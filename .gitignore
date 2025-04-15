@@ -1,10 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/unity
-# Edit at https://www.toptal.com/developers/gitignore?templates=unity
-
 ### Unity ###
-# This .gitignore file should be placed at the root of your Unity project directory
-#
-# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -74,4 +69,15 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-# End of https://www.toptal.com/developers/gitignore/api/unity
+
+# FMOD-specific ignore rules
+
+# Ignore FMOD Cache folder (local only)
+/[Aa]ssets/Plugins/FMOD/Cache/*
+
+# Ignore built bank files in StreamingAssets (but keep DLLs etc.)
+/[Aa]ssets/StreamingAssets//.bank
+/[Aa]ssets/StreamingAssets/**/.bank.meta
+
+# Optional: ignore FMOD log file
+fmod_editor.log

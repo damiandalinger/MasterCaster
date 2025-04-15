@@ -1,0 +1,5 @@
+* text=auto
+
+# Ensure consistent line endings for FMOD files (especially for macOS compatibility)
+Assets/Plugins/FMOD//*.bundle text eol=lf
+Assets/Plugins/FMOD//Info.plist text eol=lf
