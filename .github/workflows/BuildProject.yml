@@ -12,15 +12,31 @@ jobs:
         targetPlatform:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
     steps:
+
+      # Checkout
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           lfs: true
-      - uses: actions/cache@v3
+
+      # Cache
+      #- uses: actions/cache@v4
+       # with:
+        #  path: Library
+        #  key: Library-${{ matrix.targetPlatform }}
+        # restore-keys: Library-
+
+      - name: Restore Library Cache
+        id: cache-library-restore
+        uses: actions/cache/restore@v4
         with:
           path: Library
-          key: Library-${{ matrix.targetPlatform }}
-          restore-keys: Library-
+          key: Library-${{ runner.os }}-${{ matrix.targetPlatform }}
+          restore-keys: |
+           Library-${{ runner.os }}-
+           Library- 
+
+      # Build
       - if: matrix.targetPlatform == 'Android'
         uses: jlumbroso/free-disk-space@v1.3.1
       - uses: game-ci/unity-builder@v4
@@ -30,6 +46,15 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
+
+      - name: Save Library Cache
+        if: steps.cache-library-restore.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: Library
+          key: ${{ steps.cache-library-restore.outputs.cache-primary-key }}
+
+      # Output
       - uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
