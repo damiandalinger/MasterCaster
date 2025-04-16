@@ -24,7 +24,7 @@ jobs:
       # Cache
       - uses: actions/cache@v4
         with:
-          path: /Library
+          path: Library
           key: Library-${{ matrix.targetPlatform }}
           restore-keys: |
             Library-${{ matrix.targetPlatform }}
