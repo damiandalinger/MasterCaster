@@ -9,10 +9,9 @@
 
 using UnityEngine;
 
-
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/Vector2Variable")]
+    [CreateAssetMenu(menuName = "Variables/Vector2 Variable")]
     public class Vector2Variable : ScriptableObject
     {
 #if UNITY_EDITOR

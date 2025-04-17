@@ -9,10 +9,9 @@
 
 using UnityEngine;
 
-
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/FloatVariable")]
+    [CreateAssetMenu(menuName = "Variables/Float Variable")]
     public class FloatVariable : ScriptableObject
     {
 #if UNITY_EDITOR

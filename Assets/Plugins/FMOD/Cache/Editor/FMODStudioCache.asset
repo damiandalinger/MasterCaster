@@ -27,6 +27,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5583464924755267569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/parametertest
+  m_EditorClassIdentifier: 
+  Path: event:/parametertest
+  Guid:
+    Data1: 1743837061
+    Data2: 1180089904
+    Data3: -1308831871
+    Data4: 1462779915
+  Banks:
+  - {fileID: 8134671516962608896}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5404069322468411367}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &-5404069322468411367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/parametertest/EQtest
+  m_EditorClassIdentifier: 
+  Name: EQtest
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 0
+  ID:
+    data1: 1365599339
+    data2: 1128693321
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,18 +94,25 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 8485771747255326381}
   - {fileID: 2856143717668183181}
+  - {fileID: 8134671516962608896}
   EditorEvents:
   - {fileID: -9084467926698586866}
+  - {fileID: 7762678709359904058}
+  - {fileID: -5583464924755267569}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2856143717668183181}
   StringsBanks:
   - {fileID: 8485771747255326381}
   cacheVersion: 131847
-  cacheTime: 638803290378003440
+  cacheTime: 638804856005542577
   SerializableEventsDict:
   - key: event:/New Event
     index: 0
+  - key: event:/looptest
+    index: 1
+  - key: event:/parametertest
+    index: 2
 --- !u!114 &2856143717668183181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +128,57 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638803290377785545
+  lastModified: 638804856005398507
   FileSizes:
   - Name: Desktop
     Value: 857312
+  Exists: 1
+--- !u!114 &7762678709359904058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/looptest
+  m_EditorClassIdentifier: 
+  Path: event:/looptest
+  Guid:
+    Data1: 1958572331
+    Data2: 1166695446
+    Data3: 1983434403
+    Data4: -201572649
+  Banks:
+  - {fileID: 8134671516962608896}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 120
+--- !u!114 &8134671516962608896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Test.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Desktop/Test.bank
+  Name: Test
+  StudioPath: bank:/Test
+  lastModified: 638804856005542577
+  FileSizes:
+  - Name: Desktop
+    Value: 237792
   Exists: 1
 --- !u!114 &8485771747255326381
 MonoBehaviour:
@@ -89,8 +195,8 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638803290378003440
+  lastModified: 638804856005526314
   FileSizes:
   - Name: Desktop
-    Value: 770
+    Value: 960
   Exists: 1

@@ -9,10 +9,9 @@
 
 using UnityEngine;
 
-
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/BoolVariable")]
+    [CreateAssetMenu(menuName = "Variables/Bool Variable")]
     public class BoolVariable : ScriptableObject
     {
 #if UNITY_EDITOR

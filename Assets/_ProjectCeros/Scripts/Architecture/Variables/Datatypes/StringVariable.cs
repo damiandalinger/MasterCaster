@@ -9,10 +9,9 @@
 
 using UnityEngine;
 
-
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/StringVariable")]
+    [CreateAssetMenu(menuName = "Variables/String Variable")]
     public class StringVariable : ScriptableObject
     {
 #if UNITY_EDITOR
