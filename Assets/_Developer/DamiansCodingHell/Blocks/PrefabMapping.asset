@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8626a5dd6eee9b14dbcdf3543c770839, type: 3}
+  m_Name: PrefabMapping
+  m_EditorClassIdentifier: 
+  entries:
+  - sizeLabel: 1x1
+    prefab: {fileID: 3538536735344369078, guid: 6500902e0479579499f0808d73f6ffd1, type: 3}
+  - sizeLabel: 1x2
+    prefab: {fileID: 6324088813163193560, guid: 75f1e7d2f868ebf4ca31c44f8cb52980, type: 3}
+  - sizeLabel: 1x3
+    prefab: {fileID: 2602306279208458359, guid: 0e014f8106c310f409df16b37aed46f3, type: 3}
+  - sizeLabel: 2x1
+    prefab: {fileID: 3475030248882919503, guid: 1dc4c3276ba85d240b750039ce367b8a, type: 3}
+  - sizeLabel: 2x2
+    prefab: {fileID: 2090325079910715266, guid: 427398522ac6c4546a3b81bd17f7bae9, type: 3}
+  - sizeLabel: 3x1
+    prefab: {fileID: 331370863126063802, guid: d3a16bf8a0bd78a4e886b5fa9c7cf8ba, type: 3}
