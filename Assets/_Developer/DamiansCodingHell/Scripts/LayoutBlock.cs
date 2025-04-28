@@ -16,5 +16,15 @@ namespace ProjectCeros
             int y = int.Parse(split[1]);
             return new Vector2Int(x, y);
         }
+
+        public string GetSizeCategory(IntReference shortAreaLimit, IntReference mediumAreaLimit)
+        {
+            Vector2Int size = GetSize();
+            int area = size.x * size.y;
+
+            if (area <= shortAreaLimit.Value) return "short";
+            if (area <= mediumAreaLimit.Value) return "medium";
+            return "long";
+        }
     }
 }
