@@ -1,6 +1,6 @@
 /// <summary>
-/// Selects a set of important and random headlines based on available StringVariables.
-/// The selected lists are later used to populate the newspaper grid.
+/// Selects pools of important and random articles from available databases.
+/// These pools are used to build the newspaper layout.
 /// </summary>
 
 /// <remarks>
@@ -15,42 +15,33 @@ namespace ProjectCeros
 {
     public class NewsSelector : MonoBehaviour
     {
-        [HideInInspector] public List<ClassifiedHeadline> selectedImportant;
-        [HideInInspector] public List<ClassifiedHeadline> selectedRandom;
+        #region Fields
+        [Header("Article Databases")]
+        [Tooltip("Database containing all important articles.")]
+        [SerializeField] private ArticleDatabase _importantArticlesDatabase;
 
-        [SerializeField] private IntReference _importantCount;
-        [SerializeField] private List<NewsVariable> _importantHeadlines;
-        [SerializeField] private List<NewsVariable> _randomHeadlines;
+        [Tooltip("Database containing all random filler articles.")]
+        [SerializeField] private ArticleDatabase _randomArticlesDatabase;
 
-        [Header("Headline Length Settings")]
-        [SerializeField] private IntReference _shortMaxHeadlineLength;
-        [SerializeField] private IntReference _mediumMaxHeadlineLength;
+        [HideInInspector] public List<Article> ImportantArticlesPool;
+        [HideInInspector] public List<Article> RandomArticlesPool;
+        #endregion
 
-        public void SelectNews()
+        #region Public Methods
+        // Randomly generates important and random article pools for today's newspaper.
+        public void GenerateArticlePools()
         {
-            var rawImportant = _importantHeadlines.OrderBy(x => Random.value).Take(_importantCount).ToList();
-            selectedImportant = rawImportant.Select(h => new ClassifiedHeadline
-            {
-                headline = h.headline,
-                description = h.description,
-                sizeCategory = ClassifyDescription(h.description)
-            }).ToList();
+            ImportantArticlesPool = _importantArticlesDatabase.Items
+                .OrderBy(x => Random.value)
+                .Take(5)
+                .ToList();
 
-            var rawRandom = _randomHeadlines.OrderBy(x => Random.value).ToList();
-            selectedRandom = rawRandom.Select(h => new ClassifiedHeadline
-            {
-                headline = h.headline,
-                description = h.description,
-                sizeCategory = ClassifyDescription(h.description)
-            }).ToList();
-        }
+            RandomArticlesPool = _randomArticlesDatabase.Items
+                .OrderBy(x => Random.value)
+                .ToList();
 
-        private string ClassifyDescription(string description)
-        {
-            int length = description.Length;
-            if (length <= _shortMaxHeadlineLength.Value) return "short";
-            if (length <= _mediumMaxHeadlineLength.Value) return "medium";
-            return "long";
+            Debug.Log($"[NewsSelector] Generated {ImportantArticlesPool.Count} important and {RandomArticlesPool.Count} random articles.");
         }
+        #endregion
     }
 }

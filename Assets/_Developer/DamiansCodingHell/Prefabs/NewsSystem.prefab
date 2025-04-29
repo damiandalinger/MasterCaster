@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6532853331775534514}
   - component: {fileID: 7171656647062849609}
   - component: {fileID: 2531823386329476743}
+  - component: {fileID: 6288346244337601001}
   m_Layer: 0
   m_Name: NewsSystem
   m_TagString: Untagged
@@ -75,22 +76,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7498ed693229ec408e6584c927d9e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _layoutPresets:
-  - {fileID: 11400000, guid: 075fa8d322e09324c886fca898ffbd6c, type: 2}
-  - {fileID: 11400000, guid: 2b5b0e9bfb5c4874981fa762f69fa957, type: 2}
-  - {fileID: 11400000, guid: 0d375d1f7f6723a4bbb3d7fe3639f3bb, type: 2}
-  - {fileID: 11400000, guid: b168553bf989fde488098659708adab8, type: 2}
-  - {fileID: 11400000, guid: 299dd26159cbb2c4589bf22484ac496d, type: 2}
-  - {fileID: 11400000, guid: f970538a039abf942b362db1d3f1858e, type: 2}
-  - {fileID: 11400000, guid: e2b790f40ee74c1409e3d30370ee4124, type: 2}
+  _layoutPresets: []
   _shortBlockAreaLimit:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 1
     Variable: {fileID: 11400000, guid: 9b94a744c4a1abd438b8870c71635190, type: 2}
   _mediumBlockAreaLimit:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 2
     Variable: {fileID: 11400000, guid: 64cc7ec2b65489d41b4b19131c211b8c, type: 2}
+  shortCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: f46e7247ca57bfe49b974561885dd2f7, type: 2}
+  mediumCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 64fd56329464efb4bb235a7a187e904a, type: 2}
+  longCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fb594465567f0a14ba3ef9aa397b4276, type: 2}
 --- !u!114 &2531823386329476743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,33 +109,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602dc5886a0e2d141922e7004cc20b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedImportant: []
-  selectedRandom: []
-  _importantCount:
-    UseConstant: 1
-    ConstantValue: 5
-    Variable: {fileID: 0}
-  _importantHeadlines:
-  - {fileID: 11400000, guid: df0681645ba903f47a4ec825dc877c1a, type: 2}
-  - {fileID: 11400000, guid: cb1c392523f7e4e468c46080233257d3, type: 2}
-  - {fileID: 11400000, guid: a59b3c8b17a371449a5ad5d1070a948f, type: 2}
-  - {fileID: 11400000, guid: 081edae7930600a40aafab1c64dacffa, type: 2}
-  - {fileID: 11400000, guid: 132e3cff29a74a747b9a2f186a692f56, type: 2}
-  _randomHeadlines:
-  - {fileID: 11400000, guid: 5cb363abe2814644e80a2df4bdf97abe, type: 2}
-  - {fileID: 11400000, guid: baa679cd616d92e449f0313a783d894e, type: 2}
-  - {fileID: 11400000, guid: b6b9696c63e65b94880202471fd25a1a, type: 2}
-  - {fileID: 11400000, guid: 5146faac1f43d3748991a0c071bbfeff, type: 2}
-  - {fileID: 11400000, guid: 0e6a073ca8a0d3e4892b6f912d9c5828, type: 2}
-  - {fileID: 11400000, guid: 9875a8d27bd67014e80db67b201295ef, type: 2}
-  _shortMaxHeadlineLength:
-    UseConstant: 1
+  _importantArticlesDatabase: {fileID: 11400000, guid: 1cc76ce089834f54a8e1b947252a6326, type: 2}
+  _randomArticlesDatabase: {fileID: 11400000, guid: ad186f94530fce04082ef6cc1f7feb80, type: 2}
+  ImportantArticlesPool: []
+  RandomArticlesPool: []
+--- !u!114 &6288346244337601001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008143948612911384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7192b5c89f6f44fb34119ea77c6b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _importantArticlesJson: {fileID: 4900000, guid: d618a9b7fc508a543aca6fa37d98d552, type: 3}
+  _randomArticlesJson: {fileID: 4900000, guid: b578ddd6e5e553748a8922135bc2eede, type: 3}
+  _importantArticlesDatabase: {fileID: 11400000, guid: 1cc76ce089834f54a8e1b947252a6326, type: 2}
+  _randomArticlesDatabase: {fileID: 11400000, guid: ad186f94530fce04082ef6cc1f7feb80, type: 2}
+  _shortMaxLength:
+    UseConstant: 0
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 366820eda8ccf8648b82202ba1960afe, type: 2}
-  _mediumMaxHeadlineLength:
-    UseConstant: 1
+  _mediumMaxLength:
+    UseConstant: 0
     ConstantValue: 20
     Variable: {fileID: 11400000, guid: 382d298a7e3a1e542a6380ddf87a11cf, type: 2}
+  _longMaxLength:
+    UseConstant: 0
+    ConstantValue: 30
+    Variable: {fileID: 11400000, guid: 5dfa2014432fac44caac4f9f0870574d, type: 2}
+  _shortCategoryValue:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  _mediumCategoryValue:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  _longCategoryValue:
+    UseConstant: 1
+    ConstantValue: 2
+    Variable: {fileID: 0}
 --- !u!1 &2271445170981999845
 GameObject:
   m_ObjectHideFlags: 0

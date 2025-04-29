@@ -389,6 +389,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewsSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 6288346244337601001, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: _shortMaxLength.UseConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532853331775534514, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: _spacing.UseConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171656647062849609, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: _layoutPresets.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171656647062849609, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: '_layoutPresets.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c5b9712c2be406646ad1447eb6463f0b, type: 2}
+    - target: {fileID: 7171656647062849609, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: '_layoutPresets.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 60585528f6c1ea548a23ad33ae548731, type: 2}
+    - target: {fileID: 7171656647062849609, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: '_layoutPresets.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 74443805854841943acc2ceae51be951, type: 2}
+    - target: {fileID: 7171656647062849609, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: _longCategoryValue.ConstantValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171656647062849609, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: _shortBlockAreaLimit.UseConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171656647062849609, guid: a09f29ffaadffce46850b597df61269a, type: 3}
+      propertyPath: _mediumCategoryValue.ConstantValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7175462194257886549, guid: a09f29ffaadffce46850b597df61269a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

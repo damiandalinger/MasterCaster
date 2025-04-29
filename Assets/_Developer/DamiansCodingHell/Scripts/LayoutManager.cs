@@ -4,7 +4,8 @@
 /// </summary>
 
 /// <remarks>
-/// 25/04/2025 by Damian Dalinger: Script Creation.
+/// 25/04/2025 by Damian Dalinger: Script creation.
+/// 29/04/2025 by Damian Dalinger: Major refactor, cleanup, and optimizations.
 /// </remarks>
 
 using System.Collections.Generic;
@@ -13,18 +14,36 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-
     public class LayoutManager : MonoBehaviour
     {
-        [Header("All Available Layout Presets")]
+        #region Fields
+
+        [Header("Layout Settings")]
+        [Tooltip("Available layout presets.")]
         [SerializeField] private List<LayoutPreset> _layoutPresets;
 
         [Header("Block Size Settings")]
+        [Tooltip("Maximum area (width x height) a block can have to be considered 'short'.")]
         [SerializeField] private IntReference _shortBlockAreaLimit;
+
+        [Tooltip("Maximum area (width x height) a block can have to be considered 'medium'.")]
         [SerializeField] private IntReference _mediumBlockAreaLimit;
+
+        [Header("Category Value Settings")]
+        [Tooltip("Int value assigned to short descriptions.")]
+        [SerializeField] private IntReference _shortCategoryValue;
+
+        [Tooltip("Int value assigned to medium descriptions.")]
+        [SerializeField] private IntReference _mediumCategoryValue;
+
+        [Tooltip("Int value assigned to long descriptions.")]
+        [SerializeField] private IntReference _longCategoryValue;
 
         private NewsSelector _selector;
         private NewsGridRenderer _renderer;
+        #endregion
+
+        #region Lifecycle Methods
 
         private void Awake()
         {
@@ -39,113 +58,117 @@ namespace ProjectCeros
                 BuildLayout();
             }
         }
+        #endregion
 
+        #region Public Methods
+        // Builds a complete newspaper layout by selecting articles and rendering them.
         public void BuildLayout()
         {
-            _selector.SelectNews();
+            _selector.GenerateArticlePools();
 
-            var importantHeadlines = _selector.selectedImportant;
-            var randomHeadlines = _selector.selectedRandom;
+            var importantArticles = _selector.ImportantArticlesPool;
+            var randomArticles = _selector.RandomArticlesPool;
 
-            LayoutPreset chosenPreset = FindSuitablePreset(importantHeadlines);
+            var chosenPreset = FindSuitablePreset(importantArticles);
 
             if (chosenPreset == null)
             {
-                Debug.LogError("[LayoutManager] ❌ No suitable preset found!");
+                Debug.LogError("[LayoutManager] No suitable preset found!");
                 return;
             }
 
-            Debug.Log($"[LayoutManager] ✅ Preset {chosenPreset.name} selected!");
+            Debug.Log($"[LayoutManager] Preset {chosenPreset.name} selected.");
 
-            List<BlockAssignment> assignments = AssignBlocks(chosenPreset, importantHeadlines, randomHeadlines);
-
+            var assignments = AssignBlocks(chosenPreset, importantArticles, randomArticles);
             _renderer.Render(assignments);
         }
+        #endregion
 
-        private LayoutPreset FindSuitablePreset(List<ClassifiedHeadline> importantHeadlines)
+        #region Private Methods
+        // Finds a preset where the number of important blocks exactly matches the number of important articles.
+        private LayoutPreset FindSuitablePreset(List<Article> importantArticles)
         {
-            int requiredShort = importantHeadlines.Count(h => h.sizeCategory == "short");
-            int requiredMedium = importantHeadlines.Count(h => h.sizeCategory == "medium");
-            int requiredLong = importantHeadlines.Count(h => h.sizeCategory == "long");
+            int requiredShort = importantArticles.Count(h => h.SizeCategory == _shortCategoryValue.Value);
+            int requiredMedium = importantArticles.Count(h => h.SizeCategory == _mediumCategoryValue.Value);
+            int requiredLong = importantArticles.Count(h => h.SizeCategory == _longCategoryValue.Value);
 
             var shuffledPresets = _layoutPresets.OrderBy(x => Random.value).ToList();
 
             foreach (var preset in shuffledPresets)
             {
-                var importantBlocks = preset.blocks.Where(b => b.isForImportantNews).ToList();
+                var importantBlocks = preset.Blocks.Where(b => b.IsImportantNews).ToList();
 
-                int availableShort = importantBlocks.Count(b => b.GetSizeCategory(_shortBlockAreaLimit, _mediumBlockAreaLimit) == "short");
-                int availableMedium = importantBlocks.Count(b => b.GetSizeCategory(_shortBlockAreaLimit, _mediumBlockAreaLimit) == "medium");
-                int availableLong = importantBlocks.Count(b => b.GetSizeCategory(_shortBlockAreaLimit, _mediumBlockAreaLimit) == "long");
+                int availableShort = importantBlocks.Count(b => GetBlockCategory(b) == _shortCategoryValue.Value);
+                int availableMedium = importantBlocks.Count(b => GetBlockCategory(b) == _mediumCategoryValue.Value);
+                int availableLong = importantBlocks.Count(b => GetBlockCategory(b) == _longCategoryValue.Value);
 
-                if (availableShort >= requiredShort && availableMedium >= requiredMedium && availableLong >= requiredLong)
+                if (availableShort == requiredShort &&
+                    availableMedium == requiredMedium &&
+                    availableLong == requiredLong)
+                {
                     return preset;
+                }
             }
 
             return null;
         }
 
-        private List<BlockAssignment> AssignBlocks(LayoutPreset preset, List<ClassifiedHeadline> important, List<ClassifiedHeadline> random)
+        // Assigns articles to available blocks based on their size category.
+        private List<BlockAssignment> AssignBlocks(LayoutPreset preset, List<Article> important, List<Article> random)
         {
-            List<BlockAssignment> result = new List<BlockAssignment>();
+            var result = new List<BlockAssignment>();
 
-            // Wichtige Headlines nach Kategorie sortieren
-            var longImportant = important.Where(h => h.sizeCategory == "long").ToList();
-            var mediumImportant = important.Where(h => h.sizeCategory == "medium").ToList();
-            var shortImportant = important.Where(h => h.sizeCategory == "short").ToList();
+            var longImportant = important.Where(h => h.SizeCategory == _longCategoryValue.Value).ToList();
+            var mediumImportant = important.Where(h => h.SizeCategory == _mediumCategoryValue.Value).ToList();
+            var shortImportant = important.Where(h => h.SizeCategory == _shortCategoryValue.Value).ToList();
 
-            // Random Headlines nach Kategorie sortieren
-            var longRandom = random.Where(h => h.sizeCategory == "long").ToList();
-            var mediumRandom = random.Where(h => h.sizeCategory == "medium").ToList();
-            var shortRandom = random.Where(h => h.sizeCategory == "short").ToList();
+            var longRandom = random.Where(h => h.SizeCategory == _longCategoryValue.Value).ToList();
+            var mediumRandom = random.Where(h => h.SizeCategory == _mediumCategoryValue.Value).ToList();
+            var shortRandom = random.Where(h => h.SizeCategory == _shortCategoryValue.Value).ToList();
 
-            var blocks = preset.blocks.OrderByDescending(b => BlockCategoryOrder(b)).ToList();
+            var blocks = preset.Blocks.OrderByDescending(b => GetBlockCategory(b)).ToList();
 
             foreach (var block in blocks)
             {
-                string category = block.GetSizeCategory(_shortBlockAreaLimit, _mediumBlockAreaLimit);
+                int blockCategory = GetBlockCategory(block);
 
-                if (block.isForImportantNews)
+                if (block.IsImportantNews)
                 {
-                    var headline = GetMatchingHeadline(category, longImportant, mediumImportant, shortImportant);
+                    var article = GetMatchingArticle(blockCategory, longImportant, mediumImportant, shortImportant);
 
-                    if (headline == null)
+                    if (article != null)
                     {
-                        Debug.LogError($"[LayoutManager] ❌ Could not assign important headline to block {block.sizeInput}");
-                        continue;
+                        result.Add(new BlockAssignment
+                        {
+                            Block = block,
+                            ArticleHeadline = article.Headline,
+                            ArticleDescription = article.Description,
+                            IsImportant = true
+                        });
                     }
-
-                    result.Add(new BlockAssignment
-                    {
-                        block = block,
-                        headlineTitle = headline.headline,
-                        headlineDescription = headline.description,
-                        isImportant = true
-                    });
                 }
                 else
                 {
-                    var filler = GetMatchingHeadline(category, longRandom, mediumRandom, shortRandom);
+                    var filler = GetMatchingArticle(blockCategory, longRandom, mediumRandom, shortRandom);
 
-                    if (filler == null)
+                    if (filler != null)
                     {
-                        Debug.LogWarning($"[LayoutManager] ⚠️ Could not assign random headline to block {block.sizeInput}");
                         result.Add(new BlockAssignment
                         {
-                            block = block,
-                            headlineTitle = "[No Random]",
-                            headlineDescription = "",
-                            isImportant = false
+                            Block = block,
+                            ArticleHeadline = filler.Headline,
+                            ArticleDescription = filler.Description,
+                            IsImportant = false
                         });
                     }
                     else
                     {
                         result.Add(new BlockAssignment
                         {
-                            block = block,
-                            headlineTitle = filler.headline,
-                            headlineDescription = filler.description,
-                            isImportant = false
+                            Block = block,
+                            ArticleHeadline = "Error",
+                            ArticleDescription = "",
+                            IsImportant = false
                         });
                     }
                 }
@@ -154,61 +177,41 @@ namespace ProjectCeros
             return result;
         }
 
-        private ClassifiedHeadline GetMatchingHeadline(string blockCategory, List<ClassifiedHeadline> longList, List<ClassifiedHeadline> mediumList, List<ClassifiedHeadline> shortList)
+        // Retrieves a matching article from the lists based on block category.
+        private Article GetMatchingArticle(int blockCategory, List<Article> longList, List<Article> mediumList, List<Article> shortList)
         {
-            if (blockCategory == "long")
+            if (blockCategory == _longCategoryValue.Value && longList.Count > 0)
             {
-                if (longList.Count > 0)
-                {
-                    var h = longList[0];
-                    longList.RemoveAt(0);
-                    return h;
-                }
-                else if (mediumList.Count > 0)
-                {
-                    var h = mediumList[0];
-                    mediumList.RemoveAt(0);
-                    return h;
-                }
-                else if (shortList.Count > 0)
-                {
-                    var h = shortList[0];
-                    shortList.RemoveAt(0);
-                    return h;
-                }
+                var article = longList[0];
+                longList.RemoveAt(0);
+                return article;
             }
-            else if (blockCategory == "medium")
+            if (blockCategory == _mediumCategoryValue.Value && mediumList.Count > 0)
             {
-                if (mediumList.Count > 0)
-                {
-                    var h = mediumList[0];
-                    mediumList.RemoveAt(0);
-                    return h;
-                }
-                else if (shortList.Count > 0)
-                {
-                    var h = shortList[0];
-                    shortList.RemoveAt(0);
-                    return h;
-                }
+                var article = mediumList[0];
+                mediumList.RemoveAt(0);
+                return article;
             }
-            else if (blockCategory == "short")
+            if (blockCategory == _shortCategoryValue.Value && shortList.Count > 0)
             {
-                if (shortList.Count > 0)
-                {
-                    var h = shortList[0];
-                    shortList.RemoveAt(0);
-                    return h;
-                }
+                var article = shortList[0];
+                shortList.RemoveAt(0);
+                return article;
             }
 
             return null;
         }
 
-        private int BlockCategoryOrder(LayoutBlock block)
+        // Calculates the size category (short, medium, long) of a block based on its area.
+        private int GetBlockCategory(LayoutBlock block)
         {
-            string category = block.GetSizeCategory(_shortBlockAreaLimit, _mediumBlockAreaLimit);
-            return category == "long" ? 3 : category == "medium" ? 2 : 1;
+            var size = block.GetSize();
+            int area = size.x * size.y;
+
+            if (area <= _shortBlockAreaLimit.Value) return _shortCategoryValue.Value;
+            if (area <= _mediumBlockAreaLimit.Value) return _mediumCategoryValue.Value;
+            return _longCategoryValue.Value;
         }
+        #endregion
     }
 }
