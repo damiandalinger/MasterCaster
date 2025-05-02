@@ -26,18 +26,6 @@ namespace ProjectCeros
 
         [Tooltip("Parent transform for all instantiated layout blocks.")]
         [SerializeField] private Transform _gridParent;
-
-        [Tooltip("Prefabs must be named exactly after their sizeInput, e.g. '2x1', '1x1'.")]
-        [SerializeField] private List<GameObject> _layoutBlocks;
-
-        private Dictionary<string, GameObject> _prefabLookup;
-        #endregion
-
-        #region Lifecycle Methods
-        private void Awake()
-        {
-            InitializePrefabLookup();
-        }
         #endregion
 
         #region Public Methods
@@ -48,27 +36,20 @@ namespace ProjectCeros
 
             foreach (var assignment in assignments)
             {
-                if (!_prefabLookup.TryGetValue(assignment.Block.SizeInput, out var prefab))
+                if (assignment.Prefab == null)
                 {
-                    Debug.LogWarning($"[NewsGridRenderer] Missing prefab for block size {assignment.Block.SizeInput}.");
+                    Debug.LogWarning("[NewsRenderer] Missing prefab in assignment.");
                     continue;
                 }
 
-                var instance = Instantiate(prefab, _gridParent);
-
-                SetBlockPosition(instance, assignment.Block.Position);
+                var instance = Instantiate(assignment.Prefab, _gridParent);
+                SetBlockPosition(instance, assignment.Position);
                 SetBlockTexts(instance, assignment.ArticleHeadline, assignment.ArticleDescription);
             }
         }
         #endregion
 
         #region Private Methods
-        // Initializes the prefab lookup dictionary from available prefabs.
-        private void InitializePrefabLookup()
-        {
-            _prefabLookup = _layoutBlocks.ToDictionary(p => p.name);
-        }
-
         // Clears all children of the grid parent.
         private void ClearGrid()
         {

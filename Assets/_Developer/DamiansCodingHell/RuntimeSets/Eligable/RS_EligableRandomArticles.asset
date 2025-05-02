@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53b285255cec6a43a41e3d231885a4d, type: 3}
+  m_Name: RS_EligableRandomArticles
+  m_EditorClassIdentifier: 
+  Items:
+  - PairID: 0
+    Headline: R1
+    Description: Narrative
+    AgencyID: 2
+    Subgenre: rpg
+    ValuePositive: 1
+    ValueNegative: 0.5
+    SizeCategory: 0
+  - PairID: 0
+    Headline: R2
+    Description: 'Some '
+    AgencyID: 2
+    Subgenre: rpg
+    ValuePositive: 0.6
+    ValueNegative: 1.2
+    SizeCategory: 0
+  - PairID: 0
+    Headline: R3
+    Description: Narrati
+    AgencyID: 2
+    Subgenre: rpg
+    ValuePositive: 1
+    ValueNegative: 0.5
+    SizeCategory: 0
+  - PairID: 0
+    Headline: R4
+    Description: Some play
+    AgencyID: 2
+    Subgenre: rpg
+    ValuePositive: 0.6
+    ValueNegative: 1.2
+    SizeCategory: 0
+  - PairID: 0
+    Headline: R5
+    Description: Narrative
+    AgencyID: 2
+    Subgenre: rpg
+    ValuePositive: 1
+    ValueNegative: 0.5
+    SizeCategory: 0
+  - PairID: 0
+    Headline: R6
+    Description: 'Some '
+    AgencyID: 2
+    Subgenre: rpg
+    ValuePositive: 0.6
+    ValueNegative: 1.2
+    SizeCategory: 0
+  - PairID: 0
+    Headline: R7
+    Description: Narrati
+    AgencyID: 2
+    Subgenre: rpg
+    ValuePositive: 1
+    ValueNegative: 0.5
+    SizeCategory: 0
+  - PairID: 0
+    Headline: R8
+    Description: Some play
+    AgencyID: 2
+    Subgenre: rpg
+    ValuePositive: 0.6
+    ValueNegative: 1.2
+    SizeCategory: 0

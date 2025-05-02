@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53b285255cec6a43a41e3d231885a4d, type: 3}
+  m_Name: RS_AllRPGArticles
+  m_EditorClassIdentifier: 
+  Items:
+  - PairID: 2001
+    Headline: RPGs bring emotional storytelling to games
+    Description: Narrative depth sets RPGs apart from others.
+    AgencyID: 0
+    Subgenre: rpg
+    ValuePositive: 1
+    ValueNegative: 0.5
+    SizeCategory: 2
+  - PairID: 2001
+    Headline: Are RPGs too slow for modern gamers?
+    Description: Some players demand more action and less dialogue.
+    AgencyID: 1
+    Subgenre: rpg
+    ValuePositive: 0.6
+    ValueNegative: 1.2
+    SizeCategory: 2
+  - PairID: 2002
+    Headline: RPGs bring
+    Description: Narrative depth sets RPGs apart from others.
+    AgencyID: 0
+    Subgenre: rpg
+    ValuePositive: 1
+    ValueNegative: 0.5
+    SizeCategory: 2
+  - PairID: 2002
+    Headline: 'Are RPGs '
+    Description: Some players demand more action and less dialogue.
+    AgencyID: 1
+    Subgenre: rpg
+    ValuePositive: 0.6
+    ValueNegative: 1.2
+    SizeCategory: 2

@@ -1,26 +1,74 @@
 [
-    {
-      "Headline": "R1",
-      "Description": "Aliens have landed."
-    },
-    {
-      "Headline": "R2",
-      "Description": "Text"
-    },
-    {
-      "Headline": "R3",
-      "Description": "Text"
-    },
-    {
-      "Headline": "R4",
-      "Description": "Text"
-    },
-    {
-      "Headline": "R5",
-      "Description": "Text"
-    },
-    {
-      "Headline": "R6",
-      "Description": "Text"
-    }
-  ]
+  {
+    "PairID": 0,
+    "Headline": "R1",
+    "Description": "Narrative",
+    "AgencyID": 2,
+    "Subgenre": "rpg",
+    "ValuePositive": 1.0,
+    "ValueNegative": 0.5
+},
+{
+    "PairID": 0,
+    "Headline": "R2",
+    "Description": "Some ",
+    "AgencyID": 2,
+    "Subgenre": "rpg",
+    "ValuePositive": 0.6,
+    "ValueNegative": 1.2
+},
+{
+    "PairID": 0,
+    "Headline": "R3",
+    "Description": "Narrati",
+    "AgencyID": 2,
+    "Subgenre": "rpg",
+    "ValuePositive": 1.0,
+    "ValueNegative": 0.5
+},
+{
+    "PairID": 0,
+    "Headline": "R4",
+    "Description": "Some play",
+    "AgencyID": 2,
+    "Subgenre": "rpg",
+    "ValuePositive": 0.6,
+    "ValueNegative": 1.2
+},
+{
+  "PairID": 0,
+  "Headline": "R5",
+  "Description": "Narrative",
+  "AgencyID": 2,
+  "Subgenre": "rpg",
+  "ValuePositive": 1.0,
+  "ValueNegative": 0.5
+},
+{
+  "PairID": 0,
+  "Headline": "R6",
+  "Description": "Some ",
+  "AgencyID": 2,
+  "Subgenre": "rpg",
+  "ValuePositive": 0.6,
+  "ValueNegative": 1.2
+},
+{
+  "PairID": 0,
+  "Headline": "R7",
+  "Description": "Narrati",
+  "AgencyID": 2,
+  "Subgenre": "rpg",
+  "ValuePositive": 1.0,
+  "ValueNegative": 0.5
+},
+{
+  "PairID": 0,
+  "Headline": "R8",
+  "Description": "Some play",
+  "AgencyID": 2,
+  "Subgenre": "rpg",
+  "ValuePositive": 0.6,
+  "ValueNegative": 1.2
+}
+]

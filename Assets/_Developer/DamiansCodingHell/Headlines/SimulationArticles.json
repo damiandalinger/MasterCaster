@@ -1,0 +1,38 @@
+[
+    {
+        "PairID": 3001,
+        "Headline": "Simulation fans love deep mechanics",
+        "Description": "Realistic gameplay earns praise from enthusiasts.",
+        "AgencyID": 0,
+        "Subgenre": "simulation",
+        "ValuePositive": 1.1,
+        "ValueNegative": 0.7
+    },
+    {
+        "PairID": 3001,
+        "Headline": "Simulation games too complex?",
+        "Description": "Casual players feel left behind by detailed systems.",
+        "AgencyID": 1,
+        "Subgenre": "simulation",
+        "ValuePositive": 0.9,
+        "ValueNegative": 1.0
+    },
+    {
+        "PairID": 3002,
+        "Headline": "Simulation ",
+        "Description": "Realistic gameplay earns praise from enthusiasts.",
+        "AgencyID": 0,
+        "Subgenre": "simulation",
+        "ValuePositive": 1.1,
+        "ValueNegative": 0.7
+    },
+    {
+        "PairID": 3002,
+        "Headline": "Simulation games",
+        "Description": "Casual players feel left behind by detailed systems.",
+        "AgencyID": 1,
+        "Subgenre": "simulation",
+        "ValuePositive": 0.9,
+        "ValueNegative": 1.0
+    }
+]

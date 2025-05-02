@@ -1,5 +1,5 @@
 /// <summary>
-/// Represents a full article including headline, description, and size category.
+/// Represents a full article.
 /// Used for creating newspaper layouts.
 /// </summary>
 
@@ -12,8 +12,15 @@ namespace ProjectCeros
     [System.Serializable]
     public class Article
     {
+        public int PairID;
         public string Headline;
         public string Description;
+        public int AgencyID;
+        public string Subgenre;
+
+        public float ValuePositive;
+        public float ValueNegative;
+
         public int SizeCategory;
     }
 }

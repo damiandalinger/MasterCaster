@@ -17,8 +17,6 @@ namespace ProjectCeros
     public class LayoutManager : MonoBehaviour
     {
         #region Fields
-
-        [Header("Layout Settings")]
         [Tooltip("Available layout presets.")]
         [SerializeField] private List<LayoutPreset> _layoutPresets;
 
@@ -39,8 +37,12 @@ namespace ProjectCeros
         [Tooltip("Int value assigned to long descriptions.")]
         [SerializeField] private IntReference _longCategoryValue;
 
+        [Tooltip("Drag the NewsGridRenderer here.")]
+        [SerializeField] private NewsGridRenderer _renderer;
+
+        [SerializeField] private BlockPrefabMapping _prefabLibrary;
+        [SerializeField] private ArticleDatabase RandomArticlesPool;
         private NewsSelector _selector;
-        private NewsGridRenderer _renderer;
         #endregion
 
         #region Lifecycle Methods
@@ -48,7 +50,6 @@ namespace ProjectCeros
         private void Awake()
         {
             _selector = GetComponent<NewsSelector>();
-            _renderer = GetComponent<NewsGridRenderer>();
         }
 
         private void Update()
@@ -64,10 +65,10 @@ namespace ProjectCeros
         // Builds a complete newspaper layout by selecting articles and rendering them.
         public void BuildLayout()
         {
-            _selector.GenerateArticlePools();
+            _selector.SelectImportantArticles();
 
-            var importantArticles = _selector.ImportantArticlesPool;
-            var randomArticles = _selector.RandomArticlesPool;
+            var importantArticles = _selector.SelectedImportantArticles;
+            var randomArticles = RandomArticlesPool.Items; // <- Hier korrigiert
 
             var chosenPreset = FindSuitablePreset(importantArticles);
 
@@ -118,6 +119,7 @@ namespace ProjectCeros
         {
             var result = new List<BlockAssignment>();
 
+            // Artikel sortieren
             var longImportant = important.Where(h => h.SizeCategory == _longCategoryValue.Value).ToList();
             var mediumImportant = important.Where(h => h.SizeCategory == _mediumCategoryValue.Value).ToList();
             var shortImportant = important.Where(h => h.SizeCategory == _shortCategoryValue.Value).ToList();
@@ -138,12 +140,14 @@ namespace ProjectCeros
 
                     if (article != null)
                     {
+                        GameObject prefab = _prefabLibrary.GetPrefab(block.GetSize(), article.AgencyID, true);
+
                         result.Add(new BlockAssignment
                         {
-                            Block = block,
+                            Prefab = prefab,
+                            Position = block.Position,
                             ArticleHeadline = article.Headline,
                             ArticleDescription = article.Description,
-                            IsImportant = true
                         });
                     }
                 }
@@ -153,22 +157,24 @@ namespace ProjectCeros
 
                     if (filler != null)
                     {
+                        GameObject prefab = _prefabLibrary.GetPrefab(block.GetSize(), 2, false); // Agency 2 = Random
+
                         result.Add(new BlockAssignment
                         {
-                            Block = block,
+                            Prefab = prefab,
+                            Position = block.Position,
                             ArticleHeadline = filler.Headline,
                             ArticleDescription = filler.Description,
-                            IsImportant = false
                         });
                     }
                     else
                     {
                         result.Add(new BlockAssignment
                         {
-                            Block = block,
-                            ArticleHeadline = "Error",
+                            Prefab = null,
+                            Position = block.Position,
+                            ArticleHeadline = "[Empty]",
                             ArticleDescription = "",
-                            IsImportant = false
                         });
                     }
                 }

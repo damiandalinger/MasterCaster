@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718962a68cc84b34187b072c7ab889d2, type: 3}
+  m_Name: New Block Prefab Mapping
+  m_EditorClassIdentifier: 
+  _entries:
+  - Prefab: {fileID: 3538536735344369078, guid: 6cde9519e6c448547835181fcb016bb4, type: 3}
+    AgencyID: 0
+    IsImportant: 1
+  - Prefab: {fileID: 6324088813163193560, guid: e1df9f3c4b6f72649ae1ce22ef2b66ff, type: 3}
+    AgencyID: 0
+    IsImportant: 1
+  - Prefab: {fileID: 2602306279208458359, guid: a9e65b72fd9f1084ab3a1d1eea944e69, type: 3}
+    AgencyID: 0
+    IsImportant: 1
+  - Prefab: {fileID: 3475030248882919503, guid: 8ad04225018130f47a1fbfa4938c565a, type: 3}
+    AgencyID: 0
+    IsImportant: 1
+  - Prefab: {fileID: 2090325079910715266, guid: 4ef63b53a35853b4280bb69a256e9d10, type: 3}
+    AgencyID: 0
+    IsImportant: 1
+  - Prefab: {fileID: 331370863126063802, guid: 1207cc0a6e015934197f5d5d162567f1, type: 3}
+    AgencyID: 0
+    IsImportant: 1
+  - Prefab: {fileID: 3538536735344369078, guid: 6500902e0479579499f0808d73f6ffd1, type: 3}
+    AgencyID: 1
+    IsImportant: 1
+  - Prefab: {fileID: 6324088813163193560, guid: 75f1e7d2f868ebf4ca31c44f8cb52980, type: 3}
+    AgencyID: 1
+    IsImportant: 1
+  - Prefab: {fileID: 2602306279208458359, guid: 0e014f8106c310f409df16b37aed46f3, type: 3}
+    AgencyID: 1
+    IsImportant: 1
+  - Prefab: {fileID: 3475030248882919503, guid: 1dc4c3276ba85d240b750039ce367b8a, type: 3}
+    AgencyID: 1
+    IsImportant: 1
+  - Prefab: {fileID: 2090325079910715266, guid: 427398522ac6c4546a3b81bd17f7bae9, type: 3}
+    AgencyID: 1
+    IsImportant: 1
+  - Prefab: {fileID: 331370863126063802, guid: d3a16bf8a0bd78a4e886b5fa9c7cf8ba, type: 3}
+    AgencyID: 1
+    IsImportant: 1
+  - Prefab: {fileID: 3538536735344369078, guid: e734a78037b299a41a13c63e1228e9dd, type: 3}
+    AgencyID: 2
+    IsImportant: 0
+  - Prefab: {fileID: 6324088813163193560, guid: 6e2abc21cb68b484480a310995832fcc, type: 3}
+    AgencyID: 2
+    IsImportant: 0
+  - Prefab: {fileID: 2602306279208458359, guid: 6b3a06ae3e18b4c4c80b22fb9dd6617a, type: 3}
+    AgencyID: 2
+    IsImportant: 0
+  - Prefab: {fileID: 3475030248882919503, guid: 8f7b4e4139543844190aad4eef2003b4, type: 3}
+    AgencyID: 2
+    IsImportant: 0
+  - Prefab: {fileID: 2090325079910715266, guid: 4b512200c7481e446888938a569477f0, type: 3}
+    AgencyID: 2
+    IsImportant: 0
+  - Prefab: {fileID: 331370863126063802, guid: bb8450d79ee21e945a2d709639b7a62e, type: 3}
+    AgencyID: 2
+    IsImportant: 0
