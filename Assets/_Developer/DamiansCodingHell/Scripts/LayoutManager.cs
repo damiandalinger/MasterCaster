@@ -41,7 +41,7 @@ namespace ProjectCeros
         [SerializeField] private NewsGridRenderer _renderer;
 
         [SerializeField] private BlockPrefabMapping _prefabLibrary;
-        [SerializeField] private ArticleDatabase RandomArticlesPool;
+
         private NewsSelector _selector;
         #endregion
 
@@ -68,7 +68,8 @@ namespace ProjectCeros
             _selector.SelectImportantArticles();
 
             var importantArticles = _selector.SelectedImportantArticles;
-            var randomArticles = RandomArticlesPool.Items; // <- Hier korrigiert
+            var randomArticles = _selector.SelectedRandomArticles;
+            var fruitArticle = _selector.SelectedFruitArticle;
 
             var chosenPreset = FindSuitablePreset(importantArticles);
 
@@ -80,7 +81,7 @@ namespace ProjectCeros
 
             Debug.Log($"[LayoutManager] Preset {chosenPreset.name} selected.");
 
-            var assignments = AssignBlocks(chosenPreset, importantArticles, randomArticles);
+            var assignments = AssignBlocks(chosenPreset, importantArticles, randomArticles, fruitArticle);
             _renderer.Render(assignments);
         }
         #endregion
@@ -115,67 +116,62 @@ namespace ProjectCeros
         }
 
         // Assigns articles to available blocks based on their size category.
-        private List<BlockAssignment> AssignBlocks(LayoutPreset preset, List<Article> important, List<Article> random)
+        private List<BlockAssignment> AssignBlocks(LayoutPreset preset, List<Article> important, List<Article> random, Article fruit)
         {
             var result = new List<BlockAssignment>();
 
-            // Artikel sortieren
-            var longImportant = important.Where(h => h.SizeCategory == _longCategoryValue.Value).ToList();
-            var mediumImportant = important.Where(h => h.SizeCategory == _mediumCategoryValue.Value).ToList();
-            var shortImportant = important.Where(h => h.SizeCategory == _shortCategoryValue.Value).ToList();
+            var longImportant = important.Where(a => a.SizeCategory == _longCategoryValue.Value).ToList();
+            var mediumImportant = important.Where(a => a.SizeCategory == _mediumCategoryValue.Value).ToList();
+            var shortImportant = important.Where(a => a.SizeCategory == _shortCategoryValue.Value).ToList();
 
-            var longRandom = random.Where(h => h.SizeCategory == _longCategoryValue.Value).ToList();
-            var mediumRandom = random.Where(h => h.SizeCategory == _mediumCategoryValue.Value).ToList();
-            var shortRandom = random.Where(h => h.SizeCategory == _shortCategoryValue.Value).ToList();
+            var longRandom = random.Where(a => a.SizeCategory == _longCategoryValue.Value).ToList();
+            var mediumRandom = random.Where(a => a.SizeCategory == _mediumCategoryValue.Value).ToList();
+            var shortRandom = random.Where(a => a.SizeCategory == _shortCategoryValue.Value).ToList();
 
-            var blocks = preset.Blocks.OrderByDescending(b => GetBlockCategory(b)).ToList();
-
-            foreach (var block in blocks)
+            foreach (var block in preset.Blocks)
             {
                 int blockCategory = GetBlockCategory(block);
 
                 if (block.IsImportantNews)
                 {
                     var article = GetMatchingArticle(blockCategory, longImportant, mediumImportant, shortImportant);
-
                     if (article != null)
                     {
-                        GameObject prefab = _prefabLibrary.GetPrefab(block.GetSize(), article.AgencyID, true);
-
                         result.Add(new BlockAssignment
                         {
-                            Prefab = prefab,
+                            Prefab = _prefabLibrary.GetPrefab(block.GetSize(), article.AgencyID, true),
                             Position = block.Position,
                             ArticleHeadline = article.Headline,
-                            ArticleDescription = article.Description,
+                            ArticleDescription = article.Description
                         });
                     }
                 }
                 else
                 {
+                    // Random article
                     var filler = GetMatchingArticle(blockCategory, longRandom, mediumRandom, shortRandom);
-
                     if (filler != null)
                     {
-                        GameObject prefab = _prefabLibrary.GetPrefab(block.GetSize(), 2, false); // Agency 2 = Random
-
                         result.Add(new BlockAssignment
                         {
-                            Prefab = prefab,
+                            Prefab = _prefabLibrary.GetPrefab(block.GetSize(), 2, false),
                             Position = block.Position,
                             ArticleHeadline = filler.Headline,
-                            ArticleDescription = filler.Description,
+                            ArticleDescription = filler.Description
                         });
                     }
-                    else
+                    else if (fruit != null)
                     {
                         result.Add(new BlockAssignment
                         {
-                            Prefab = null,
+                            Prefab = _prefabLibrary.GetPrefab(block.GetSize(), 4, false),
                             Position = block.Position,
-                            ArticleHeadline = "[Empty]",
-                            ArticleDescription = "",
+                            ArticleHeadline = fruit.Headline,
+                            ArticleDescription = fruit.Description,
+                            ArticleSubgenre = fruit.Subgenre
                         });
+
+                        fruit = null; // Ensure only one gets assigned
                     }
                 }
             }

@@ -5,8 +5,9 @@
         "Description": "Narrative depth sets RPGs apart from others.",
         "AgencyID": 0,
         "Subgenre": "rpg",
-        "ValuePositive": 1.0,
-        "ValueNegative": 0.5
+        "ValuePositive": 0.1,
+        "ValueNegative": 2,
+        "StoryID": 0
     },
     {
         "PairID": 2001,
@@ -15,7 +16,8 @@
         "AgencyID": 1,
         "Subgenre": "rpg",
         "ValuePositive": 0.6,
-        "ValueNegative": 1.2
+        "ValueNegative": 1.2,
+        "StoryID": 0
     },
     {
         "PairID": 2002,
@@ -24,7 +26,8 @@
         "AgencyID": 0,
         "Subgenre": "rpg",
         "ValuePositive": 1.0,
-        "ValueNegative": 0.5
+        "ValueNegative": 0.5,
+        "StoryID": 0
     },
     {
         "PairID": 2002,
@@ -33,6 +36,7 @@
         "AgencyID": 1,
         "Subgenre": "rpg",
         "ValuePositive": 0.6,
-        "ValueNegative": 1.2
+        "ValueNegative": 1.2,
+        "StoryID": 0
     }
 ]

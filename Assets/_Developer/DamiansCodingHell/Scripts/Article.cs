@@ -22,5 +22,8 @@ namespace ProjectCeros
         public float ValueNegative;
 
         public int SizeCategory;
+
+        public int StoryID = 0;       // 0 = kein Storyartikel
+        public int StoryPart = 0;     // 1 = erster Teil der Story
     }
 }

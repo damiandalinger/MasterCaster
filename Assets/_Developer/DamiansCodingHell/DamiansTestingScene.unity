@@ -470,6 +470,9 @@ MonoBehaviour:
   - AllArticles: {fileID: 11400000, guid: 44b3f34d56ec18f45a08ede3511db02a, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
     UsesPairs: 0
+  - AllArticles: {fileID: 11400000, guid: 57aa8c8848c4c614985d5ee670b2cfd9, type: 2}
+    EligibleArticles: {fileID: 11400000, guid: 7f6f3aed222d5e5428bdc1c8a0c67daf, type: 2}
+    UsesPairs: 0
   debugLogging: 1
 --- !u!4 &823883495
 Transform:
@@ -524,6 +527,8 @@ MonoBehaviour:
     targetDatabase: {fileID: 11400000, guid: 28ebd0fef0132ff4fa6c02d9d4b9e130, type: 2}
   - json: {fileID: 4900000, guid: b578ddd6e5e553748a8922135bc2eede, type: 3}
     targetDatabase: {fileID: 11400000, guid: 44b3f34d56ec18f45a08ede3511db02a, type: 2}
+  - json: {fileID: 4900000, guid: 8c1899b2f21874f449d47f3b1a16e51c, type: 3}
+    targetDatabase: {fileID: 11400000, guid: 57aa8c8848c4c614985d5ee670b2cfd9, type: 2}
   _shortMaxLength:
     UseConstant: 0
     ConstantValue: 0
@@ -728,7 +733,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -858,7 +863,6 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: fb594465567f0a14ba3ef9aa397b4276, type: 2}
   _renderer: {fileID: 7466678180680496269}
   _prefabLibrary: {fileID: 11400000, guid: 7a8f1eada960cd140b1030d09faa4320, type: 2}
-  RandomArticlesPool: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
 --- !u!1 &6890105048835308181
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +902,10 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 4abc4ccbcb69fed4591c067475a70d39, type: 2}
   _gridParent: {fileID: 1737578111867922032}
+  _fruitSprites:
+  - {fileID: 21300000, guid: e648dae21c860c949a9773a8d7051bca, type: 3}
+  - {fileID: 21300000, guid: c725bca9539ec7b4198e52d51ceb4346, type: 3}
+  - {fileID: 21300000, guid: c1ff55e216bd1f34c81f262d0e4561b6, type: 3}
 --- !u!114 &7667019031840386168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,6 +962,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1fdd6439d0b23074aac3c9aa6d7053c4, type: 2}
   - {fileID: 11400000, guid: 1cc76ce089834f54a8e1b947252a6326, type: 2}
   - {fileID: 11400000, guid: 68ddad669d86c7d40a3371a817b9f845, type: 2}
+  eligibleRandomArticles: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
+  eligibleFruitArticles: {fileID: 11400000, guid: 7f6f3aed222d5e5428bdc1c8a0c67daf, type: 2}
   genreCount:
     UseConstant: 1
     ConstantValue: 3

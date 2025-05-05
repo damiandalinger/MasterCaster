@@ -14,9 +14,16 @@ namespace ProjectCeros
     /// </remarks>
     public class NewsSelector : MonoBehaviour
     {
-        [Header("Eligible Genre Pools")]
+        [Header("Important News Pools")]
         [Tooltip("Databases that hold eligible important articles (by genre).")]
         [SerializeField] private List<ArticleDatabase> eligibleImportantGenrePools;
+
+        [Header("Random News Pool")]
+        [Tooltip("Single database that holds eligible random articles.")]
+        [SerializeField] private ArticleDatabase eligibleRandomArticles;
+
+        [Tooltip("Eligible articles for fruit of the day.")]
+        [SerializeField] private ArticleDatabase eligibleFruitArticles;
 
         [Header("Selection Settings")]
         [Tooltip("How many genres should be selected per newspaper.")]
@@ -42,11 +49,15 @@ namespace ProjectCeros
         [SerializeField] private bool debugLogging = false;
 
         public List<Article> SelectedImportantArticles { get; private set; } = new();
+        public List<Article> SelectedRandomArticles { get; private set; } = new();
+        public Article SelectedFruitArticle { get; private set; }
         private Dictionary<int, List<Article>> pairedByGenre = new();
 
         public void SelectImportantArticles()
         {
             SelectedImportantArticles.Clear();
+            SelectedRandomArticles.Clear();
+            SelectedFruitArticle = null;
             pairedByGenre.Clear();
 
             // 1. Wähle Genres
@@ -83,14 +94,54 @@ namespace ProjectCeros
                 AddOptionalPairArticle(slotsNeeded: 1);
 
             // 4. Optionaler 5ter Artikel (Slot 5)
-            if (enableFifthSlot && Random.value < fifthSlotChance.Value / 100f)
+            if (enableFifthSlot)
             {
-                Debug.Log($"[NewsSelector] 🎲 Rolled fifth slot: continuing story.");
-                AddOptionalPairArticle(1);
+                bool useImportant = Random.value < (fifthSlotChance.Value / 100f);
+                if (useImportant)
+                {
+                    if (debugLogging)
+                        Debug.Log("[NewsSelector] 🎲 5th Slot → Important Story");
+
+                    AddOptionalPairArticle(1);
+                }
+                else
+                {
+                    if (debugLogging)
+                        Debug.Log("[NewsSelector] 🎲 5th Slot → Random News");
+
+                    SelectRandomArticles(1);
+                }
             }
+
+            // 5. Slot 6 – immer eine Random News
+            SelectRandomArticles(1);
+            SelectFruitOfTheDay();
 
             if (debugLogging)
                 LogSelectedArticles();
+            LogSelectedRandoms();
+        }
+
+        private void SelectRandomArticles(int count)
+        {
+            var pool = eligibleRandomArticles.Items.OrderBy(_ => Random.value).ToList();
+
+            for (int i = 0; i < count && i < pool.Count; i++)
+            {
+                var selected = pool[i];
+                SelectedRandomArticles.Add(selected);
+                eligibleRandomArticles.Items.Remove(selected);
+            }
+        }
+
+        private void SelectFruitOfTheDay()
+        {
+            var pool = eligibleFruitArticles.Items;
+            if (pool.Count == 0) return;
+
+            var picked = pool[Random.Range(0, pool.Count)];
+            SelectedFruitArticle = picked;
+            pool.Remove(picked);
         }
 
         private void AddOptionalPairArticle(int slotsNeeded)
@@ -150,6 +201,13 @@ namespace ProjectCeros
             {
                 Debug.Log($"→ {a.Headline} | Agency: {a.AgencyID}, Pair: {a.PairID}, Value+: {a.ValuePositive}, Value-: {a.ValueNegative}");
             }
+        }
+
+        private void LogSelectedRandoms()
+        {
+            Debug.Log("[NewsSelector] Selected Random Articles:");
+            foreach (var a in SelectedRandomArticles)
+                Debug.Log($"→ {a.Headline}");
         }
     }
 }

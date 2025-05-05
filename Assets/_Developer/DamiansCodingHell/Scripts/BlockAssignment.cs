@@ -17,5 +17,6 @@ namespace ProjectCeros
         public Vector2Int Position; // Position im Grid
         public string ArticleHeadline;
         public string ArticleDescription;
+        public string ArticleSubgenre;
     }
 }

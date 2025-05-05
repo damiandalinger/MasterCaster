@@ -11,6 +11,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ProjectCeros
 {
@@ -26,9 +27,30 @@ namespace ProjectCeros
 
         [Tooltip("Parent transform for all instantiated layout blocks.")]
         [SerializeField] private Transform _gridParent;
+
+        [Header("Fruit Images (drag them in)")]
+        [Tooltip("All fruit images, must be named exactly like the article Subgenre (e.g. 'peach').")]
+        [SerializeField] private List<Sprite> _fruitSprites = new();
+        private Dictionary<string, Sprite> _spriteLookup;
         #endregion
 
         #region Public Methods
+
+        private void Awake()
+        {
+            // Setup lookup dictionary from sprite names
+            _spriteLookup = new Dictionary<string, Sprite>();
+            foreach (var sprite in _fruitSprites)
+            {
+                if (sprite != null)
+                {
+                    string key = sprite.name.ToLower();
+                    if (!_spriteLookup.ContainsKey(key))
+                        _spriteLookup[key] = sprite;
+                }
+            }
+        }
+
         // Clears the current grid and renders the new layout based on block assignments.
         public void Render(List<BlockAssignment> assignments)
         {
@@ -45,6 +67,7 @@ namespace ProjectCeros
                 var instance = Instantiate(assignment.Prefab, _gridParent);
                 SetBlockPosition(instance, assignment.Position);
                 SetBlockTexts(instance, assignment.ArticleHeadline, assignment.ArticleDescription);
+                SetBlockImage(instance, assignment.ArticleSubgenre); // Neu
             }
         }
         #endregion
@@ -75,6 +98,26 @@ namespace ProjectCeros
 
             if (titleText != null) titleText.text = headlineTitle;
             if (descriptionText != null) descriptionText.text = headlineDescription;
+        }
+
+        private void SetBlockImage(GameObject block, string subgenre)
+        {
+            if (string.IsNullOrEmpty(subgenre)) return;
+
+            var image = block.transform.Find("Image")?.GetComponent<Image>();
+            if (image == null) return;
+
+            string key = subgenre.ToLower();
+            if (_spriteLookup.TryGetValue(key, out Sprite sprite))
+            {
+                image.sprite = sprite;
+                image.enabled = true;
+            }
+            else
+            {
+                Debug.LogWarning($"[NewsGridRenderer] ⚠️ Sprite for subgenre '{subgenre}' not found.");
+                image.enabled = false; // Optional fallback
+            }
         }
         #endregion
     }

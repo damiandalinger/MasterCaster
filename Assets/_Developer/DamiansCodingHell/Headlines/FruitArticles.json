@@ -1,0 +1,29 @@
+[
+  {
+    "PairID": 0,
+    "Headline": "Banana of the Day",
+    "Description": "Narrative",
+    "AgencyID": 4,
+    "Subgenre": "banana",
+    "ValuePositive": 0,
+    "ValueNegative": 0
+},
+{
+    "PairID": 0,
+    "Headline": "Cherry of the Day",
+    "Description": "Some ",
+    "AgencyID": 4,
+    "Subgenre": "cherry",
+    "ValuePositive": 0,
+    "ValueNegative": 0
+},
+{
+    "PairID": 0,
+    "Headline": "Peach of the Day",
+    "Description": "Narrati",
+    "AgencyID": 4,
+    "Subgenre": "peach",
+    "ValuePositive": 0,
+    "ValueNegative": 0
+}
+]

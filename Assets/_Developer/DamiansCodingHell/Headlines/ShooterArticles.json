@@ -6,7 +6,8 @@
         "AgencyID": 0,
         "Subgenre": "shooter",
         "ValuePositive": 1.2,
-        "ValueNegative": 0.6
+        "ValueNegative": 0.6,
+        "StoryID": 0
     },
     {
         "PairID": 1001,
@@ -15,7 +16,8 @@
         "AgencyID": 1,
         "Subgenre": "shooter",
         "ValuePositive": 0.8,
-        "ValueNegative": 1.1
+        "ValueNegative": 1.1,
+        "StoryID": 0
     },
     {
         "PairID": 1002,
@@ -24,7 +26,8 @@
         "AgencyID": 0,
         "Subgenre": "shooter",
         "ValuePositive": 1.2,
-        "ValueNegative": 0.6
+        "ValueNegative": 0.6,
+        "StoryID": 0
     },
     {
         "PairID": 1002,
@@ -33,6 +36,7 @@
         "AgencyID": 1,
         "Subgenre": "shooter",
         "ValuePositive": 0.8,
-        "ValueNegative": 1.1
+        "ValueNegative": 1.1,
+        "StoryID": 0
     }
 ]
