@@ -44,6 +44,7 @@ namespace ProjectCeros
 
         [Tooltip("Min % chance for a follow-up story article.")]
         [SerializeField] private FloatReference minContinuationChance;
+        private NewsPoolReshuffler _reshuffler;
 
         [Header("Debug")]
         [SerializeField] private bool debugLogging = false;
@@ -53,8 +54,13 @@ namespace ProjectCeros
         public Article SelectedFruitArticle { get; private set; }
         private Dictionary<int, List<Article>> pairedByGenre = new();
 
+        void Start()
+        {
+            _reshuffler = GetComponentInChildren<NewsPoolReshuffler>();
+        }
         public void SelectImportantArticles()
         {
+            _reshuffler.ReshufflePoolsIfNeeded();
             SelectedImportantArticles.Clear();
             SelectedRandomArticles.Clear();
             SelectedFruitArticle = null;
@@ -70,23 +76,30 @@ namespace ProjectCeros
             // 2. Aus jedem Genre ein Artikelpaar ziehen (eine Agentur)
             foreach (var genre in selectedGenres)
             {
-                var pairs = genre.Items
-                    .GroupBy(a => a.PairID)
-                    .Where(g => g.Count() == 2)
-                    .Select(g => g.ToList())
-                    .ToList();
+                var items = genre.Items;
+                if (items.Count == 0)
+                    continue;
 
-                if (pairs.Count == 0) continue;
+                // Prüfen, ob die beiden obersten Elemente ein Paar sind
+                if (items[0].PairID != 0
+                    && items.Count > 1
+                    && items[1].PairID == items[0].PairID)
+                {
+                    // Zufällig eines der beiden aus den oberen 2 nehmen
+                    var pick = Random.value < 0.5f ? items[0] : items[1];
 
-                var selectedPair = pairs[Random.Range(0, pairs.Count)];
-                var picked = selectedPair[Random.Range(0, 2)];
+                    SelectedImportantArticles.Add(pick);
+                    pairedByGenre[pick.PairID] = new List<Article> { items[0], items[1] };
 
-                SelectedImportantArticles.Add(picked);
-                pairedByGenre[picked.PairID] = selectedPair;
-
-                // Entferne beide aus Pool
-                foreach (var article in selectedPair)
-                    genre.Items.Remove(article);
+                    // Entferne beide Varianten aus dem Pool
+                    items.RemoveRange(0, 2);
+                }
+                else
+                {
+                    // Kein Paar, einfach den obersten Artikel nehmen
+                    SelectedImportantArticles.Add(items[0]);
+                    items.RemoveAt(0);
+                }
             }
 
             // 3. Story-Fortsetzung (Slot 4)
@@ -124,24 +137,25 @@ namespace ProjectCeros
 
         private void SelectRandomArticles(int count)
         {
-            var pool = eligibleRandomArticles.Items.OrderBy(_ => Random.value).ToList();
-
-            for (int i = 0; i < count && i < pool.Count; i++)
+            var items = eligibleRandomArticles.Items;
+            for (int i = 0; i < count && items.Count > 0; i++)
             {
-                var selected = pool[i];
+                // Nimm immer das oberste Element
+                var selected = items[0];
                 SelectedRandomArticles.Add(selected);
-                eligibleRandomArticles.Items.Remove(selected);
+                items.RemoveAt(0);
             }
         }
 
         private void SelectFruitOfTheDay()
         {
-            var pool = eligibleFruitArticles.Items;
-            if (pool.Count == 0) return;
+            var items = eligibleFruitArticles.Items;
+            if (items.Count == 0)
+                return;
 
-            var picked = pool[Random.Range(0, pool.Count)];
-            SelectedFruitArticle = picked;
-            pool.Remove(picked);
+            // Immer das oberste Element nehmen
+            SelectedFruitArticle = items[0];
+            items.RemoveAt(0);
         }
 
         private void AddOptionalPairArticle(int slotsNeeded)

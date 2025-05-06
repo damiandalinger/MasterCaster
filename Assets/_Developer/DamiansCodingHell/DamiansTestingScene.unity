@@ -457,19 +457,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42cc051fb09e044790af70df46e5771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pairedChanceOffset1: 0.4
+  pairedChanceOffset2: 1
+  unpairedChanceOffset1: 0
+  unpairedChanceOffset2: 0.5
   genrePoolPairs:
-  - AllArticles: {fileID: 11400000, guid: f8c808b73a2999e4a8063241d2339b8c, type: 2}
-    EligibleArticles: {fileID: 11400000, guid: 1fdd6439d0b23074aac3c9aa6d7053c4, type: 2}
-    UsesPairs: 1
-  - AllArticles: {fileID: 11400000, guid: 188d72054dbc3894399eb03028ced59e, type: 2}
-    EligibleArticles: {fileID: 11400000, guid: 1cc76ce089834f54a8e1b947252a6326, type: 2}
-    UsesPairs: 1
   - AllArticles: {fileID: 11400000, guid: 28ebd0fef0132ff4fa6c02d9d4b9e130, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 68ddad669d86c7d40a3371a817b9f845, type: 2}
     UsesPairs: 1
   - AllArticles: {fileID: 11400000, guid: 44b3f34d56ec18f45a08ede3511db02a, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
     UsesPairs: 0
+  - AllArticles: {fileID: 11400000, guid: 188d72054dbc3894399eb03028ced59e, type: 2}
+    EligibleArticles: {fileID: 11400000, guid: 1cc76ce089834f54a8e1b947252a6326, type: 2}
+    UsesPairs: 1
+  - AllArticles: {fileID: 11400000, guid: f8c808b73a2999e4a8063241d2339b8c, type: 2}
+    EligibleArticles: {fileID: 11400000, guid: 1fdd6439d0b23074aac3c9aa6d7053c4, type: 2}
+    UsesPairs: 1
   - AllArticles: {fileID: 11400000, guid: 57aa8c8848c4c614985d5ee670b2cfd9, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 7f6f3aed222d5e5428bdc1c8a0c67daf, type: 2}
     UsesPairs: 0
@@ -482,12 +486,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823883493}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 89864577696728051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1347680276
 GameObject:
@@ -696,7 +700,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 823883495}
   m_Father: {fileID: 8262235437144944830}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &784571691567877363
@@ -1028,4 +1033,3 @@ SceneRoots:
   - {fileID: 404019292}
   - {fileID: 2017232323}
   - {fileID: 1347680278}
-  - {fileID: 823883495}

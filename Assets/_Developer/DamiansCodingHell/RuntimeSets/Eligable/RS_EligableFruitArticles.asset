@@ -14,66 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - PairID: 0
-    Headline: R1
-    Description: Narrative
-    AgencyID: 2
-    Subgenre: rpg
-    ValuePositive: 1
-    ValueNegative: 0.5
-    SizeCategory: 0
-  - PairID: 0
-    Headline: R2
+    Headline: Cherry of the Day
     Description: 'Some '
-    AgencyID: 2
-    Subgenre: rpg
-    ValuePositive: 0.6
-    ValueNegative: 1.2
+    AgencyID: 4
+    Subgenre: cherry
+    ValuePositive: 0
+    ValueNegative: 0
     SizeCategory: 0
+    StoryID: 0
+    StoryPart: 0
   - PairID: 0
-    Headline: R3
-    Description: Narrati
-    AgencyID: 2
-    Subgenre: rpg
-    ValuePositive: 1
-    ValueNegative: 0.5
-    SizeCategory: 0
-  - PairID: 0
-    Headline: R4
-    Description: Some play
-    AgencyID: 2
-    Subgenre: rpg
-    ValuePositive: 0.6
-    ValueNegative: 1.2
-    SizeCategory: 0
-  - PairID: 0
-    Headline: R5
+    Headline: Banana of the Day
     Description: Narrative
-    AgencyID: 2
-    Subgenre: rpg
-    ValuePositive: 1
-    ValueNegative: 0.5
+    AgencyID: 4
+    Subgenre: banana
+    ValuePositive: 0
+    ValueNegative: 0
     SizeCategory: 0
+    StoryID: 0
+    StoryPart: 0
   - PairID: 0
-    Headline: R6
-    Description: 'Some '
-    AgencyID: 2
-    Subgenre: rpg
-    ValuePositive: 0.6
-    ValueNegative: 1.2
-    SizeCategory: 0
-  - PairID: 0
-    Headline: R7
+    Headline: Peach of the Day
     Description: Narrati
-    AgencyID: 2
-    Subgenre: rpg
-    ValuePositive: 1
-    ValueNegative: 0.5
+    AgencyID: 4
+    Subgenre: peach
+    ValuePositive: 0
+    ValueNegative: 0
     SizeCategory: 0
-  - PairID: 0
-    Headline: R8
-    Description: Some play
-    AgencyID: 2
-    Subgenre: rpg
-    ValuePositive: 0.6
-    ValueNegative: 1.2
-    SizeCategory: 0
+    StoryID: 0
+    StoryPart: 0
