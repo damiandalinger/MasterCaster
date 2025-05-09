@@ -1,5 +1,44 @@
+# Set default behavior to automatically detect text files and normalize line endings
 * text=auto
 
-# Ensure consistent line endings for FMOD files (especially for macOS compatibility)
-Assets/Plugins/FMOD//*.bundle text eol=lf
-Assets/Plugins/FMOD//Info.plist text eol=lf
+# Explicit LF line endings for Unity text-based files
+*.cs           text eol=lf
+*.shader       text eol=lf
+*.cginc        text eol=lf
+*.hlsl         text eol=lf
+*.compute      text eol=lf
+*.uxml         text eol=lf
+*.uss          text eol=lf
+*.asmdef       text eol=lf
+*.json         text eol=lf
+*.xml          text eol=lf
+*.txt          text eol=lf
+*.md           text eol=lf
+*.yml          text eol=lf
+*.yaml         text eol=lf
+
+# LF endings for Unity-specific asset files
+*.asset        text eol=lf
+*.meta         text eol=lf
+*.unity        text eol=lf
+*.prefab       text eol=lf
+*.mat          text eol=lf
+
+# FMOD: treat .bundle files as binary (do not change line endings)
+Assets/Plugins/FMOD/**/*.bundle binary
+
+# FMOD: ensure Info.plist files have LF endings
+Assets/Plugins/FMOD/**/Info.plist text eol=lf
+
+# Treat common binary files properly
+*.dll          binary
+*.exe          binary
+*.png          binary
+*.jpg          binary
+*.jpeg         binary
+*.mp3          binary
+*.ogg          binary
+*.wav          binary
+*.fbx          binary
+*.anim         binary
+*.controller   binary
