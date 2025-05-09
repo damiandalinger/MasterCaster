@@ -55,14 +55,6 @@ namespace ProjectCeros
             _selector = GetComponent<NewsSelector>();
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                BuildLayout();
-            }
-        }
-
         #endregion
 
         #region Public Methods
