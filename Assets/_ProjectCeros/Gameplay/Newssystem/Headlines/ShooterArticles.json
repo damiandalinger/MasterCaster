@@ -1,0 +1,42 @@
+[
+    {
+        "PairID": 1001,
+        "Headline": "Shooter games dominate 2025 charts",
+        "Description": "Fast-paced action continues to lead the industry.",
+        "AgencyID": 0,
+        "Subgenre": "shooter",
+        "ValuePositive": 1.2,
+        "ValueNegative": 0.6,
+        "StoryID": 0
+    },
+    {
+        "PairID": 1001,
+        "Headline": "Critics say shooters lack innovation",
+        "Description": "Repetitive gameplay cycles hinder growth.",
+        "AgencyID": 1,
+        "Subgenre": "shooter",
+        "ValuePositive": 0.8,
+        "ValueNegative": 1.1,
+        "StoryID": 0
+    },
+    {
+        "PairID": 1002,
+        "Headline": "Shooter games",
+        "Description": "Fast-paced action continues to lead the industry.",
+        "AgencyID": 0,
+        "Subgenre": "shooter",
+        "ValuePositive": 1.2,
+        "ValueNegative": 0.6,
+        "StoryID": 0
+    },
+    {
+        "PairID": 1002,
+        "Headline": "Critics say",
+        "Description": "Repetitive gameplay cycles hinder growth.",
+        "AgencyID": 1,
+        "Subgenre": "shooter",
+        "ValuePositive": 0.8,
+        "ValueNegative": 1.1,
+        "StoryID": 0
+    }
+]
