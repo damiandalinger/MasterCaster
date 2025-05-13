@@ -68,7 +68,7 @@ namespace ProjectCeros
 
         #region Lifecycle Methods
 
-        void Awake()
+        private void Awake()
         {
             _reshuffler = GetComponentInChildren<NewsDatabaseReshuffler>();
         }

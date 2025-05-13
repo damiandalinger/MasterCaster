@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7255526877399649507}
   m_Layer: 0
-  m_Name: NewsSystem
+  m_Name: NewsSystemold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,0 +1,256 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3497879011262180529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3329887583220187435}
+  - component: {fileID: 3210063376729946278}
+  m_Layer: 0
+  m_Name: '@NewsPoolReshuffler'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3329887583220187435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497879011262180529}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4266409222978876612}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3210063376729946278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497879011262180529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42cc051fb09e044790af70df46e5771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pairedChanceOffset1:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 1c9833855902f4a4ea8226a4d0f03f98, type: 2}
+  _pairedChanceOffset2:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: cf297221ddb35414ca214bf379c4819a, type: 2}
+  _unpairedChanceOffset1:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 1ed2ff212c4b88547a55e4d2f1f7d2fb, type: 2}
+  _unpairedChanceOffset2:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 08512edabd4c6a94b83d39ef63e62628, type: 2}
+  _articlePoolPairs:
+  - AllArticles: {fileID: 11400000, guid: 57aa8c8848c4c614985d5ee670b2cfd9, type: 2}
+    EligibleArticles: {fileID: 11400000, guid: 7f6f3aed222d5e5428bdc1c8a0c67daf, type: 2}
+    UsesPairs: 0
+  - AllArticles: {fileID: 11400000, guid: 44b3f34d56ec18f45a08ede3511db02a, type: 2}
+    EligibleArticles: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
+    UsesPairs: 0
+  - AllArticles: {fileID: 11400000, guid: f8c808b73a2999e4a8063241d2339b8c, type: 2}
+    EligibleArticles: {fileID: 11400000, guid: 1fdd6439d0b23074aac3c9aa6d7053c4, type: 2}
+    UsesPairs: 1
+  - AllArticles: {fileID: 11400000, guid: 188d72054dbc3894399eb03028ced59e, type: 2}
+    EligibleArticles: {fileID: 11400000, guid: 1cc76ce089834f54a8e1b947252a6326, type: 2}
+    UsesPairs: 1
+  - AllArticles: {fileID: 11400000, guid: 28ebd0fef0132ff4fa6c02d9d4b9e130, type: 2}
+    EligibleArticles: {fileID: 11400000, guid: 68ddad669d86c7d40a3371a817b9f845, type: 2}
+    UsesPairs: 1
+  _isDebugLogging: 0
+--- !u!1 &7877826804840754719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4266409222978876612}
+  - component: {fileID: 753618992931477180}
+  - component: {fileID: 2354113631319605285}
+  - component: {fileID: 2468582364305282710}
+  - component: {fileID: 7006981452719394654}
+  m_Layer: 0
+  m_Name: '@NewsManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4266409222978876612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877826804840754719}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3329887583220187435}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753618992931477180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877826804840754719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7498ed693229ec408e6584c927d9e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layoutPresets:
+  - {fileID: 11400000, guid: eac63af97df8f6646af17606fc183bfc, type: 2}
+  - {fileID: 11400000, guid: 911beae861468024b80c6eeb8a508273, type: 2}
+  - {fileID: 11400000, guid: 9051034d65a32394eb492bc9e5ae27c0, type: 2}
+  - {fileID: 11400000, guid: 3cf5016fa0dbd914093ec42dad664b00, type: 2}
+  _shortBlockAreaLimit:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 9b94a744c4a1abd438b8870c71635190, type: 2}
+  _mediumBlockAreaLimit:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 64cc7ec2b65489d41b4b19131c211b8c, type: 2}
+  _shortCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: f46e7247ca57bfe49b974561885dd2f7, type: 2}
+  _mediumCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 64fd56329464efb4bb235a7a187e904a, type: 2}
+  _longCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fb594465567f0a14ba3ef9aa397b4276, type: 2}
+  _prefabMapping: {fileID: 11400000, guid: 04002f44a5dea2c4a9b3db0b403ff3ce, type: 2}
+--- !u!114 &2354113631319605285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877826804840754719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602dc5886a0e2d141922e7004cc20b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eligibleImportantArticles:
+  - {fileID: 11400000, guid: 1fdd6439d0b23074aac3c9aa6d7053c4, type: 2}
+  - {fileID: 11400000, guid: 1cc76ce089834f54a8e1b947252a6326, type: 2}
+  - {fileID: 11400000, guid: 68ddad669d86c7d40a3371a817b9f845, type: 2}
+  _eligibleRandomArticles: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
+  _eligibleFruitArticles: {fileID: 11400000, guid: 7f6f3aed222d5e5428bdc1c8a0c67daf, type: 2}
+  _genreCount:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 4678b159631ecb34e871e86272b07353, type: 2}
+  _enableHypeSlot:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: e11184bfba8a01c4f9840eb874a6a414, type: 2}
+  _enableFifthSlot:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 888fbd59a74bfe144a5a07fc2834a2f2, type: 2}
+  _fifthSlotChance:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: f7b3c59ed165c8f46ace5be8f7f2ed54, type: 2}
+  _randomArticleCount:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: ce33740edbc350749a930e86c70a969d, type: 2}
+  _maxHypeChance:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 2100a6737a637d8488105150bf4aa91c, type: 2}
+  _minHypeChance:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 1f2bfbdd8b86d844aa2e2e46d5e4b4a6, type: 2}
+  _isDebugLogging: 0
+--- !u!114 &2468582364305282710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877826804840754719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756af48229c34a140bf09dfa3d17e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2ff8ebb54a5b78d488ec91d90c7032a5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 753618992931477180}
+        m_TargetAssemblyTypeName: ProjectCeros.LayoutManager, Assembly-CSharp
+        m_MethodName: BuildLayout
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7006981452719394654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877826804840754719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756af48229c34a140bf09dfa3d17e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 3b4844cc409e8e2479e734f4c4a610b3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 753618992931477180}
+        m_TargetAssemblyTypeName: ProjectCeros.LayoutManager, Assembly-CSharp
+        m_MethodName: BuildLayout
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

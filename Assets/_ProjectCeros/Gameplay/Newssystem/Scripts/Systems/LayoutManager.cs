@@ -38,11 +38,10 @@ namespace ProjectCeros
         [Tooltip("Int value assigned to long descriptions.")]
         [SerializeField] private IntReference _longCategoryValue;
 
-        [Tooltip("Drag the NewsGridRenderer here.")]
-        [SerializeField] private NewsGridRenderer _renderer;
-
         [Tooltip("Mapping of all block prefabs used for layout generation.")]
         [SerializeField] private BlockPrefabMapping _prefabMapping;
+
+        public List<BlockAssignment> CurrentAssignments { get; private set; }
 
         private NewsSelector _selector;
 
@@ -77,7 +76,7 @@ namespace ProjectCeros
             }
 
             var assignments = AssignBlocks(chosenPreset, importantArticles, randomArticles, fruitArticle);
-            _renderer.Render(assignments);
+            CurrentAssignments = assignments;
         }
 
         #endregion

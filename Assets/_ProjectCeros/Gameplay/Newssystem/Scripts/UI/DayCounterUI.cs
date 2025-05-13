@@ -20,6 +20,11 @@ namespace ProjectCeros
         [SerializeField, Tooltip("Text element where the current day number will be displayed.")]
         private TextMeshProUGUI dayText;
 
+        private void OnEnable()
+        {
+            UpdateDayCounter();
+        }
+
         // Updates the text field to show the current day.
         public void UpdateDayCounter()
         {
