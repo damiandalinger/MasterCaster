@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/_ProjectCeros/Resources/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638823961951024443
+  lastModified: 638804856005398507
   FileSizes: []
   Exists: 1
 --- !u!114 &-5583464924755267569
@@ -123,7 +123,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3364671461531975951}
   cacheVersion: 131847
-  cacheTime: 638823961951054274
+  cacheTime: 638804856005542577
   SerializableEventsDict:
   - key: event:/New Event
     index: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   Path: Assets/_ProjectCeros/Resources/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638823961951034213
+  lastModified: 638804856005526314
   FileSizes:
   - Name: 
     Value: 960
@@ -193,6 +193,6 @@ MonoBehaviour:
   Path: Assets/_ProjectCeros/Resources/FMODBanks/Desktop/Test.bank
   Name: Test
   StudioPath: bank:/Test
-  lastModified: 638823961951054274
+  lastModified: 638804856005542577
   FileSizes: []
   Exists: 1

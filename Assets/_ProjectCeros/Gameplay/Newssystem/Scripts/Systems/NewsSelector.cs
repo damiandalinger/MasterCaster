@@ -38,6 +38,9 @@ namespace ProjectCeros
         [Tooltip("How many genres should be selected per newspaper.")]
         [SerializeField] private IntReference _genreCount;
 
+        [Tooltip("Penalty multiplier for genres that were selected in the previous selection. Range: 0.0 (strong penalty) to 1.0 (no penalty)")]
+        [SerializeField] private FloatReference _repeatPenaltyFactor;
+
         [Tooltip("Enable a possible hype slot 4.")]
         [SerializeField] private BoolReference _enableHypeSlot;
 
@@ -63,6 +66,7 @@ namespace ProjectCeros
 
         private NewsDatabaseReshuffler _reshuffler;
         private Dictionary<int, List<Article>> _pairedByGenre = new();
+        private List<ArticleDatabase> _lastSelectedGenres = new List<ArticleDatabase>();
 
         #endregion
 
@@ -89,10 +93,7 @@ namespace ProjectCeros
 
 
             // 1. Select a genre.
-            var selectedGenres = _eligibleImportantArticles
-                .OrderBy(_ => Random.value)
-                .Take(_genreCount.Value)
-                .ToList();
+            var selectedGenres = SelectGenres();
 
             // 2. Select the primary importatnt articles from each genre.
             foreach (var genre in selectedGenres)
@@ -142,6 +143,36 @@ namespace ProjectCeros
         #endregion
 
         #region Private Methods
+
+        // Selects a set of genres using weighted randomness.
+        // Genres selected in the previous round have a reduced chance of being picked again.
+        public List<ArticleDatabase> SelectGenres()
+        {
+            // Step 1: Create weighted list
+            var weightedGenres = new List<(ArticleDatabase db, float weight)>();
+
+            foreach (var db in _eligibleImportantArticles)
+            {
+                bool wasPreviouslySelected = _lastSelectedGenres.Contains(db);
+                float baseWeight = Random.value;
+
+                float finalWeight = wasPreviouslySelected ? baseWeight * _repeatPenaltyFactor : baseWeight;
+                weightedGenres.Add((db, finalWeight));
+            }
+
+            // Step 2: Sort by weight descending (more likely = higher finalWeight)
+            var selectedGenres = weightedGenres
+                .OrderByDescending(entry => entry.weight)
+                .Take(_genreCount.Value)
+                .Select(entry => entry.db)
+                .ToList();
+
+            // Step 3: Store current selection as last
+            _lastSelectedGenres = selectedGenres;
+
+            return selectedGenres;
+        }
+
 
         // Selects and removes the specified number of random articles.
         private void SelectRandomArticles(int count)

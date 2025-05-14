@@ -55,6 +55,12 @@ MonoBehaviour:
     TargetDatabase: {fileID: 11400000, guid: 188d72054dbc3894399eb03028ced59e, type: 2}
   - Json: {fileID: 4900000, guid: 0978ac7124f85a04e850118fdc609996, type: 3}
     TargetDatabase: {fileID: 11400000, guid: 28ebd0fef0132ff4fa6c02d9d4b9e130, type: 2}
+  - Json: {fileID: 4900000, guid: c276276d31443e44782f5b9f05e17b86, type: 3}
+    TargetDatabase: {fileID: 11400000, guid: e3c452dc0bc250c47a45d03adc96d903, type: 2}
+  - Json: {fileID: 4900000, guid: a7f3ad83181595b49a98405580eb1c46, type: 3}
+    TargetDatabase: {fileID: 11400000, guid: 3eb52f70e9c001f4d8c1afe5ab86c754, type: 2}
+  - Json: {fileID: 4900000, guid: 1bda3f7b6d1c374418792cd30b9439e0, type: 3}
+    TargetDatabase: {fileID: 11400000, guid: c46c2ff12569f6345a49e44201d2f0be, type: 2}
   _shortMaxLength:
     UseConstant: 0
     ConstantValue: 0
