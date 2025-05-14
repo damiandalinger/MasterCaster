@@ -81,9 +81,11 @@ namespace ProjectCeros
                     foreach (var listener in log.listeners)
                     {
                         EditorGUILayout.BeginHorizontal();
-                        EditorGUILayout.LabelField("Listener: " + listener.name);
-                        if (GUILayout.Button("Select", GUILayout.Width(60)))
+                        EditorGUILayout.LabelField("Listener: " + (listener != null ? listener.name : "<Destroyed>"));
+                        if (listener != null && GUILayout.Button("Select", GUILayout.Width(60)))
+                        {
                             Selection.activeGameObject = listener;
+                        }
                         EditorGUILayout.EndHorizontal();
                     }
                 }

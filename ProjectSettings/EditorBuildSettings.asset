@@ -5,11 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_ProjectCeros/Level/Scenes/DamiansScene/DamiansScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/_ProjectCeros/Scenes/News/News.unity
+    path: Assets/_ProjectCeros/Scenes/Bootstrapper/Bootstrapper.unity
+    guid: 2d57a5525abfce54586bac363015c6de
+  - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/MainMenu/MainMenu.unity
+    guid: c3ab43eec8d1cbe49bf15e6624a3c59e
+  - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/GameSession/GameSession.unity
+    guid: 18a34f54c3dee4f43969ae5bf14c42e8
+  - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/Bedroom/Bedroom.unity
+    guid: 205aa528a767dfa42a015c891f34bd73
+  - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/NewspaperUI/NewspaperUI.unity
     guid: 9eee40a474cb5a94dbc0572082f92fa2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

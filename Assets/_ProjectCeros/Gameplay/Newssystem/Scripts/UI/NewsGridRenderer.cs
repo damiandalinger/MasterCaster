@@ -33,6 +33,7 @@ namespace ProjectCeros
         [Header("Fruit Images")]
         [Tooltip("All fruit images, must be named exactly like the article Subgenre property (e.g. 'peach').")]
         [SerializeField] private List<Sprite> _fruitSprites = new();
+
         private Dictionary<string, Sprite> _spriteLookup;
 
         #endregion
@@ -48,12 +49,34 @@ namespace ProjectCeros
                 .ToDictionary(group => group.Key, group => group.First());
         }
 
+        // Render the Newspaper as soon as the scene is loaded.
+        private void Start()
+        {
+            RenderFromLayout();
+        }
+
         #endregion
 
         #region Public Methods
 
+        // Renders content using the current layout assignments from the active LayoutManager in the scene.
+        [ContextMenu("DEBUG: Render Now")]
+        public void RenderFromLayout()
+        {
+            var layoutManager = FindFirstObjectByType<LayoutManager>();
+            if (layoutManager == null)
+                return;
+
+            var assignments = layoutManager.CurrentAssignments;
+
+            if (assignments == null || assignments.Count == 0)
+                return;
+
+            Render(assignments);
+        }
+
         // Clears the current grid and renders the new layout based on block assignments.
-        public void Render(List<BlockAssignment> assignments)
+        private void Render(List<BlockAssignment> assignments)
         {
             ClearGrid();
 
@@ -118,7 +141,7 @@ namespace ProjectCeros
                 image.enabled = true;
             }
         }
-        
+
         #endregion
     }
 }

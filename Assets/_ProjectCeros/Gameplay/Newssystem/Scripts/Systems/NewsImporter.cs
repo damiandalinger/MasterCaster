@@ -44,21 +44,11 @@ namespace ProjectCeros
 
         #endregion
 
-        #region Lifecycle Methods
-
-        // Should eventually be replaced by explicit game initialization.
-        private void Awake()
-        {
-            ImportAll();
-        }
-
-        #endregion
-
         #region Public Methods
 
         // Imports article data from all defined JSON sources and classifies them based on description length.
         // Fills the corresponding target databases with the processed articles.
-        private void ImportAll()
+        public void ImportAll()
         {
             foreach (var source in _importSources)
             {

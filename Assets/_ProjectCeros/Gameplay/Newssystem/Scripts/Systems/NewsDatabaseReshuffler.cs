@@ -40,17 +40,21 @@ namespace ProjectCeros
 
         #endregion
 
-        #region Lifecycle Methods
-
-        // Needs to be moved into game creation.
-        private void Start()
-        {
-            RefreshAllPools();
-        }
-
-        #endregion
-
         #region Public Methods
+
+        // Reshuffles all article pools from scratch.
+        // Called on start and available via context menu for debugging.
+        [ContextMenu("DEBUG: Reshuffle All Pools")]
+        public void RefreshAllPools()
+        {
+            foreach (var pair in _articlePoolPairs)
+            {
+                BuildEligibleQueue(pair);
+
+                Log($" Full reshuffle for genre: {GetGenreName(pair)}");
+            }
+            PrintEligibleQueues();
+        }
 
         // Reshuffles only those article pools whose eligible queues are currently empty.
         public void ReshufflePoolsIfNeeded()
@@ -187,20 +191,6 @@ namespace ProjectCeros
                     Log($"{i}: {a.Headline} (StoryID={a.StoryID}, Part={a.StoryPart}, PairID={a.PairID})");
                 }
             }
-        }
-
-        // Reshuffles all article pools from scratch.
-        // Called on start and available via context menu for debugging.
-        [ContextMenu("Reshuffle All Pools")]
-        private void RefreshAllPools()
-        {
-            foreach (var pair in _articlePoolPairs)
-            {
-                BuildEligibleQueue(pair);
-
-                Log($" Full reshuffle for genre: {GetGenreName(pair)}");
-            }
-            PrintEligibleQueues();
         }
 
         #endregion
