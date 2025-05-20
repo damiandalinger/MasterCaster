@@ -301,11 +301,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a914ca1476743840aeef121ba9932af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDay:
+  _valueToDisplay:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 4d88b8b3e7919fa49a3283bcff4b3b36, type: 2}
-  dayText: {fileID: 338875311867189049}
+  _targetText: {fileID: 338875311867189049}
+  _prefix: 'Day: '
+  _suffix: 
 --- !u!114 &5834264956027324834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,8 +325,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2564623240450778438}
-        m_TargetAssemblyTypeName: ProjectCeros.DayCounterUI, Assembly-CSharp
-        m_MethodName: UpdateDayCounter
+        m_TargetAssemblyTypeName: ProjectCeros.IntVariableDisplayUI, Assembly-CSharp
+        m_MethodName: UpdateDisplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

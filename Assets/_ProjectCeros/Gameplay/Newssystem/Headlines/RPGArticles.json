@@ -4,9 +4,9 @@
         "Headline": "RPG 1A",
         "Description": "Narrative depth sets RPGs apart from others.",
         "AgencyID": 0,
-        "Subgenre": "rpg",
+        "Subgenre": "/",
         "ValuePositive": 0.1,
-        "ValueNegative": 2,
+        "ValueNegative": 1.8,
         "StoryID": 0
     },
     {
@@ -14,9 +14,9 @@
         "Headline": "RPG 1B",
         "Description": "Some players demand more action and less dialogue.",
         "AgencyID": 1,
-        "Subgenre": "rpg",
-        "ValuePositive": 0.6,
-        "ValueNegative": 1.2,
+        "Subgenre": "/",
+        "ValuePositive": 0.1,
+        "ValueNegative": 1.8,
         "StoryID": 0
     },
     {
@@ -24,9 +24,9 @@
         "Headline": "RPG 2A",
         "Description": "Narrative depth sets RPGs apart from others.",
         "AgencyID": 0,
-        "Subgenre": "rpg",
-        "ValuePositive": 1.0,
-        "ValueNegative": 0.5,
+        "Subgenre": "/",
+        "ValuePositive": 0.9,
+        "ValueNegative": 1.5,
         "StoryID": 0
     },
     {
@@ -34,29 +34,29 @@
         "Headline": "RPG 2B",
         "Description": "Some players demand more action and less dialogue.",
         "AgencyID": 1,
-        "Subgenre": "rpg",
-        "ValuePositive": 0.6,
-        "ValueNegative": 1.2,
+        "Subgenre": "/",
+        "ValuePositive": 0.9,
+        "ValueNegative": 1.5,
         "StoryID": 0
     },
     {
         "PairID": 3003,
-        "Headline": "RPG 3A",
+        "Headline": "RPG 3A Drama",
         "Description": "Narrative depth sets RPGs apart from others.",
         "AgencyID": 0,
-        "Subgenre": "rpg",
+        "Subgenre": "drama",
         "ValuePositive": 1.0,
-        "ValueNegative": 0.5,
+        "ValueNegative": 0.8,
         "StoryID": 0
     },
     {
         "PairID": 3003,
-        "Headline": "RPG 3B",
+        "Headline": "RPG 3B Drama",
         "Description": "Some players demand more action and less dialogue.",
         "AgencyID": 1,
-        "Subgenre": "rpg",
-        "ValuePositive": 0.6,
-        "ValueNegative": 1.2,
+        "Subgenre": "drama",
+        "ValuePositive": 1.0,
+        "ValueNegative": 0.8,
         "StoryID": 0
     }
 ]

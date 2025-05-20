@@ -25,14 +25,6 @@ namespace ProjectCeros
 
         #region Public Methods
 
-        // Starts the first day of a new game.
-        // Sets the current day to 1 and raises the day start event.
-        public void StartFirstDay()
-        {
-            _currentDay.Variable.SetValue(1);
-            _onNewDayStarted.Raise();
-        }
-
         // Advances the game by one day.
         // Increments the current day and notifies listeners.
         public void NextDay()

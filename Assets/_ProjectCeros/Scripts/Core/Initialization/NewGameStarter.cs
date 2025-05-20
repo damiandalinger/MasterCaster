@@ -38,6 +38,13 @@ namespace ProjectCeros
         [Tooltip("Names of scenes to unload after game start is complete.")]
         [SerializeField] private List<string> _sceneNamesToUnload = new();
 
+        [Header("Values")]
+        [Tooltip("The IntVariable of the listener count.")]
+        [SerializeField] private IntVariable _listenerCount;
+
+        [Tooltip("The IntVariable of the day count.")]
+        [SerializeField] private IntVariable _currentDay;
+
         #endregion
 
         #region Public Methods
@@ -49,6 +56,9 @@ namespace ProjectCeros
 
             // Delay to ensure UI updates.
             await Task.Yield();
+
+            _listenerCount.SetValue(0);
+            _currentDay.SetValue(1);
 
             await LoadAdditiveScenes();
 

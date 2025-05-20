@@ -1,22 +1,22 @@
 [
     {
         "PairID": 4001,
-        "Headline": "Shooter 1A",
+        "Headline": "Shooter 1A Drama",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "shooter",
+        "Subgenre": "drama",
         "ValuePositive": 1.2,
         "ValueNegative": 0.6,
         "StoryID": 0
     },
     {
         "PairID": 4001,
-        "Headline": "Shooter 1B",
+        "Headline": "Shooter 1B Drama",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "shooter",
-        "ValuePositive": 0.8,
-        "ValueNegative": 1.1,
+        "Subgenre": "drama",
+        "ValuePositive": 1.2,
+        "ValueNegative": 0.6,
         "StoryID": 0
     },
     {
@@ -24,9 +24,9 @@
         "Headline": "Shooter 2A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "shooter",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "/",
+        "ValuePositive": 1.8,
+        "ValueNegative": 1.8,
         "StoryID": 0
     },
     {
@@ -34,9 +34,9 @@
         "Headline": "Shooter 2B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "shooter",
-        "ValuePositive": 0.8,
-        "ValueNegative": 1.1,
+        "Subgenre": "/",
+        "ValuePositive": 1.8,
+        "ValueNegative": 1.8,
         "StoryID": 0
     },
     {
@@ -44,9 +44,9 @@
         "Headline": "Shooter 3A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "shooter",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "/",
+        "ValuePositive": 0.8,
+        "ValueNegative": 1.4,
         "StoryID": 0
     },
     {
@@ -54,9 +54,9 @@
         "Headline": "Shooter 3B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "shooter",
+        "Subgenre": "/",
         "ValuePositive": 0.8,
-        "ValueNegative": 1.1,
+        "ValueNegative": 1.4,
         "StoryID": 0
     }
 ]

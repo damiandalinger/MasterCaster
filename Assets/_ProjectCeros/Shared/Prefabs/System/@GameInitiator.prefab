@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fab3942b37a7f44f84852ee4dac8278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _persistentPrefabs: []
+  _persistentPrefabs:
+  - {fileID: 4431615166882675191, guid: b4605551c869a8a4e9977ebdc13ad45e, type: 3}
   _onGameInitialized: {fileID: 11400000, guid: 88a3e9b587f775e4eb4f26840673de38, type: 2}
 --- !u!114 &8638104865614212774
 MonoBehaviour:

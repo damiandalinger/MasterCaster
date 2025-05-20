@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/_ProjectCeros/Scenes/Bedroom/Bedroom.unity
     guid: 205aa528a767dfa42a015c891f34bd73
   - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/HUD/HUD.unity
+    guid: 054b32c2dbeaf83498a5e3e35a7ab32a
+  - enabled: 1
     path: Assets/_ProjectCeros/Scenes/NewspaperUI/NewspaperUI.unity
     guid: 9eee40a474cb5a94dbc0572082f92fa2
+  - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/PodcastCreationUI/PodcastCreationUI.unity
+    guid: be70f4b37f03fc643bd73dddfe8997a5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

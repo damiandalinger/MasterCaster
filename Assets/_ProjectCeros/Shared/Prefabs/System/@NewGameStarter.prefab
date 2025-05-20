@@ -51,5 +51,8 @@ MonoBehaviour:
   _sceneNamesToLoad:
   - GameSession
   - Bedroom
+  - HUD
   _sceneNamesToUnload:
   - MainMenu
+  _listenerCount: {fileID: 11400000, guid: 10d72ee4fcdb40a408d8314a91b64658, type: 2}
+  _currentDay: {fileID: 11400000, guid: 4d88b8b3e7919fa49a3283bcff4b3b36, type: 2}

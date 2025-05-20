@@ -7,6 +7,7 @@
 /// 25/04/2025 by Damian Dalinger: Script creation.
 /// 01/05/2025 by Damian Dalinger: Overhaul for the final selection logic.
 /// 07/05/2025 by Damian Dalinger: Tech Bible compliance.
+/// 14/05/2025 by Damian Dalinger: Weighted genre selection.
 /// </remarks>
 
 using System.Collections.Generic;

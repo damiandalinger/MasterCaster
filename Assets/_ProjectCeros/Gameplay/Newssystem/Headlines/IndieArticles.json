@@ -1,22 +1,22 @@
 [
     {
         "PairID": 2001,
-        "Headline": "Indie 1A",
+        "Headline": "Indie 1A Economy",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "indie",
+        "Subgenre": "economy",
         "ValuePositive": 1.2,
         "ValueNegative": 0.6,
         "StoryID": 0
     },
     {
         "PairID": 2001,
-        "Headline": "Indie 1B",
+        "Headline": "Indie 1B Economy",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "indie",
-        "ValuePositive": 0.8,
-        "ValueNegative": 1.1,
+        "Subgenre": "economy",
+        "ValuePositive": 1.2,
+        "ValueNegative": 0.6,
         "StoryID": 0
     },
     {
@@ -24,9 +24,9 @@
         "Headline": "Indie 2A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "indie",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "/",
+        "ValuePositive": 0.8,
+        "ValueNegative": 1.1,
         "StoryID": 0
     },
     {
@@ -34,7 +34,7 @@
         "Headline": "Indie 2B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "indie",
+        "Subgenre": "/",
         "ValuePositive": 0.8,
         "ValueNegative": 1.1,
         "StoryID": 0
@@ -44,9 +44,9 @@
         "Headline": "Indie 3A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "indie",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "/",
+        "ValuePositive": 1.6,
+        "ValueNegative": 1.1,
         "StoryID": 0
     },
     {
@@ -54,8 +54,8 @@
         "Headline": "Indie 3B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "indie",
-        "ValuePositive": 0.8,
+        "Subgenre": "/",
+        "ValuePositive": 1.6,
         "ValueNegative": 1.1,
         "StoryID": 0
     }

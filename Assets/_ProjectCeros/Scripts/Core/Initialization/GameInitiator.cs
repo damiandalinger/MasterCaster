@@ -8,6 +8,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ProjectCeros
 {
@@ -53,6 +54,7 @@ namespace ProjectCeros
 
                 var instance = Instantiate(prefab);
                 instance.name = prefab.name;
+                SceneManager.MoveGameObjectToScene(instance, gameObject.scene);
             }
         }
 

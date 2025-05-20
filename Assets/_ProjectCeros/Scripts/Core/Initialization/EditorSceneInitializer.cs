@@ -1,5 +1,3 @@
-
-
 /// <summary>
 /// Editor-only utility that auto-loads the bootstrap scene additively when testing from a subscene.
 /// Optionally starts a new game automatically after loading.

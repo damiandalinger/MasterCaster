@@ -4,9 +4,9 @@
         "Headline": "Action 1A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "action",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "/",
+        "ValuePositive": 1.5,
+        "ValueNegative": 0.8,
         "StoryID": 0
     },
     {
@@ -14,28 +14,28 @@
         "Headline": "Action 1B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "action",
-        "ValuePositive": 0.8,
+        "Subgenre": "/",
+        "ValuePositive": 1.5,
+        "ValueNegative": 0.8,
+        "StoryID": 0
+    },
+    {
+        "PairID": 1002,
+        "Headline": "Action 2A Horror",
+        "Description": "Fast-paced action continues to lead the industry.",
+        "AgencyID": 0,
+        "Subgenre": "horror",
+        "ValuePositive": 1.2,
         "ValueNegative": 1.1,
         "StoryID": 0
     },
     {
         "PairID": 1002,
-        "Headline": "Action 2A",
-        "Description": "Fast-paced action continues to lead the industry.",
-        "AgencyID": 0,
-        "Subgenre": "action",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
-        "StoryID": 0
-    },
-    {
-        "PairID": 1002,
-        "Headline": "Action 2B",
+        "Headline": "Action 2B Horror",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "action",
-        "ValuePositive": 0.8,
+        "Subgenre": "horror",
+        "ValuePositive": 1.2,
         "ValueNegative": 1.1,
         "StoryID": 0
     },
@@ -44,9 +44,9 @@
         "Headline": "Action 3A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "action",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "/",
+        "ValuePositive": 0.9,
+        "ValueNegative": 1.4,
         "StoryID": 0
     },
     {
@@ -54,9 +54,9 @@
         "Headline": "Action 3B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "action",
-        "ValuePositive": 0.8,
-        "ValueNegative": 1.1,
+        "Subgenre": "/",
+        "ValuePositive": 0.9,
+        "ValueNegative": 1.4,
         "StoryID": 0
     }
 ]

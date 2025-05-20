@@ -4,9 +4,9 @@
         "Headline": "Strategy 1A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "strategy",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "horror",
+        "ValuePositive": 1.6,
+        "ValueNegative": 0.9,
         "StoryID": 0
     },
     {
@@ -14,9 +14,9 @@
         "Headline": "Strategy 1B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "strategy",
-        "ValuePositive": 0.8,
-        "ValueNegative": 1.1,
+        "Subgenre": "horror",
+        "ValuePositive": 1.6,
+        "ValueNegative": 0.9,
         "StoryID": 0
     },
     {
@@ -24,9 +24,9 @@
         "Headline": "Strategy 2A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "strategy",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "/",
+        "ValuePositive": 0.8,
+        "ValueNegative": 1.1,
         "StoryID": 0
     },
     {
@@ -34,7 +34,7 @@
         "Headline": "Strategy 2B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "strategy",
+        "Subgenre": "/",
         "ValuePositive": 0.8,
         "ValueNegative": 1.1,
         "StoryID": 0
@@ -44,9 +44,9 @@
         "Headline": "Strategy 3A",
         "Description": "Fast-paced action continues to lead the industry.",
         "AgencyID": 0,
-        "Subgenre": "strategy",
-        "ValuePositive": 1.2,
-        "ValueNegative": 0.6,
+        "Subgenre": "/",
+        "ValuePositive": 1.6,
+        "ValueNegative": 1.8,
         "StoryID": 0
     },
     {
@@ -54,9 +54,9 @@
         "Headline": "Strategy 3B",
         "Description": "Repetitive gameplay cycles hinder growth.",
         "AgencyID": 1,
-        "Subgenre": "strategy",
-        "ValuePositive": 0.8,
-        "ValueNegative": 1.1,
+        "Subgenre": "/",
+        "ValuePositive": 1.6,
+        "ValueNegative": 1.8,
         "StoryID": 0
     }
 ]
