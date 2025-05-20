@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 /// <summary>
 /// Editor-only utility that auto-loads the bootstrap scene additively when testing from a subscene.
 /// Optionally starts a new game automatically after loading.
@@ -27,7 +28,6 @@ namespace ProjectCeros
 
         #region Unity Methods
 
-#if UNITY_EDITOR
         // Checks if the current scene is the only one loaded and injects the bootstrap scene if needed.
         private async void Awake()
         {
@@ -44,8 +44,8 @@ namespace ProjectCeros
                 starter?.StartNewGame();
             }
         }
-#endif
 
         #endregion
     }
 }
+#endif

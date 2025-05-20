@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 /// <summary>
 /// Custom Unity Editor window for displaying a live log of GameEvent invocations,
 /// including which listeners were active at the time of the event.
@@ -8,7 +9,6 @@
 /// 11/04/2025 by Damian Dalinger: Script creation.
 /// </remarks>
 
-#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
