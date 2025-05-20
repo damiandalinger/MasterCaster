@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: V_LongMaxArticleLength
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 60
+  Value: 400
