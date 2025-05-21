@@ -75,6 +75,7 @@ crashlytics-build.properties
 # Ignore FMOD Cache folder (local only)
 /[Aa]ssets/Plugins/FMOD/Cache/*
 /[Aa]ssets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+/[Aa]ssets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset.meta
 
 # Ignore built bank files in StreamingAssets (but keep DLLs etc.)
 /[Aa]ssets/StreamingAssets//.bank
