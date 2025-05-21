@@ -2,7 +2,7 @@
   {
     "PairID": 0,
     "Headline": "Banana of the Day",
-    "Description": "Narrative",
+    "Description": "Bananas share 50% of their DNA with humans.",
     "AgencyID": 2,
     "Subgenre": "banana",
     "ValuePositive": 0,
@@ -12,7 +12,7 @@
 {
     "PairID": 0,
     "Headline": "Cherry of the Day",
-    "Description": "Some ",
+    "Description": "Cherries contain melatonin and can thus help regulate sleep patterns. ",
     "AgencyID": 2,
     "Subgenre": "cherry",
     "ValuePositive": 0,
@@ -22,7 +22,7 @@
 {
     "PairID": 0,
     "Headline": "Peach of the Day",
-    "Description": "Narrati",
+    "Description": "Donut peaches are infact a natural development and not caused by humans!",
     "AgencyID": 2,
     "Subgenre": "peach",
     "ValuePositive": 0,

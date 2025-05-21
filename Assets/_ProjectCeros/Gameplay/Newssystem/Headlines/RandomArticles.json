@@ -1,8 +1,8 @@
 [
   {
     "PairID": 0,
-    "Headline": "BREAD! 1",
-    "Description": "Bread has been voted as the best food in the world. Voted by scandinavians and germans. ",
+    "Headline": "BREAD!",
+    "Description": "Bread has been voted as the best food in the world. Elected by germans.",
     "AgencyID": 3,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -112,6 +112,42 @@
     "PairID": 0,
     "Headline": "Handsome man rejects women and embraces ChatGBT",
     "Description": "Some may claim that AI has become a significant problem in our modern society, however Famian D. would probably tell you something different. The 21 year old has formed a romantic relationship with ChatGBT and couldn’t be happier - ‘’Chat  is always there for me and helps me whenever I need her! How could I not love her. She even gives me compliments!’’",
+    "AgencyID": 3,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "7 Tips for a Healthy Body",
+    "Description": "Our quick guide will improve your Body in only a month! More information ...",
+    "AgencyID": 3,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Earn 1000€ in 1 Week!",
+    "Description": "All you need to do is fill out the following form and accept our E-Mail ...",
+    "AgencyID": 3,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Youth less Quick-Witted",
+    "Description": "Studies say that male programmers are smarter than their young colleges.",
+    "AgencyID": 3,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "North Korea lands on MOON",
+    "Description": "The man with the chubby face and handsome hair finally did it!",
     "AgencyID": 3,
     "ValuePositive": 0,
     "ValueNegative": 0,

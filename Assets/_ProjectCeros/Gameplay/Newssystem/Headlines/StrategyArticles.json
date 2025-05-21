@@ -82,27 +82,5 @@
         "ValueNegative": 1.3,
         "StoryID": 61,
         "StoryPart": 2
-    },
-    {
-        "PairID": 6005,
-        "Headline": "Yikes",
-        "Description": "After their disastrous launch, the devs actually managed to turn it around! Fans are relieved.",
-        "AgencyID": 0,
-        "Subgenre": "grandstrategy",
-        "ValuePositive": 1.4,
-        "ValueNegative": 1.3,
-        "StoryID": 61,
-        "StoryPart": 3
-    },
-    {
-        "PairID": 6005,
-        "Headline": "Nikez ",
-        "Description": "Player complaints seem to have had a impact. The devs behind Half War have poured their heart and soul into fixing their broken mess.",
-        "AgencyID": 1,
-        "Subgenre": "grandstrategy",
-        "ValuePositive": 1.4,
-        "ValueNegative": 1.3,
-        "StoryID": 61,
-        "StoryPart": 3
     }
 ]
