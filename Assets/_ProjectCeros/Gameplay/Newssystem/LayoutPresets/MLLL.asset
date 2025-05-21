@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1fb226f8158c8549939680859ff3af6, type: 3}
-  m_Name: 5B
+  m_Name: MLLL
   m_EditorClassIdentifier: 
   Blocks:
-  - Position: {x: 2, y: 0}
-    SizeInput: 2x2
-    IsImportantNews: 1
   - Position: {x: 0, y: 0}
     SizeInput: 1x3
     IsImportantNews: 1
-  - Position: {x: 1, y: 0}
-    SizeInput: 1x3
+  - Position: {x: 1, y: 1}
+    SizeInput: 2x2
     IsImportantNews: 1
   - Position: {x: 4, y: 0}
-    SizeInput: 1x3
+    SizeInput: 2x2
     IsImportantNews: 1
-  - Position: {x: 5, y: 0}
-    SizeInput: 1x3
+  - Position: {x: 2, y: 0}
+    SizeInput: 2x1
     IsImportantNews: 1
-  - Position: {x: 2, y: 2}
+  - Position: {x: 1, y: 0}
+    SizeInput: 1x1
+    IsImportantNews: 0
+  - Position: {x: 3, y: 1}
     SizeInput: 1x1
     IsImportantNews: 0
   - Position: {x: 3, y: 2}
-    SizeInput: 1x1
+    SizeInput: 3x1
     IsImportantNews: 0

@@ -60,32 +60,52 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 08512edabd4c6a94b83d39ef63e62628, type: 2}
+  _shortCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: f46e7247ca57bfe49b974561885dd2f7, type: 2}
+  _mediumCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 64fd56329464efb4bb235a7a187e904a, type: 2}
+  _longCategoryValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fb594465567f0a14ba3ef9aa397b4276, type: 2}
   _articlePoolPairs:
   - AllArticles: {fileID: 11400000, guid: 57aa8c8848c4c614985d5ee670b2cfd9, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 7f6f3aed222d5e5428bdc1c8a0c67daf, type: 2}
     UsesPairs: 0
+    DisableAutoReshuffle: 1
   - AllArticles: {fileID: 11400000, guid: 44b3f34d56ec18f45a08ede3511db02a, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
     UsesPairs: 0
+    DisableAutoReshuffle: 0
   - AllArticles: {fileID: 11400000, guid: f8c808b73a2999e4a8063241d2339b8c, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 1fdd6439d0b23074aac3c9aa6d7053c4, type: 2}
     UsesPairs: 1
+    DisableAutoReshuffle: 0
   - AllArticles: {fileID: 11400000, guid: 188d72054dbc3894399eb03028ced59e, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 1cc76ce089834f54a8e1b947252a6326, type: 2}
     UsesPairs: 1
+    DisableAutoReshuffle: 0
   - AllArticles: {fileID: 11400000, guid: 28ebd0fef0132ff4fa6c02d9d4b9e130, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 68ddad669d86c7d40a3371a817b9f845, type: 2}
     UsesPairs: 1
+    DisableAutoReshuffle: 0
   - AllArticles: {fileID: 11400000, guid: e3c452dc0bc250c47a45d03adc96d903, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 4bda3b3acc6b3344681c718cec13debf, type: 2}
     UsesPairs: 1
+    DisableAutoReshuffle: 0
   - AllArticles: {fileID: 11400000, guid: 3eb52f70e9c001f4d8c1afe5ab86c754, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 154abc5c18be5ed4b9c9024be57cf993, type: 2}
     UsesPairs: 1
+    DisableAutoReshuffle: 0
   - AllArticles: {fileID: 11400000, guid: c46c2ff12569f6345a49e44201d2f0be, type: 2}
     EligibleArticles: {fileID: 11400000, guid: 0d14586465541cf46a3903ebf914a86a, type: 2}
     UsesPairs: 1
-  _isDebugLogging: 0
+    DisableAutoReshuffle: 0
+  _isDebugLogging: 1
 --- !u!1 &7877826804840754719
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,10 +155,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _layoutPresets:
-  - {fileID: 11400000, guid: eac63af97df8f6646af17606fc183bfc, type: 2}
-  - {fileID: 11400000, guid: 911beae861468024b80c6eeb8a508273, type: 2}
-  - {fileID: 11400000, guid: 9051034d65a32394eb492bc9e5ae27c0, type: 2}
-  - {fileID: 11400000, guid: 3cf5016fa0dbd914093ec42dad664b00, type: 2}
+  - {fileID: 11400000, guid: fa3cfa5e765f8114db2430da71beb188, type: 2}
+  - {fileID: 11400000, guid: 06867f426df5486479224af334770c3a, type: 2}
+  - {fileID: 11400000, guid: e87aaa087fa3fc54c8dbf6b6f74c202f, type: 2}
+  - {fileID: 11400000, guid: 74e85000f62578d4395f61d1b2ca704d, type: 2}
+  - {fileID: 11400000, guid: 2756ef114ad9e834e9f66195e17edcd1, type: 2}
+  - {fileID: 11400000, guid: d407d867997a23340930b45a80e70c30, type: 2}
+  - {fileID: 11400000, guid: feaacae1ad516b04b87d1581be43d11b, type: 2}
+  - {fileID: 11400000, guid: 21c57269dd8ca264d9fc8a4ed84f3fd2, type: 2}
+  - {fileID: 11400000, guid: 4f5c3661c4d9df849a3e24b95e6f2d2c, type: 2}
+  - {fileID: 11400000, guid: 58e0ed5cd43a5884d8547cb4464f6735, type: 2}
+  - {fileID: 11400000, guid: 2132aff711e34e24da79db83305ccccd, type: 2}
   _shortBlockAreaLimit:
     UseConstant: 0
     ConstantValue: 0

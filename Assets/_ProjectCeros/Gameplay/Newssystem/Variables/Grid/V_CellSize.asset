@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: V_CellSize
   m_EditorClassIdentifier: 
   DeveloperDescription: Cell size of the news grid
-  Value: 200
+  Value: 250

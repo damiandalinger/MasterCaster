@@ -24,6 +24,9 @@ namespace ProjectCeros
         [Tooltip("Determines whether this database uses pairs.")]
         public bool UsesPairs = true;
 
+        [Tooltip("Prevents reshuffling logic. Articles are used in simple FIFO order.")]
+        public bool DisableAutoReshuffle = false;
+
         #endregion
     }
 }

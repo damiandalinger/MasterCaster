@@ -4,7 +4,6 @@
     "Headline": "BREAD! 1",
     "Description": "Bread has been voted as the best food in the world. Voted by scandinavians and germans. ",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -14,7 +13,7 @@
     "Headline": "Florida Man wins Darwin Award",
     "Description": "‘’I’m immune to electricity’’ He apparently exclaimed before diving into his bathtub with a toaster.",
     "AgencyID": 3,
-    "Subgenre": "/",
+
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -24,7 +23,6 @@
     "Headline": "Lama voted CUTEST ANIMAL",
     "Description": "The world rejoices as our cute overlords from the Andes Moutains take over. Their charm unmatched!",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -34,7 +32,6 @@
     "Headline": "14 year olds build TANK",
     "Description": "As part of a world war 2 memorial russian school kids have built a T-34 to commemorate the sacrifice of their soldiers. Parents are stunned as it is a working one.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -44,7 +41,6 @@
     "Headline": "Local Artist drives Team into Madness",
     "Description": "‘’We don’t know what to do anymore. She talks so much it just breaks you, you know? It’s never ending. Always there and always continuing.’’ - Two of the five-man-team are currently in a mental asylum.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -54,7 +50,6 @@
     "Headline": "First successful Albino Sturgeon Farm",
     "Description": "After trying for 6 generations, fish farmer Mark Welsh has made the impossible possible - ‘’It’s the family dream since me old man 150 years ago.’’ - Experts predict that the special caviar will surely rise in favour among the less wealthy elite of our society.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -64,7 +59,6 @@
     "Headline": "Vietnamese woman marries frogs",
     "Description": "A vietnamese woman has decided that her love is reserved for frogs and frogs alone.  Having married her 4th frog, fans speculate how many more will follow. Feta is concerned about the things done to these frogs.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -74,7 +68,6 @@
     "Headline": "Man flexes so much his arms explode",
     "Description": "After training vigorously for one and a half hours each morning Lamian D. apparently decided to train his arms so much after ‘’a hard leg day’’ that they exploded. ‘’Torn muscles will not deter me from reaching my goal of two meters shoulder width’’ He boldly exclaimed in the hospital.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -84,7 +77,6 @@
     "Headline": "Albanian student found dead",
     "Description": "Unique K. was found gutted in a trash can. ‘’We are sure it’s his ex!’’ friends of the victim said. Apparently she was described as an emotionless robot with a hidden killer instinct. She has yet to be found by the authorities which further leads people to believe this conclusion.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -94,7 +86,6 @@
     "Headline": "Scandal in the Swedish Royal Family!",
     "Description": "The royal family is furious! The third daughter has not waved properly at last Sunday's evening ball. Royal experts believe that she will be severely punished internally.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID":0
@@ -104,7 +95,6 @@
     "Headline": "Blood Diamonds good for your Health",
     "Description": "Scientists have discovered that crushed up blood diamonds are good for your health. ‘’The fact that people died for this is of importance to the overall effectiveness of the miracle cure’’ the scientists say.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -114,7 +104,6 @@
     "Headline": "Austrian Game Theorist MURDERED",
     "Description": "Game enthusiast Schnitz has been found dead. The perpetrator, allegedly a student, has already been found. He is currently pleading not guilty in court. ‘’The books he wrote corroded my mental health so much that it was either him or me. I had no choice’’- Judges are inclined to agree after reading the books themselves.",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0
@@ -124,7 +113,6 @@
     "Headline": "Handsome man rejects women and embraces ChatGBT",
     "Description": "Some may claim that AI has become a significant problem in our modern society, however Famian D. would probably tell you something different. The 21 year old has formed a romantic relationship with ChatGBT and couldn’t be happier - ‘’Chat  is always there for me and helps me whenever I need her! How could I not love her. She even gives me compliments!’’",
     "AgencyID": 3,
-    "Subgenre": "/",
     "ValuePositive": 0,
     "ValueNegative": 0,
     "StoryID": 0

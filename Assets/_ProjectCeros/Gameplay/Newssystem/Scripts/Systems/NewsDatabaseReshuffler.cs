@@ -16,19 +16,22 @@ namespace ProjectCeros
     {
         #region Fields
 
-        [Header("Paired Offsets")]
+        [Header("Story Offsets")]
         [Tooltip("Probability that the next part of a story appears directly after the current one.")]
-        [SerializeField] private FloatReference _pairedChanceOffset1;
+        [SerializeField] private FloatReference _storyChanceOffset1;
 
         [Tooltip("Probability that the next part of a story appears two slots after the current one. The third slot has a 100% chance.")]
-        [SerializeField] private FloatReference _pairedChanceOffset2;
+        [SerializeField] private FloatReference _storyChanceOffset2;
 
-        [Header("Unpaired Offsets")]
-        [Tooltip("Probability that the next part of an story appears directly after the current one.")]
-        [SerializeField] private FloatReference _unpairedChanceOffset1;
+        [Header("Category Value Settings")]
+        [Tooltip("Int value assigned to short descriptions.")]
+        [SerializeField] private IntReference _shortCategoryValue;
 
-        [Tooltip("Probability that the next part of an story appears two slots after the current one. The third slot has a 100% chance.")]
-        [SerializeField] private FloatReference _unpairedChanceOffset2;
+        [Tooltip("Int value assigned to medium descriptions.")]
+        [SerializeField] private IntReference _mediumCategoryValue;
+
+        [Tooltip("Int value assigned to long descriptions.")]
+        [SerializeField] private IntReference _longCategoryValue;
 
         [Header("Article Pool Pairs")]
         [Tooltip("List of article pool pairs linking all articles with their eligible counterparts.")]
@@ -61,10 +64,37 @@ namespace ProjectCeros
         {
             foreach (var pair in _articlePoolPairs)
             {
-                if (pair.EligibleArticles.Items.Count == 0)
+                var items = pair.EligibleArticles.Items;
+
+                if (pair.DisableAutoReshuffle)
+                {
+                    if (items.Count == 0)
+                    {
+                        BuildEligibleQueue(pair);
+                        Log($"Reshuffled empty genre: {GetGenreName(pair)}");
+                    }
+                    continue;
+                }
+
+                // Logic for random articles: if a size category is empty it is reshuffled.
+                if (!pair.UsesPairs)
+                {
+                    int shortCount = items.Count(a => a.SizeCategory == _shortCategoryValue.Value);
+                    int mediumCount = items.Count(a => a.SizeCategory == _mediumCategoryValue.Value);
+                    int longCount = items.Count(a => a.SizeCategory == _longCategoryValue.Value);
+
+                    if (shortCount == 0 || mediumCount == 0 || longCount == 0)
+                    {
+                        BuildEligibleQueue(pair);
+                        Log($"[RandomPool] Reshuffled due to missing category: S={shortCount}, M={mediumCount}, L={longCount}");
+                        continue;
+                    }
+                }
+
+                if (items.Count == 0)
                 {
                     BuildEligibleQueue(pair);
-                    Log($" Conditional reshuffle for genre: {GetGenreName(pair)}");
+                    Log($"Reshuffled empty genre: {GetGenreName(pair)}");
                 }
             }
         }
@@ -99,24 +129,22 @@ namespace ProjectCeros
             var blocks = BuildArticleBlocks(pair.AllArticles.Items);
             var baseBlocks = GetBaseBlocks(blocks);
 
-            var storyLookup = BuildStoryLookup(blocks);
-            InsertStoryContinuations(baseBlocks, storyLookup, pair.UsesPairs);
+            if (pair.UsesPairs)
+            {
+                var storyLookup = blocks
+                    .Where(b => b.StoryID != 0)
+                    .GroupBy(b => b.StoryID)
+                    .Where(g => g.Select(b => b.StoryPart).Distinct().Count() > 1)
+                    .ToDictionary(
+                        g => g.Key,
+                        g => g.ToDictionary(b => b.StoryPart, b => b)
+                    );
+
+                InsertPairedStoryContinuations(baseBlocks, storyLookup);
+            }
 
             pair.EligibleArticles.Items.Clear();
             pair.EligibleArticles.Items.AddRange(baseBlocks.SelectMany(b => b.Articles));
-        }
-
-        // Builds a lookup dictionary of stories with more than one part.
-        private Dictionary<int, Dictionary<int, ArticleBlock>> BuildStoryLookup(List<ArticleBlock> blocks)
-        {
-            return blocks
-                .Where(b => b.StoryID != 0)
-                .GroupBy(b => b.StoryID)
-                .Where(g => g.Select(b => b.StoryPart).Distinct().Count() > 1)
-                .ToDictionary(
-                    g => g.Key,
-                    g => g.ToDictionary(b => b.StoryPart, b => b)
-                );
         }
 
         // Filters and randomizes blocks that can serve as story starters (Part 1 or non-story).
@@ -134,35 +162,22 @@ namespace ProjectCeros
             return pair.AllArticles != null ? pair.AllArticles.name : "(Unnamed Genre)";
         }
 
-        // Returns the offset probabilities depending on whether the pair is marked as using paired logic.
-        private (float, float) GetOffsetChances(bool usesPairs)
-        {
-            return usesPairs
-                ? (_pairedChanceOffset1, _pairedChanceOffset2)
-                : (_unpairedChanceOffset1, _unpairedChanceOffset2);
-        }
-
         // Inserts continuation blocks (StoryParts >= 2) into the base queue using probabilistic offset positions.
-        private void InsertStoryContinuations(List<ArticleBlock> baseBlocks, Dictionary<int, Dictionary<int, ArticleBlock>> storyLookup, bool usesPairs)
+        private void InsertPairedStoryContinuations(List<ArticleBlock> baseBlocks, Dictionary<int, Dictionary<int, ArticleBlock>> storyLookup)
         {
-            var (chance1, chance2) = GetOffsetChances(usesPairs);
-
             foreach (var story in storyLookup.Values)
             {
-                // Ensure part 1 exists.
                 if (!story.TryGetValue(1, out var part1Block)) continue;
 
-                // Get index of Part 1 in base queue.
                 int idx = baseBlocks.IndexOf(part1Block);
                 if (idx < 0) continue;
 
-                // Insert each continuation part (2, 3, …).
                 for (int partNum = 2; story.ContainsKey(partNum); partNum++)
                 {
                     var block = story[partNum];
 
                     float rnd = Random.value;
-                    int offset = rnd < chance1 ? 1 : (rnd < chance2 ? 2 : 3);
+                    int offset = rnd < _storyChanceOffset1 ? 1 : (rnd < _storyChanceOffset2 ? 2 : 3);
                     int insertPos = Mathf.Clamp(idx + offset, 0, baseBlocks.Count);
 
                     baseBlocks.Insert(insertPos, block);

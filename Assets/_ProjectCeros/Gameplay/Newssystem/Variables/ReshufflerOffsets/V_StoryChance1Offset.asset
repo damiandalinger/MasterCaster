@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1821afb6f7187b4d8ecbf29760f003b, type: 3}
-  m_Name: V_UnpairedChance1Offset
+  m_Name: V_StoryChance1Offset
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 0
+  Value: 0.4

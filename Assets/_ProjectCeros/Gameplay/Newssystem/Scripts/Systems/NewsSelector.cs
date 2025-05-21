@@ -21,7 +21,10 @@ namespace ProjectCeros
         #region Fields
 
         public List<Article> SelectedImportantArticles { get; private set; } = new();
-        public List<Article> SelectedRandomArticles { get; private set; } = new();
+        public List<Article> GetRandomArticlePool()
+        {
+            return _eligibleRandomArticles.Items;
+        }
         public Article SelectedFruitArticle { get; private set; }
 
         [Header("Important News Pools")]
@@ -89,7 +92,7 @@ namespace ProjectCeros
             _reshuffler.ReshufflePoolsIfNeeded();
             _pairedByGenre.Clear();
             SelectedImportantArticles.Clear();
-            SelectedRandomArticles.Clear();
+            //SelectedRandomArticles.Clear();
             SelectedFruitArticle = null;
 
 
@@ -128,14 +131,14 @@ namespace ProjectCeros
                 }
                 else
                 {
-                    SelectRandomArticles(1);
+                    //SelectRandomArticles(1);
                     Log($"5th Slot → Random News");
                 }
             }
 
             // 5. Select random articles and fruit of the day.
             _reshuffler.ReshufflePoolsIfNeeded();
-            SelectRandomArticles(_randomArticleCount);
+            //SelectRandomArticles(_randomArticleCount);
             SelectFruitOfTheDay();
 
             LogSelectedArticles();
@@ -176,7 +179,7 @@ namespace ProjectCeros
 
 
         // Selects and removes the specified number of random articles.
-        private void SelectRandomArticles(int count)
+        /*private void SelectRandomArticles(int count)
         {
             var items = _eligibleRandomArticles.Items;
             for (int i = 0; i < count && items.Count > 0; i++)
@@ -185,7 +188,7 @@ namespace ProjectCeros
                 SelectedRandomArticles.Add(selected);
                 items.RemoveAt(0);
             }
-        }
+        }*/
 
         // Selects the first fruit article.
         private void SelectFruitOfTheDay()
@@ -251,11 +254,11 @@ namespace ProjectCeros
                 Log($"→ {a.Headline} | Agency: {a.AgencyID}, Pair: {a.PairID}, Value+: {a.ValuePositive}, Value-: {a.ValueNegative}");
             }
 
-            Log($"Selected Random Articles:");
+            /*Log($"Selected Random Articles:");
             foreach (var a in SelectedRandomArticles)
             {
                 Log($"→ {a.Headline}");
-            }
+            }*/
         }
 
         // DEBUG: Logs a message to the console if debug logging is enabled.
