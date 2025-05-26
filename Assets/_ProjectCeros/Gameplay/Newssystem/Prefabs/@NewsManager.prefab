@@ -44,22 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42cc051fb09e044790af70df46e5771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pairedChanceOffset1:
+  _storyChanceOffset1:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 1c9833855902f4a4ea8226a4d0f03f98, type: 2}
-  _pairedChanceOffset2:
+  _storyChanceOffset2:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: cf297221ddb35414ca214bf379c4819a, type: 2}
-  _unpairedChanceOffset1:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 1ed2ff212c4b88547a55e4d2f1f7d2fb, type: 2}
-  _unpairedChanceOffset2:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 08512edabd4c6a94b83d39ef63e62628, type: 2}
   _shortCategoryValue:
     UseConstant: 0
     ConstantValue: 0
@@ -105,7 +97,7 @@ MonoBehaviour:
     EligibleArticles: {fileID: 11400000, guid: 0d14586465541cf46a3903ebf914a86a, type: 2}
     UsesPairs: 1
     DisableAutoReshuffle: 0
-  _isDebugLogging: 1
+  _isDebugLogging: 0
 --- !u!1 &7877826804840754719
 GameObject:
   m_ObjectHideFlags: 0

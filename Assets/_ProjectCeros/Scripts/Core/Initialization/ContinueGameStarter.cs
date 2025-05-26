@@ -1,10 +1,9 @@
 /// <summary>
-/// Handles the startup sequence of a new game session: loading scenes, instantiating managers,
-/// initializing systems, and then cleaning up temporary scenes.
+/// Handles the startup sequence for continuing a saved game session.
 /// </summary>
 
 /// <remarks>
-/// 13/05/2025 by Damian Dalinger: Script creation.
+/// 26/05/2025 by Damian Dalinger: Script creation.
 /// </remarks>
 
 using System.Collections.Generic;
@@ -14,7 +13,7 @@ using UnityEngine.SceneManagement;
 
 namespace ProjectCeros
 {
-    public class NewGameStarter : MonoBehaviour
+    public class ContinueGameStarter : MonoBehaviour
     {
         #region Fields
 
@@ -25,7 +24,7 @@ namespace ProjectCeros
         [SerializeField] private List<GameObject> _persistentPrefabs = new();
 
         [Tooltip("Event raised after the game is fully initialized.")]
-        [SerializeField] private GameEvent _onNewGameStarted;
+        [SerializeField] private GameEvent _onGameContinued;
 
         [Tooltip("Names of scenes to load additively during game start.")]
         [SerializeField] private List<string> _sceneNamesToLoad = new();
@@ -33,39 +32,27 @@ namespace ProjectCeros
         [Tooltip("Names of scenes to unload after game start is complete.")]
         [SerializeField] private List<string> _sceneNamesToUnload = new();
 
-        [Header("Values")]
-        [Tooltip("The IntVariable of the listener count.")]
-        [SerializeField] private IntVariable _listenerCount;
-
-        [Tooltip("The IntVariable of the day count.")]
-        [SerializeField] private IntVariable _currentDay;
-
         #endregion
 
         #region Public Methods
 
-        // Starts a new game session.
-        public async void StartNewGame()
+        // Continues a game session.
+        public async void ContinueGame()
         {
             _loadingScreen?.SetActive(true);
 
             // Delay to ensure UI updates.
             await Task.Yield();
 
-            FindFirstObjectByType<SaveManager>()?.DeleteSave();
-
-            _listenerCount.SetValue(0);
-            _currentDay.SetValue(1);
-
             await LoadAdditiveScenes();
 
             InstantiateManagers();
 
-            await InitializeManagers();
+            FindFirstObjectByType<SaveManager>()?.Load();
 
             await UnloadAdditiveScenes();
 
-            _onNewGameStarted?.Raise();
+            _onGameContinued?.Raise();
 
             _loadingScreen?.SetActive(false);
         }
@@ -90,20 +77,6 @@ namespace ProjectCeros
                 instance.name = prefab.name;
                 DontDestroyOnLoad(instance);
             }
-        }
-
-        // Calls setup methods on critical systems required for a new game session.
-        private async Task InitializeManagers()
-        {
-            await Task.Yield();
-
-            var importer = FindFirstObjectByType<NewsImporter>();
-            importer?.ImportAll();
-            if (importer != null)
-                Destroy(importer.gameObject);
-
-            var reshuffler = FindFirstObjectByType<NewsDatabaseReshuffler>();
-            reshuffler?.RefreshAllPools();
         }
 
         // Loads all configured scenes additively if they are not already loaded.

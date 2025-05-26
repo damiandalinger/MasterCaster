@@ -7,12 +7,13 @@
 /// 09/04/2025 by Damian Dalinger: Script Creation.
 /// </remarks>
 
+using System;
 using UnityEngine;
 
 namespace ProjectCeros
 {
     [CreateAssetMenu(menuName = "Variables/Int Variable")]
-    public class IntVariable : ScriptableObject
+    public class IntVariable : ScriptableObject, ISaveable
     {
 #if UNITY_EDITOR
         [Multiline]
@@ -20,6 +21,15 @@ namespace ProjectCeros
 #endif
 
         public int Value;
+
+        public string SaveKey => name;
+
+        public object CaptureState() => Value;
+
+        public void RestoreState(object state)
+        {
+            Value = Convert.ToInt32(state);
+        }
 
         #region Public Methods
         #region ApplyChange

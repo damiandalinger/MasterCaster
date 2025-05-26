@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/_ProjectCeros/Scenes/GameSession/GameSession.unity
     guid: 18a34f54c3dee4f43969ae5bf14c42e8
   - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/PauseMenu/PauseMenu.unity
+    guid: 2891d89e46d61fb47a2b9edfab66dd5f
+  - enabled: 1
     path: Assets/_ProjectCeros/Scenes/Bedroom/Bedroom.unity
     guid: 205aa528a767dfa42a015c891f34bd73
   - enabled: 1
