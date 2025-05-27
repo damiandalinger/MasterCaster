@@ -1,138 +1,56 @@
 /// <summary>
-/// Handles the startup sequence of a new game session: loading scenes, instantiating managers,
-/// initializing systems, and then cleaning up temporary scenes.
+/// Starts a new game by resetting variables and initializing game systems.
 /// </summary>
 
 /// <remarks>
 /// 13/05/2025 by Damian Dalinger: Script creation.
+/// 27/05/2025 by Damian Dalinger: Implemented NewGameStarter as BaseGameStarter child.
 /// </remarks>
 
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace ProjectCeros
 {
-    public class NewGameStarter : MonoBehaviour
+    public class NewGameStarter : BaseGameStarter
     {
         #region Fields
 
-        [Tooltip("The loading screen to show during initialization.")]
-        [SerializeField] private GameObject _loadingScreen;
-
-        [Tooltip("Prefabs to instantiate. Must not exist in the scene already.")]
-        [SerializeField] private List<GameObject> _persistentPrefabs = new();
-
-        [Tooltip("Event raised after the game is fully initialized.")]
+        [Tooltip("Event raised after a new game has been started.")]
         [SerializeField] private GameEvent _onNewGameStarted;
 
-        [Tooltip("Names of scenes to load additively during game start.")]
-        [SerializeField] private List<string> _sceneNamesToLoad = new();
-
-        [Tooltip("Names of scenes to unload after game start is complete.")]
-        [SerializeField] private List<string> _sceneNamesToUnload = new();
-
-        [Header("Values")]
-        [Tooltip("The IntVariable of the listener count.")]
+        [Tooltip("The variable tracking how many listeners the player has.")]
         [SerializeField] private IntVariable _listenerCount;
 
-        [Tooltip("The IntVariable of the day count.")]
+        [Tooltip("The variable representing the current in-game day.")]
         [SerializeField] private IntVariable _currentDay;
 
         #endregion
 
-        #region Public Methods
+        #region Protected Methods
 
-        // Starts a new game session.
-        public async void StartNewGame()
+        // Resets saved data and initializes game values for a fresh start.
+        protected override IEnumerator RunCustomLogic()
         {
-            _loadingScreen?.SetActive(true);
-
-            // Delay to ensure UI updates.
-            await Task.Yield();
-
-            FindFirstObjectByType<SaveManager>()?.DeleteSave();
+            SaveManager.Instance?.DeleteSave();
 
             _listenerCount.SetValue(0);
             _currentDay.SetValue(1);
 
-            await LoadAdditiveScenes();
-
-            InstantiateManagers();
-
-            await InitializeManagers();
-
-            await UnloadAdditiveScenes();
-
-            _onNewGameStarted?.Raise();
-
-            _loadingScreen?.SetActive(false);
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        // Instantiates required manager prefabs and ensures only one instance exists.
-        private void InstantiateManagers()
-        {
-            foreach (var prefab in _persistentPrefabs)
-            {
-                if (prefab == null) continue;
-
-                var prefabType = prefab.GetComponent<MonoBehaviour>().GetType();
-
-                if (FindFirstObjectByType(prefabType) != null)
-                    continue;
-
-                var instance = Instantiate(prefab);
-                instance.name = prefab.name;
-                DontDestroyOnLoad(instance);
-            }
-        }
-
-        // Calls setup methods on critical systems required for a new game session.
-        private async Task InitializeManagers()
-        {
-            await Task.Yield();
+            yield return null;
 
             var importer = FindFirstObjectByType<NewsImporter>();
             importer?.ImportAll();
-            if (importer != null)
-                Destroy(importer.gameObject);
+            Destroy(importer.gameObject);
 
             var reshuffler = FindFirstObjectByType<NewsDatabaseReshuffler>();
             reshuffler?.RefreshAllPools();
         }
 
-        // Loads all configured scenes additively if they are not already loaded.
-        private async Task LoadAdditiveScenes()
+        // Raises an event signaling that a new game has started.
+        protected override void RaiseFinishedEvent()
         {
-            foreach (var sceneName in _sceneNamesToLoad)
-            {
-                if (SceneManager.GetSceneByName(sceneName).isLoaded)
-                    continue;
-
-                var op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-                while (!op.isDone)
-                    await Task.Yield();
-            }
-        }
-
-        // Unloads all configured additive scenes if they are currently loaded.
-        private async Task UnloadAdditiveScenes()
-        {
-            foreach (var sceneName in _sceneNamesToUnload)
-            {
-                var scene = SceneManager.GetSceneByName(sceneName);
-                if (!scene.IsValid() || !scene.isLoaded)
-                    continue;
-
-                var op = SceneManager.UnloadSceneAsync(scene);
-                while (!op.isDone)
-                    await Task.Yield();
-            }
+            _onNewGameStarted?.Raise();
         }
 
         #endregion

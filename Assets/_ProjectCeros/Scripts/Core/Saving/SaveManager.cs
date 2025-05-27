@@ -19,6 +19,19 @@ namespace ProjectCeros
 
         [SerializeField] private List<SaveGroup> saveGroups;
 
+        public static SaveManager Instance { get; private set; }
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+        }
+
         [ContextMenu("Save Now")]
         public void Save()
         {
