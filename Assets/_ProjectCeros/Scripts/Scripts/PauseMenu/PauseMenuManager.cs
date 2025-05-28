@@ -4,9 +4,11 @@
 
 /// <remarks>
 /// 27/05/2025 by Damian Dalinger: Initial creation.
+/// 28/05/2025 by Damian Dalinger: Updated to the new Input System.
 /// </remarks>
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace ProjectCeros
 {
@@ -15,7 +17,7 @@ namespace ProjectCeros
         #region Fields
 
         [Tooltip("The key used to toggle pause/resume.")]
-        [SerializeField] private KeyCode _pauseKey = KeyCode.Escape;
+        [SerializeField] private InputActionReference _pauseAction;
 
         [Tooltip("Raised when the game is paused.")]
         [SerializeField] private GameEvent _onGamePaused;
@@ -29,20 +31,32 @@ namespace ProjectCeros
 
         #region Lifecycle Methods
 
-        private void Update()
+        // Registers the pause input callback and enables the input action when the object becomes active.
+        private void OnEnable()
         {
-            if (Input.GetKeyDown(_pauseKey))
-            {
-                if (!_isPaused)
-                    TriggerPause();
-                else
-                    TriggerResume();
-            }
+            _pauseAction.action.performed += OnPauseInput;
+            _pauseAction.action.Enable();
+        }
+
+        // Unregisters the pause input callback and disables the input action when the object is deactivated.
+        private void OnDisable()
+        {
+            _pauseAction.action.performed -= OnPauseInput;
+            _pauseAction.action.Disable();
         }
 
         #endregion
 
         #region Public Methods
+
+        // Handles the performed input event for the pause action and toggles game pause state accordingly.
+        private void OnPauseInput(InputAction.CallbackContext context)
+        {
+            if (!_isPaused)
+                TriggerPause();
+            else
+                TriggerResume();
+        }
 
         // Pauses the game and raises the pause event.
         public void TriggerPause()

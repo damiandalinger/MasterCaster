@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad8f0015efd9f842a65c6da47bb2c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pauseKey: 27
+  _pauseAction: {fileID: -6877997413692492279, guid: 7ee58004a8554674488d7d797ce55ec1, type: 3}
   _onGamePaused: {fileID: 11400000, guid: 4cb6a5bec7b65c74685c2e0f171c08dd, type: 2}
   _onGameResumed: {fileID: 11400000, guid: 8297fa7fe86ba804cb35daeaa867049a, type: 2}
 --- !u!114 &8820331617113471210
