@@ -4944,6 +4944,7 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: f8d7e135bdad61640927f2229d2c632c, type: 2}
   _feedbackText: {fileID: 902774352}
   _onPodcastConfirmed: {fileID: 11400000, guid: 2016aac406210b348a175d66f9a627de, type: 2}
+  _selectedImportantArticles: {fileID: 11400000, guid: 5927c7122f7723e4c9c565c802275fbc, type: 2}
 --- !u!4 &1232269528
 Transform:
   m_ObjectHideFlags: 0

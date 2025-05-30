@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 09/04/2025 by Damian Dalinger: Script Creation.
+/// 28/05/2025 by Damian Dalinger: Changed to BaseVariable for saving.
 /// </remarks>
 
 using UnityEngine;
@@ -12,16 +13,10 @@ using UnityEngine;
 namespace ProjectCeros
 {
     [CreateAssetMenu(menuName = "Variables/Vector2 Variable")]
-    public class Vector2Variable : ScriptableObject
+    public class Vector2Variable : BaseVariable<Vector2>
     {
-#if UNITY_EDITOR
-        [Multiline]
-        public string DeveloperDescription = "";
-#endif
-        public Vector2 Value;
-
         #region Public Methods
-        #region ApplyChange
+
         public void ApplyChange(Vector2 amount)
         {
             Value += amount;
@@ -31,16 +26,12 @@ namespace ProjectCeros
         {
             Value += amount.Value;
         }
-        #endregion
 
-        #region Normalize
         public void Normalize()
         {
             Value = Value.normalized;
         }
-        #endregion
 
-        #region SetValue
         public void SetValue(Vector2 value)
         {
             Value = value;
@@ -50,7 +41,7 @@ namespace ProjectCeros
         {
             Value = value.Value;
         }
-        #endregion
+
         #endregion
     }
 }

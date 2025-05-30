@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53b285255cec6a43a41e3d231885a4d, type: 3}
+  m_Name: RS_SelectedFruit
+  m_EditorClassIdentifier: 
+  Items:
+  - PairID: 0
+    Headline: Banana of the Day
+    Description: Bananas share 50% of their DNA with humans.
+    AgencyID: 2
+    Subgenre: banana
+    ValuePositive: 0
+    ValueNegative: 0
+    SizeCategory: 0
+    StoryID: 0
+    StoryPart: 0

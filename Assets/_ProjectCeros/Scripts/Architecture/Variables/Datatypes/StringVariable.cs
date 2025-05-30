@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 09/04/2025 by Damian Dalinger: Script Creation.
+/// 28/05/2025 by Damian Dalinger: Changed to BaseVariable for saving.
 /// </remarks>
 
 using UnityEngine;
@@ -12,22 +13,10 @@ using UnityEngine;
 namespace ProjectCeros
 {
     [CreateAssetMenu(menuName = "Variables/String Variable")]
-    public class StringVariable : ScriptableObject
+    public class StringVariable : BaseVariable<string>
     {
-#if UNITY_EDITOR
-        [Multiline]
-        public string DeveloperDescription = "";
-#endif
-        [SerializeField] private string value = "";
-
-        public string Value
-        {
-            get => value;
-            set => this.value = value;
-        }
-
         #region Public Methods
-        #region Append
+
         public void Append(string extra)
         {
             Value += extra;
@@ -37,16 +26,12 @@ namespace ProjectCeros
         {
             Value += extra;
         }
-        #endregion
 
-        #region Clear
         public void Clear()
         {
             Value = "";
         }
-        #endregion
 
-        #region SetValue
         public void SetValue(string value)
         {
             Value = value;
@@ -56,7 +41,7 @@ namespace ProjectCeros
         {
             Value = value.Value;
         }
-        #endregion
+
         #endregion
     }
 }

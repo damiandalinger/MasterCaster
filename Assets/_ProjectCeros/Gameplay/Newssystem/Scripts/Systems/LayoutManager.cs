@@ -41,6 +41,16 @@ namespace ProjectCeros
         [Tooltip("Mapping of all block prefabs used for layout generation.")]
         [SerializeField] private BlockPrefabMapping _prefabMapping;
 
+        [Header("Runtime Data")]
+        [Tooltip("Database that holds selected important articles.")]
+        [SerializeField] private ArticleDatabase _selectedImportantArticles;
+
+        [Tooltip("Selected article for fruit of the day.")]
+        [SerializeField] private ArticleDatabase _selectedFruitArticle;
+
+        [Tooltip("Random articles database.")]
+        [SerializeField] private ArticleDatabase _randomArticlesDatabase;
+
         public List<BlockAssignment> CurrentAssignments { get; private set; }
 
         private NewsSelector _selector;
@@ -65,9 +75,9 @@ namespace ProjectCeros
         {
             _selector.SelectImportantArticles();
 
-            var importantArticles = _selector.SelectedImportantArticles;
-            var randomArticles = _selector.GetRandomArticlePool();
-            var fruitArticle = _selector.SelectedFruitArticle;
+            var importantArticles = _selectedImportantArticles.Items;
+            var randomArticles = _randomArticlesDatabase.Items;
+            var fruitArticle = _selectedFruitArticle.Items.FirstOrDefault();
 
             var chosenPreset = FindSuitablePreset(importantArticles);
 
@@ -90,7 +100,6 @@ namespace ProjectCeros
 
             var assignments = AssignBlocks(chosenPreset, importantArticles, randomArticles, fruitArticle);
             CurrentAssignments = assignments;
-
         }
 
         #endregion
@@ -214,70 +223,8 @@ namespace ProjectCeros
                     });
                 }
             }
-
             return result;
         }
-
-        // Assigns articles to available blocks based on their size category.
-        /*private List<BlockAssignment> AssignBlocks(LayoutPreset preset, List<Article> important, List<Article> random, Article fruit)
-        {
-            var result = new List<BlockAssignment>();
-
-            var longImportant = important.Where(a => a.SizeCategory == _longCategoryValue.Value).ToList();
-            var mediumImportant = important.Where(a => a.SizeCategory == _mediumCategoryValue.Value).ToList();
-            var shortImportant = important.Where(a => a.SizeCategory == _shortCategoryValue.Value).ToList();
-
-            var longRandom = random.Where(a => a.SizeCategory == _longCategoryValue.Value).ToList();
-            var mediumRandom = random.Where(a => a.SizeCategory == _mediumCategoryValue.Value).ToList();
-            var shortRandom = random.Where(a => a.SizeCategory == _shortCategoryValue.Value).ToList();
-
-            foreach (var block in preset.Blocks)
-            {
-                int blockCategory = GetBlockCategory(block);
-
-                Article article = null;
-                bool isImportant = block.IsImportantNews;
-
-                if (isImportant)
-                {
-                    article = GetMatchingArticle(blockCategory, longImportant, mediumImportant, shortImportant);
-                }
-                else
-                {
-                    article = TryGetFittingRandomArticle(blockCategory, shortRandom, mediumRandom, longRandom) ?? fruit;
-                    if (article == fruit) fruit = null;
-                }
-
-                if (article != null)
-                {
-                    result.Add(new BlockAssignment
-                    {
-                        Prefab = _prefabMapping.GetPrefab(block.GetSize(), article.AgencyID, isImportant),
-                        Position = block.Position,
-                        ArticleHeadline = article.Headline,
-                        ArticleDescription = article.Description,
-                        ArticleSubgenre = article.Subgenre
-                    });
-                }
-            }
-
-            return result;
-        }
-
-        // Retrieves a matching article from the lists based on block category.
-        private Article GetMatchingArticle(int blockCategory, List<Article> longList, List<Article> mediumList, List<Article> shortList)
-        {
-            if (blockCategory == _longCategoryValue.Value && longList.Count > 0)
-                return PopFirst(longList);
-
-            if (blockCategory == _mediumCategoryValue.Value && mediumList.Count > 0)
-                return PopFirst(mediumList);
-
-            if (blockCategory == _shortCategoryValue.Value && shortList.Count > 0)
-                return PopFirst(shortList);
-
-            return null;
-        }*/
 
         // Calculates the size category (short, medium, long) of a block based on its area.
         private int GetBlockCategory(LayoutBlock block)
@@ -288,14 +235,6 @@ namespace ProjectCeros
             if (area <= _shortBlockAreaLimit.Value) return _shortCategoryValue.Value;
             if (area <= _mediumBlockAreaLimit.Value) return _mediumCategoryValue.Value;
             return _longCategoryValue.Value;
-        }
-
-        // Pops the first article from the list.
-        private Article PopFirst(List<Article> list)
-        {
-            var article = list[0];
-            list.RemoveAt(0);
-            return article;
         }
 
         #endregion

@@ -17,10 +17,19 @@ namespace ProjectCeros
 
         #region Fields
 
-        [Header("Listener Settings")]
         [Tooltip("Current number of listeners.")]
         [SerializeField] private IntReference _currentListeners;
 
+        [Tooltip("Text UI element for feedback.")]
+        [SerializeField] private TMP_Text _feedbackText;
+
+        [Tooltip("Event raised after podcast is confirmed.")]
+        [SerializeField] private GameEvent _onPodcastConfirmed;
+        
+        [Tooltip("Database that holds selected important articles.")]
+        [SerializeField] private ArticleDatabase _selectedImportantArticles;
+
+        [Header("Listener Settings")]
         [Tooltip("Multiplier for previous listeners.")]
         [SerializeField] private FloatReference _previousListenerMod;
 
@@ -30,16 +39,9 @@ namespace ProjectCeros
         [Tooltip("Bonus multiplier if the selected subgenre matches.")]
         [SerializeField] private FloatReference _subgenreBonus;
 
-        [Tooltip("Text UI element for feedback.")]
-        [SerializeField] private TMP_Text _feedbackText;
-
-        [Tooltip("Event raised after podcast is confirmed.")]
-        [SerializeField] private GameEvent _onPodcastConfirmed;
-
         private int _selectedGenre = -1;
         private int _selectedValue = 0;
         private string _selectedSubgenre = string.Empty;
-        private NewsSelector _selector;
 
         #endregion
 
@@ -47,7 +49,6 @@ namespace ProjectCeros
 
         private void Start()
         {
-            _selector = FindFirstObjectByType<NewsSelector>();
             UpdateFeedback();
         }
 
@@ -79,9 +80,6 @@ namespace ProjectCeros
         // Confirms the current selection, performs listener gain calculation and updates feedback.
         public void ConfirmSelection()
         {
-            if (!TryFindSelector())
-                return;
-
             if (!IsValidSelection())
             {
                 ShowInvalidFeedback();
@@ -96,19 +94,6 @@ namespace ProjectCeros
         #endregion
 
         #region Private Methods
-
-        // Attempts to find and cache the NewsSelector if not already assigned.
-        private bool TryFindSelector()
-        {
-            if (_selector != null)
-                return true;
-
-            _selector = FindFirstObjectByType<NewsSelector>();
-            if (_selector == null)
-                return false;
-
-            return true;
-        }
 
         // Returns true if the current selection is valid for processing.
         private bool IsValidSelection()
@@ -135,7 +120,7 @@ namespace ProjectCeros
         // Calculates listener growth based on current selections and article match data.
         private PodcastResult CalculateListenerGain()
         {
-            var articles = _selector.SelectedImportantArticles;
+            var articles = _selectedImportantArticles.Items;
             var matchingArticle = articles.FirstOrDefault(a => a.PairID / 1000 == _selectedGenre);
 
             var result = new PodcastResult

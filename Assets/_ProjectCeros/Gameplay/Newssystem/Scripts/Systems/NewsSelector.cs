@@ -20,23 +20,22 @@ namespace ProjectCeros
     {
         #region Fields
 
-        public List<Article> SelectedImportantArticles { get; private set; } = new();
-        public List<Article> GetRandomArticlePool()
-        {
-            return _eligibleRandomArticles.Items;
-        }
-        public Article SelectedFruitArticle { get; private set; }
-
-        [Header("Important News Pools")]
+        [Header("Important Article Databases")]
         [Tooltip("Databases that hold eligible important articles.")]
         [SerializeField] private List<ArticleDatabase> _eligibleImportantArticles;
 
-        [Header("Random News Pools")]
-        [Tooltip("Database that holds eligible random articles.")]
-        [SerializeField] private ArticleDatabase _eligibleRandomArticles;
-
         [Tooltip("Eligible articles for fruit of the day.")]
         [SerializeField] private ArticleDatabase _eligibleFruitArticles;
+
+        [Header("Selected Articles")]
+        [Tooltip("Database that holds selected important articles.")]
+        [SerializeField] private ArticleDatabase _selectedImportantArticles;
+
+        [Tooltip("Selected article for fruit of the day.")]
+        [SerializeField] private ArticleDatabase _selectedFruitArticle;
+
+        [Tooltip("Last selected genres string runtime set.")]
+        [SerializeField] private StringRuntimeSet _lastSelectedGenreNames;
 
         [Header("Selection Settings")]
         [Tooltip("How many genres should be selected per newspaper.")]
@@ -70,7 +69,6 @@ namespace ProjectCeros
 
         private NewsDatabaseReshuffler _reshuffler;
         private Dictionary<int, List<Article>> _pairedByGenre = new();
-        private List<ArticleDatabase> _lastSelectedGenres = new List<ArticleDatabase>();
 
         #endregion
 
@@ -91,9 +89,8 @@ namespace ProjectCeros
         {
             _reshuffler.ReshufflePoolsIfNeeded();
             _pairedByGenre.Clear();
-            SelectedImportantArticles.Clear();
-            //SelectedRandomArticles.Clear();
-            SelectedFruitArticle = null;
+            _selectedImportantArticles.Clear();
+            _selectedFruitArticle.Clear();
 
 
             // 1. Select a genre.
@@ -108,7 +105,7 @@ namespace ProjectCeros
 
                 var pick = Random.value < 0.5f ? items[0] : items[1];
 
-                SelectedImportantArticles.Add(pick);
+                _selectedImportantArticles.Add(pick);
                 _pairedByGenre[pick.PairID] = new List<Article> { items[0], items[1] };
 
                 items.RemoveRange(0, 2);
@@ -136,9 +133,8 @@ namespace ProjectCeros
                 }
             }
 
-            // 5. Select random articles and fruit of the day.
+            // 5. Select fruit of the day.
             _reshuffler.ReshufflePoolsIfNeeded();
-            //SelectRandomArticles(_randomArticleCount);
             SelectFruitOfTheDay();
 
             LogSelectedArticles();
@@ -157,7 +153,7 @@ namespace ProjectCeros
 
             foreach (var db in _eligibleImportantArticles)
             {
-                bool wasPreviouslySelected = _lastSelectedGenres.Contains(db);
+                bool wasPreviouslySelected = _lastSelectedGenreNames.Items.Contains(db.name);
                 float baseWeight = Random.value;
 
                 float finalWeight = wasPreviouslySelected ? baseWeight * _repeatPenaltyFactor : baseWeight;
@@ -172,36 +168,27 @@ namespace ProjectCeros
                 .ToList();
 
             // Step 3: Store current selection as last
-            _lastSelectedGenres = selectedGenres;
+            _lastSelectedGenreNames.Clear();
+            foreach (var genre in selectedGenres)
+            {
+                _lastSelectedGenreNames.Add(genre.name);
+            }
 
             return selectedGenres;
         }
-
-
-        // Selects and removes the specified number of random articles.
-        /*private void SelectRandomArticles(int count)
-        {
-            var items = _eligibleRandomArticles.Items;
-            for (int i = 0; i < count && items.Count > 0; i++)
-            {
-                var selected = items[0];
-                SelectedRandomArticles.Add(selected);
-                items.RemoveAt(0);
-            }
-        }*/
 
         // Selects the first fruit article.
         private void SelectFruitOfTheDay()
         {
             var items = _eligibleFruitArticles.Items;
-            SelectedFruitArticle = items[0];
+            _selectedFruitArticle.Add(items[0]);
             items.RemoveAt(0);
         }
 
         // Attempts to add a follow-up story article based on weighted selection.
         private void AddOptionalPairArticle()
         {
-            var alreadyUsedOpposites = SelectedImportantArticles
+            var alreadyUsedOpposites = _selectedImportantArticles.Items
                 .Select(a => a.PairID)
                 .GroupBy(id => id)
                 .Where(g => g.Count() > 1)
@@ -210,7 +197,7 @@ namespace ProjectCeros
 
             var weighted = new List<(Article primary, Article opposite, float weight)>();
 
-            foreach (var a in SelectedImportantArticles)
+            foreach (var a in _selectedImportantArticles.Items)
             {
                 if (!_pairedByGenre.ContainsKey(a.PairID) || alreadyUsedOpposites.Contains(a.PairID))
                     continue;
@@ -241,7 +228,7 @@ namespace ProjectCeros
 
             if (chosen.opposite != null)
             {
-                SelectedImportantArticles.Add(chosen.opposite);
+                _selectedImportantArticles.Add(chosen.opposite);
             }
         }
 
@@ -249,16 +236,10 @@ namespace ProjectCeros
         private void LogSelectedArticles()
         {
             Log($"Selected Important Articles:");
-            foreach (var a in SelectedImportantArticles)
+            foreach (var a in _selectedImportantArticles.Items)
             {
                 Log($"→ {a.Headline} | Agency: {a.AgencyID}, Pair: {a.PairID}, Value+: {a.ValuePositive}, Value-: {a.ValueNegative}");
             }
-
-            /*Log($"Selected Random Articles:");
-            foreach (var a in SelectedRandomArticles)
-            {
-                Log($"→ {a.Headline}");
-            }*/
         }
 
         // DEBUG: Logs a message to the console if debug logging is enabled.
