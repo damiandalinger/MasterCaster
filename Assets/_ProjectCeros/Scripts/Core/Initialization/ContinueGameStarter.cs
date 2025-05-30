@@ -22,8 +22,13 @@ namespace ProjectCeros
 
         #region Protected Methods
 
+        protected override void ResetInitialGameState()
+        {
+            // Nothing to reset.
+        }
+
         // Attempts to load the saved game from disk.
-        protected override IEnumerator RunCustomLogic()
+        protected override IEnumerator ManagerInitialization()
         {
             if (SaveManager.Instance != null && SaveManager.Instance.SaveFileExists())
                 SaveManager.Instance.Load();

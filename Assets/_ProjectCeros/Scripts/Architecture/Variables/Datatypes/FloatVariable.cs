@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 09/04/2025 by Damian Dalinger: Script Creation.
+/// 28/05/2025 by Damian Dalinger: Changed to BaseVariable for saving.
 /// </remarks>
 
 using UnityEngine;
@@ -12,17 +13,10 @@ using UnityEngine;
 namespace ProjectCeros
 {
     [CreateAssetMenu(menuName = "Variables/Float Variable")]
-    public class FloatVariable : ScriptableObject
+    public class FloatVariable : BaseVariable<float>
     {
-#if UNITY_EDITOR
-        [Multiline]
-        public string DeveloperDescription = "";
-#endif
-
-        public float Value;
-
         #region Public Methods
-        #region ApplyChange
+
         public void ApplyChange(float amount)
         {
             Value += amount;
@@ -32,9 +26,7 @@ namespace ProjectCeros
         {
             Value += amount.Value;
         }
-        #endregion
 
-        #region Clamp
         public void Clamp(float min, float max)
         {
             Value = Mathf.Clamp(Value, min, max);
@@ -54,9 +46,7 @@ namespace ProjectCeros
         {
             Value = Mathf.Clamp(Value, min.Value, max.Value);
         }
-        #endregion
 
-        #region Divide
         public void Divide(float divisor)
         {
             Value /= divisor;
@@ -66,9 +56,7 @@ namespace ProjectCeros
         {
             Value /= divisor.Value;
         }
-        #endregion
 
-        #region Multiply
         public void Multiply(float factor)
         {
             Value *= factor;
@@ -78,9 +66,7 @@ namespace ProjectCeros
         {
             Value *= factor.Value;
         }
-        #endregion
 
-        #region SetValue
         public void SetValue(float value)
         {
             Value = value;
@@ -90,7 +76,7 @@ namespace ProjectCeros
         {
             Value = value.Value;
         }
-        #endregion
+
         #endregion
     }
 }

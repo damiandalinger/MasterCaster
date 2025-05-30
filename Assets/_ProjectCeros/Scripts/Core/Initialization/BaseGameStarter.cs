@@ -45,11 +45,13 @@ namespace ProjectCeros
             LoadingScreenManager.Instance.Show();
             yield return null;
 
+            ResetInitialGameState();
+
             yield return LoadAdditiveScenes();
 
             InstantiateManagers();
 
-            yield return RunCustomLogic();
+            yield return ManagerInitialization();
 
             yield return UnloadAdditiveScenes();
 
@@ -110,7 +112,8 @@ namespace ProjectCeros
         #region Abstract Methods
 
         // Implement in subclasses
-        protected abstract IEnumerator RunCustomLogic();
+        protected abstract void ResetInitialGameState();
+        protected abstract IEnumerator ManagerInitialization();
         protected abstract void RaiseFinishedEvent();
 
         #endregion

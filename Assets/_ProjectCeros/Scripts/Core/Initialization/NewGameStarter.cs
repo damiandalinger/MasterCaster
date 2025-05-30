@@ -29,19 +29,22 @@ namespace ProjectCeros
 
         #region Protected Methods
 
-        // Resets saved data and initializes game values for a fresh start.
-        protected override IEnumerator RunCustomLogic()
+        // Resets the data from the last play.
+        protected override void ResetInitialGameState()
         {
             SaveManager.Instance?.DeleteSave();
-
             _listenerCount.SetValue(0);
             _currentDay.SetValue(1);
+        }
 
+        // Initializes managers.
+        protected override IEnumerator ManagerInitialization()
+        {
             yield return null;
 
             var importer = FindFirstObjectByType<NewsImporter>();
             importer?.ImportAll();
-            Destroy(importer.gameObject);
+            Destroy(importer?.gameObject);
 
             var reshuffler = FindFirstObjectByType<NewsDatabaseReshuffler>();
             reshuffler?.RefreshAllPools();

@@ -43,8 +43,6 @@ namespace ProjectCeros
             LoadingScreenManager.Instance.Show();
             yield return null;
 
-            SaveManager.Instance.Save();
-
             Time.timeScale = 1f;
 
             yield return StartCoroutine(UnloadScenesAndKeepSpecified());

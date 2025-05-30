@@ -1,3 +1,11 @@
+/// <summary>
+/// Manages saving and loading of ScriptableObjects implementing ISaveable.
+/// Uses JSON file stored in persistent data path.
+/// </summary>
+/// <remarks>
+/// 30/05/2025 by Damian Dalinger: Script creation.
+/// </remarks>
+
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
@@ -10,16 +18,21 @@ namespace ProjectCeros
 {
     public class SaveManager : MonoBehaviour
     {
-        [System.Serializable]
-        public class SaveGroup
-        {
-            public string GroupName;
-            public List<ScriptableObject> Saveables;
-        }
+        #region Fields
 
-        [SerializeField] private List<SaveGroup> saveGroups;
+        [Tooltip("Groups of ScriptableObjects to be saved and loaded.")]
+        [SerializeField] private List<SaveGroup> _saveGroups = new();
 
+        #endregion
+
+        #region Properties
+
+        // Global instance of the SaveManager.
         public static SaveManager Instance { get; private set; }
+
+        #endregion
+
+        #region Lifecycle Methods
 
         private void Awake()
         {
@@ -32,12 +45,17 @@ namespace ProjectCeros
             Instance = this;
         }
 
+        #endregion
+
+        #region Public Methods
+
+        // Saves all ISaveable objects in configured save groups to disk.
         [ContextMenu("Save Now")]
         public void Save()
         {
             var data = new Dictionary<string, object>();
 
-            foreach (var group in saveGroups)
+            foreach (var group in _saveGroups)
             {
                 foreach (var so in group.Saveables)
                 {
@@ -48,9 +66,9 @@ namespace ProjectCeros
 
             var json = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(GetSavePath(), json);
-            Debug.Log("Game saved to: " + GetSavePath());
         }
 
+        // Loads and restores state for all ISaveable objects from disk.
         [ContextMenu("Load Now")]
         public void Load()
         {
@@ -63,7 +81,7 @@ namespace ProjectCeros
             var json = File.ReadAllText(GetSavePath());
             var data = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
 
-            foreach (var group in saveGroups)
+            foreach (var group in _saveGroups)
             {
                 foreach (var so in group.Saveables)
                 {
@@ -71,10 +89,9 @@ namespace ProjectCeros
                         saveable.RestoreState(state);
                 }
             }
-
-            Debug.Log("Game loaded from: " + GetSavePath());
         }
 
+        // Opens the folder containing the save file in the OS file browser (Editor only).
         [ContextMenu("Open Save Folder")]
         public void OpenSaveFolder()
         {
@@ -86,7 +103,7 @@ namespace ProjectCeros
         private string GetSavePath() =>
             Path.Combine(Application.persistentDataPath, "save.json");
 
-
+        // Deletes the existing save file from disk.
         public void DeleteSave()
         {
             var path = GetSavePath();
@@ -97,9 +114,25 @@ namespace ProjectCeros
             }
         }
 
+        // Checks if a save file exists.
         public bool SaveFileExists()
         {
             return File.Exists(GetSavePath());
         }
+
+        #endregion
+
+        #region Nested Types
+
+        [System.Serializable]
+        public class SaveGroup
+        {
+            public string GroupName;
+
+            [Tooltip("List of ScriptableObjects to include in this save group.")]
+            public List<ScriptableObject> Saveables;
+        }
+
+        #endregion
     }
 }

@@ -5,34 +5,18 @@
 
 /// <remarks>
 /// 09/04/2025 by Damian Dalinger: Script Creation.
+/// 28/05/2025 by Damian Dalinger: Changed to BaseVariable for saving.
 /// </remarks>
 
-using System;
 using UnityEngine;
 
 namespace ProjectCeros
 {
     [CreateAssetMenu(menuName = "Variables/Int Variable")]
-    public class IntVariable : ScriptableObject, ISaveable
+    public class IntVariable : BaseVariable<int>
     {
-#if UNITY_EDITOR
-        [Multiline]
-        public string DeveloperDescription = "";
-#endif
-
-        public int Value;
-
-        public string SaveKey => name;
-
-        public object CaptureState() => Value;
-
-        public void RestoreState(object state)
-        {
-            Value = Convert.ToInt32(state);
-        }
-
         #region Public Methods
-        #region ApplyChange
+
         public void ApplyChange(int amount)
         {
             Value += amount;
@@ -42,9 +26,7 @@ namespace ProjectCeros
         {
             Value += amount.Value;
         }
-        #endregion
 
-        #region Clamp
         public void Clamp(int min, int max)
         {
             Value = Mathf.Clamp(Value, min, max);
@@ -64,9 +46,7 @@ namespace ProjectCeros
         {
             Value = Mathf.Clamp(Value, min.Value, max.Value);
         }
-        #endregion
 
-        #region Divide
         public void Divide(int divisor)
         {
             Value /= divisor;
@@ -76,9 +56,7 @@ namespace ProjectCeros
         {
             Value /= divisor.Value;
         }
-        #endregion
 
-        #region Multiply
         public void Multiply(int factor)
         {
             Value *= factor;
@@ -88,9 +66,7 @@ namespace ProjectCeros
         {
             Value *= factor.Value;
         }
-        #endregion
 
-        #region SetValue
         public void SetValue(int value)
         {
             Value = value;
@@ -100,7 +76,7 @@ namespace ProjectCeros
         {
             Value = value.Value;
         }
-        #endregion
+
         #endregion
     }
 }

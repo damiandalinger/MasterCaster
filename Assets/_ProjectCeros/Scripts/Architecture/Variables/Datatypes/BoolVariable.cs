@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 09/04/2025 by Damian Dalinger: Script Creation.
+/// 28/05/2025 by Damian Dalinger: Changed to BaseVariable for saving.
 /// </remarks>
 
 using UnityEngine;
@@ -12,16 +13,10 @@ using UnityEngine;
 namespace ProjectCeros
 {
     [CreateAssetMenu(menuName = "Variables/Bool Variable")]
-    public class BoolVariable : ScriptableObject
+    public class BoolVariable : BaseVariable<bool>
     {
-#if UNITY_EDITOR
-        [Multiline]
-        public string DeveloperDescription = "";
-#endif
-        public bool Value;
-
         #region Public Methods
-        #region SetValue
+
         public void SetValue(bool value)
         {
             Value = value;
@@ -31,14 +26,12 @@ namespace ProjectCeros
         {
             Value = value.Value;
         }
-        #endregion
 
-        #region Toggle
         public void Toggle()
         {
-        Value = !Value;
+            Value = !Value;
         }
-        #endregion
+
         #endregion
     }
 }

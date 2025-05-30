@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 2354113631319605285}
   - component: {fileID: 2468582364305282710}
   - component: {fileID: 7006981452719394654}
+  - component: {fileID: 3132247430497240590}
   m_Layer: 0
   m_Name: '@NewsManager'
   m_TagString: Untagged
@@ -179,6 +180,9 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: fb594465567f0a14ba3ef9aa397b4276, type: 2}
   _prefabMapping: {fileID: 11400000, guid: 04002f44a5dea2c4a9b3db0b403ff3ce, type: 2}
+  _selectedImportantArticles: {fileID: 11400000, guid: 5927c7122f7723e4c9c565c802275fbc, type: 2}
+  _selectedFruitArticle: {fileID: 11400000, guid: a3b6341b58e3e8745a77b17ffc7cb20e, type: 2}
+  _randomArticlesDatabase: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
 --- !u!114 &2354113631319605285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,8 +202,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4bda3b3acc6b3344681c718cec13debf, type: 2}
   - {fileID: 11400000, guid: 154abc5c18be5ed4b9c9024be57cf993, type: 2}
   - {fileID: 11400000, guid: 0d14586465541cf46a3903ebf914a86a, type: 2}
-  _eligibleRandomArticles: {fileID: 11400000, guid: 8227647a5d0898f4b8c271af2337a781, type: 2}
   _eligibleFruitArticles: {fileID: 11400000, guid: 7f6f3aed222d5e5428bdc1c8a0c67daf, type: 2}
+  _selectedImportantArticles: {fileID: 11400000, guid: 5927c7122f7723e4c9c565c802275fbc, type: 2}
+  _selectedFruitArticle: {fileID: 11400000, guid: a3b6341b58e3e8745a77b17ffc7cb20e, type: 2}
+  _lastSelectedGenreNames: {fileID: 11400000, guid: beeb58ef363bb6e4f88164eab6f857fd, type: 2}
   _genreCount:
     UseConstant: 0
     ConstantValue: 0
@@ -274,6 +280,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: {fileID: 11400000, guid: 3b4844cc409e8e2479e734f4c4a610b3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 753618992931477180}
+        m_TargetAssemblyTypeName: ProjectCeros.LayoutManager, Assembly-CSharp
+        m_MethodName: BuildLayout
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3132247430497240590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877826804840754719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756af48229c34a140bf09dfa3d17e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4f388e52b6649154987cec43fa16e923, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
