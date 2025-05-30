@@ -6,28 +6,28 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_MasterCaster/Scenes/Bootstrapper/Bootstrapper.unity
+    path: Assets/_ProjectCeros/Scenes/Bootstrapper/Bootstrapper.unity
     guid: 2d57a5525abfce54586bac363015c6de
   - enabled: 1
-    path: Assets/_MasterCaster/Scenes/MainMenu/MainMenu.unity
+    path: Assets/_ProjectCeros/Scenes/MainMenu/MainMenu.unity
     guid: c3ab43eec8d1cbe49bf15e6624a3c59e
   - enabled: 1
-    path: Assets/_MasterCaster/Scenes/GameSession/GameSession.unity
+    path: Assets/_ProjectCeros/Scenes/GameSession/GameSession.unity
     guid: 18a34f54c3dee4f43969ae5bf14c42e8
   - enabled: 1
-    path: Assets/_MasterCaster/Scenes/PauseMenu/PauseMenu.unity
+    path: Assets/_ProjectCeros/Scenes/PauseMenu/PauseMenu.unity
     guid: 2891d89e46d61fb47a2b9edfab66dd5f
   - enabled: 1
-    path: Assets/_MasterCaster/Scenes/Bedroom/Bedroom.unity
+    path: Assets/_ProjectCeros/Scenes/Bedroom/Bedroom.unity
     guid: 205aa528a767dfa42a015c891f34bd73
   - enabled: 1
-    path: Assets/_MasterCaster/Scenes/HUD/HUD.unity
+    path: Assets/_ProjectCeros/Scenes/HUD/HUD.unity
     guid: 054b32c2dbeaf83498a5e3e35a7ab32a
   - enabled: 1
-    path: Assets/_MasterCaster/Scenes/NewspaperUI/NewspaperUI.unity
+    path: Assets/_ProjectCeros/Scenes/NewspaperUI/NewspaperUI.unity
     guid: 9eee40a474cb5a94dbc0572082f92fa2
   - enabled: 1
-    path: Assets/_MasterCaster/Scenes/PodcastCreationUI/PodcastCreationUI.unity
+    path: Assets/_ProjectCeros/Scenes/PodcastCreationUI/PodcastCreationUI.unity
     guid: be70f4b37f03fc643bd73dddfe8997a5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7ee58004a8554674488d7d797ce55ec1, type: 3}

@@ -673,7 +673,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: ../../FMOD Studio/test/test.fspro
-  sourceBankPath: Assets/_MasterCaster/Resources/FMODBanks/Desktop
+  sourceBankPath: Assets/_ProjectCeros/Resources/FMODBanks/Desktop
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
