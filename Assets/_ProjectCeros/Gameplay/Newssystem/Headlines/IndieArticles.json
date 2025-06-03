@@ -7,6 +7,7 @@
         "Subgenre": "sidescroller",
         "ValuePositive": 1.3,
         "ValueNegative": 0.8,
+        "BackgroundName": "",
         "StoryID": 0
     },
     {
@@ -17,6 +18,7 @@
         "Subgenre": "sidescroller",
         "ValuePositive": 1.3,
         "ValueNegative": 0.8,
+        "BackgroundName": "",
         "StoryID": 0
     },
     {
@@ -27,6 +29,7 @@
         "Subgenre": "roguelike",
         "ValuePositive": 1.3,
         "ValueNegative": 1.1,
+        "BackgroundName": "",
         "StoryID": 0
     },
     {
@@ -37,6 +40,7 @@
         "Subgenre": "roguelike",
         "ValuePositive": 1.3,
         "ValueNegative": 1.1,
+        "BackgroundName": "",
         "StoryID": 0
     },
     {
@@ -47,6 +51,7 @@
         "Subgenre": "sidescroller",
         "ValuePositive": 1.5,
         "ValueNegative": 0.9,
+        "BackgroundName": "",
         "StoryID": 0
     },
     {
@@ -57,6 +62,7 @@
         "Subgenre": "sidescroller",
         "ValuePositive": 1.5,
         "ValueNegative": 0.9,
+        "BackgroundName": "",
         "StoryID": 0
     }
 ]

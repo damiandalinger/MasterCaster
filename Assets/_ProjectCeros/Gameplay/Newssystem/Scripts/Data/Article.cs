@@ -21,7 +21,8 @@ namespace ProjectCeros
         public float ValuePositive;
         public float ValueNegative;
         public int SizeCategory;
-        public int StoryID = 0;   
+        public int StoryID = 0;
         public int StoryPart = 0;     
+        public string BackgroundName;
     }
 }

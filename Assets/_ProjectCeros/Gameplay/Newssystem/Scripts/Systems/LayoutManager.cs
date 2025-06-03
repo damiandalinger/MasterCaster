@@ -6,6 +6,7 @@
 /// <remarks>
 /// 25/04/2025 by Damian Dalinger: Script creation.
 /// 29/04/2025 by Damian Dalinger: Major refactor, cleanup, and optimizations.
+/// 03/06/2025 by Damian Dalinger: Added ArticleBackgroundName and UseCustomBackground.
 /// </remarks>
 
 using System.Collections.Generic;
@@ -162,13 +163,17 @@ namespace ProjectCeros
 
                 if (matchedBlock != null)
                 {
+                    var size = matchedBlock.GetSize();
+                    bool is2x2 = size.x == 2 && size.y == 2;
+
                     result.Add(new BlockAssignment
                     {
                         Prefab = _prefabMapping.GetPrefab(matchedBlock.GetSize(), article.AgencyID, true),
                         Position = matchedBlock.Position,
                         ArticleHeadline = article.Headline,
                         ArticleDescription = article.Description,
-                        ArticleSubgenre = article.Subgenre
+                        ArticleBackgroundName = is2x2 ? article.BackgroundName : null,
+                        UseCustomBackground = is2x2
                     });
 
                     remainingBlocks.Remove(matchedBlock);
@@ -193,7 +198,8 @@ namespace ProjectCeros
                         Position = fruitBlock.Position,
                         ArticleHeadline = fruit.Headline,
                         ArticleDescription = fruit.Description,
-                        ArticleSubgenre = fruit.Subgenre
+                        ArticleBackgroundName = fruit.BackgroundName,
+                        UseCustomBackground = true
                     });
 
                     remainingBlocks.Remove(fruitBlock);
@@ -213,13 +219,17 @@ namespace ProjectCeros
                 var article = TryGetFittingRandomArticle(blockCategory, random);
                 if (article != null)
                 {
+                    var size = block.GetSize();
+                    bool is2x2 = size.x == 2 && size.y == 2;
+
                     result.Add(new BlockAssignment
                     {
                         Prefab = _prefabMapping.GetPrefab(block.GetSize(), article.AgencyID, false),
                         Position = block.Position,
                         ArticleHeadline = article.Headline,
                         ArticleDescription = article.Description,
-                        ArticleSubgenre = article.Subgenre
+                        ArticleBackgroundName = is2x2 ? article.BackgroundName : null,
+                        UseCustomBackground = is2x2
                     });
                 }
             }

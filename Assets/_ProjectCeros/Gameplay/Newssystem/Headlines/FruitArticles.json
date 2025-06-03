@@ -3,30 +3,30 @@
     "PairID": 0,
     "Headline": "Banana of the Day",
     "Description": "Bananas share 50% of their DNA with humans.",
-    "AgencyID": 2,
-    "Subgenre": "banana",
+    "AgencyID": 4,
     "ValuePositive": 0,
     "ValueNegative": 0,
+    "BackgroundName": "SPR_FruitOfTheWeek_Banana_1x1",
     "StoryID": 0
 },
 {
     "PairID": 0,
     "Headline": "Cherry of the Day",
     "Description": "Cherries contain melatonin and can thus help regulate sleep patterns. ",
-    "AgencyID": 2,
-    "Subgenre": "cherry",
+    "AgencyID": 4,
     "ValuePositive": 0,
     "ValueNegative": 0,
+    "BackgroundName": "SPR_FruitOfTheWeek_Cherry_1x1",
     "StoryID": 0
 },
 {
     "PairID": 0,
     "Headline": "Peach of the Day",
     "Description": "Donut peaches are infact a natural development and not caused by humans!",
-    "AgencyID": 2,
-    "Subgenre": "peach",
+    "AgencyID": 4,
     "ValuePositive": 0,
     "ValueNegative": 0,
+    "BackgroundName": "SPR_FruitOfTheWeek_Peach_1x1",
     "StoryID": 0
 }
 ]

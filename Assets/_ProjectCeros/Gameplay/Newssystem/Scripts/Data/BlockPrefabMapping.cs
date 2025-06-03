@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 06/05/2025 by Damian Dalinger: Script creation.
+/// 03/06/2025 by Damian Dalinger: Changed from a GameObject to a list. 
 /// </remarks>
 
 using System.Collections.Generic;
@@ -24,13 +25,13 @@ namespace ProjectCeros
         {
             foreach (var entry in _prefabEntries)
             {
-                if (entry == null || entry.Prefab == null) continue;
+                if (entry == null || entry.Prefabs == null || entry.Prefabs.Count == 0) continue;
 
                 if (entry.AgencyID == agencyID &&
                     entry.IsImportant == isImportant &&
                     entry.GetSize() == size)
                 {
-                    return entry.Prefab;
+                    return entry.Prefabs[Random.Range(0, entry.Prefabs.Count)];
                 }
             }
 
