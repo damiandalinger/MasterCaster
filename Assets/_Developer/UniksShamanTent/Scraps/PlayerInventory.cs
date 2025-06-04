@@ -15,9 +15,9 @@ namespace ProjectCeros
 {
     public class PlayerInventory : MonoBehaviour
     {
-    [SerializeField] private List<ItemObjects> inventory = new();
+    [SerializeField] private List<ItemSO> inventory = new();
 
-    public void AddItem(ItemObjects item)
+    public void AddItem(ItemSO item)
     {
         if (!inventory.Contains(item))
         {
@@ -30,6 +30,6 @@ namespace ProjectCeros
         }
     }
 
-    public List<ItemObjects> GetInventory() => inventory;
+    public List<ItemSO> GetInventory() => inventory;
 }
 }

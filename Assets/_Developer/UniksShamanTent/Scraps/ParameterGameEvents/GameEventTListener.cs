@@ -2,23 +2,27 @@ using ProjectCeros;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class GameEventTListener<T> : MonoBehaviour
+namespace ProjectCeros
 {
-    public GameEventT<T> Event;
-    public UnityEvent<T> Response;
 
-    private void OnEnable()
+    public abstract class GameEventTListener<T> : MonoBehaviour
     {
-        Event.RegisterListener(this);
-    }
+        public GameEventT<T> Event;
+        public UnityEvent<T> Response;
 
-    private void OnDisable()
-    {
-        Event.UnregisterListener(this);
-    }
+        private void OnEnable()
+        {
+            Event.RegisterListener(this);
+        }
 
-    public void OnEventRaised(T item)
-    {
-        Response.Invoke(item);
+        private void OnDisable()
+        {
+            Event.UnregisterListener(this);
+        }
+
+        public void OnEventRaised(T item)
+        {
+            Response.Invoke(item);
+        }
     }
 }

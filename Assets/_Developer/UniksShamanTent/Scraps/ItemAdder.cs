@@ -14,7 +14,7 @@ namespace ProjectCeros
 {
     public class ItemAdder : MonoBehaviour
     {
-    public ItemObjects itemToAdd; // Assign in Inspector
+    public ItemSO itemToAdd; // Assign in Inspector
     public PlayerInventory inventory; // Assign in Inspector
 
     public void AddItemToInventory()

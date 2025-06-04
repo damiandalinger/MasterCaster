@@ -1,5 +1,4 @@
-
-/// <summary>
+// <summary>
 /// Creates SO for Items in the Shop
 /// </summary>
 
@@ -13,11 +12,14 @@ using UnityEngine;
 namespace ProjectCeros
 {
     [CreateAssetMenu(fileName = "NewItem", menuName = "Shop/Items")]
-    public class ItemObjects : ScriptableObject
+    public class ItemSO : ScriptableObject
     {
 
         [Tooltip("Name of the Shop Item")]
         [SerializeField] public string ItemName;
+
+        public Sprite icon;
+        public int price;
 
 
 
