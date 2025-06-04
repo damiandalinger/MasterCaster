@@ -20,7 +20,7 @@ namespace ProjectCeros
 
         protected override float GetValue()
         {
-            return UseConstant ? ConstantValue : Variable.Value;
+            return UseConstant ? ConstantValue : Variable.RuntimeValue;
         }
 
         public static implicit operator float(FloatReference reference)

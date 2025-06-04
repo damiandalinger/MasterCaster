@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1821afb6f7187b4d8ecbf29760f003b, type: 3}
   m_Name: V_WrongGenreValue
   m_EditorClassIdentifier: 
+  _isSaveable: 0
   DeveloperDescription: 
-  Value: 1
+  InitialValue: 0
+  RuntimeValue: 1

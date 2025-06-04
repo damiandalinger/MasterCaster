@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a41be0e8f08db24a9abfb68fe0416f9, type: 3}
   m_Name: RS_LastSelectedGenres
   m_EditorClassIdentifier: 
-  Items:
-  - RS_EligableActionArticles
-  - RS_EligableSimulationArticles
-  - RS_EligableRPGArticles
+  _isSaveable: 1
+  Items: []

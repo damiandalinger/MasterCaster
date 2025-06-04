@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b285255cec6a43a41e3d231885a4d, type: 3}
   m_Name: RS_AllSimulationArticles
   m_EditorClassIdentifier: 
+  _isSaveable: 1
   Items:
   - PairID: 3001
     Headline: Simulation fans love deep mechanics
@@ -23,6 +24,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 0
     StoryPart: 0
+    BackgroundName: 
   - PairID: 3001
     Headline: Simulation games too complex?
     Description: Casual players feel left behind by detailed systems.
@@ -33,6 +35,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 0
     StoryPart: 0
+    BackgroundName: 
   - PairID: 3002
     Headline: 'Simulation '
     Description: Realistic gameplay earns praise from enthusiasts.
@@ -43,6 +46,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 0
     StoryPart: 0
+    BackgroundName: 
   - PairID: 3002
     Headline: Simulation games
     Description: Casual players feel left behind by detailed systems.
@@ -53,6 +57,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 0
     StoryPart: 0
+    BackgroundName: 
   - PairID: 3003
     Headline: 'Part 1A: Dark Experiments Begin'
     Description: A mysterious company begins unethical AI research.
@@ -63,6 +68,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 1
     StoryPart: 1
+    BackgroundName: 
   - PairID: 3003
     Headline: 'Part 1B: Scientific Breakthrough?'
     Description: Bold research into AI may reshape society.
@@ -73,6 +79,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 1
     StoryPart: 1
+    BackgroundName: 
   - PairID: 3004
     Headline: 'Part 2A: AI Loses Control'
     Description: An AI threatens infrastructure in a simulated test.
@@ -83,6 +90,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 1
     StoryPart: 2
+    BackgroundName: 
   - PairID: 3004
     Headline: 'Part 2B: Simulated Chaos Sparks Debate'
     Description: "Test reveals AI's immense power \u2014 and risk."
@@ -93,6 +101,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 1
     StoryPart: 2
+    BackgroundName: 
   - PairID: 3005
     Headline: 'Part 3A: Regulation Incoming'
     Description: Global leaders react to controversial AI project.
@@ -103,6 +112,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 1
     StoryPart: 3
+    BackgroundName: 
   - PairID: 3005
     Headline: 'Part 3B: Opportunity or Overreach?'
     Description: Should innovation be limited to protect society?
@@ -113,3 +123,4 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 1
     StoryPart: 3
+    BackgroundName: 

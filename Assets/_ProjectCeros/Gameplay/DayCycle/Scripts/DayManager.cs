@@ -29,8 +29,10 @@ namespace ProjectCeros
         // Increments the current day and notifies listeners.
         public void NextDay()
         {
-            SaveManager.Instance.Save();
             _currentDay.Variable.ApplyChange(1);
+
+            SaveManager.Instance.Save();
+            
             _onNewDayStarted.Raise();
         }
 

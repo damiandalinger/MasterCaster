@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 28/05/2025 by Damian Dalinger: Script Creation.
+/// 04/06/2025 by Damian Dalinger: Refactored to inherit from SaveableVariableBase for unified save handling.
 /// </remarks>
 
 using System;
@@ -12,7 +13,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    public abstract class BaseVariable<T> : ScriptableObject, ISaveable
+    public abstract class BaseVariable<T> : SaveableVariableBase
     {
         #region Fields
 
@@ -22,8 +23,11 @@ namespace ProjectCeros
         public string DeveloperDescription = "";
 #endif
 
+        [Tooltip("The default value used when resetting.")]
+        public T InitialValue;
+
         [Tooltip("The current value of the variable.")]
-        public T Value;
+        public T RuntimeValue;
 
         #endregion
 
@@ -31,15 +35,21 @@ namespace ProjectCeros
 
         // The unique key for saving and loading this variable.
         // Defaults to the asset's name.
-        public virtual string SaveKey => name;
+        public override string SaveKey => name;
 
         // Captures the current value for saving.
-        public virtual object CaptureState() => Value;
+        public override object CaptureState() => RuntimeValue;
 
         // Restores the saved value from persisted data.
-        public virtual void RestoreState(object state)
+        public override void RestoreState(object state)
         {
-            Value = (T)Convert.ChangeType(state, typeof(T));
+            RuntimeValue = (T)Convert.ChangeType(state, typeof(T));
+        }
+
+        // Resets the variable to its initial value.
+        public override void ResetToDefault()
+        {
+            RuntimeValue = InitialValue;
         }
 
         #endregion

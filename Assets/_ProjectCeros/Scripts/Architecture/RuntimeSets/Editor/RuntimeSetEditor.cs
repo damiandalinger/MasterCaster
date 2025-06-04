@@ -1,73 +1,138 @@
 /// <summary>
-/// Custom Editor for ScriptableObjects that are derived from RuntimeSet<T>.
-/// It provides a user-friendly display of the items contained in a RuntimeSet in the Inspector.
+/// Custom editor for RuntimeSet<T>. Handles display of tracked runtime items and saveability logic.
+/// Dynamically determines item type via reflection and disables save option if type is not serializable.
 /// </summary>
 
 /// <remarks>
-/// 14/04/2025 by Damian Dalinger: Script creation.
+/// 04/06/2025 by Damian Dalinger: Script creation.
 /// </remarks>
 
-using System.Collections;
-using System.Reflection;
 using UnityEditor;
-using UnityEngine;
+using System;
+using System.Reflection;
+using System.Collections;
 
 namespace ProjectCeros
 {
-    [CustomEditor(typeof(ScriptableObject), true)]
+    [CustomEditor(typeof(RuntimeSet<>), true)]
     public class RuntimeSetEditor : UnityEditor.Editor
     {
-        private FieldInfo _itemsField;
-        private IList _itemsList;
-        private string _label;
+        #region Fields
 
-        // Override of the OnInspectorGUI method to display a custom inspector for RuntimeSets.
-        // It shows a read-only list of items contained in the RuntimeSet.
+        private SerializedProperty _isSaveableProp;
+        private SerializedProperty _itemsProp;
+        private FieldInfo _itemsField;
+        private Type _itemType;
+        private bool _isSerializable;
+        private SaveableVariableIndex _cachedIndex;
+
+        #endregion
+
+        #region Lifecycle Methods
+
+        // Called when the inspector is opened. Caches references and type info.
+        private void OnEnable()
+        {
+            _isSaveableProp = serializedObject.FindProperty("_isSaveable");
+            _itemsProp = serializedObject.FindProperty("Items");
+
+            var targetType = target.GetType();
+
+            while (targetType != null)
+            {
+                if (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(RuntimeSet<>))
+                {
+                    _itemType = targetType.GetGenericArguments()[0];
+                    _itemsField = targetType.GetField("Items", BindingFlags.Public | BindingFlags.Instance);
+                    break;
+                }
+                targetType = targetType.BaseType;
+            }
+
+            _isSerializable = IsTrulySerializable(_itemType);
+        }
+
+        // Draws the custom inspector GUI for the RuntimeSet.
         public override void OnInspectorGUI()
         {
-            var type = target.GetType();
-            if (!IsRuntimeSet(type))
+            serializedObject.Update();
+
+            if (_isSerializable)
             {
-                base.OnInspectorGUI();
-                return;
+                EditorGUILayout.PropertyField(_isSaveableProp);
+                UpdateIndex((SaveableVariableBase)target, _isSaveableProp.boolValue);
+
+                if (_itemsProp != null)
+                    EditorGUILayout.PropertyField(_itemsProp, true);
+            }
+            else
+            {
+                _isSaveableProp.boolValue = false;
+
+                ShowItemsManually();
+                EditorGUILayout.HelpBox(
+                    $"The type '{_itemType?.Name}' is not serialisable. Saving is disabled.",
+                    MessageType.Warning
+                );
             }
 
-            // Try to get the "Items" field (it may be inherited from a base class).
-            if (_itemsField == null)
-            {
-                _itemsField = type.GetField("Items", BindingFlags.Public | BindingFlags.Instance);
-            }
+            serializedObject.ApplyModifiedProperties();
+        }
 
-            _itemsList = _itemsField.GetValue(target) as IList;
+        #endregion
 
-            _label = ObjectNames.NicifyVariableName(type.Name);
-            EditorGUILayout.LabelField(_label + " (Runtime Set)", EditorStyles.boldLabel);
+        #region Private Methods
+
+        // Displays the items manually as read-only fields when serialization isn't supported.
+        private void ShowItemsManually()
+        {
+            if (_itemsField == null) return;
+
+            var list = _itemsField.GetValue(target) as IList;
+            if (list == null) return;
 
             EditorGUILayout.Space();
+            EditorGUILayout.LabelField($"Items ({list.Count}):", EditorStyles.boldLabel);
 
-            EditorGUILayout.LabelField($"Items ({_itemsList.Count}):");
-
-            EditorGUI.BeginDisabledGroup(true); 
-            foreach (var item in _itemsList)
+            EditorGUI.BeginDisabledGroup(true);
+            foreach (var item in list)
             {
-                EditorGUILayout.ObjectField(item as Object, typeof(Object), true);
+                EditorGUILayout.ObjectField(item as UnityEngine.Object, typeof(UnityEngine.Object), true);
             }
             EditorGUI.EndDisabledGroup();
-
-            EditorUtility.SetDirty(target); 
         }
 
-        private bool IsRuntimeSet(System.Type type)
+        // Determines if a type is serializable by Unity and .NET standards.
+        private bool IsTrulySerializable(Type type)
         {
-            while (type != null)
-            {
-                if (type.IsGenericType && type.GetGenericTypeDefinition().Name.StartsWith("RuntimeSet"))
-                    return true;
-
-                type = type.BaseType;
-            }
-
-            return false;
+            return type != null && type.IsSerializable && !typeof(UnityEngine.Object).IsAssignableFrom(type);
         }
+
+        // Finds and caches the SaveableVariableIndex asset in the project.
+        private SaveableVariableIndex GetIndex()
+        {
+            if (_cachedIndex != null) return _cachedIndex;
+
+            string[] guids = AssetDatabase.FindAssets("t:SaveableVariableIndex");
+            if (guids.Length == 0) return null;
+
+            string path = AssetDatabase.GUIDToAssetPath(guids[0]);
+            _cachedIndex = AssetDatabase.LoadAssetAtPath<SaveableVariableIndex>(path);
+            return _cachedIndex;
+        }
+
+        // Adds or removes the variable from the index based on saveable status.
+        private void UpdateIndex(SaveableVariableBase variable, bool isSaveable)
+        {
+            var index = GetIndex();
+            if (index == null) return;
+
+            if (isSaveable)
+                index.AddIfSaveable(variable);
+            else
+                index.RemoveIfPresent(variable);
+        }
+
+        #endregion
     }
 }

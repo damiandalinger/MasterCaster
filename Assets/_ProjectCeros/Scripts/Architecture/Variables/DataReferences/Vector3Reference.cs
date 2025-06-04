@@ -21,7 +21,7 @@ namespace ProjectCeros
 
         protected override Vector3 GetValue()
         {
-            return UseConstant ? ConstantValue : Variable.Value;
+            return UseConstant ? ConstantValue : Variable.RuntimeValue;
         }
 
         public static implicit operator Vector3(Vector3Reference reference)

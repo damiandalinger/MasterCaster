@@ -2,14 +2,17 @@
 /// Manages saving and loading of ScriptableObjects implementing ISaveable.
 /// Uses JSON file stored in persistent data path.
 /// </summary>
+
 /// <remarks>
 /// 30/05/2025 by Damian Dalinger: Script creation.
+/// 04/06/2025 by Damian Dalinger: Changed the system from a hardcoded list to a automatic adding list.
 /// </remarks>
 
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -20,8 +23,8 @@ namespace ProjectCeros
     {
         #region Fields
 
-        [Tooltip("Groups of ScriptableObjects to be saved and loaded.")]
-        [SerializeField] private List<SaveGroup> _saveGroups = new();
+        [Tooltip("The Index who keeps track of all saveable Variables.")]
+        [SerializeField] private SaveableVariableIndex _variableIndex;
 
         #endregion
 
@@ -49,45 +52,36 @@ namespace ProjectCeros
 
         #region Public Methods
 
-        // Saves all ISaveable objects in configured save groups to disk.
+        // Saves all saveable variables in the index to disk as a JSON file.
         [ContextMenu("Save Now")]
         public void Save()
         {
-            var data = new Dictionary<string, object>();
+            if (_variableIndex == null) return;
 
-            foreach (var group in _saveGroups)
+            var data = new Dictionary<string, object>();
+            foreach (var saveable in _variableIndex.Saveables)
             {
-                foreach (var so in group.Saveables)
-                {
-                    if (so is ISaveable saveable)
-                        data[saveable.SaveKey] = saveable.CaptureState();
-                }
+                if (saveable.IsSaveable)
+                    data[saveable.SaveKey] = saveable.CaptureState();
             }
 
             var json = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(GetSavePath(), json);
         }
 
-        // Loads and restores state for all ISaveable objects from disk.
+        // Loads saved data from disk and applies it to registered saveables.
         [ContextMenu("Load Now")]
         public void Load()
         {
-            if (!File.Exists(GetSavePath()))
-            {
-                Debug.LogWarning("Save file not found.");
-                return;
-            }
+            if (!File.Exists(GetSavePath()) || _variableIndex == null) return;
 
             var json = File.ReadAllText(GetSavePath());
             var data = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
 
-            foreach (var group in _saveGroups)
+            foreach (var saveable in _variableIndex.Saveables)
             {
-                foreach (var so in group.Saveables)
-                {
-                    if (so is ISaveable saveable && data.TryGetValue(saveable.SaveKey, out var state))
-                        saveable.RestoreState(state);
-                }
+                if (saveable.IsSaveable && data.TryGetValue(saveable.SaveKey, out var state))
+                    saveable.RestoreState(state);
             }
         }
 
@@ -100,9 +94,6 @@ namespace ProjectCeros
 #endif
         }
 
-        private string GetSavePath() =>
-            Path.Combine(Application.persistentDataPath, "save.json");
-
         // Deletes the existing save file from disk.
         public void DeleteSave()
         {
@@ -110,7 +101,6 @@ namespace ProjectCeros
             if (File.Exists(path))
             {
                 File.Delete(path);
-                Debug.Log("🗑️ Alte Save-Datei gelöscht.");
             }
         }
 
@@ -120,18 +110,21 @@ namespace ProjectCeros
             return File.Exists(GetSavePath());
         }
 
+        // Resets all saveable variables to their default values.
+        public void ResetSaveables()
+        {
+            foreach (var saveable in _variableIndex.Saveables)
+            {
+                saveable.ResetToDefault();
+            }
+        }
+
         #endregion
 
-        #region Nested Types
+        #region Private Methods
 
-        [System.Serializable]
-        public class SaveGroup
-        {
-            public string GroupName;
-
-            [Tooltip("List of ScriptableObjects to include in this save group.")]
-            public List<ScriptableObject> Saveables;
-        }
+        // Returns the full file path to the save file on disk.
+        private string GetSavePath() => Path.Combine(Application.persistentDataPath, "save.json");
 
         #endregion
     }

@@ -20,7 +20,7 @@ namespace ProjectCeros
 
         protected override bool GetValue()
         {
-            return UseConstant ? ConstantValue : Variable.Value;
+            return UseConstant ? ConstantValue : Variable.RuntimeValue;
         }
 
         public static implicit operator bool(BoolReference reference)

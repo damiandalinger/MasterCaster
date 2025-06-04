@@ -19,27 +19,27 @@ namespace ProjectCeros
 
         public void ApplyChange(Vector3 amount)
         {
-            Value += amount;
+            RuntimeValue += amount;
         }
 
         public void ApplyChange(Vector3Variable amount)
         {
-            Value += amount.Value;
+            RuntimeValue += amount.RuntimeValue;
         }
 
         public void Normalize()
         {
-            Value = Value.normalized;
+            RuntimeValue = RuntimeValue.normalized;
         }
 
         public void SetValue(Vector3 value)
         {
-            Value = value;
+            RuntimeValue = value;
         }
 
         public void SetValue(Vector3Variable value)
         {
-            Value = value.Value;
+            RuntimeValue = value.RuntimeValue;
         }
 
         #endregion

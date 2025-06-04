@@ -19,62 +19,62 @@ namespace ProjectCeros
 
         public void ApplyChange(int amount)
         {
-            Value += amount;
+            RuntimeValue += amount;
         }
 
         public void ApplyChange(IntVariable amount)
         {
-            Value += amount.Value;
+            RuntimeValue += amount.RuntimeValue;
         }
 
         public void Clamp(int min, int max)
         {
-            Value = Mathf.Clamp(Value, min, max);
+            RuntimeValue = Mathf.Clamp(RuntimeValue, min, max);
         }
 
         public void Clamp(IntVariable min, int max)
         {
-            Value = Mathf.Clamp(Value, min.Value, max);
+            RuntimeValue = Mathf.Clamp(RuntimeValue, min.RuntimeValue, max);
         }
 
         public void Clamp(int min, IntVariable max)
         {
-            Value = Mathf.Clamp(Value, min, max.Value);
+            RuntimeValue = Mathf.Clamp(RuntimeValue, min, max.RuntimeValue);
         }
 
         public void Clamp(IntVariable min, IntVariable max)
         {
-            Value = Mathf.Clamp(Value, min.Value, max.Value);
+            RuntimeValue = Mathf.Clamp(RuntimeValue, min.RuntimeValue, max.RuntimeValue);
         }
 
         public void Divide(int divisor)
         {
-            Value /= divisor;
+            RuntimeValue /= divisor;
         }
 
         public void Divide(IntVariable divisor)
         {
-            Value /= divisor.Value;
+            RuntimeValue /= divisor.RuntimeValue;
         }
 
         public void Multiply(int factor)
         {
-            Value *= factor;
+            RuntimeValue *= factor;
         }
 
         public void Multiply(IntVariable factor)
         {
-            Value *= factor.Value;
+            RuntimeValue *= factor.RuntimeValue;
         }
 
         public void SetValue(int value)
         {
-            Value = value;
+            RuntimeValue = value;
         }
 
         public void SetValue(IntVariable value)
         {
-            Value = value.Value;
+            RuntimeValue = value.RuntimeValue;
         }
 
         #endregion

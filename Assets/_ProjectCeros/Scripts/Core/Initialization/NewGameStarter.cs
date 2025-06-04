@@ -19,12 +19,6 @@ namespace ProjectCeros
         [Tooltip("Event raised after a new game has been started.")]
         [SerializeField] private GameEvent _onNewGameStarted;
 
-        [Tooltip("The variable tracking how many listeners the player has.")]
-        [SerializeField] private IntVariable _listenerCount;
-
-        [Tooltip("The variable representing the current in-game day.")]
-        [SerializeField] private IntVariable _currentDay;
-
         #endregion
 
         #region Protected Methods
@@ -33,8 +27,7 @@ namespace ProjectCeros
         protected override void ResetInitialGameState()
         {
             SaveManager.Instance?.DeleteSave();
-            _listenerCount.SetValue(0);
-            _currentDay.SetValue(1);
+            SaveManager.Instance?.ResetSaveables();
         }
 
         // Initializes managers.

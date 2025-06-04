@@ -19,27 +19,27 @@ namespace ProjectCeros
 
         public void Append(string extra)
         {
-            Value += extra;
+            RuntimeValue += extra;
         }
 
         public void Append(StringVariable extra)
         {
-            Value += extra;
+            RuntimeValue += extra;
         }
 
         public void Clear()
         {
-            Value = "";
+            RuntimeValue = "";
         }
 
         public void SetValue(string value)
         {
-            Value = value;
+            RuntimeValue = value;
         }
 
         public void SetValue(StringVariable value)
         {
-            Value = value.Value;
+            RuntimeValue = value.RuntimeValue;
         }
 
         #endregion

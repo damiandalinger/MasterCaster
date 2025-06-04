@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b285255cec6a43a41e3d231885a4d, type: 3}
   m_Name: RS_EligableShooterArticles
   m_EditorClassIdentifier: 
+  _isSaveable: 1
   Items:
   - PairID: 1002
     Headline: Shooter games
@@ -23,6 +24,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 0
     StoryPart: 0
+    BackgroundName: 
   - PairID: 1002
     Headline: Critics say
     Description: Repetitive gameplay cycles hinder growth.
@@ -33,6 +35,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 0
     StoryPart: 0
+    BackgroundName: 
   - PairID: 1001
     Headline: Shooter games dominate 2025 charts
     Description: Fast-paced action continues to lead the industry.
@@ -43,6 +46,7 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 0
     StoryPart: 0
+    BackgroundName: 
   - PairID: 1001
     Headline: Critics say shooters lack innovation
     Description: Repetitive gameplay cycles hinder growth.
@@ -53,3 +57,4 @@ MonoBehaviour:
     SizeCategory: 2
     StoryID: 0
     StoryPart: 0
+    BackgroundName: 

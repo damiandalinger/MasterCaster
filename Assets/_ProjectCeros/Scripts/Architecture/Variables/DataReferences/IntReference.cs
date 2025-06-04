@@ -20,7 +20,7 @@ namespace ProjectCeros
 
         protected override int GetValue()
         {
-            return UseConstant ? ConstantValue : Variable.Value;
+            return UseConstant ? ConstantValue : Variable.RuntimeValue;
         }
 
         public static implicit operator int(IntReference reference)

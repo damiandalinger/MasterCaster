@@ -19,17 +19,17 @@ namespace ProjectCeros
 
         public void SetValue(bool value)
         {
-            Value = value;
+            RuntimeValue = value;
         }
 
         public void SetValue(BoolVariable value)
         {
-            Value = value.Value;
+            RuntimeValue = value.RuntimeValue;
         }
 
         public void Toggle()
         {
-            Value = !Value;
+            RuntimeValue = !RuntimeValue;
         }
 
         #endregion

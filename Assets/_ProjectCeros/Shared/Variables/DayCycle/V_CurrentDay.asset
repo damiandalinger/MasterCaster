@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f132603ac8d8844bf8625d4ec67e9d, type: 3}
   m_Name: V_CurrentDay
   m_EditorClassIdentifier: 
+  _isSaveable: 1
   DeveloperDescription: 
-  Value: 0
+  InitialValue: 1
+  RuntimeValue: 0

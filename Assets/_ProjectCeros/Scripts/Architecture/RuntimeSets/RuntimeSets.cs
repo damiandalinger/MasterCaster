@@ -6,16 +6,15 @@
 /// <remarks>
 /// 14/04/2025 by Damian Dalinger: Script creation.
 /// 30/05/2025 by Damian Dalinger: Implemented the save methods.
+/// 04/06/2025 by Damian Dalinger: Refactored to inherit SaveableVariableBase and auto-register.
 /// </remarks>
 
-using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 using UnityEngine;
 
 namespace ProjectCeros
 {
-    public abstract class RuntimeSet<T> : ScriptableObject, ISaveable
+    public abstract class RuntimeSet<T> : SaveableVariableBase
     {
         #region Fields
 
@@ -26,7 +25,11 @@ namespace ProjectCeros
 
         #region Properties
 
-        public virtual string SaveKey => name;
+        // The key used to save and load this RuntimeSet.
+        public override string SaveKey => name;
+
+        // The number of items currently tracked.
+        public int Count => Items.Count;
 
         #endregion
 
@@ -52,44 +55,27 @@ namespace ProjectCeros
             Items.Clear();
         }
 
+        #endregion
+
+        #region ISaveable
+
         // Captures the current list of items for saving.
-        public virtual object CaptureState()
+        public override object CaptureState()
         {
-            if (typeof(T).IsSerializable)
-            {
-                return Items;
-            }
-            else
-            {
-#if UNITY_EDITOR
-                Debug.LogWarning($"{name}: Type {typeof(T)} is not serializable. RuntimeSet will not be saved.");
-#endif
-                return null;
-            }
+            return Items;
         }
 
-
         // Restores the list of items from saved state.
-        public virtual void RestoreState(object state)
+        public override void RestoreState(object state)
         {
-            if (!typeof(T).IsSerializable || state == null)
-                return;
+            if (state is List<T> list)
+                Items = new List<T>(list);
+        }
 
-            try
-            {
-                if (state is List<T> typedList)
-                {
-                    Items = new List<T>(typedList);
-                }
-                else
-                {
-                    Items = JsonConvert.DeserializeObject<List<T>>(state.ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"{name}: Failed to restore RuntimeSet state for {typeof(T)}. Error: {ex.Message}");
-            }
+        // Resets the runtime state to its default (empty) state.
+        public override void ResetToDefault()
+        {
+            Clear();
         }
 
         #endregion

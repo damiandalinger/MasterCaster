@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b285255cec6a43a41e3d231885a4d, type: 3}
   m_Name: RS_EligableFruitArticles
   m_EditorClassIdentifier: 
+  _isSaveable: 1
   Items: []

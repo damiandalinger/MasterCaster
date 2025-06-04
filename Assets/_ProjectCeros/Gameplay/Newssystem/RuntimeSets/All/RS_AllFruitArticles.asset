@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b285255cec6a43a41e3d231885a4d, type: 3}
   m_Name: RS_AllFruitArticles
   m_EditorClassIdentifier: 
+  _isSaveable: 1
   Items:
   - PairID: 3001
     Headline: Simulation fans love deep mechanics
@@ -21,6 +22,9 @@ MonoBehaviour:
     ValuePositive: 1.1
     ValueNegative: 0.7
     SizeCategory: 2
+    StoryID: 0
+    StoryPart: 0
+    BackgroundName: 
   - PairID: 3001
     Headline: Simulation games too complex?
     Description: Casual players feel left behind by detailed systems.
@@ -29,6 +33,9 @@ MonoBehaviour:
     ValuePositive: 0.9
     ValueNegative: 1
     SizeCategory: 2
+    StoryID: 0
+    StoryPart: 0
+    BackgroundName: 
   - PairID: 3002
     Headline: 'Simulation '
     Description: Realistic gameplay earns praise from enthusiasts.
@@ -37,6 +44,9 @@ MonoBehaviour:
     ValuePositive: 1.1
     ValueNegative: 0.7
     SizeCategory: 2
+    StoryID: 0
+    StoryPart: 0
+    BackgroundName: 
   - PairID: 3002
     Headline: Simulation games
     Description: Casual players feel left behind by detailed systems.
@@ -45,3 +55,6 @@ MonoBehaviour:
     ValuePositive: 0.9
     ValueNegative: 1
     SizeCategory: 2
+    StoryID: 0
+    StoryPart: 0
+    BackgroundName: 

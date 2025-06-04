@@ -19,62 +19,62 @@ namespace ProjectCeros
 
         public void ApplyChange(float amount)
         {
-            Value += amount;
+            RuntimeValue += amount;
         }
 
         public void ApplyChange(FloatVariable amount)
         {
-            Value += amount.Value;
+            RuntimeValue += amount.RuntimeValue;
         }
 
         public void Clamp(float min, float max)
         {
-            Value = Mathf.Clamp(Value, min, max);
+            RuntimeValue = Mathf.Clamp(RuntimeValue, min, max);
         }
 
         public void Clamp(FloatVariable min, float max)
         {
-            Value = Mathf.Clamp(Value, min.Value, max);
+            RuntimeValue = Mathf.Clamp(RuntimeValue, min.RuntimeValue, max);
         }
 
         public void Clamp(float min, FloatVariable max)
         {
-            Value = Mathf.Clamp(Value, min, max.Value);
+            RuntimeValue = Mathf.Clamp(RuntimeValue, min, max.RuntimeValue);
         }
 
         public void Clamp(FloatVariable min, FloatVariable max)
         {
-            Value = Mathf.Clamp(Value, min.Value, max.Value);
+            RuntimeValue = Mathf.Clamp(RuntimeValue, min.RuntimeValue, max.RuntimeValue);
         }
 
         public void Divide(float divisor)
         {
-            Value /= divisor;
+            RuntimeValue /= divisor;
         }
 
         public void Divide(FloatVariable divisor)
         {
-            Value /= divisor.Value;
+            RuntimeValue /= divisor.RuntimeValue;
         }
 
         public void Multiply(float factor)
         {
-            Value *= factor;
+            RuntimeValue *= factor;
         }
 
         public void Multiply(FloatVariable factor)
         {
-            Value *= factor.Value;
+            RuntimeValue *= factor.RuntimeValue;
         }
 
         public void SetValue(float value)
         {
-            Value = value;
+            RuntimeValue = value;
         }
 
         public void SetValue(FloatVariable value)
         {
-            Value = value.Value;
+            RuntimeValue = value.RuntimeValue;
         }
 
         #endregion

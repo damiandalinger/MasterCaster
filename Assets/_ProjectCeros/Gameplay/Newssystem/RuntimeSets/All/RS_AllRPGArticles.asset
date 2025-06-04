@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b285255cec6a43a41e3d231885a4d, type: 3}
   m_Name: RS_AllRPGArticles
   m_EditorClassIdentifier: 
+  _isSaveable: 1
   Items:
   - PairID: 2001
     Headline: RPGs bring emotional storytelling to games
@@ -21,6 +22,9 @@ MonoBehaviour:
     ValuePositive: 1
     ValueNegative: 0.5
     SizeCategory: 2
+    StoryID: 0
+    StoryPart: 0
+    BackgroundName: 
   - PairID: 2001
     Headline: Are RPGs too slow for modern gamers?
     Description: Some players demand more action and less dialogue.
@@ -29,6 +33,9 @@ MonoBehaviour:
     ValuePositive: 0.6
     ValueNegative: 1.2
     SizeCategory: 2
+    StoryID: 0
+    StoryPart: 0
+    BackgroundName: 
   - PairID: 2002
     Headline: RPGs bring
     Description: Narrative depth sets RPGs apart from others.
@@ -37,6 +44,9 @@ MonoBehaviour:
     ValuePositive: 1
     ValueNegative: 0.5
     SizeCategory: 2
+    StoryID: 0
+    StoryPart: 0
+    BackgroundName: 
   - PairID: 2002
     Headline: 'Are RPGs '
     Description: Some players demand more action and less dialogue.
@@ -45,3 +55,6 @@ MonoBehaviour:
     ValuePositive: 0.6
     ValueNegative: 1.2
     SizeCategory: 2
+    StoryID: 0
+    StoryPart: 0
+    BackgroundName: 

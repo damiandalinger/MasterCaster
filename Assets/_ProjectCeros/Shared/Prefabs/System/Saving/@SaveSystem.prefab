@@ -72,3 +72,4 @@ MonoBehaviour:
   - GroupName: NewsSettings
     Saveables:
     - {fileID: 11400000, guid: beeb58ef363bb6e4f88164eab6f857fd, type: 2}
+  _variableIndex: {fileID: 11400000, guid: 6f1dec94514db104d8998ca66423306e, type: 2}
