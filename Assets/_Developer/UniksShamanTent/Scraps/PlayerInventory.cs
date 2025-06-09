@@ -15,21 +15,21 @@ namespace ProjectCeros
 {
     public class PlayerInventory : MonoBehaviour
     {
-    [SerializeField] private List<ItemSO> inventory = new();
+        [SerializeField] private List<ItemSO> inventory = new();
 
-    public void AddItem(ItemSO item)
-    {
-        if (!inventory.Contains(item))
+        public void AddItem(ItemSO item)
         {
-            inventory.Add(item);
-            Debug.Log("Added item: " + item.ItemName);
+            if (!inventory.Contains(item))
+            {
+                inventory.Add(item);
+                Debug.Log("Added item to inventory: " + item.ItemName);
+            }
+            else
+            {
+                Debug.Log("Item already in inventory: " + item.ItemName);
+            }
         }
-        else
-        {
-            Debug.Log("Item already in inventory: " + item.ItemName);
-        }
+
+        public List<ItemSO> GetInventory() => inventory;
     }
-
-    public List<ItemSO> GetInventory() => inventory;
-}
 }

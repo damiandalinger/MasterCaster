@@ -21,6 +21,8 @@ namespace ProjectCeros
         public Sprite icon;
         public int price;
 
+        public int id; 
+
 
 
 
