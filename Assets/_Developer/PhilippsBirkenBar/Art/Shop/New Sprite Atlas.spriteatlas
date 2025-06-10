@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: eaeb77c8dbabc8e4bbde95718c1ac2f3, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 1ed80211baf9746468d4927f9100d512: 21300000
+    - 553f72518f33c5d46bc3f236e4322d26: 21300000
+    - 3fe71691be80cd948a91095d6d7c5071: 21300000
+    - d28db9f18f1834b42a37e4d1c0616475: 21300000
+    - 02c758533bd10dd43bbca5e8691ecbca: 21300000
+    - 5a56f5e376f7e404fa59b532af74cf48: 21300000
+    - e2bc9576c5cb833479a4f694ff76328f: 21300000
+    - 0bd716978d752a049a1ca8d84c0a3431: 21300000
+    - 7e6012ba0c49bc5498c12380df994d1e: 21300000
+    - 96f7a9dc0243f8f419c23b3da76da588: 21300000
+    - 9f91a4dd1cbf86543803bdd47f87afa0: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 1ed80211baf9746468d4927f9100d512, type: 3}
+  - {fileID: 21300000, guid: 553f72518f33c5d46bc3f236e4322d26, type: 3}
+  - {fileID: 21300000, guid: 3fe71691be80cd948a91095d6d7c5071, type: 3}
+  - {fileID: 21300000, guid: d28db9f18f1834b42a37e4d1c0616475, type: 3}
+  - {fileID: 21300000, guid: 02c758533bd10dd43bbca5e8691ecbca, type: 3}
+  - {fileID: 21300000, guid: 5a56f5e376f7e404fa59b532af74cf48, type: 3}
+  - {fileID: 21300000, guid: e2bc9576c5cb833479a4f694ff76328f, type: 3}
+  - {fileID: 21300000, guid: 0bd716978d752a049a1ca8d84c0a3431, type: 3}
+  - {fileID: 21300000, guid: 7e6012ba0c49bc5498c12380df994d1e, type: 3}
+  - {fileID: 21300000, guid: 96f7a9dc0243f8f419c23b3da76da588, type: 3}
+  - {fileID: 21300000, guid: 9f91a4dd1cbf86543803bdd47f87afa0, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SPR_Collectibles_Staf
+  - SPR_Collectibles_Ranch
+  - SPR_Collectibles_Scribe
+  - SPR_Collectibles_Mushroom
+  - SPR_Collectibles_Pickaxe
+  - SPR_Collectibles_Needle
+  - SPR_Collectibles_Bonefire
+  - SPR_Collectibles_Glove
+  - SPR_Collectibles_Raygun
+  - SPR_Collectibles_Mask
+  - SPR_Collectibles_Bathwater
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0
