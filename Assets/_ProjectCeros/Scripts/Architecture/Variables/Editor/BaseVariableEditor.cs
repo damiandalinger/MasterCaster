@@ -59,20 +59,6 @@ namespace ProjectCeros
 
         #region Private Methods
 
-        // Adds or removes the variable from the SaveableVariableIndex based on saveable state.
-        private void UpdateIndex(SaveableVariableBase variable, bool isSaveable)
-        {
-            var index = GetIndex();
-            if (index == null) return;
-
-            if (isSaveable)
-                index.AddIfSaveable(variable);
-            else
-                index.RemoveIfPresent(variable);
-        }
-
-
-
         // Finds and caches the first SaveableVariableIndex asset in the project.
         private SaveableVariableIndex GetIndex()
         {
@@ -84,6 +70,18 @@ namespace ProjectCeros
             string path = AssetDatabase.GUIDToAssetPath(guids[0]);
             _cachedIndex = AssetDatabase.LoadAssetAtPath<SaveableVariableIndex>(path);
             return _cachedIndex;
+        }
+
+        // Adds or removes the variable from the SaveableVariableIndex based on saveable state.
+        private void UpdateIndex(SaveableVariableBase variable, bool isSaveable)
+        {
+            var index = GetIndex();
+            if (index == null) return;
+
+            if (isSaveable)
+                index.AddIfSaveable(variable);
+            else
+                index.RemoveIfPresent(variable);
         }
 
         #endregion

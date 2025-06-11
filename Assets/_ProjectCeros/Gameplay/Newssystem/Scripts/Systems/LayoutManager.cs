@@ -107,34 +107,6 @@ namespace ProjectCeros
 
         #region Private Methods
 
-        // Finds a preset where the number of important blocks exactly matches the number of important articles.
-        private LayoutPreset FindSuitablePreset(List<Article> importantArticles)
-        {
-            int requiredShort = importantArticles.Count(h => h.SizeCategory == _shortCategoryValue.Value);
-            int requiredMedium = importantArticles.Count(h => h.SizeCategory == _mediumCategoryValue.Value);
-            int requiredLong = importantArticles.Count(h => h.SizeCategory == _longCategoryValue.Value);
-
-            var shuffledPresets = _layoutPresets.OrderBy(x => Random.value).ToList();
-
-            foreach (var preset in shuffledPresets)
-            {
-                var importantBlocks = preset.Blocks.Where(b => b.IsImportantNews).ToList();
-
-                int availableShort = importantBlocks.Count(b => GetBlockCategory(b) == _shortCategoryValue.Value);
-                int availableMedium = importantBlocks.Count(b => GetBlockCategory(b) == _mediumCategoryValue.Value);
-                int availableLong = importantBlocks.Count(b => GetBlockCategory(b) == _longCategoryValue.Value);
-
-                if (availableShort == requiredShort &&
-                    availableMedium == requiredMedium &&
-                    availableLong == requiredLong)
-                {
-                    return preset;
-                }
-            }
-
-            return null;
-        }
-
         private List<BlockAssignment> AssignBlocks(LayoutPreset preset, List<Article> important, List<Article> random, Article fruit)
         {
             var result = new List<BlockAssignment>();
@@ -234,6 +206,34 @@ namespace ProjectCeros
                 }
             }
             return result;
+        }
+
+        // Finds a preset where the number of important blocks exactly matches the number of important articles.
+        private LayoutPreset FindSuitablePreset(List<Article> importantArticles)
+        {
+            int requiredShort = importantArticles.Count(h => h.SizeCategory == _shortCategoryValue.Value);
+            int requiredMedium = importantArticles.Count(h => h.SizeCategory == _mediumCategoryValue.Value);
+            int requiredLong = importantArticles.Count(h => h.SizeCategory == _longCategoryValue.Value);
+
+            var shuffledPresets = _layoutPresets.OrderBy(x => Random.value).ToList();
+
+            foreach (var preset in shuffledPresets)
+            {
+                var importantBlocks = preset.Blocks.Where(b => b.IsImportantNews).ToList();
+
+                int availableShort = importantBlocks.Count(b => GetBlockCategory(b) == _shortCategoryValue.Value);
+                int availableMedium = importantBlocks.Count(b => GetBlockCategory(b) == _mediumCategoryValue.Value);
+                int availableLong = importantBlocks.Count(b => GetBlockCategory(b) == _longCategoryValue.Value);
+
+                if (availableShort == requiredShort &&
+                    availableMedium == requiredMedium &&
+                    availableLong == requiredLong)
+                {
+                    return preset;
+                }
+            }
+
+            return null;
         }
 
         // Calculates the size category (short, medium, long) of a block based on its area.
