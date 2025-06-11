@@ -23,6 +23,13 @@ namespace ProjectCeros
 
         #region Protected Methods
 
+        // Resets the data from the last play.
+        protected override void ResetInitialGameState()
+        {
+            SaveManager.Instance?.DeleteSave();
+            SaveManager.Instance?.ResetSaveables();
+        }
+
         // Initializes managers.
         protected override IEnumerator ManagerInitialization()
         {
@@ -40,13 +47,6 @@ namespace ProjectCeros
         protected override void RaiseFinishedEvent()
         {
             _onNewGameStarted?.Raise();
-        }
-
-        // Resets the data from the last play.
-        protected override void ResetInitialGameState()
-        {
-            SaveManager.Instance?.DeleteSave();
-            SaveManager.Instance?.ResetSaveables();
         }
 
         #endregion

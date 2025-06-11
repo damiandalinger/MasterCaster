@@ -39,36 +39,6 @@ namespace ProjectCeros
 
         #region Private Methods
 
-        // Instantiates persistent managers only if they are not already present in the scene.
-        private void InstantiateManagers()
-        {
-            foreach (var prefab in _persistentPrefabs)
-            {
-                if (prefab == null) continue;
-
-                var type = prefab.GetComponent<MonoBehaviour>()?.GetType();
-                if (type == null || FindFirstObjectByType(type) != null)
-                    continue;
-
-                var instance = Instantiate(prefab);
-                instance.name = prefab.name;
-            }
-        }
-
-        // Loads each listed scene additively if it's not already loaded.
-        private IEnumerator LoadAdditiveScenes()
-        {
-            foreach (var sceneName in _sceneNamesToLoad)
-            {
-                if (SceneManager.GetSceneByName(sceneName).isLoaded)
-                    continue;
-
-                var op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-                while (!op.isDone)
-                    yield return null;
-            }
-        }
-
         // Main sequence for loading scenes, instantiating prefabs, and triggering custom logic.
         private IEnumerator StartSequenceRoutine()
         {
@@ -92,6 +62,20 @@ namespace ProjectCeros
             Destroy(gameObject);
         }
 
+        // Loads each listed scene additively if it's not already loaded.
+        private IEnumerator LoadAdditiveScenes()
+        {
+            foreach (var sceneName in _sceneNamesToLoad)
+            {
+                if (SceneManager.GetSceneByName(sceneName).isLoaded)
+                    continue;
+
+                var op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+                while (!op.isDone)
+                    yield return null;
+            }
+        }
+
         // Unloads each listed scene if it is currently loaded and valid.
         private IEnumerator UnloadAdditiveScenes()
         {
@@ -107,14 +91,30 @@ namespace ProjectCeros
             }
         }
 
+        // Instantiates persistent managers only if they are not already present in the scene.
+        private void InstantiateManagers()
+        {
+            foreach (var prefab in _persistentPrefabs)
+            {
+                if (prefab == null) continue;
+
+                var type = prefab.GetComponent<MonoBehaviour>()?.GetType();
+                if (type == null || FindFirstObjectByType(type) != null)
+                    continue;
+
+                var instance = Instantiate(prefab);
+                instance.name = prefab.name;
+            }
+        }
+
         #endregion
 
         #region Abstract Methods
 
         // Implement in subclasses
+        protected abstract void ResetInitialGameState();
         protected abstract IEnumerator ManagerInitialization();
         protected abstract void RaiseFinishedEvent();
-        protected abstract void ResetInitialGameState();
 
         #endregion
     }

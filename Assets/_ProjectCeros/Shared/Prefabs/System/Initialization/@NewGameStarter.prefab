@@ -44,12 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59890de7f15301f4c8a12f94fab5504f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _loadingScreen: {fileID: 9161983147625544676, guid: 37780ca2c80e9cb42bbaa7e43ef8668a, type: 3}
   _persistentPrefabs:
   - {fileID: 3237627029861064207, guid: 15b7df1f357717c49bd2ada59be1ed35, type: 3}
+  _onNewGameStarted: {fileID: 11400000, guid: 3b4844cc409e8e2479e734f4c4a610b3, type: 2}
   _sceneNamesToLoad:
   - GameSession
   - Bedroom
   - HUD
   _sceneNamesToUnload:
   - MainMenu
-  _onNewGameStarted: {fileID: 11400000, guid: 4f388e52b6649154987cec43fa16e923, type: 2}
+  _listenerCount: {fileID: 11400000, guid: 10d72ee4fcdb40a408d8314a91b64658, type: 2}
+  _currentDay: {fileID: 11400000, guid: 4d88b8b3e7919fa49a3283bcff4b3b36, type: 2}

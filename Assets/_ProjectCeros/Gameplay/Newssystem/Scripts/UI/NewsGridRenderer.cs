@@ -59,6 +59,22 @@ namespace ProjectCeros
 
         #region Public Methods
 
+        // Renders content using the current layout assignments from the active LayoutManager in the scene.
+        [ContextMenu("DEBUG: Render Now")]
+        public void RenderFromLayout()
+        {
+            var layoutManager = FindFirstObjectByType<LayoutManager>();
+            if (layoutManager == null)
+                return;
+
+            var assignments = layoutManager.CurrentAssignments;
+
+            if (assignments == null || assignments.Count == 0)
+                return;
+
+            Render(assignments);
+        }
+
         // Clears the current grid and renders the new layout based on block assignments.
         private void Render(List<BlockAssignment> assignments)
         {
@@ -80,22 +96,6 @@ namespace ProjectCeros
             }
         }
 
-        // Renders content using the current layout assignments from the active LayoutManager in the scene.
-        [ContextMenu("DEBUG: Render Now")]
-        public void RenderFromLayout()
-        {
-            var layoutManager = FindFirstObjectByType<LayoutManager>();
-            if (layoutManager == null)
-                return;
-
-            var assignments = layoutManager.CurrentAssignments;
-
-            if (assignments == null || assignments.Count == 0)
-                return;
-
-            Render(assignments);
-        }
-
         #endregion
 
         #region Private Methods
@@ -106,22 +106,6 @@ namespace ProjectCeros
             foreach (Transform child in _gridParent)
             {
                 Destroy(child.gameObject);
-            }
-        }
-
-        // Sets the background of a layout block based on the article's BackgroundName.
-        private void SetBlockBackground(GameObject block, string backgroundName)
-        {
-            if (string.IsNullOrEmpty(backgroundName)) return;
-
-            var background = block.transform.Find("Background")?.GetComponent<Image>();
-            if (background == null) return;
-
-            string key = backgroundName.ToLower();
-            if (_backgroundLookup.TryGetValue(key, out Sprite sprite))
-            {
-                background.sprite = sprite;
-                background.enabled = true;
             }
         }
 
@@ -141,6 +125,22 @@ namespace ProjectCeros
 
             if (titleText != null) titleText.text = headlineTitle;
             if (descriptionText != null) descriptionText.text = headlineDescription;
+        }
+
+        // Sets the background of a layout block based on the article's BackgroundName.
+        private void SetBlockBackground(GameObject block, string backgroundName)
+        {
+            if (string.IsNullOrEmpty(backgroundName)) return;
+
+            var background = block.transform.Find("Background")?.GetComponent<Image>();
+            if (background == null) return;
+
+            string key = backgroundName.ToLower();
+            if (_backgroundLookup.TryGetValue(key, out Sprite sprite))
+            {
+                background.sprite = sprite;
+                background.enabled = true;
+            }
         }
 
         #endregion

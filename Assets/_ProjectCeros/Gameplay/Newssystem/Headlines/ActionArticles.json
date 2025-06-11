@@ -47,11 +47,11 @@
         "PairID": 1003,
         "Headline": "New FUN in The First of Us",
         "Description": "A new sub plot has been added to further help the player explore the zombie struck world. And we get a new character completely cut off from the main cast to do it with as well. However, fans won’t be completely alone as we will be able to meet some of the favorite NPC’s as well. But we won’t spoil any more than this.",
-        "AgencyID": 3,
+        "AgencyID": 0,
         "Subgenre": "stealthgame",
         "ValuePositive": 1.4,
         "ValueNegative": 1.1,
-        "BackgroundName": "SPR_WorldOfGames_Action_2x2",
+        "BackgroundName": "",
         "StoryID": 0
     },
     {

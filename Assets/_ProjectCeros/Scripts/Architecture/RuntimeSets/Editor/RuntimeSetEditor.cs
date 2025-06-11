@@ -83,25 +83,6 @@ namespace ProjectCeros
 
         #region Private Methods
 
-        // Determines if a type is serializable by Unity and .NET standards.
-        private bool IsTrulySerializable(Type type)
-        {
-            return type != null && type.IsSerializable && !typeof(UnityEngine.Object).IsAssignableFrom(type);
-        }
-
-        // Finds and caches the SaveableVariableIndex asset in the project.
-        private SaveableVariableIndex GetIndex()
-        {
-            if (_cachedIndex != null) return _cachedIndex;
-
-            string[] guids = AssetDatabase.FindAssets("t:SaveableVariableIndex");
-            if (guids.Length == 0) return null;
-
-            string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-            _cachedIndex = AssetDatabase.LoadAssetAtPath<SaveableVariableIndex>(path);
-            return _cachedIndex;
-        }
-
         // Displays the items manually as read-only fields when serialization isn't supported.
         private void ShowItemsManually()
         {
@@ -119,6 +100,25 @@ namespace ProjectCeros
                 EditorGUILayout.ObjectField(item as UnityEngine.Object, typeof(UnityEngine.Object), true);
             }
             EditorGUI.EndDisabledGroup();
+        }
+
+        // Determines if a type is serializable by Unity and .NET standards.
+        private bool IsTrulySerializable(Type type)
+        {
+            return type != null && type.IsSerializable && !typeof(UnityEngine.Object).IsAssignableFrom(type);
+        }
+
+        // Finds and caches the SaveableVariableIndex asset in the project.
+        private SaveableVariableIndex GetIndex()
+        {
+            if (_cachedIndex != null) return _cachedIndex;
+
+            string[] guids = AssetDatabase.FindAssets("t:SaveableVariableIndex");
+            if (guids.Length == 0) return null;
+
+            string path = AssetDatabase.GUIDToAssetPath(guids[0]);
+            _cachedIndex = AssetDatabase.LoadAssetAtPath<SaveableVariableIndex>(path);
+            return _cachedIndex;
         }
 
         // Adds or removes the variable from the index based on saveable status.
