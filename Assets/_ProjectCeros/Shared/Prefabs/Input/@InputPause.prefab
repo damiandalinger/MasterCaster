@@ -77,6 +77,5 @@ MonoBehaviour:
   _enableMaps:
   - UI
   - Pause
-  _disableMaps:
-  - Loading
-  OnStart: 0
+  _disableMaps: []
+  _applyOnStart: 1

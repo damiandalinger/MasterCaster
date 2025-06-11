@@ -276,12 +276,6 @@
             ]
         },
         {
-            "name": "Loading",
-            "id": "8f622159-33e3-443f-b154-eb6cce5a1584",
-            "actions": [],
-            "bindings": []
-        },
-        {
             "name": "Pause",
             "id": "3755bbd6-8725-4691-8a4c-c33289fab3ff",
             "actions": [

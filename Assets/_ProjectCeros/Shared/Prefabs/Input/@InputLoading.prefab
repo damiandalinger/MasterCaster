@@ -47,7 +47,6 @@ MonoBehaviour:
   _inputActions: {fileID: -944628639613478452, guid: 7ee58004a8554674488d7d797ce55ec1, type: 3}
   _enableMaps: []
   _disableMaps:
-  - Loading
   - Pause
   - UI
-  OnStart: 1
+  _applyOnStart: 1
