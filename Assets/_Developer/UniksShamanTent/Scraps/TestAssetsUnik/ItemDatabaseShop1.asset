@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
-  m_Name: StoneMask
+  m_Script: {fileID: 11500000, guid: b1b6047dad4cac54d8c2f2f83377e8d7, type: 3}
+  m_Name: ItemDatabaseShop1
   m_EditorClassIdentifier: 
-  ItemName: StoneMask
-  icon: {fileID: 0}
-  price: 0
-  id: 22
+  allItems:
+  - {fileID: 11400000, guid: 6aa621f2dbfbe72489b472bc266ef48e, type: 2}
+  - {fileID: 11400000, guid: 8575f64c8ed75484f9d3683346820989, type: 2}
