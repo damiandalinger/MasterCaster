@@ -83,25 +83,6 @@ namespace ProjectCeros
 
         #region Private Methods
 
-        // Displays the items manually as read-only fields when serialization isn't supported.
-        private void ShowItemsManually()
-        {
-            if (_itemsField == null) return;
-
-            var list = _itemsField.GetValue(target) as IList;
-            if (list == null) return;
-
-            EditorGUILayout.Space();
-            EditorGUILayout.LabelField($"Items ({list.Count}):", EditorStyles.boldLabel);
-
-            EditorGUI.BeginDisabledGroup(true);
-            foreach (var item in list)
-            {
-                EditorGUILayout.ObjectField(item as UnityEngine.Object, typeof(UnityEngine.Object), true);
-            }
-            EditorGUI.EndDisabledGroup();
-        }
-
         // Determines if a type is serializable by Unity and .NET standards.
         private bool IsTrulySerializable(Type type)
         {
@@ -119,6 +100,25 @@ namespace ProjectCeros
             string path = AssetDatabase.GUIDToAssetPath(guids[0]);
             _cachedIndex = AssetDatabase.LoadAssetAtPath<SaveableVariableIndex>(path);
             return _cachedIndex;
+        }
+
+        // Displays the items manually as read-only fields when serialization isn't supported.
+        private void ShowItemsManually()
+        {
+            if (_itemsField == null) return;
+
+            var list = _itemsField.GetValue(target) as IList;
+            if (list == null) return;
+
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField($"Items ({list.Count}):", EditorStyles.boldLabel);
+
+            EditorGUI.BeginDisabledGroup(true);
+            foreach (var item in list)
+            {
+                EditorGUILayout.ObjectField(item as UnityEngine.Object, typeof(UnityEngine.Object), true);
+            }
+            EditorGUI.EndDisabledGroup();
         }
 
         // Adds or removes the variable from the index based on saveable status.

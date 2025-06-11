@@ -22,11 +22,6 @@ namespace ProjectCeros
 
         #region Protected Methods
 
-        protected override void ResetInitialGameState()
-        {
-            // Nothing to reset.
-        }
-
         // Attempts to load the saved game from disk.
         protected override IEnumerator ManagerInitialization()
         {
@@ -42,6 +37,11 @@ namespace ProjectCeros
         protected override void RaiseFinishedEvent()
         {
             _onGameContinued?.Raise();
+        }
+
+        protected override void ResetInitialGameState()
+        {
+            // Nothing to reset.
         }
 
         #endregion

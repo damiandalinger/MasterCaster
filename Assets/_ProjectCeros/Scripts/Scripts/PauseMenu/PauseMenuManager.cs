@@ -31,13 +31,6 @@ namespace ProjectCeros
 
         #region Lifecycle Methods
 
-        // Registers the pause input callback and enables the input action when the object becomes active.
-        private void OnEnable()
-        {
-            _pauseAction.action.performed += OnPauseInput;
-            _pauseAction.action.Enable();
-        }
-
         // Unregisters the pause input callback and disables the input action when the object is deactivated.
         private void OnDisable()
         {
@@ -45,9 +38,28 @@ namespace ProjectCeros
             _pauseAction.action.Disable();
         }
 
+        // Registers the pause input callback and enables the input action when the object becomes active.
+        private void OnEnable()
+        {
+            _pauseAction.action.performed += OnPauseInput;
+            _pauseAction.action.Enable();
+        }
+
         #endregion
 
         #region Public Methods
+
+        // Called externally to pause the game.
+        public void OnGamePausedExternally()
+        {
+            TriggerPause();
+        }
+
+        // Called externally to resume the game.
+        public void OnGameResumedExternally()
+        {
+            TriggerResume();
+        }
 
         // Handles the performed input event for the pause action and toggles game pause state accordingly.
         private void OnPauseInput(InputAction.CallbackContext context)
@@ -74,18 +86,6 @@ namespace ProjectCeros
             _isPaused = false;
             Time.timeScale = 1;
             _onGameResumed?.Raise();
-        }
-
-        // Called externally to pause the game.
-        public void OnGamePausedExternally()
-        {
-            TriggerPause();
-        }
-
-        // Called externally to resume the game.
-        public void OnGameResumedExternally()
-        {
-            TriggerResume();
         }
 
         #endregion

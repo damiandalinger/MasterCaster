@@ -144,47 +144,6 @@ namespace ProjectCeros
 
         #region Private Methods
 
-        // Selects a set of genres using weighted randomness.
-        // Genres selected in the previous round have a reduced chance of being picked again.
-        public List<ArticleDatabase> SelectGenres()
-        {
-            // Step 1: Create weighted list
-            var weightedGenres = new List<(ArticleDatabase db, float weight)>();
-
-            foreach (var db in _eligibleImportantArticles)
-            {
-                bool wasPreviouslySelected = _lastSelectedGenreNames.Items.Contains(db.name);
-                float baseWeight = Random.value;
-
-                float finalWeight = wasPreviouslySelected ? baseWeight * _repeatPenaltyFactor : baseWeight;
-                weightedGenres.Add((db, finalWeight));
-            }
-
-            // Step 2: Sort by weight descending (more likely = higher finalWeight)
-            var selectedGenres = weightedGenres
-                .OrderByDescending(entry => entry.weight)
-                .Take(_genreCount.Value)
-                .Select(entry => entry.db)
-                .ToList();
-
-            // Step 3: Store current selection as last
-            _lastSelectedGenreNames.Clear();
-            foreach (var genre in selectedGenres)
-            {
-                _lastSelectedGenreNames.Add(genre.name);
-            }
-
-            return selectedGenres;
-        }
-
-        // Selects the first fruit article.
-        private void SelectFruitOfTheDay()
-        {
-            var items = _eligibleFruitArticles.Items;
-            _selectedFruitArticle.Add(items[0]);
-            items.RemoveAt(0);
-        }
-
         // Attempts to add a follow-up story article based on weighted selection.
         private void AddOptionalPairArticle()
         {
@@ -232,7 +191,14 @@ namespace ProjectCeros
             }
         }
 
-        // DEBUG: Logs all selected important and random articles.
+        // DEBUG: Logs a message to the console if debug logging is enabled.
+        private void Log(string message)
+        {
+            if (_isDebugLogging)
+                Debug.Log("[NewsSelector] " + message);
+        }
+
+        // DEBUG: Logs all selected important articles.
         private void LogSelectedArticles()
         {
             Log($"Selected Important Articles:");
@@ -242,11 +208,45 @@ namespace ProjectCeros
             }
         }
 
-        // DEBUG: Logs a message to the console if debug logging is enabled.
-        private void Log(string message)
+        // Selects a set of genres using weighted randomness.
+        // Genres selected in the previous round have a reduced chance of being picked again.
+        public List<ArticleDatabase> SelectGenres()
         {
-            if (_isDebugLogging)
-                Debug.Log("[NewsSelector] " + message);
+            // Step 1: Create weighted list
+            var weightedGenres = new List<(ArticleDatabase db, float weight)>();
+
+            foreach (var db in _eligibleImportantArticles)
+            {
+                bool wasPreviouslySelected = _lastSelectedGenreNames.Items.Contains(db.name);
+                float baseWeight = Random.value;
+
+                float finalWeight = wasPreviouslySelected ? baseWeight * _repeatPenaltyFactor : baseWeight;
+                weightedGenres.Add((db, finalWeight));
+            }
+
+            // Step 2: Sort by weight descending (more likely = higher finalWeight)
+            var selectedGenres = weightedGenres
+                .OrderByDescending(entry => entry.weight)
+                .Take(_genreCount.Value)
+                .Select(entry => entry.db)
+                .ToList();
+
+            // Step 3: Store current selection as last
+            _lastSelectedGenreNames.Clear();
+            foreach (var genre in selectedGenres)
+            {
+                _lastSelectedGenreNames.Add(genre.name);
+            }
+
+            return selectedGenres;
+        }
+
+        // Selects the first fruit article.
+        private void SelectFruitOfTheDay()
+        {
+            var items = _eligibleFruitArticles.Items;
+            _selectedFruitArticle.Add(items[0]);
+            items.RemoveAt(0);
         }
 
         #endregion
