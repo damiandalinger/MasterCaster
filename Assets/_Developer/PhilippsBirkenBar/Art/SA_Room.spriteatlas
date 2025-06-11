@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SA_Room
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: f1739da29fb5ce84d8e305000a6354c4, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 4e1fb8734f21c094a817bf774b11f698: 21300000
+    - 93aea183a003c2c48b8bcb603985147b: 21300000
+    - 2eaf0e83bb437354faa5f65caaaa9e02: 21300000
+    - 2fd3019349645e448953f8ce9e284776: 21300000
+    - 241c62f45b89a59488f9cf4c0661bffb: 21300000
+    - 116235374e546d943a98d23ed70b4842: 21300000
+    - 590b7f2b3c1cc2840af182291e6017b5: 21300000
+    - d43fe4ac665e05a449a90feaefeb940f: 21300000
+    - d33ba4bc5b3e8ad41b9dfa08fe1d90dc: 21300000
+    - ace4558dac5fe5e419ee2b5606c0d0da: 21300000
+    - ab8ee05eb01cafe41aadb27b57c03b29: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 4e1fb8734f21c094a817bf774b11f698, type: 3}
+  - {fileID: 21300000, guid: 93aea183a003c2c48b8bcb603985147b, type: 3}
+  - {fileID: 21300000, guid: 2eaf0e83bb437354faa5f65caaaa9e02, type: 3}
+  - {fileID: 21300000, guid: 2fd3019349645e448953f8ce9e284776, type: 3}
+  - {fileID: 21300000, guid: 241c62f45b89a59488f9cf4c0661bffb, type: 3}
+  - {fileID: 21300000, guid: 116235374e546d943a98d23ed70b4842, type: 3}
+  - {fileID: 21300000, guid: 590b7f2b3c1cc2840af182291e6017b5, type: 3}
+  - {fileID: 21300000, guid: d43fe4ac665e05a449a90feaefeb940f, type: 3}
+  - {fileID: 21300000, guid: d33ba4bc5b3e8ad41b9dfa08fe1d90dc, type: 3}
+  - {fileID: 21300000, guid: ace4558dac5fe5e419ee2b5606c0d0da, type: 3}
+  - {fileID: 21300000, guid: ab8ee05eb01cafe41aadb27b57c03b29, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SPR_Room_Couch
+  - SPR_Room_DeskPodcast
+  - SPR_Room_Bed
+  - SPR_Room_ShelfStanding
+  - SPR_Room_News
+  - SPR_Room_Plant
+  - SPR_Room_DeskLaptop
+  - SPR_Room_ShelfWall
+  - SPR_Room_NewsBound
+  - HintergrundHub
+  - SPR_Room_Leaderboard
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0

@@ -46,6 +46,16 @@ namespace ProjectCeros
 
         #region Public Methods
 
+        // Hides and destroys the loading screen instance.
+        public void HideAndDestroy()
+        {
+            if (_instance != null)
+            {
+                Destroy(_instance);
+                _instance = null;
+            }
+        }
+
         // Shows the loading screen. Instantiates it if necessary.
         public void Show()
         {
@@ -57,16 +67,6 @@ namespace ProjectCeros
             }
 
             _instance.SetActive(true);
-        }
-
-        // Hides and destroys the loading screen instance.
-        public void HideAndDestroy()
-        {
-            if (_instance != null)
-            {
-                Destroy(_instance);
-                _instance = null;
-            }
         }
 
         #endregion

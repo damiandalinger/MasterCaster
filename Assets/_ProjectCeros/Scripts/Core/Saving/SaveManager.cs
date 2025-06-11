@@ -52,21 +52,14 @@ namespace ProjectCeros
 
         #region Public Methods
 
-        // Saves all saveable variables in the index to disk as a JSON file.
-        [ContextMenu("Save Now")]
-        public void Save()
+        // Deletes the existing save file from disk.
+        public void DeleteSave()
         {
-            if (_variableIndex == null) return;
-
-            var data = new Dictionary<string, object>();
-            foreach (var saveable in _variableIndex.Saveables)
+            var path = GetSavePath();
+            if (File.Exists(path))
             {
-                if (saveable.IsSaveable)
-                    data[saveable.SaveKey] = saveable.CaptureState();
+                File.Delete(path);
             }
-
-            var json = JsonConvert.SerializeObject(data, Formatting.Indented);
-            File.WriteAllText(GetSavePath(), json);
         }
 
         // Loads saved data from disk and applies it to registered saveables.
@@ -94,22 +87,6 @@ namespace ProjectCeros
 #endif
         }
 
-        // Deletes the existing save file from disk.
-        public void DeleteSave()
-        {
-            var path = GetSavePath();
-            if (File.Exists(path))
-            {
-                File.Delete(path);
-            }
-        }
-
-        // Checks if a save file exists.
-        public bool SaveFileExists()
-        {
-            return File.Exists(GetSavePath());
-        }
-
         // Resets all saveable variables to their default values.
         public void ResetSaveables()
         {
@@ -117,6 +94,29 @@ namespace ProjectCeros
             {
                 saveable.ResetToDefault();
             }
+        }
+
+        // Saves all saveable variables in the index to disk as a JSON file.
+        [ContextMenu("Save Now")]
+        public void Save()
+        {
+            if (_variableIndex == null) return;
+
+            var data = new Dictionary<string, object>();
+            foreach (var saveable in _variableIndex.Saveables)
+            {
+                if (saveable.IsSaveable)
+                    data[saveable.SaveKey] = saveable.CaptureState();
+            }
+
+            var json = JsonConvert.SerializeObject(data, Formatting.Indented);
+            File.WriteAllText(GetSavePath(), json);
+        }
+
+        // Checks if a save file exists.
+        public bool SaveFileExists()
+        {
+            return File.Exists(GetSavePath());
         }
 
         #endregion
