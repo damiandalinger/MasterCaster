@@ -84,8 +84,8 @@ SpriteAtlas:
   - SPR_Room_DeskLaptop
   - SPR_Room_ShelfWall
   - SPR_Room_NewsBound
-  - HintergrundHub
+  - SPR_Room
   - SPR_Room_Leaderboard
   m_RenderDataMap: {}
-  m_Tag: New Sprite Atlas
+  m_Tag: SA_Room
   m_IsVariant: 0

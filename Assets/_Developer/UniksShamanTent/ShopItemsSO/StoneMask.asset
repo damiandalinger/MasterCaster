@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
   m_Name: StoneMask
   m_EditorClassIdentifier: 
-  ItemName: StoneMask
-  icon: {fileID: 0}
+  itemName: Mysterious Stone Mask
+  description: A Mask for an ancient tomb. You probably should not put it on. AYAAYAAAYAA
+  itemSprite: {fileID: 21300000, guid: 96f7a9dc0243f8f419c23b3da76da588, type: 3}
   price: 0
   upgradeGroup: 1
   id: 22

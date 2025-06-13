@@ -16,7 +16,7 @@ namespace ProjectCeros
 
             if (_money.Value >= _itemToPurchase.price)
             {
-                 _itemEvent.Raise(_itemToPurchase.id);
+                 _itemEvent.Raise(_itemToPurchase.id); // this needs to be a dynamic SO
             }
 
             else

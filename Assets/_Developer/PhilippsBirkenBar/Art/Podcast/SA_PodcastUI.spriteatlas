@@ -69,5 +69,5 @@ SpriteAtlas:
   - SPR_Podcast_Speachbubble_left
   - SPR_Podcast_Screen
   m_RenderDataMap: {}
-  m_Tag: New Sprite Atlas
+  m_Tag: SA_PodcastUI
   m_IsVariant: 0

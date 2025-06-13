@@ -16,9 +16,13 @@ namespace ProjectCeros
     {
 
         [Tooltip("Name of the Shop Item")]
-        [SerializeField] public string ItemName;
+        [SerializeField] public string itemName;
 
-        public Sprite icon;
+
+        [TextArea(3, 10)]
+        [SerializeField] public string description;
+
+        public Sprite itemSprite;
         public int price;
 
         public int upgradeGroup;

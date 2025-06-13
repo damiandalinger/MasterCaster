@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
   m_Name: ThanosGauntlet
   m_EditorClassIdentifier: 
-  ItemName: 
-  icon: {fileID: 0}
+  itemName: Gauntlet forged by Florians
+  description: '*Snaps* hm... nothing happened'
+  itemSprite: {fileID: 21300000, guid: 0bd716978d752a049a1ca8d84c0a3431, type: 3}
   price: 0
-  upgradeGroup: 1
+  upgradeGroup: 0
   id: 11
