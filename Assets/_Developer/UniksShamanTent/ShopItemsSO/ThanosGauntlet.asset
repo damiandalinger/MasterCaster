@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Gauntlet forged by Florians
   description: '*Snaps* hm... nothing happened'
   itemSprite: {fileID: 21300000, guid: 0bd716978d752a049a1ca8d84c0a3431, type: 3}
-  price: 0
+  price: 5
   upgradeGroup: 0
   id: 11

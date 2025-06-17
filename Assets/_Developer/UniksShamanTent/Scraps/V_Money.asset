@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSaveable: 1
   DeveloperDescription: 
-  InitialValue: 0
-  RuntimeValue: 0
+  InitialValue: 100
+  RuntimeValue: 35

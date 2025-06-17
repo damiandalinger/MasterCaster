@@ -9,6 +9,8 @@ namespace ProjectCeros
     {
         public static ShopUI Instance;
 
+        [SerializeField] private MoneyChecker moneyChecker;
+
         [Header("UI Elements")]
         [SerializeField] private TextMeshProUGUI itemNameText;
         [SerializeField] private TextMeshProUGUI descriptionText;
@@ -32,6 +34,9 @@ namespace ProjectCeros
             descriptionText.text = item.description;
             priceText.text = $"${item.price}";
             itemImage.sprite = item.itemSprite;
+
+            moneyChecker.SetItemToPurchase(item);
+
         }
 
         private void BuyCurrentItem()
@@ -40,6 +45,10 @@ namespace ProjectCeros
 
             // Trigger your purchase logic here
             Debug.Log($"Buying {currentSelectedItem.itemName}");
+
+            
+            moneyChecker.CheckMoney();
+
             // Fire your parameterized GameEvent or deduct currency, etc.
         }
     }
