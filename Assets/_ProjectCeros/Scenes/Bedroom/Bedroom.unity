@@ -1181,7 +1181,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1723886063}
   - component: {fileID: 1723886062}
-  - component: {fileID: 1723886061}
   m_Layer: 0
   m_Name: '@ListenerCount'
   m_TagString: Untagged
@@ -1189,34 +1188,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1723886061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723886060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756af48229c34a140bf09dfa3d17e737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 2016aac406210b348a175d66f9a627de, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1723886062}
-        m_TargetAssemblyTypeName: ProjectCeros.IntVariableDisplayUI, Assembly-CSharp
-        m_MethodName: UpdateDisplay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1723886062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1207,7 @@ MonoBehaviour:
   _targetText: {fileID: 1774489457}
   _prefix: 
   _suffix: ' Listener'
+  _useUpdateMethod: 1
 --- !u!4 &1723886063
 Transform:
   m_ObjectHideFlags: 0

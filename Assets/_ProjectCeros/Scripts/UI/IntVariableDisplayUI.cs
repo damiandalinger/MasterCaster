@@ -4,6 +4,7 @@
 
 /// <remarks>
 /// 09/05/2025 by Damian Dalinger: Script creation.
+/// 18/06/2025 by Damian Dalinger: Added the update method.
 /// </remarks>
 
 using UnityEngine;
@@ -25,6 +26,17 @@ namespace ProjectCeros
 
         [Tooltip("Optional text displayed after the value (e.g., ' viewers' or ' points').")]
         [SerializeField] private string _suffix = "";
+
+        [Tooltip("If the display should refresh every frame.")]
+        [SerializeField] private bool _useUpdateMethod = false;
+
+        void Update()
+        {
+            if (_useUpdateMethod)
+            {
+                UpdateDisplay();
+            }
+        }
 
         private void OnEnable()
         {

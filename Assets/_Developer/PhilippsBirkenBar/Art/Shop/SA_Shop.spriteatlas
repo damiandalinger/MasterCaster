@@ -121,5 +121,5 @@ SpriteAtlas:
   - SPR_Collectibles_Bathwater
   - SPR_Equipment_Mic_T2
   m_RenderDataMap: {}
-  m_Tag: New Sprite Atlas
+  m_Tag: SA_Shop
   m_IsVariant: 0
