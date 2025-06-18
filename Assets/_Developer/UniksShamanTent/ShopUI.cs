@@ -1,3 +1,11 @@
+/// <summary>
+/// This script handles the important UI information for the Shop screen.
+/// </summary>
+
+/// <remarks>
+/// 18/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,47 +17,77 @@ namespace ProjectCeros
     {
         public static ShopUI Instance;
 
-        [SerializeField] private MoneyChecker moneyChecker;
+        [SerializeField] private MoneyChecker _moneyChecker;
+
+        [SerializeField] private IntRuntimeSet _unlockedItemIDs;
+ 
 
         [Header("UI Elements")]
-        [SerializeField] private TextMeshProUGUI itemNameText;
-        [SerializeField] private TextMeshProUGUI descriptionText;
-        [SerializeField] private TextMeshProUGUI priceText;
-        [SerializeField] private Image itemImage;
-        [SerializeField] private Button buyButton;
+        [SerializeField] private TextMeshProUGUI _itemNameText;
+
+        [SerializeField] private TextMeshProUGUI _descriptionText;
+
+        [SerializeField] private TextMeshProUGUI _priceText;
+
+        [SerializeField] private Image _itemImage;
+
+        [SerializeField] private Button _buyButton;
+
+        [SerializeField] private Image _alreadyBought;
 
         private ItemSO currentSelectedItem;
 
         private void Awake()
         {
             Instance = this;
-            buyButton.onClick.AddListener(BuyCurrentItem);
+            _buyButton.onClick.AddListener(BuyCurrentItem);
         }
 
+
+        // Adjusts the ShopUI info.
         public void ShowItemDetails(ItemSO item)
         {
             currentSelectedItem = item;
 
-            itemNameText.text = item.itemName;
-            descriptionText.text = item.description;
-            priceText.text = $"${item.price}";
-            itemImage.sprite = item.itemSprite;
+            _itemNameText.text = item.ItemName;
+            _descriptionText.text = item.Description;
+            _priceText.text = $"${item.Price}";
+            _itemImage.sprite = item.ItemSprite;
 
-            moneyChecker.SetItemToPurchase(item);
+            _moneyChecker.SetItemToPurchase(item);
 
+            ShowItemSold();
         }
 
+        // Triggers the buying logic.
         private void BuyCurrentItem()
         {
             if (currentSelectedItem == null) return;
 
-            // Trigger your purchase logic here
-            Debug.Log($"Buying {currentSelectedItem.itemName}");
+            Debug.Log($"Buying {currentSelectedItem.ItemName}");
 
-            
-            moneyChecker.CheckMoney();
+            _moneyChecker.CheckMoney();
 
-            // Fire your parameterized GameEvent or deduct currency, etc.
         }
+
+        // Updates the UI when an item is Sold out.
+        public void ShowItemSold()
+
+        {
+            if (_unlockedItemIDs.Items.Contains(currentSelectedItem.Id))
+
+            {
+                _alreadyBought.enabled = true;
+            }
+
+            else
+
+            {
+                _alreadyBought.enabled = false;
+            }
+
+
+        }
+
     }
 }

@@ -1,20 +1,30 @@
+/// <summary>
+/// This script handles how and when the items appear in the room of the player once he acquires them.
+/// </summary>
+
+/// <remarks>
+/// 18/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
 using System.Collections.Generic;
 
+/// Dev Notes:
+/// Once the game reloads, it needs to look at the items and based on the item id, the inventory needs to be restored.
+
 namespace ProjectCeros
 {
-    
-    // instantiate object based on item id when event is triggered
-    // instantiated object needs to replace old item
-    // Once the game reloads, it needs to look at the items and based on the item id, the inventory needs to be restored
 
-
-public class RoomItemDisplayManager : MonoBehaviour
+    public class RoomItemDisplayManager : MonoBehaviour
     {
-        public ItemDatabaseSO itemDatabase;
-        public List<RoomItemDisplay> roomObjects;
-        public IntRuntimeSet unlockedItemIDs; // This comes from your runtime set
+        [SerializeField, Tooltip("Here goes the ItemDatabase that holds all possible items")]
+        private ItemDatabaseSO itemDatabase;
 
+        [SerializeField, Tooltip("Here go all the GameObjects that contain the RoomItemDisplay script")]
+        private List<RoomItemDisplay> roomObjects;
+
+        [SerializeField, Tooltip("Here goes the RuntimeSet that hold all the item ids")]
+        private IntRuntimeSet unlockedItemIDs;
 
 
         public void Start()
@@ -23,6 +33,9 @@ public class RoomItemDisplayManager : MonoBehaviour
         }
 
 
+        ///  Creates a Dictionary which lists the items that get displayed, upgraded items get ignored.
+        ///  Fetches the ItemSO by id from the ItemDatabaseSO.
+        ///  Displays the items in the studio, as long as the objects are assigned to roomObjects.
         public void UpdateRoomDisplay()
         {
             Dictionary<int, ItemSO> activeUpgrades = new Dictionary<int, ItemSO>();
@@ -32,21 +45,21 @@ public class RoomItemDisplayManager : MonoBehaviour
                 ItemSO item = itemDatabase.GetItemByID(id);
                 if (item == null) continue;
 
-                int group = item.upgradeGroup;
+                int group = item.UpgradeGroup;
 
                 if (!activeUpgrades.ContainsKey(group))
                     activeUpgrades[group] = item;
-                else if (item.id > activeUpgrades[group].id)
+                else if (item.Id > activeUpgrades[group].Id)
                     activeUpgrades[group] = item;
             }
 
             foreach (var display in roomObjects)
             {
                 var item = display.itemData;
-                int group = item.upgradeGroup;
+                int group = item.UpgradeGroup;
 
                 bool shouldBeActive = activeUpgrades.ContainsKey(group) &&
-                                      activeUpgrades[group].id == item.id;
+                                      activeUpgrades[group].Id == item.Id;
 
                 display.gameObject.SetActive(shouldBeActive);
             }

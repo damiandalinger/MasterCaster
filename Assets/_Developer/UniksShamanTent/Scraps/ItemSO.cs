@@ -1,5 +1,5 @@
-// <summary>
-/// Creates SO for Items in the Shop
+/// <summary>
+/// Creates the SO for Items in the Shop.
 /// </summary>
 
 /// <remarks>
@@ -16,18 +16,26 @@ namespace ProjectCeros
     {
 
         [Tooltip("Name of the Shop Item")]
-        [SerializeField] public string itemName;
+        public string ItemName;
 
-
+        [Tooltip("Item description")]
         [TextArea(3, 10)]
-        [SerializeField] public string description;
+        public string Description;
 
-        public Sprite itemSprite;
-        public int price;
+        [Tooltip("Sprite displayed in the Shop UI")]
+        public Sprite ItemSprite;
 
-        public int upgradeGroup;
+        [Tooltip("Item price")]
+        public int Price;
 
-        public int id; 
+        [Tooltip("Every item that upgrades into another item needs to have the same number here")]
+        public int UpgradeGroup;
+
+        [Tooltip("The id of the item. One id per item. Important: lower id items upgrade into higher id items")]
+        public int Id;
+
+        [Tooltip("Modifier for the podcast calculation")]
+        public float Modifier;
 
 
 
