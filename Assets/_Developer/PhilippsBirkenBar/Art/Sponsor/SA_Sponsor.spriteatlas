@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SA_Sponsor
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 6669ba2ecb8f6544e9b5887bb5439654, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - f1c92480c11994b468b3d989d7e4bcf5: 21300000
+    - 7fe14c81ca80f5347b365b0de4f4505a: 21300000
+    - bac2fdc3143cf2342bc74846d434e611: 21300000
+    - 7ffce014577f6d64db5cdc1c09b6c43f: 21300000
+    - e5206fb4955a57d448cfd0a992173cb7: 21300000
+    - 478d40e58a686dd4f9cd790c0e704666: 21300000
+    - f0513336be5e2a04eb81eebdc55311f0: 21300000
+    - f7ff1d09584c9c0429b83142f9d074a3: 21300000
+    - 60df6b596b3cf5143a11a0a530f07aeb: 21300000
+    - 0d7e414a4479aed4a81c0513806fe9ff: 21300000
+    - 1f078d5bf7f12cf44aee2c6e31b9e21c: 21300000
+    - 2ed368ec86143d4449a5cb5f2d9a417e: 21300000
+    - fac2dfcedb40ed14680f6a35de02babe: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f1c92480c11994b468b3d989d7e4bcf5, type: 3}
+  - {fileID: 21300000, guid: 7fe14c81ca80f5347b365b0de4f4505a, type: 3}
+  - {fileID: 21300000, guid: bac2fdc3143cf2342bc74846d434e611, type: 3}
+  - {fileID: 21300000, guid: 7ffce014577f6d64db5cdc1c09b6c43f, type: 3}
+  - {fileID: 21300000, guid: e5206fb4955a57d448cfd0a992173cb7, type: 3}
+  - {fileID: 21300000, guid: 478d40e58a686dd4f9cd790c0e704666, type: 3}
+  - {fileID: 21300000, guid: f0513336be5e2a04eb81eebdc55311f0, type: 3}
+  - {fileID: 21300000, guid: f7ff1d09584c9c0429b83142f9d074a3, type: 3}
+  - {fileID: 21300000, guid: 60df6b596b3cf5143a11a0a530f07aeb, type: 3}
+  - {fileID: 21300000, guid: 0d7e414a4479aed4a81c0513806fe9ff, type: 3}
+  - {fileID: 21300000, guid: 1f078d5bf7f12cf44aee2c6e31b9e21c, type: 3}
+  - {fileID: 21300000, guid: 2ed368ec86143d4449a5cb5f2d9a417e, type: 3}
+  - {fileID: 21300000, guid: fac2dfcedb40ed14680f6a35de02babe, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SPR_SponsorIcon_BlueCow
+  - SPR_SponsorIcon_Superstar
+  - SPR_SponsorIcon_BG1
+  - SPR_SponsorIcon_Skillexchange
+  - SPR_SponsorIcon_SupertinyGames
+  - SPR_SponsorIcon_Blizzison
+  - SPR_SponsorIcon_ByeFresh
+  - SPR_SponsorIcon_TeamPrune
+  - SPR_SponsorIcon_Papadox
+  - SPR_SponsorIcon_Soundible
+  - SPR_SponsorIcon_Trail
+  - SPR_SponsorIcon_Buyifi
+  - SPR_SponsorIcon_Ubihard
+  m_RenderDataMap: {}
+  m_Tag: SA_Sponsor
+  m_IsVariant: 0

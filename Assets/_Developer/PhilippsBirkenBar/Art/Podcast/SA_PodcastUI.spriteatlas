@@ -50,24 +50,60 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
+    - 026bbd1050ce2d945be5be6081b37688: 21300000
     - ed55949022db35147b1e2469c93da127: 21300000
+    - 947c51524d820a84f9760feab2e83fd3: 21300000
+    - b884b772080359340866238e553b69fe: 21300000
+    - c8e39ab20597daf4bbf961d07f02f056: 21300000
+    - 5705a33381337b44abc256e8d1433b77: 21300000
+    - 48911cd315ba75f44b495f6f204ccff1: 21300000
     - c2c8f504fceead74f865c8771397befc: 21300000
+    - bee13395ae1697449b2b931adab2c212: 21300000
+    - 2081b2a52af8e3e42a87b007277c5f9d: 21300000
     - bc40eea72233d7548bf08387539eccf0: 21300000
     - 024784c7bea83724d814b018903358da: 21300000
+    - 1a177968de86cf847b37bd468de1d781: 21300000
     - 4e89e198d03e6c44cba3ee5ff499e626: 21300000
+    - 03190269f5cde7447a3b20e1242ed388: 21300000
+    - 46132eeabeee7a84d98c8a7842a9b8d2: 21300000
+    - db1d37dbb181fce49a24bacd36793032: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 026bbd1050ce2d945be5be6081b37688, type: 3}
   - {fileID: 21300000, guid: ed55949022db35147b1e2469c93da127, type: 3}
+  - {fileID: 21300000, guid: 947c51524d820a84f9760feab2e83fd3, type: 3}
+  - {fileID: 21300000, guid: b884b772080359340866238e553b69fe, type: 3}
+  - {fileID: 21300000, guid: c8e39ab20597daf4bbf961d07f02f056, type: 3}
+  - {fileID: 21300000, guid: 5705a33381337b44abc256e8d1433b77, type: 3}
+  - {fileID: 21300000, guid: 48911cd315ba75f44b495f6f204ccff1, type: 3}
   - {fileID: 21300000, guid: c2c8f504fceead74f865c8771397befc, type: 3}
+  - {fileID: 21300000, guid: bee13395ae1697449b2b931adab2c212, type: 3}
+  - {fileID: 21300000, guid: 2081b2a52af8e3e42a87b007277c5f9d, type: 3}
   - {fileID: 21300000, guid: bc40eea72233d7548bf08387539eccf0, type: 3}
   - {fileID: 21300000, guid: 024784c7bea83724d814b018903358da, type: 3}
+  - {fileID: 21300000, guid: 1a177968de86cf847b37bd468de1d781, type: 3}
   - {fileID: 21300000, guid: 4e89e198d03e6c44cba3ee5ff499e626, type: 3}
+  - {fileID: 21300000, guid: 03190269f5cde7447a3b20e1242ed388, type: 3}
+  - {fileID: 21300000, guid: 46132eeabeee7a84d98c8a7842a9b8d2, type: 3}
+  - {fileID: 21300000, guid: db1d37dbb181fce49a24bacd36793032, type: 3}
   m_PackedSpriteNamesToIndex:
+  - SPR_Genre_RPG_UNSelected
   - SPR_Podcast_Menu
+  - SPR_Genre_Simulation_Selected
+  - SPR_Genre_Action_Selected
+  - SPR_Genre_Indie_Selected
+  - SPR_Genre_Action_UNSelected
+  - SPR_Genre_Shooter_UNSelected
   - SPR_Podcast_Speachbubble_right
+  - SPR_Genre_Strategy_UNSelected
+  - SPR_Genre_Shooter_Selected
   - SPR_Podcast_Sponsor
   - SPR_Podcast_Speachbubble_left
+  - SPR_Genre_RPG_Selected
   - SPR_Podcast_Screen
+  - SPR_Genre_Simulation_UNSelected
+  - SPR_Genre_Indie_UNSelected
+  - SPR_Genre_Strategy_Selected
   m_RenderDataMap: {}
-  m_Tag: New Sprite Atlas
+  m_Tag: SA_PodcastUI
   m_IsVariant: 0
