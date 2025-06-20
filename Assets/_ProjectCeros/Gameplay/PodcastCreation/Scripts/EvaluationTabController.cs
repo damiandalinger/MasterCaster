@@ -19,7 +19,7 @@ namespace ProjectCeros
 
         [Header("Evaluation UI Root")]
         [SerializeField] private GameObject _evaluationUIRoot;
-        [SerializeField] private PodcastResultVisualizer _visualizer;
+        [SerializeField] private PodcastResultVisualizer _podcastVisualizer;
 
         private int _currentTab = 0;
 
@@ -33,7 +33,6 @@ namespace ProjectCeros
                 int index = i;
                 _tabButtons[i].onClick.AddListener(() =>
                 {
-                    _visualizer?.SkipAnimation(); // Auch beim direkten Tabwechsel skippen
                     ShowTab(index);
                 });
             }
@@ -59,7 +58,6 @@ namespace ProjectCeros
 
         private void OnNextClicked()
         {
-            _visualizer?.SkipAnimation(); // Animation abbrechen, falls noch läuft
 
             if (_currentTab < _tabs.Count - 1)
             {

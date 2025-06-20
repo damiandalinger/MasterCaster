@@ -32,56 +32,56 @@ namespace ProjectCeros
         [SerializeField] private float _delayBeforeTotal = 1.5f;
         [SerializeField] private float _initialDelay = 1.0f;
 
+        [Header("Data")]
+        [SerializeField] private PodcastResult _result;
+
         public UnityEvent OnAnimationFinished;
 
         private Coroutine _activeAnimation;
-        private PodcastResult _lastResult;
+        private bool _hasAnimated = false;
 
-        public void ShowResult(PodcastResult result)
+        private void OnEnable()
         {
-            if (_activeAnimation != null)
+            if (_hasAnimated)
             {
-                StopCoroutine(_activeAnimation);
-                CompleteImmediately(_lastResult);
+                CompleteImmediately(_result);
             }
-
-            _lastResult = result;
-            _activeAnimation = StartCoroutine(AnimateResult(result));
+            else
+            {
+                ResetUI();
+                _activeAnimation = StartCoroutine(AnimateResult(_result));
+            }
         }
 
-        public void SkipAnimation()
+        private void OnDisable()
         {
             if (_activeAnimation != null)
             {
                 StopCoroutine(_activeAnimation);
-                CompleteImmediately(_lastResult);
+                CompleteImmediately(_result);
                 _activeAnimation = null;
             }
+        }
+        private void ResetUI()
+        {
+            _gainText.text = "+0";
+            _totalRow.SetActive(false);
+            foreach (var row in _multiplierRows)
+                row.RootObject.SetActive(false);
         }
 
         private IEnumerator AnimateResult(PodcastResult result)
         {
-            _gainText.text = "+0";
-            _totalRow.SetActive(false);
-
-            foreach (var row in _multiplierRows)
-                row.RootObject.SetActive(false);
-
             yield return new WaitForSeconds(_initialDelay);
 
             int currentRow = 0;
 
-            // Topic Multiplier
             SetRow(currentRow++, "Topic Multiplier", $"x{result.TopicMultiplier:F2}");
-
             yield return new WaitForSeconds(_stepDelay);
 
-            // Bonus Multiplier
             SetRow(currentRow++, "Bonus Multiplier", $"x{result.BonusMultiplier:F2}");
-
             yield return new WaitForSeconds(_stepDelay);
 
-            // Einzelboni
             var modifiers = new List<(string label, float value, int iconIndex)>
             {
                 ("Guest Bonus", result.GuestBonus, 0),
@@ -108,16 +108,15 @@ namespace ProjectCeros
                 yield return new WaitForSeconds(_stepDelay);
             }
 
-            // Listener Gain Count
             yield return CountUp(_gainText, 0, result.Gain, _gainCountDuration);
             yield return new WaitForSeconds(_delayBeforeTotal);
 
-            // Total Listeners Count
             _totalRow.SetActive(true);
             int previous = result.TotalListeners - result.Gain;
             yield return CountUp(_totalText, previous, result.TotalListeners, _finalCountDuration);
 
             _activeAnimation = null;
+            _hasAnimated = true;
             OnAnimationFinished?.Invoke();
         }
 
@@ -133,7 +132,6 @@ namespace ProjectCeros
                 row.RootObject.SetActive(false);
 
             int rowIndex = 0;
-
             SetRow(rowIndex++, "Topic Multiplier", $"x{result.TopicMultiplier:F2}");
             SetRow(rowIndex++, "Bonus Multiplier", $"x{result.BonusMultiplier:F2}");
 
@@ -161,7 +159,7 @@ namespace ProjectCeros
                     row.Icon.sprite = _iconSprites[iconIndex];
             }
 
-            _activeAnimation = null;
+            _hasAnimated = true;
             OnAnimationFinished?.Invoke();
         }
 

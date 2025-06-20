@@ -25,10 +25,10 @@ namespace ProjectCeros
         [SerializeField] private FloatReference _wrongGenrePenalty;
         [SerializeField] private IntReference _currentListeners;
         [SerializeField] private ArticleDatabase _selectedImportantArticles;
-        private PodcastResult _lastResult;
+        [SerializeField] private PodcastResult _result;
 
         // Calculates listener growth based on current selections and article match data.
-        public PodcastResult Calculate(PodcastInputData input)
+        public void Calculate(PodcastInputData input)
         {
             float baseListeners = _currentListeners.Value;
             float baseValue = 2 + (baseListeners * _previousListenerMod.Value);
@@ -66,20 +66,19 @@ namespace ProjectCeros
             int gainAfterBonus = Mathf.CeilToInt(afterBonus - baseListeners);
 
             // Create minimal result
-            var result = new PodcastResult
-            {
-                TotalListeners = totalListeners,
-                Gain = gain,
-                GainAfterBonus = gainAfterBonus,
-                GuestBonus = guest,
-                EquipmentBonus = equip,
-                SponsorBonus = sponsor,
-                DarkWebBonus = dark,
-                SubgenreBonus = subgenre,
-                OtherBonus = other,
-                BonusMultiplier = bonusMult,
-                TopicMultiplier = topicMod
-            };
+            _result.OverwriteWith(
+       totalListeners,
+       gain,
+       gainAfterBonus,
+       guest,
+       equip,
+       sponsor,
+       dark,
+       subgenre,
+       other,
+       bonusMult,
+       topicMod
+   );
 
             // DEBUG LOG (vollständig)
             Debug.Log(
@@ -111,16 +110,11 @@ namespace ProjectCeros
                 $"Total Gain: {(gain >= 0 ? "+" : "")}{gain}\n" +
                 "------------------------------"
             );
-            _lastResult = result;
-            return result;
         }
 
         public void ApplyFinalListenerGain()
         {
-            if (_lastResult != null)
-            {
-                _currentListeners.Variable.SetValue(_lastResult.TotalListeners);
-            }
+            _currentListeners.Variable.SetValue(_result.TotalListeners);
         }
 
         private string GetGenreName(int genreId)

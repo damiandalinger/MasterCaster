@@ -52,9 +52,10 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
-    - b30fd37029f98654a9186102f84804d9: 21300000
+    - ddf1bc11c701fbf42aae9a824a3aa8db: 21300000
     - fc5680c1036d96a488005ad8bbd7b95a: 21300000
     - eb50b112adad65449b1be169dda1b2b6: 21300000
+    - 65337a73ea371f149a73b3e67ce32027: 21300000
     - 9160e22429d01174fa83316b2c79f1c8: 21300000
     - 64204454d691e124b9b8dd123224e1ba: 21300000
     - 7c356db41805ea74dab8595872df943c: 21300000
@@ -73,12 +74,12 @@ SpriteAtlas:
     - 79a7d7ccf4d96e447863a484b6c39b12: 21300000
     - bf792f4d409896e47b2c0b85373a80e5: 21300000
     - 47d8685dabc7f8d4385ad5280fbe3d56: 21300000
-    - 08eb60ed3dadacc44b808953ff89b2b5: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: b30fd37029f98654a9186102f84804d9, type: 3}
+  - {fileID: 21300000, guid: ddf1bc11c701fbf42aae9a824a3aa8db, type: 3}
   - {fileID: 21300000, guid: fc5680c1036d96a488005ad8bbd7b95a, type: 3}
   - {fileID: 21300000, guid: eb50b112adad65449b1be169dda1b2b6, type: 3}
+  - {fileID: 21300000, guid: 65337a73ea371f149a73b3e67ce32027, type: 3}
   - {fileID: 21300000, guid: 9160e22429d01174fa83316b2c79f1c8, type: 3}
   - {fileID: 21300000, guid: 64204454d691e124b9b8dd123224e1ba, type: 3}
   - {fileID: 21300000, guid: 7c356db41805ea74dab8595872df943c, type: 3}
@@ -97,11 +98,11 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 79a7d7ccf4d96e447863a484b6c39b12, type: 3}
   - {fileID: 21300000, guid: bf792f4d409896e47b2c0b85373a80e5, type: 3}
   - {fileID: 21300000, guid: 47d8685dabc7f8d4385ad5280fbe3d56, type: 3}
-  - {fileID: 21300000, guid: 08eb60ed3dadacc44b808953ff89b2b5, type: 3}
   m_PackedSpriteNamesToIndex:
-  - SPR_RatingScreen_IconStarFilled
+  - SPR_RatingScreen_IconStar_V2
   - SPR_RatingScreen_IconListener
   - SPR_ScoreBoard_Button
+  - SPR_RatingScreen_IconStarfilled_V2
   - SPR_ScoreScreen_IconCoin
   - SPR_ScoreScreen_V3
   - SPR_ScoreBoard_ButtonPressed
@@ -120,7 +121,6 @@ SpriteAtlas:
   - SPR_ScoreScreen_IconSmiley
   - SPR_RatingScreen
   - SPR_ScoreScreen_V2
-  - SPR_RatingScreen_IconStar
   m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0

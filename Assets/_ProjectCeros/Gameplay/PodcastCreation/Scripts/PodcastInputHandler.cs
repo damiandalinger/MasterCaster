@@ -29,7 +29,9 @@ namespace ProjectCeros
         [Header("Core")]
         [SerializeField] private PodcastCalculator _calculator;
         [SerializeField] private PodcastResultVisualizer _resultVisualizer;
-
+        [SerializeField] private TMP_InputField _titleInputField;
+        [SerializeField] private StringRuntimeSet _podcastTitles;
+        [SerializeField] private int _maxTitleLength = 32;
         private int _selectedGenre = -1;
         private int _selectedSpin = 0;
         private string _selectedSubgenre = string.Empty;
@@ -40,6 +42,8 @@ namespace ProjectCeros
 
         private void Start()
         {
+
+            _titleInputField.characterLimit = _maxTitleLength;
             UpdateFeedback();
         }
 
@@ -78,6 +82,11 @@ namespace ProjectCeros
                 return;
             }
 
+            string title = _titleInputField.text.Trim();
+
+            _podcastTitles.Add(title);
+
+
             var input = new PodcastInputData
             {
                 Genre = _selectedGenre,
@@ -85,12 +94,11 @@ namespace ProjectCeros
                 Subgenre = _selectedSubgenre
             };
 
-            var result = _calculator.Calculate(input);
+            _calculator.Calculate(input);
 
             _onPodcastConfirmed.Raise();
             _selectionUI.SetActive(false);
             _evaluationUI.SetActive(true);
-            _resultVisualizer.ShowResult(result);
         }
 
         #endregion
@@ -100,7 +108,9 @@ namespace ProjectCeros
         private bool IsValidSelection()
         {
             return _selectedGenre >= 1 && _selectedGenre <= 6 &&
-                   (_selectedSpin == 1 || _selectedSpin == 2);
+                   (_selectedSpin == 1 || _selectedSpin == 2) &&
+                    _titleInputField != null &&
+           !string.IsNullOrWhiteSpace(_titleInputField.text);
         }
 
         private void ResetSelection()
