@@ -38,8 +38,8 @@ namespace ProjectCeros
                 // Hasn't bought this item yet.
                 if (!_boughtItems.Contains(ItemToPurchase.Id))
                 {
-                    _itemEvent.Raise(ItemToPurchase.Id);
                     _money.Variable.ApplyChange(-ItemToPurchase.Price);
+                    _itemEvent.Raise(ItemToPurchase.Id);
                     _boughtItems.Add(ItemToPurchase.Id);
                 }
 

@@ -21,6 +21,8 @@ namespace ProjectCeros
 
         [SerializeField] private IntRuntimeSet _unlockedItemIDs;
 
+        [SerializeField] private IntReference _money;
+
 
         [Header("UI Elements")]
         [SerializeField] private TextMeshProUGUI _itemNameText;
@@ -28,6 +30,8 @@ namespace ProjectCeros
         [SerializeField] private TextMeshProUGUI _descriptionText;
 
         [SerializeField] private TextMeshProUGUI _priceText;
+
+        [SerializeField] private TextMeshProUGUI _playerMoney;
 
         [SerializeField] private Image _itemImage;
 
@@ -72,9 +76,18 @@ namespace ProjectCeros
 
         }
 
+        // Update the amount of money the Player has in the UI.
+        public void UpdateMoney()
+        {
+            _playerMoney.text = $"${_money.Value}";
+
+            Debug.Log($"Money value changed to: {_money.Value}");
+        }
+
         private void Awake()
         {
             Instance = this;
+            _playerMoney.text = $"${_money.Value}";
             _buyButton.onClick.AddListener(BuyCurrentItem);
         }
 
