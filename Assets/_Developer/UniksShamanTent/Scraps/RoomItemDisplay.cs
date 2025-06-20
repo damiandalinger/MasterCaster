@@ -14,8 +14,7 @@ namespace ProjectCeros
 {
     public class RoomItemDisplay : MonoBehaviour
     {
-        public ItemSO itemData;
-
+        public ItemSO ItemData;
 
     }
 }

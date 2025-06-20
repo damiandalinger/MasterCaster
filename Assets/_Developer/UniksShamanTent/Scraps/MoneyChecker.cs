@@ -32,30 +32,28 @@ namespace ProjectCeros
         // Checks if player has enough money and if the item was already bought or not
         public void CheckMoney()
         {
-            // Has enough money?
+            // Has enough money.
             if (_money.Value >= ItemToPurchase.Price)
             {
-                // Hasn't bought this item yet?
+                // Hasn't bought this item yet.
                 if (!_boughtItems.Contains(ItemToPurchase.Id))
                 {
                     _itemEvent.Raise(ItemToPurchase.Id);
                     _money.Variable.ApplyChange(-ItemToPurchase.Price);
                     _boughtItems.Add(ItemToPurchase.Id);
-
-                    
                 }
+
                 else
                 {
                     Debug.Log("You already bought this item!");
                 }
+
             }
+
             else
             {
                 Debug.Log("Rack off, you wet wallet!");
             }
         }
-
-
- 
     }
 }

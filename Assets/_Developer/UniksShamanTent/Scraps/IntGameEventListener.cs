@@ -23,7 +23,7 @@ namespace ProjectCeros
         public IntGameEvent GameEvent;
 
         [Tooltip("Response to invoke when Event is raised.")]
-        public UnityIntEvent response;
+        public UnityIntEvent Response;
 
         private void OnEnable()
         {
@@ -39,7 +39,7 @@ namespace ProjectCeros
 
         public void OnEventRaised(int value)
         {
-            response.Invoke(value);
+            Response.Invoke(value);
 
             // Debug.Log("Invoke with value " + value);
         }

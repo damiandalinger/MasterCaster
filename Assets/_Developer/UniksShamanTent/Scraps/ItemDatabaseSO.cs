@@ -16,12 +16,12 @@ namespace ProjectCeros
     public class ItemDatabaseSO : ScriptableObject
     {
 
-        [Tooltip("Here go all items that the Player can potentially have")]
+        [Tooltip("Here go all items that the Player can potentially have.")]
         public List<ItemSO> AllItems;
 
         private Dictionary<int, ItemSO> _lookup;
 
-        // Setup the dictionary with the item id and ItemSO
+        // Setup the dictionary with the item id and ItemSO.
         public void Initialize()
         {
             _lookup = new Dictionary<int, ItemSO>();
@@ -35,7 +35,7 @@ namespace ProjectCeros
         }
 
 
-        // Call this method to get the ItemSO in exchange for the item id
+        // Call this method to get the ItemSO in exchange for the item id.
         public ItemSO GetItemByID(int id)
         {
             if (_lookup == null)

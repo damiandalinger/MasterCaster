@@ -9,7 +9,6 @@
 /// </remarks>
 
 using UnityEngine;
-using UnityEngine.Events;
 using System.Collections.Generic;
 
 namespace ProjectCeros
@@ -18,29 +17,28 @@ namespace ProjectCeros
     public class IntGameEvent : ScriptableObject
     {
         // The list of listeners that this event will notify if it is raised.
-        private readonly List<IntGameEventListener> listeners = new();
+        private readonly List<IntGameEventListener> _listeners = new();
 
         public void Raise(int value)
         {
             // Looping backwards, in case the listeners respond includes removing it from the list.
-            for (int i = listeners.Count - 1; i >= 0; i--)
+            for (int i = _listeners.Count - 1; i >= 0; i--)
             {
-                listeners[i].OnEventRaised(value);
+                _listeners[i].OnEventRaised(value);
             }
 
             Debug.Log("Raise value " + value);
-
         }
 
         public void RegisterListener(IntGameEventListener listener)
         {
-            if (!listeners.Contains(listener))
-                listeners.Add(listener);
+            if (!_listeners.Contains(listener))
+                _listeners.Add(listener);
         }
 
         public void UnregisterListener(IntGameEventListener listener)
         {
-            listeners.Remove(listener);
+            _listeners.Remove(listener);
         }
     }
 }

@@ -1,5 +1,8 @@
 /// <summary>
 /// This script handles how and when the items appear in the room of the player once he acquires them.
+///  Creates a Dictionary which lists the items that get displayed, upgraded items get ignored.
+///  Fetches the ItemSO by id from the ItemDatabaseSO.
+///  Displays the items in the studio, as long as the objects are assigned to roomObjects.
 /// </summary>
 
 /// <remarks>
@@ -17,13 +20,13 @@ namespace ProjectCeros
 
     public class RoomItemDisplayManager : MonoBehaviour
     {
-        [SerializeField, Tooltip("Here goes the ItemDatabase that holds all possible items")]
+        [SerializeField, Tooltip("Here goes the ItemDatabase that holds all possible items.")]
         private ItemDatabaseSO itemDatabase;
 
-        [SerializeField, Tooltip("Here go all the GameObjects that contain the RoomItemDisplay script")]
+        [SerializeField, Tooltip("Here go all the GameObjects that contain the RoomItemDisplay script.")]
         private List<RoomItemDisplay> roomObjects;
 
-        [SerializeField, Tooltip("Here goes the RuntimeSet that hold all the item ids")]
+        [SerializeField, Tooltip("Here goes the RuntimeSet that hold all the item ids.")]
         private IntRuntimeSet unlockedItemIDs;
 
 
@@ -32,10 +35,6 @@ namespace ProjectCeros
             UpdateRoomDisplay();
         }
 
-
-        ///  Creates a Dictionary which lists the items that get displayed, upgraded items get ignored.
-        ///  Fetches the ItemSO by id from the ItemDatabaseSO.
-        ///  Displays the items in the studio, as long as the objects are assigned to roomObjects.
         public void UpdateRoomDisplay()
         {
             Dictionary<int, ItemSO> activeUpgrades = new Dictionary<int, ItemSO>();
@@ -55,7 +54,7 @@ namespace ProjectCeros
 
             foreach (var display in roomObjects)
             {
-                var item = display.itemData;
+                var item = display.ItemData;
                 int group = item.UpgradeGroup;
 
                 bool shouldBeActive = activeUpgrades.ContainsKey(group) &&

@@ -1,5 +1,5 @@
 /// <summary>
-/// Wrapper for the RuntimeSet with int base
+/// Wrapper for the RuntimeSet with int base.
 /// </summary>
 
 /// <remarks>

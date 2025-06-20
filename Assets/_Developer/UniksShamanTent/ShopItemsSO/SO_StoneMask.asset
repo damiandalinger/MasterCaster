@@ -16,6 +16,6 @@ MonoBehaviour:
   Description: A Mask that is very curious
   ItemSprite: {fileID: 21300000, guid: 96f7a9dc0243f8f419c23b3da76da588, type: 3}
   Price: 0
-  UpgradeGroup: 1
+  UpgradeGroup: 10
   Id: 2
   Modifier: 0.5

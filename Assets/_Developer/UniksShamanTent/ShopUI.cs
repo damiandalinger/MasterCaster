@@ -20,7 +20,7 @@ namespace ProjectCeros
         [SerializeField] private MoneyChecker _moneyChecker;
 
         [SerializeField] private IntRuntimeSet _unlockedItemIDs;
- 
+
 
         [Header("UI Elements")]
         [SerializeField] private TextMeshProUGUI _itemNameText;
@@ -36,12 +36,6 @@ namespace ProjectCeros
         [SerializeField] private Image _alreadyBought;
 
         private ItemSO currentSelectedItem;
-
-        private void Awake()
-        {
-            Instance = this;
-            _buyButton.onClick.AddListener(BuyCurrentItem);
-        }
 
 
         // Adjusts the ShopUI info.
@@ -59,16 +53,6 @@ namespace ProjectCeros
             ShowItemSold();
         }
 
-        // Triggers the buying logic.
-        private void BuyCurrentItem()
-        {
-            if (currentSelectedItem == null) return;
-
-            Debug.Log($"Buying {currentSelectedItem.ItemName}");
-
-            _moneyChecker.CheckMoney();
-
-        }
 
         // Updates the UI when an item is Sold out.
         public void ShowItemSold()
@@ -86,6 +70,23 @@ namespace ProjectCeros
                 _alreadyBought.enabled = false;
             }
 
+        }
+
+        private void Awake()
+        {
+            Instance = this;
+            _buyButton.onClick.AddListener(BuyCurrentItem);
+        }
+
+
+        // Triggers the buying logic.
+        private void BuyCurrentItem()
+        {
+            if (currentSelectedItem == null) return;
+
+            Debug.Log($"Buying {currentSelectedItem.ItemName}");
+
+            _moneyChecker.CheckMoney();
 
         }
 
