@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
-  m_Name: SO_StoneMask
+  m_Name: SO_MediocreMic
   m_EditorClassIdentifier: 
-  ItemName: Curious Stone Mask
-  Description: A Mask that is very curious
-  ItemSprite: {fileID: 21300000, guid: 96f7a9dc0243f8f419c23b3da76da588, type: 3}
-  Price: 0
+  ItemName: Mediocre Microphone
+  Description: Listening to music, don't tell my mom
+  ItemSprite: {fileID: 21300000, guid: 8ef2ee3e84a13524e88b8c2aa674cd74, type: 3}
+  Price: 1
   UpgradeGroup: 1
-  Id: 2
-  Modifier: 0.5
+  Id: 1
+  Modifier: 0.1

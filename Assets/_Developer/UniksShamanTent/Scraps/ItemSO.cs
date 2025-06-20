@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(fileName = "NewItem", menuName = "Shop/Items")]
+    [CreateAssetMenu(fileName = "NewItem", menuName = "Item/Item")]
     public class ItemSO : ScriptableObject
     {
 
