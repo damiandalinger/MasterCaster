@@ -338,6 +338,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 310619802}
+        m_TargetAssemblyTypeName: ProjectCeros.ItemModifierUpdater, Assembly-CSharp
+        m_MethodName: UpdateModifier
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &38533346
 Transform:
   m_ObjectHideFlags: 0
@@ -1324,6 +1336,56 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &310619801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 310619803}
+  - component: {fileID: 310619802}
+  m_Layer: 0
+  m_Name: '@ItemModifierUpdater'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &310619802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310619801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea7af89eccf13645b33d02d825add55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemIds: {fileID: 11400000, guid: e4c0ad56298c8fd428871f5dc2782cf4, type: 2}
+  _itemDatabase: {fileID: 11400000, guid: 9350200173fea9042ad71c867868dfbc, type: 2}
+  _shopModifier:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 6e440fd26f0cf094785b372da5b2ce07, type: 2}
+--- !u!4 &310619803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310619801}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &311658760
 GameObject:
   m_ObjectHideFlags: 0
@@ -10076,6 +10138,7 @@ SceneRoots:
   - {fileID: 990817367}
   - {fileID: 1813269731}
   - {fileID: 38533346}
+  - {fileID: 310619803}
   - {fileID: 191317511}
   - {fileID: 780318832}
   - {fileID: 1215579423}
