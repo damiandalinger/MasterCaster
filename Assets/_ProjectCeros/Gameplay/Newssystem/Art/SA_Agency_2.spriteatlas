@@ -23,7 +23,7 @@ SpriteAtlas:
     platformSettings:
     - serializedVersion: 4
       m_BuildTarget: DefaultTexturePlatform
-      m_MaxTextureSize: 2048
+      m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
       m_TextureCompression: 0
@@ -46,6 +46,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 7daeefaa236e8ed4faaa8a0cf7dc389e, type: 3}
+    - {fileID: 102900000, guid: 3dce344d56957b741853a9fcba5352c2, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -56,6 +57,7 @@ SpriteAtlas:
     - 2a72b7123c0737a41b55de215c636708: 21300000
     - c72efb32568f45542950af1c744e17a3: 21300000
     - d1593f92920fb564f9bb1ddb0239140c: 21300000
+    - 374a733326c68d74d97f948de2a2de43: 21300000
     - f4091553e78d4cd4ab82b5b00f570636: 21300000
     - 9486eb442eeded54facad03812eca1c3: 21300000
     - f7544cd40c3c8f34d91dc6979c72b750: 21300000
@@ -80,6 +82,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2a72b7123c0737a41b55de215c636708, type: 3}
   - {fileID: 21300000, guid: c72efb32568f45542950af1c744e17a3, type: 3}
   - {fileID: 21300000, guid: d1593f92920fb564f9bb1ddb0239140c, type: 3}
+  - {fileID: 21300000, guid: 374a733326c68d74d97f948de2a2de43, type: 3}
   - {fileID: 21300000, guid: f4091553e78d4cd4ab82b5b00f570636, type: 3}
   - {fileID: 21300000, guid: 9486eb442eeded54facad03812eca1c3, type: 3}
   - {fileID: 21300000, guid: f7544cd40c3c8f34d91dc6979c72b750, type: 3}
@@ -103,6 +106,7 @@ SpriteAtlas:
   - SPR_FruitOfTheWeek_Cranberry_1x1
   - SPR_FruitOfTheWeek_Rhubarb_1x1
   - SPR_FruitOfTheWeek_Fig_1x1
+  - SPR_News_Background
   - SPR_FruitOfTheWeek_StrawBerry_1x1
   - SPR_FruitOfTheWeek_Grape_1x1
   - SPR_FruitOfTheWeek_Cherry_1x1
