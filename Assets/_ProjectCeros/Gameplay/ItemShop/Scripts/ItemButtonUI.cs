@@ -8,7 +8,6 @@
 /// </remarks>
 
 using UnityEngine;
-using UnityEngine.UI;
 
 
 namespace ProjectCeros
@@ -17,14 +16,9 @@ namespace ProjectCeros
     public class ItemButtonUI : MonoBehaviour
     {
         [SerializeField] private ItemSO _itemData;
-        [SerializeField] private Button _button;
-
-        private void Awake()
-        {
-            _button.onClick.AddListener(OnClick);
-        }
-
-        private void OnClick()
+         
+        // This tells the ShopUI the SO data.
+        public void TransferData()
         {
             ShopUI.Instance.ShowItemDetails(_itemData);
         }
