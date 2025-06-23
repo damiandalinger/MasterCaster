@@ -33,21 +33,23 @@ namespace ProjectCeros
             float baseListeners = _currentListeners.Value;
             float baseValue = 2 + (baseListeners * _previousListenerMod.Value);
 
+            float baseBonus = 1f;
             float guest = _guestMod.Value;
             float equip = _equipmentMod.Value;
             float sponsor = _sponsorMod.Value;
             float dark = _darkWebMod.Value;
             float subgenre = 0f;
-            float other = 1 + _sizeMod.Value;
+            float sizeMult = CalculateSizeModifier(_currentListeners.Value);
+            _sizeMod.Variable.SetValue(sizeMult);
 
-            float topicMod = _wrongGenrePenalty.Value;
+            float topicMult = _wrongGenrePenalty.Value;
             bool genreMatched = false;
             bool subgenreMatched = false;
 
             var article = _selectedImportantArticles.Items.FirstOrDefault(a => a.PairID / 1000 == input.Genre);
             if (article != null)
             {
-                topicMod = input.Spin == 1 ? article.ValuePositive : article.ValueNegative;
+                topicMult = input.Spin == 1 ? article.ValuePositive : article.ValueNegative;
                 genreMatched = true;
 
                 if (!string.IsNullOrEmpty(article.Subgenre) && article.Subgenre == input.Subgenre)
@@ -57,27 +59,24 @@ namespace ProjectCeros
                 }
             }
 
-            float bonusMult = guest + equip + sponsor + dark + other + subgenre;
-            float afterBonus = baseValue * bonusMult;
-            float finalValue = afterBonus * topicMod;
+            float bonusMult = baseBonus + guest + equip + sponsor + dark + subgenre;
+            float finalValue = baseValue * topicMult * bonusMult * sizeMult;
 
             int totalListeners = Mathf.CeilToInt(finalValue);
             int gain = totalListeners - (int)baseListeners;
-            int gainAfterBonus = Mathf.CeilToInt(afterBonus - baseListeners);
 
             // Create minimal result
             _result.OverwriteWith(
        totalListeners,
        gain,
-       gainAfterBonus,
+       baseBonus,
        guest,
        equip,
        sponsor,
        dark,
        subgenre,
-       other,
        bonusMult,
-       topicMod
+       topicMult
    );
 
             // DEBUG LOG (vollständig)
@@ -92,18 +91,16 @@ namespace ProjectCeros
                 $"BaseValue = 2 + (BaseListeners * PreviousListenersMod) = {baseValue:F2}\n\n" +
 
                 $"--- Additive Modifiers ---\n" +
+                $"Base: +{baseBonus}\n" +
                 $"Guest: +{guest}\n" +
                 $"Equipment: +{equip}\n" +
                 $"Sponsor: +{sponsor}\n" +
                 $"Dark Web: +{dark}\n" +
-                $"Other: +{other}\n" +
                 $"Subgenre Bonus: +{subgenre}\n" +
                 $"Final Multiplier = 1 + sum = {bonusMult:F2}\n" +
-                $"After Additives = BaseValue * FinalMult = {afterBonus:F2}\n" +
-                $"GainAfterBonus = AfterAdditives - BaseListeners = {afterBonus - baseListeners:F2}\n\n" +
-
+                $"Size Multiplier: x{sizeMult}\n" +
                 $"--- Topic Modifier ---\n" +
-                $"Topic Mod: x{topicMod:F2}\n" +
+                $"Topic Multiplier: x{topicMult:F2}\n" +
                 $"Final = AfterAdditives * TopicMod = {finalValue:F2}\n\n" +
 
                 $"Final Listeners: {totalListeners}\n" +
@@ -129,6 +126,35 @@ namespace ProjectCeros
                 6 => "Strategy",
                 _ => "Unknown"
             };
+        }
+
+        private static float CalculateSizeModifier(int currentListeners)
+        {
+            if (currentListeners <= 1000)
+            {
+                Debug.Log("1");
+                return -0.00015f * currentListeners + 1.15f;
+            }
+            else if (currentListeners <= 10000)
+            {
+                Debug.Log("2");
+                return -0.000010001f * currentListeners + 0.9899889989f;
+            }
+            else if (currentListeners <= 100000)
+            {
+                Debug.Log("3");
+                return -0.00000300003f * currentListeners + 0.86999669996f;
+            }
+            else if (currentListeners <= 3000000)
+            {
+                Debug.Log("4");
+                return -1.33333378e-7f * currentListeners + 0.58666652888f;
+            }
+            else
+            {
+                Debug.Log("5");
+                return 0.2f;
+            }
         }
     }
 }

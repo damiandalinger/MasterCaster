@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Sprite Atlas
+  m_Name: SA_Evaluationscreen
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -122,5 +122,5 @@ SpriteAtlas:
   - SPR_RatingScreen
   - SPR_ScoreScreen_V2
   m_RenderDataMap: {}
-  m_Tag: New Sprite Atlas
+  m_Tag: SA_Evaluationscreen
   m_IsVariant: 0

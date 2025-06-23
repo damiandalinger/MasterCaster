@@ -194,7 +194,7 @@ SpriteAtlas:
   - SPR_RandomNews_Orange_1x3
   - SPR_ScamNews_1x1
   - SPR_GSN_2x1
-  - SPR_RandomNews_Purpel_2x2
+  - SPR_RandomNews_Purple_2x2
   - SPR_GameMoon_Action_2x2
   - SPR_FrogBusterGames_FrogHappy_2x2
   - SPR_ScamNews_1x3
@@ -212,9 +212,9 @@ SpriteAtlas:
   - SPR_FrogBusterGames_FrogAngry_2x2
   - SPR_ScamNews_2x2
   - SPR_FrogBusterGames_FrogSad_2x2
-  - SPR_RandomNews_Purpel_1x3
+  - SPR_RandomNews_Purple_1x3
   - SPR_GameMoon_2x1
-  - SPR_RandomNews_Purpel_1x1
+  - SPR_RandomNews_Purple_1x1
   - SPR_GameMoon_1x3
   - SPR_ScamNews_1x2
   - SPR_FrogBusterGames_2x2
@@ -223,7 +223,7 @@ SpriteAtlas:
   - SPR_GSN_Plane_2x2
   - SPR_WorldOfGames_Shooter_2x2
   - SPR_RandomNews_Green_1x2
-  - SPR_RandomNews_Purpel_3x1
+  - SPR_RandomNews_Purple_3x1
   - SPR_WorldOfGames_Strategy_2x2
   - SPR_GSN_1x2
   - SPR_RandomNews_Green_2x1
@@ -249,8 +249,8 @@ SpriteAtlas:
   - SPR_WorldOfGames_2x2
   - SPR_RandomNews_Orange_2x2
   - SPR_RandomNews_Orange_1x2
-  - SPR_RandomNews_Purpel_2x1
-  - SPR_RandomNews_Purpel_1x2
+  - SPR_RandomNews_Purple_2x1
+  - SPR_RandomNews_Purple_1x2
   - SPR_RandomNews_Orange_3x1
   - SPR_WorldOfGames_Sim_2x2
   m_RenderDataMap: {}

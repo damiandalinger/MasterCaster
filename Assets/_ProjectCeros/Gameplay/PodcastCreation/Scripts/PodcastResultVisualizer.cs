@@ -84,12 +84,12 @@ namespace ProjectCeros
 
             var modifiers = new List<(string label, float value, int iconIndex)>
             {
-                ("Guest Bonus", result.GuestBonus, 0),
-                ("Equipment Bonus", result.EquipmentBonus, 1),
-                ("Sponsor Bonus", result.SponsorBonus, 2),
-                ("Dark Web Bonus", result.DarkWebBonus, 3),
-                ("Subgenre Bonus", result.SubgenreBonus, 4),
-                ("Other", result.OtherBonus, 5)
+                ("Base Bonus", result.BaseBonus, 0),
+                ("Guest Bonus", result.GuestBonus, 1),
+                ("Equipment Bonus", result.EquipmentBonus, 2),
+                ("Sponsor Bonus", result.SponsorBonus, 3),
+                ("Dark Web Bonus", result.DarkWebBonus, 4),
+                ("Subgenre Bonus", result.SubgenreBonus, 5),
             };
 
             foreach (var (label, value, iconIndex) in modifiers)
@@ -136,13 +136,13 @@ namespace ProjectCeros
             SetRow(rowIndex++, "Bonus Multiplier", $"x{result.BonusMultiplier:F2}");
 
             var modifiers = new List<(string label, float value, int iconIndex)>
-            {
-                ("Guest Bonus", result.GuestBonus, 0),
-                ("Equipment Bonus", result.EquipmentBonus, 1),
-                ("Sponsor Bonus", result.SponsorBonus, 2),
-                ("Dark Web Bonus", result.DarkWebBonus, 3),
-                ("Subgenre Bonus", result.SubgenreBonus, 4),
-                ("Other", result.OtherBonus, 5)
+             {
+                ("Base Bonus", result.BaseBonus, 0),
+                ("Guest Bonus", result.GuestBonus, 1),
+                ("Equipment Bonus", result.EquipmentBonus, 2),
+                ("Sponsor Bonus", result.SponsorBonus, 3),
+                ("Dark Web Bonus", result.DarkWebBonus, 4),
+                ("Subgenre Bonus", result.SubgenreBonus, 5),
             };
 
             foreach (var (label, value, iconIndex) in modifiers)
