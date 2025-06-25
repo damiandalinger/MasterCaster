@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
-  m_Name: SO_Trapclap
+  m_Name: SO_Bathwater
   m_EditorClassIdentifier: 
-  ItemName: Trapclap
-  Description: A Robot from space I think? That just talks nonsense all day and will
-    eventually drive you insane. Perfect for a peaceful day, right?
-  ItemSprite: {fileID: 21300000, guid: 97ba61105d7e4ac4691839bd03f56a77, type: 3}
-  Price: 1
+  ItemName: E-Girl Bathwater
+  Description: "This needs no explanation. Maybe it\u2019s for cloning someone? Or
+    just your average everyday ethical dilemma in a box. Why would you even try to
+    buy this?"
+  ItemSprite: {fileID: 21300000, guid: 9f91a4dd1cbf86543803bdd47f87afa0, type: 3}
+  Price: 1000000000
   UpgradeGroup: 10
-  Id: 101
+  Id: 112
   Modifier: 0.01

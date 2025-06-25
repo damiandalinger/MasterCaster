@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
-  m_Name: SO_Trapclap
+  m_Name: SO_ActualLaptop
   m_EditorClassIdentifier: 
-  ItemName: Trapclap
-  Description: A Robot from space I think? That just talks nonsense all day and will
-    eventually drive you insane. Perfect for a peaceful day, right?
-  ItemSprite: {fileID: 21300000, guid: 97ba61105d7e4ac4691839bd03f56a77, type: 3}
-  Price: 1
-  UpgradeGroup: 10
-  Id: 101
+  ItemName: Actual Laptop
+  Description: "It just works. Gets the job done and faster than the first one, believe
+    it or not. What an improvement! Next thing you know, it\u2019ll be solving world
+    peace."
+  ItemSprite: {fileID: 21300000, guid: 0b68fd47f94e8144b94e20758176651a, type: 3}
+  Price: 200
+  UpgradeGroup: 3
+  Id: 7
   Modifier: 0.01

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
+  m_Name: SO_OfficeThrone
+  m_EditorClassIdentifier: 
+  ItemName: Office Throne
+  Description: "Not exactly comfortable to sit in unless you enjoy mild suffering.
+    This looks better than the last one but only a slight improvement for the podcast.
+    But hey, it looks professional, and that\u2019s what really matters, right?"
+  ItemSprite: {fileID: 21300000, guid: eb98b946f6d0c9745990868cec0d98c0, type: 3}
+  Price: 400
+  UpgradeGroup: 4
+  Id: 9
+  Modifier: 0.01

@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
-  m_Name: SO_Trapclap
+  m_Name: SO_Stick
   m_EditorClassIdentifier: 
-  ItemName: Trapclap
-  Description: A Robot from space I think? That just talks nonsense all day and will
-    eventually drive you insane. Perfect for a peaceful day, right?
-  ItemSprite: {fileID: 21300000, guid: 97ba61105d7e4ac4691839bd03f56a77, type: 3}
-  Price: 1
+  ItemName: Stick
+  Description: Nice Stick. Good for hitting.
+  ItemSprite: {fileID: 21300000, guid: 1ed80211baf9746468d4927f9100d512, type: 3}
+  Price: 1000
   UpgradeGroup: 10
-  Id: 101
+  Id: 109
   Modifier: 0.01
