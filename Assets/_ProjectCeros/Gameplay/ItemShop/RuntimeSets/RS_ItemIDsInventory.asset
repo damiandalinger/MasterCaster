@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RS_ItemIDsInventory
   m_EditorClassIdentifier: 
   _isSaveable: 1
-  Items: 01000000
+  Items: 0100000004000000

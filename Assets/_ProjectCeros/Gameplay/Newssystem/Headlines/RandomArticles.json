@@ -2,7 +2,7 @@
   {
     "PairID": 0,
     "Headline": "BREAD!",
-    "Description": "Bread has been voted as the best food in the world. Elected by germans.",
+    "Description": "Bread has been voted as the best food in the world (by Germans).",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -12,7 +12,7 @@
   {
     "PairID": 0,
     "Headline": "Florida Man wins Darwin Award",
-    "Description": "‘’I’m immune to electricity’’ He apparently exclaimed before diving into his bathtub with a toaster.",
+    "Description": "’I’m immune to electric’’ exclaimed before diving into bath with toaster.",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -22,7 +22,7 @@
   {
     "PairID": 0,
     "Headline": "Lama voted CUTEST ANIMAL",
-    "Description": "The world rejoices as our cute overlords from the Andes Moutains take over. Their charm unmatched!",
+    "Description": "Our cute overlords from the Andes Mountains take over. Their charm unmatched!",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -32,7 +32,7 @@
   {
     "PairID": 0,
     "Headline": "14 year olds build TANK",
-    "Description": "As part of a world war 2 memorial russian school kids have built a T-34 to commemorate the sacrifice of their soldiers. Parents are stunned as it is a working one.",
+    "Description": "Russian school kids have built a T-34 to commemorate the sacrifice of their soldiers. Parents are stunned as it is a working one.",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -42,7 +42,7 @@
   {
     "PairID": 0,
     "Headline": "Local Artist drives Team into Madness",
-    "Description": "‘’We don’t know what to do anymore. She talks so much it just breaks you, you know? It’s never ending. Always there and always continuing.’’ - Two of the five-man-team are currently in a mental asylum.",
+    "Description": "‘’We don’t know what to do anymore. She talks so much it just breaks you, you know? It’s never ending. Always there and always continuing.’’",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -52,7 +52,7 @@
   {
     "PairID": 0,
     "Headline": "First successful Albino Sturgeon Farm",
-    "Description": "After trying for 6 generations, fish farmer Mark Welsh has made the impossible possible - ‘’It’s the family dream since me old man 150 years ago.’’ - Experts predict that the special caviar will surely rise in favour among the less wealthy elite of our society.",
+    "Description": "Mark Welsh made it possible - ‘’It’s the family dream since me old man 150 years ago.’’",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -62,7 +62,7 @@
   {
     "PairID": 0,
     "Headline": "Vietnamese woman marries frogs",
-    "Description": "A vietnamese woman has decided that her love is reserved for frogs and frogs alone.  Having married her 4th frog, fans speculate how many more will follow. Feta is concerned about the things done to these frogs.",
+    "Description": "A Vietnamese woman has married her 4th. Fans speculate how many follow.",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -72,7 +72,7 @@
   {
     "PairID": 0,
     "Headline": "Man flexes so much his arms explode",
-    "Description": "After training vigorously for one and a half hours each morning Lamian D. apparently decided to train his arms so much after ‘’a hard leg day’’ that they exploded. ‘’Torn muscles will not deter me from reaching my goal of two meters shoulder width’’ He boldly exclaimed in the hospital.",
+    "Description": "Lamian D. trained his arms too much after ‘’a hard leg day’’. - ‘’Torn muscles will not deter me from reaching my two meters shoulder width’’",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -82,7 +82,7 @@
   {
     "PairID": 0,
     "Headline": "Albanian student found dead",
-    "Description": "Unique K. was found gutted in a trash can. ‘’We are sure it’s his ex!’’ friends of the victim said. Apparently she was described as an emotionless robot with a hidden killer instinct. She has yet to be found by the authorities which further leads people to believe this conclusion.",
+    "Description": "Unique K. was found gutted in a trash can. ‘’We are sure it’s his ex!’’ friends said. They described her as an emotionless killer robot.",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -92,7 +92,7 @@
   {
     "PairID": 0,
     "Headline": "Scandal in the Swedish Royal Family!",
-    "Description": "The royal family is furious! The third daughter has not waved properly at last Sunday's evening ball. Royal experts believe that she will be severely punished internally.",
+    "Description": "Royal family furious! Daughter didn’t wave…",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -102,7 +102,7 @@
   {
     "PairID": 0,
     "Headline": "Blood Diamonds good for your Health",
-    "Description": "Scientists have discovered that crushed up blood diamonds are good for your health. ‘’The fact that people died for this is of importance to the overall effectiveness of the miracle cure’’ the scientists say.",
+    "Description": "‘’People dying is important for the effectiveness of the miracle cure’’",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -112,8 +112,8 @@
   {
     "PairID": 0,
     "Headline": "Austrian Game Theorist MURDERED",
-    "Description": "Game enthusiast Schnitz has been found dead. The perpetrator, allegedly a student, has already been found. He is currently pleading not guilty in court. ‘’The books he wrote corroded my mental health so much that it was either him or me. I had no choice’’- Judges are inclined to agree after reading the books themselves.",
-    "AgencyID": 6,
+    "Description": "Schnitz dead! The perpetrator, a student declared. ‘’The books he wrote corroded my mental health so much that it was either him or me. I had no choice’",
+    "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
     "BackgroundName": "",
@@ -122,7 +122,7 @@
   {
     "PairID": 0,
     "Headline": "Handsome man rejects women and embraces ChatGBT",
-    "Description": "Some may claim that AI has become a significant problem in our modern society, however Famian D. would probably tell you something different. The 21 year old has formed a romantic relationship with ChatGBT and couldn’t be happier - ‘’Chat  is always there for me and helps me whenever I need her! How could I not love her. She even gives me compliments!’’",
+    "Description": "The 21 year old has formed a romantic relationship with ChatGBT ‘’Chat is always there for me and helps me whenever I need her!’’",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
@@ -132,8 +132,8 @@
   {
     "PairID": 0,
     "Headline": "7 Tips for a Healthy Body",
-    "Description": "Our quick guide will improve your Body in only a month! More information ...",
-    "AgencyID": 5,
+    "Description": "Our quick guide will improve your Body in only a month! You can find more information through paid subscription service!",
+    "AgencyID": 6,
     "ValuePositive": 0,
     "ValueNegative": 0,
     "BackgroundName": "",
@@ -142,8 +142,8 @@
   {
     "PairID": 0,
     "Headline": "Earn 1000€ in 1 Week!",
-    "Description": "All you need to do is fill out the following form and accept our E-Mail ...",
-    "AgencyID": 5,
+    "Description": "All you need to do is fill out the following form and accept our E-Mail and you can start earning money by doing nothing!",
+    "AgencyID": 6,
     "ValuePositive": 0,
     "ValueNegative": 0,
     "BackgroundName": "",
@@ -152,8 +152,8 @@
   {
     "PairID": 0,
     "Headline": "Youth less Quick-Witted",
-    "Description": "Studies say that male programmers are smarter than their young colleges.",
-    "AgencyID": 6,
+    "Description": "People are fucking stupid - Studies say",
+    "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
     "BackgroundName": "",
@@ -163,6 +163,346 @@
     "PairID": 0,
     "Headline": "North Korea lands on MOON",
     "Description": "The man with the chubby face and handsome hair finally did it!",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "The worst Neighbor",
+    "Description": "Swede J. managed to … chaos, one woman lost",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Serbian man finds oil in his backyard",
+    "Description": "He ‘’volunteered’’ to declare his backyard as sovereign territory of the US.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Women grows LARGEST cucumber",
+    "Description": "Ilke’s (86) cucumbers weigh 14 kg! ",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Man Breaks Out of Prison and BACK",
+    "Description": "A man broke out and back inside to get his dog. ‘’He’s my buddy’’",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Dog KILLS Crocodile",
+    "Description": "Dog of an inmate has defended his master from a suprise crocodile attack!",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Military Shoots Down OWN Drone!",
+    "Description": "It seems that the trigger finger of some military personnel is rather loose, as they mistakenly shot down their own drone, worth 35 Million.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "New colour discovered!",
+    "Description": "Scientists baffled at the discovery of ‘’Yem’’. The colour was found in a frozen capsule in Antarctica. Some believe aliens to be involved.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "17 pigs found dead on irish road",
+    "Description": "Police say there is a serial pig killer on the run.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Designer dog eaten in brazilian Favela",
+    "Description": "‘’The tour will not continue!’’ - Wavy Perry.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Colonisation of the moons of Jupiter has started!",
+    "Description": "Four brave men and women have been sent. Chances are low.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Divers discover frog Kingdom",
+    "Description": "Deep sea frogs developed intricate societies",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Camel World Championship UPSET",
+    "Description": "Norway's young prodigy Magnus Y. has won. Critics say that it wasn’t fair as the Arabian camels aren’t used to the cold weather of the Fjords.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Mount Everest no longer the TALLEST",
+    "Description": "Woman found it, right next to Everest. Climbers all around the world are still confused how they could miss that mountain for so long.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Alcoholism - A Problem for our youth!",
+    "Description": "Following the example of Fillip B. who drank himself to death as a form of protest has led many more to join in this lethal exercise",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Olympia in SHOCK",
+    "Description": "Turns out the actual Marathon isn’t 42,195 kilometers but rather 42,236 kilometers. Judges are unsure if this invalidates all previous run records or not.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Singer Serial Killer",
+    "Description": "Famous singer Keith N. is a serial killer.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Monkey BEATS Man",
+    "Description": "In a grueling 7 match series, Mura, a chimpanzee, defeated his zookeeper at chess.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Tined Baby food",
+    "Description": "Tin has found its way back into the food industry",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Secretaries more likely to have Blood Type AB-",
+    "Description": "Scientists are unsure how, but there is a direct correlation between the blood type AB- and the secretary business..",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Honey statistically the best present!",
+    "Description": "400 women in Stockholm have been asked what their ideal present from a potential partner is. The answer - Honey. Weird but understandable.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Boy invites everyone to his Birthday-Party",
+    "Description": "The party was made a public event on the internet and thousands gathered to celebrate the lads birthday. ‘’I never had so many people and presents!’’",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Killer Ovens",
+    "Description": "The young siblings played games when they accidentally put him into the hot oven. They watched in shock as poor Gibson was cooked alive.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Plastic fruits trick apes",
+    "Description": "The vicious gibraltar apes have been bested! ",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "LOST ANTARCTIC CIVILIZATION FOUND",
+    "Description": "Piri Reis map reveals lost civilization in Antarctica. Research suggests that they had hanging farms underneath the earth plate. Guarding the way of the disk.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Crime on Oil Platforms",
+    "Description": "Criminals are tied to a concrete block and lowered into the water, with their heads barely above it. ‘’Really motivates the people to keep in line’’",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Biggest Sting Operation",
+    "Description": "The FBI busted a biker gang named Deathlord Riders. Of the four hundred members the 300 hundred undercover agents were the only to walk free.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Mother births sixtuples",
+    "Description": "Certainly a surprise that not everyone can enjoy.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Have you considered a new Face ?",
+    "Description": "New licensed and specialized doctors are able to carve your face anew!",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Ninety-Nine-Rockets",
+    "Description": "99 rockets have been launched into the air simultaneously. Witness Reports describe it as a surreal experience both in sight and feel.",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "5 Things you can do to help with Blood Pressure!",
+    "Description": "First of all, always remain calm! It might sound stupid but it really helps !",
+    "AgencyID": 5,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "11 Reasons why your Partner doesn’t like you",
+    "Description": "Does your partner not tell you they love you when they leave the house, do they leave the dishes uncleaned ? Now you can find out what it means.",
+    "AgencyID": 6,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "16 Ways to get Rich",
+    "Description": "Buy my book - ‘’Rich in 16 Steps’’ - to fully…",
+    "AgencyID": 6,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "7 Tips for a Healthy Body",
+    "Description": "Our quick guide will improve your Body in only a month! You can find more information through paid subscription service!",
+    "AgencyID": 6,
+    "ValuePositive": 0,
+    "ValueNegative": 0,
+    "BackgroundName": "",
+    "StoryID": 0
+  },
+  {
+    "PairID": 0,
+    "Headline": "Camper at the GamesCom",
+    "Description": "Queues so shit that people have started using camping gear to help their knees and boredom.",
     "AgencyID": 5,
     "ValuePositive": 0,
     "ValueNegative": 0,
