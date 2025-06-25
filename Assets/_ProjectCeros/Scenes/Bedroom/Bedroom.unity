@@ -2445,6 +2445,7 @@ MonoBehaviour:
   - {fileID: 1822570178}
   - {fileID: 1109387653}
   - {fileID: 1969385854}
+  - {fileID: 729834821}
   unlockedItemIDs: {fileID: 11400000, guid: e4c0ad56298c8fd428871f5dc2782cf4, type: 2}
 --- !u!4 &1210319336
 Transform:
