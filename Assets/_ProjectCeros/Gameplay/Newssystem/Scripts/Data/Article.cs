@@ -17,7 +17,7 @@ namespace ProjectCeros
         public string Headline;
         public string Description;
         public int AgencyID;
-        public string Subgenre;
+        public int Subgenre;
         public float ValuePositive;
         public float ValueNegative;
         public int SizeCategory;

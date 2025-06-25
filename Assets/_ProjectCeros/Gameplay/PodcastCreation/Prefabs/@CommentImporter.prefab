@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8419644515967061226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672489059859996552}
+  - component: {fileID: 9184792786265103480}
+  m_Layer: 0
+  m_Name: '@CommentImporter'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1672489059859996552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419644515967061226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9184792786265103480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419644515967061226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a625a806d75e2d8459d129822445c1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _importSources:
+  - JsonFile: {fileID: 4900000, guid: cbf4abd544fabfe47be15292943af40b, type: 3}
+    TargetSet: {fileID: 11400000, guid: 308f0fdd321638e45af07647347895fd, type: 2}
+  - JsonFile: {fileID: 4900000, guid: 33777f5095371dc42be3c26a3fe24550, type: 3}
+    TargetSet: {fileID: 11400000, guid: cb015782732393d48860415e093f8af3, type: 2}
+  - JsonFile: {fileID: 4900000, guid: c0c7e9f2059a0bb4caa7ed81b15a8572, type: 3}
+    TargetSet: {fileID: 11400000, guid: 6221536ce4a46594b97a87bd55e6886c, type: 2}
+  - JsonFile: {fileID: 4900000, guid: 9bbb59a88190f3340bd4d7f8d53e0bd5, type: 3}
+    TargetSet: {fileID: 11400000, guid: 37020d81791719a448001453b6e22bbd, type: 2}
+  - JsonFile: {fileID: 4900000, guid: 1edae4921b3e6b141a69215553bb8b09, type: 3}
+    TargetSet: {fileID: 11400000, guid: b28559b1d8ac06349868c3ae549eee75, type: 2}
+  - JsonFile: {fileID: 4900000, guid: 887eb3b0630db844f8eeee2b9655464b, type: 3}
+    TargetSet: {fileID: 11400000, guid: dd39c211c71ddbf4aafba0a19bcc77f8, type: 2}

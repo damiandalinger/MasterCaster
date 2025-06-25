@@ -44,6 +44,16 @@ namespace ProjectCeros
 
         #endregion
 
+        #region Lifecycle Methods
+
+        private void Start()
+        {
+            ImportAll();
+            Destroy(gameObject);
+        }
+
+        #endregion
+
         #region Public Methods
 
         // Imports article data from all defined JSON sources and classifies them based on description length.

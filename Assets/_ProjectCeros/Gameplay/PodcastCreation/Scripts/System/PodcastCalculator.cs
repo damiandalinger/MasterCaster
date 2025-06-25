@@ -27,8 +27,12 @@ namespace ProjectCeros
         [SerializeField] private ArticleDatabase _selectedImportantArticles;
         [SerializeField] private PodcastResult _result;
 
+        [SerializeField] private IntVariable _selectedGenre;
+        [SerializeField] private IntVariable _selectedSpin;
+        [SerializeField] private IntVariable _selectedSubgenre;
+
         // Calculates listener growth based on current selections and article match data.
-        public void Calculate(PodcastInputData input)
+        public void Calculate()
         {
             float baseListeners = _currentListeners.Value;
             float baseValue = 2 + (baseListeners * _previousListenerMod.Value);
@@ -46,13 +50,13 @@ namespace ProjectCeros
             bool genreMatched = false;
             bool subgenreMatched = false;
 
-            var article = _selectedImportantArticles.Items.FirstOrDefault(a => a.PairID / 1000 == input.Genre);
+            var article = _selectedImportantArticles.Items.FirstOrDefault(a => a.PairID / 1000 == _selectedGenre.RuntimeValue);
             if (article != null)
             {
-                topicMult = input.Spin == 1 ? article.ValuePositive : article.ValueNegative;
+                topicMult = _selectedSpin.RuntimeValue == 1 ? article.ValuePositive : article.ValueNegative;
                 genreMatched = true;
 
-                if (!string.IsNullOrEmpty(article.Subgenre) && article.Subgenre == input.Subgenre)
+                if (article.Subgenre > 0 && article.Subgenre == _selectedSubgenre.RuntimeValue)
                 {
                     subgenre = _subgenreMod.Value;
                     subgenreMatched = true;
@@ -82,9 +86,9 @@ namespace ProjectCeros
             // DEBUG LOG (vollständig)
             Debug.Log(
                 "--- Podcast Evaluation Debug ---\n" +
-                $"Selected Genre: {GetGenreName(input.Genre)} (Matched: {genreMatched})\n" +
-                $"Selected Spin: {(input.Spin == 1 ? "Positive" : "Negative")}\n" +
-                $"Selected Subgenre: {input.Subgenre} (Matched: {subgenreMatched})\n\n" +
+                $"Selected Genre: {GetGenreName(_selectedGenre.RuntimeValue)} (Matched: {genreMatched})\n" +
+                $"Selected Spin: {(_selectedSpin.RuntimeValue == 1 ? "Positive" : "Negative")}\n" +
+                $"Selected Subgenre: {_selectedSubgenre.RuntimeValue} (Matched: {subgenreMatched})\n\n" +
 
                 $"Base Listeners: {baseListeners}\n" +
                 $"PreviousListenersMod: {_previousListenerMod.Value}\n" +

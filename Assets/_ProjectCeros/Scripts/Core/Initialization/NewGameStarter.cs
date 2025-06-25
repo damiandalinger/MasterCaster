@@ -28,10 +28,6 @@ namespace ProjectCeros
         {
             yield return null;
 
-            var importer = FindFirstObjectByType<NewsImporter>();
-            importer?.ImportAll();
-            Destroy(importer?.gameObject);
-
             var reshuffler = FindFirstObjectByType<NewsDatabaseReshuffler>();
             reshuffler?.RefreshAllPools();
         }
