@@ -26,23 +26,39 @@ namespace ProjectCeros
 
         public void InviteGuest()
         {
-            if (InvitationLimit.Value != InvitationsSend.Value)
-            {
-                if (!GuestToInvite.isRequested)
-                {
-                    _event.Raise(GuestToInvite.GuestID);
 
-                    InvitationsSend.Variable.ApplyChange(1);
+            if (!GuestToInvite.isOnCooldown)
+
+            {
+
+                if (InvitationLimit.Value != InvitationsSend.Value)
+                {
+                    if (!GuestToInvite.isRequested)
+                    {
+                        _event.Raise(GuestToInvite.GuestID);
+
+                        InvitationsSend.Variable.ApplyChange(1);
+
+                        
+                    }
+
+                    else
+                        Debug.Log("You already send this person an invitation.");
                 }
 
                 else
-                    Debug.Log("You already send this person an invtiation.");
+                {
+                    Debug.Log("No more Invitations for you, you lonely scaliwag!");
+
+                }
+
             }
 
             else
-            {
-                Debug.Log("No more Invitations for you, you lonely scaliwag!");
 
+            {
+
+                Debug.Log("Guest is currently unavailable.");
             }
 
         }

@@ -20,7 +20,7 @@ namespace ProjectCeros
 
 
 
-        public void Start()
+        public void GambleGuest(GuestSO guest)
         {
             if (_listerners.Value > 0 && _listerners.Value <= 9)
 

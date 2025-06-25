@@ -17,11 +17,11 @@ MonoBehaviour:
   Topic: RPG
   Modifier: 1.5
   GuestID: 2
-  CooldownCounter: 0
+  CooldownCounter: 2
   Rating: 3
   Fee: 2000
   TopicID: 4
   GuestSprite: {fileID: 21300000, guid: 2bc859fe9410d0543ae6227572b231bd, type: 3}
-  isRequested: 1
-  hasAccepted: 0
-  isOnCooldown: 0
+  isRequested: 0
+  hasAccepted: 1
+  isOnCooldown: 1
