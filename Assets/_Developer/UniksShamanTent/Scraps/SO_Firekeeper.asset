@@ -22,6 +22,6 @@ MonoBehaviour:
   Fee: 2000
   TopicID: 4
   GuestSprite: {fileID: 21300000, guid: 011e4f755a2732a4bbf69939139b643b, type: 3}
-  isRequested: 0
+  isRequested: 1
   hasAccepted: 0
   isOnCooldown: 0

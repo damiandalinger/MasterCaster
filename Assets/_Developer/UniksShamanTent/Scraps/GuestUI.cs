@@ -17,7 +17,7 @@ namespace ProjectCeros
     {
         public static GuestUI Instance;
 
-        [SerializeField] private MoneyChecker _moneyChecker;
+        [SerializeField] private InvitationLimiter _invitationLimiter;
 
         [SerializeField] private GuestDatabaseSO _unlockedGuestIDs;
 
@@ -53,7 +53,7 @@ namespace ProjectCeros
             // _priceText.text = $"${item.Price}";
             _guestImage.sprite = item.GuestSprite;
 
-            // _moneyChecker.SetItemToPurchase(item);
+            _invitationLimiter.SetGuestToInvite(item);
 
             ShowItemSold();
         }
@@ -100,9 +100,10 @@ namespace ProjectCeros
         {
             if (currentSelectedItem == null) return;
 
-            Debug.Log($"Buying {currentSelectedItem.Name}");
+            Debug.Log($"Trying to invite {currentSelectedItem.Name}");
 
-           //_moneyChecker.CheckMoney();
+            //_moneyChecker.CheckMoney();
+           _invitationLimiter.InviteGuest();
 
         }
 

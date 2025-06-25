@@ -119,6 +119,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13243657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13243659}
+  - component: {fileID: 13243658}
+  m_Layer: 0
+  m_Name: '@InvitationLimiter'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &13243658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13243657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79366a7111134e6489c75fcdacc6b906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InvitationLimit:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: eda64f80cf727c641beab2b2e8c120d1, type: 2}
+  InvitationsSend:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 239110ab70a639e4c9141ce6606ea270, type: 2}
+  GuestToInvite: {fileID: 0}
+  _event: {fileID: 11400000, guid: 9cb567afcbc03fd4d87080abf26cd9ab, type: 2}
+--- !u!4 &13243659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13243657}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 618, y: 526, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &79025274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,6 +2054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0472dc67e2dcc7c4f8d4fad2d1a423a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _invitationLimiter: {fileID: 13243658}
   _unlockedGuestIDs: {fileID: 11400000, guid: b42925ca3a66c76479834c95dcc590a1, type: 2}
   _guestNameText: {fileID: 1447030958}
   _descriptionText: {fileID: 911221351}
@@ -2269,3 +2324,4 @@ SceneRoots:
   - {fileID: 1052897653}
   - {fileID: 509060141}
   - {fileID: 193677893}
+  - {fileID: 13243659}
