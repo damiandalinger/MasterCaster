@@ -17,7 +17,7 @@ namespace ProjectCeros
     {
         public static GuestUI Instance;
 
-        // [SerializeField] private MoneyChecker _moneyChecker;
+        [SerializeField] private MoneyChecker _moneyChecker;
 
         [SerializeField] private GuestDatabaseSO _unlockedGuestIDs;
 
@@ -102,7 +102,7 @@ namespace ProjectCeros
 
             Debug.Log($"Buying {currentSelectedItem.Name}");
 
-           // _moneyChecker.CheckMoney();
+           //_moneyChecker.CheckMoney();
 
         }
 
