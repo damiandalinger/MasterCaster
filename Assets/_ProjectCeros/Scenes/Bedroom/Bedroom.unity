@@ -2426,7 +2426,25 @@ MonoBehaviour:
   roomObjects:
   - {fileID: 114310230}
   - {fileID: 766829328}
+  - {fileID: 737717647}
+  - {fileID: 778947982}
+  - {fileID: 107940463}
+  - {fileID: 1399222992}
+  - {fileID: 1820143021}
+  - {fileID: 225117929}
+  - {fileID: 224270481}
+  - {fileID: 43445552}
+  - {fileID: 170671515}
+  - {fileID: 2096105916}
   - {fileID: 2102038655}
+  - {fileID: 638921301}
+  - {fileID: 2020481937}
+  - {fileID: 1860674446}
+  - {fileID: 1401494431}
+  - {fileID: 897992180}
+  - {fileID: 1822570178}
+  - {fileID: 1109387653}
+  - {fileID: 1969385854}
   unlockedItemIDs: {fileID: 11400000, guid: e4c0ad56298c8fd428871f5dc2782cf4, type: 2}
 --- !u!4 &1210319336
 Transform:
