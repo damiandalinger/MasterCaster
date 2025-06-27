@@ -14,7 +14,7 @@
         "PairID": 6001,
         "Headline": "Uncivilized 8 - The Age system is still here … ",
         "Description": "…doubled down on the worst feature. It’s surprising really, for a game that focuses so much on critical thinking the devs clearly lack it.",
-        "AgencyID": 2,
+        "AgencyID": 3,
         "Subgenre": 12,
         "ValuePositive": 1.4,
         "ValueNegative": 1.3,
@@ -57,7 +57,7 @@
     },
     {
         "PairID": 6003,
-        "Headline": "Desperation Stirkes - Half War",
+        "Headline": "Desperation Strikes - Half War",
         "Description": "It really feels like a slap in the face for fans. AI has become less engaging…",
         "AgencyID": 3,
         "Subgenre": 11,
