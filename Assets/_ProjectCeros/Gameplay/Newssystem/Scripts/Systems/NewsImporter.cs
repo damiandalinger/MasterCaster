@@ -65,8 +65,6 @@ namespace ProjectCeros
                 List<Article> articles = JsonUtilityWrapper.FromJsonArray<Article>(source.Json.text);
                 ClassifyArticles(articles);
                 AddArticlesToDatabase(source.TargetDatabase, articles);
-
-                Debug.Log($"[NewsImporter] Imported {articles.Count} articles into {source.TargetDatabase.name}.");
             }
         }
 

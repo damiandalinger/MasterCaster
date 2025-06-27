@@ -1,37 +1,70 @@
 /// <summary>
-/// Handles podcast creation, listener gain calculation, and user feedback display based on genre and subgenre selection.
+/// Handles podcast listener calculation and evaluation based on genre and article matchups.
 /// </summary>
 
 /// <remarks>
-/// 20/05/2025 by Damian Dalinger: Initial creation.
+/// 20/06/2025 by Damian Dalinger: Initial creation.
+/// 27/06/2025 by Damian Dalinger: Tech Bible refactor.
 /// </remarks>
 
 using System.Linq;
-using NUnit.Framework.Interfaces;
 using UnityEngine;
 
 namespace ProjectCeros
 {
     public class PodcastCalculator : MonoBehaviour
     {
+        #region Fields
 
-        [SerializeField] private FloatReference _equipmentMod;
-        [SerializeField] private FloatReference _sponsorMod;
+        [Header("Modifier References")]
+        [Tooltip("Guest segment bonus.")]
         [SerializeField] private FloatReference _guestMod;
-        [SerializeField] private FloatReference _darkWebMod;
-        [SerializeField] private FloatReference _subgenreMod;
-        [SerializeField] private FloatReference _sizeMod;
-        [SerializeField] private FloatReference _previousListenerMod;
-        [SerializeField] private FloatReference _wrongGenrePenalty;
-        [SerializeField] private IntReference _currentListeners;
-        [SerializeField] private ArticleDatabase _selectedImportantArticles;
-        [SerializeField] private PodcastResult _result;
 
+        [Tooltip("Equipment quality bonus.")]
+        [SerializeField] private FloatReference _equipmentMod;
+
+        [Tooltip("Sponsor segment bonus.")]
+        [SerializeField] private FloatReference _sponsorMod;
+
+        [Tooltip("Dark web segment bonus.")]
+        [SerializeField] private FloatReference _darkWebMod;
+
+        [Tooltip("Subgenre match bonus.")]
+        [SerializeField] private FloatReference _subgenreMod;
+
+        [Tooltip("Previous audience growth modifier.")]
+        [SerializeField] private FloatReference _previousListenerMod;
+
+        [Tooltip("Default penalty multiplier if genre is wrong.")]
+        [SerializeField] private FloatReference _wrongGenrePenalty;
+
+        [Tooltip("Listener size scaling modifier.")]
+        [SerializeField] private FloatReference _sizeMultiplier;
+
+        [Header("Runtime Values")]
+        [SerializeField] private IntReference _currentListeners;
+
+        [Tooltip("Selected genre ID.")]
         [SerializeField] private IntVariable _selectedGenre;
+
+        [Tooltip("Selected spin (1 = positive, 2 = negative).")]
         [SerializeField] private IntVariable _selectedSpin;
+
+        [Tooltip("Selected subgenre ID.")]
         [SerializeField] private IntVariable _selectedSubgenre;
 
-        // Calculates listener growth based on current selections and article match data.
+        [Header("Data Sources")]
+        [Tooltip("The RUntimeSet storing the selected articles from the current newspaper.")]
+        [SerializeField] private ArticleDatabase _selectedImportantArticles;
+
+        [Tooltip("The ScriptableObject which stores the results of this script.")]
+        [SerializeField] private PodcastResult _result;
+
+        #endregion
+
+        #region Public Methods
+
+        // Performs the full listener calculation based on selected genre, modifiers and article matches.
         public void Calculate()
         {
             float baseListeners = _currentListeners.Value;
@@ -44,7 +77,7 @@ namespace ProjectCeros
             float dark = _darkWebMod.Value;
             float subgenre = 0f;
             float sizeMult = CalculateSizeModifier(_currentListeners.Value);
-            _sizeMod.Variable.SetValue(sizeMult);
+            _sizeMultiplier.Variable.SetValue(sizeMult);
 
             float topicMult = _wrongGenrePenalty.Value;
             bool genreMatched = false;
@@ -69,53 +102,74 @@ namespace ProjectCeros
             int totalListeners = Mathf.CeilToInt(finalValue);
             int gain = totalListeners - (int)baseListeners;
 
-            // Create minimal result
-            _result.OverwriteWith(
-       totalListeners,
-       gain,
-       baseBonus,
-       guest,
-       equip,
-       sponsor,
-       dark,
-       subgenre,
-       bonusMult,
-       topicMult
-   );
+            _result.OverwriteWith(totalListeners, gain, baseBonus, guest, equip, sponsor, dark, subgenre, bonusMult, topicMult);
+            PrintDebugOutput(baseListeners, baseValue, guest, equip, sponsor, dark,
+                                       subgenre, baseBonus, topicMult, sizeMult,
+                                       finalValue, totalListeners, gain, genreMatched, subgenreMatched);
+        }
 
-            // DEBUG LOG (vollständig)
+        #endregion
+
+        #region Private Methods
+
+        // Calculates a dynamic modifier based on current audience size.
+        private static float CalculateSizeModifier(int currentListeners)
+        {
+            if (currentListeners <= 1000)
+            {
+                return -0.00015f * currentListeners + 1.15f;
+            }
+            else if (currentListeners <= 10000)
+            {
+                return -0.000010001f * currentListeners + 0.9899889989f;
+            }
+            else if (currentListeners <= 100000)
+            {
+                return -0.00000300003f * currentListeners + 0.86999669996f;
+            }
+            else if (currentListeners <= 3000000)
+            {
+                return -1.33333378e-7f * currentListeners + 0.58666652888f;
+            }
+            else
+            {
+                return 0.2f;
+            }
+        }
+
+        // Outputs detailed calculation breakdown to console for debugging.
+        private void PrintDebugOutput(
+           float baseListeners, float baseValue,
+           float guest, float equip, float sponsor, float darkWeb, float subgenre,
+           float bonusMult, float topicMult, float sizeMult,
+           float final, int total, int gain, bool genreMatched, bool subgenreMatched)
+        {
             Debug.Log(
                 "--- Podcast Evaluation Debug ---\n" +
                 $"Selected Genre: {GetGenreName(_selectedGenre.RuntimeValue)} (Matched: {genreMatched})\n" +
                 $"Selected Spin: {(_selectedSpin.RuntimeValue == 1 ? "Positive" : "Negative")}\n" +
-                $"Selected Subgenre: {_selectedSubgenre.RuntimeValue} (Matched: {subgenreMatched})\n\n" +
+                $"Selected Subgenre: {GetSubgenreDisplayName(_selectedSubgenre.RuntimeValue)} (Matched: {subgenreMatched})\n\n" +
 
                 $"Base Listeners: {baseListeners}\n" +
                 $"PreviousListenersMod: {_previousListenerMod.Value}\n" +
                 $"BaseValue = 2 + (BaseListeners * PreviousListenersMod) = {baseValue:F2}\n\n" +
 
                 $"--- Additive Modifiers ---\n" +
-                $"Base: +{baseBonus}\n" +
                 $"Guest: +{guest}\n" +
                 $"Equipment: +{equip}\n" +
                 $"Sponsor: +{sponsor}\n" +
-                $"Dark Web: +{dark}\n" +
-                $"Subgenre Bonus: +{subgenre}\n" +
-                $"Final Multiplier = 1 + sum = {bonusMult:F2}\n" +
-                $"Size Multiplier: x{sizeMult}\n" +
-                $"--- Topic Modifier ---\n" +
-                $"Topic Multiplier: x{topicMult:F2}\n" +
-                $"Final = AfterAdditives * TopicMod = {finalValue:F2}\n\n" +
+                $"Dark Web: +{darkWeb}\n" +
+                $"Subgenre: +{subgenre}\n" +
+                $"Total Bonus Multiplier: {bonusMult:F2}\n\n" +
 
-                $"Final Listeners: {totalListeners}\n" +
-                $"Total Gain: {(gain >= 0 ? "+" : "")}{gain}\n" +
+                $"Size Multiplier: x{sizeMult:F2}\n" +
+                $"Topic Multiplier: x{topicMult:F2}\n" +
+                $"Final Value: {final:F2}\n" +
+
+                $"Total Listeners: {total}\n" +
+                $"Gain: {(gain >= 0 ? "+" : "")}{gain}\n" +
                 "------------------------------"
             );
-        }
-
-        public void ApplyFinalListenerGain()
-        {
-            _currentListeners.Variable.SetValue(_result.TotalListeners);
         }
 
         private string GetGenreName(int genreId)
@@ -132,33 +186,32 @@ namespace ProjectCeros
             };
         }
 
-        private static float CalculateSizeModifier(int currentListeners)
+        private string GetSubgenreDisplayName(int subgenreId)
         {
-            if (currentListeners <= 1000)
+            return subgenreId switch
             {
-                Debug.Log("1");
-                return -0.00015f * currentListeners + 1.15f;
-            }
-            else if (currentListeners <= 10000)
-            {
-                Debug.Log("2");
-                return -0.000010001f * currentListeners + 0.9899889989f;
-            }
-            else if (currentListeners <= 100000)
-            {
-                Debug.Log("3");
-                return -0.00000300003f * currentListeners + 0.86999669996f;
-            }
-            else if (currentListeners <= 3000000)
-            {
-                Debug.Log("4");
-                return -1.33333378e-7f * currentListeners + 0.58666652888f;
-            }
-            else
-            {
-                Debug.Log("5");
-                return 0.2f;
-            }
+                1 => "FPS",
+                2 => "Hero Shooter",
+                3 => "Loot Shooter",
+                4 => "Fighting Game",
+                5 => "Stealth Game",
+                6 => "Hack & Slash",
+                7 => "Souls Like",
+                8 => "Open World",
+                9 => "MMORPG",
+                10 => "RTS",
+                11 => "Grand Strategy",
+                12 => "TBS",
+                13 => "Sport",
+                14 => "Living Simulation",
+                15 => "Job Simulation",
+                16 => "Farming Game",
+                17 => "Side Scroller",
+                18 => "Roguelike",
+                _ => "Unknown"
+            };
         }
+
+        #endregion
     }
 }

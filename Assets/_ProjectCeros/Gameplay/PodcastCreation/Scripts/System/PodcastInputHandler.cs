@@ -182,7 +182,7 @@ namespace ProjectCeros
                     : "Spin: Not selected\n";
 
             text += _selectedSubgenre.RuntimeValue >= 1 && _selectedSubgenre
-                ? $"Subgenre: {GetSubgenreDisplayName(_selectedSubgenre.RuntimeValue)}\n"
+                ? $"Subgenre: {_selectedSubgenre.RuntimeValue}\n"
                 : "Subgenre: Not selected\n";
 
             _feedbackText.text = text;
@@ -202,31 +202,7 @@ namespace ProjectCeros
             };
         }
 
-        private string GetSubgenreDisplayName(int subgenreId)
-        {
-            return subgenreId switch
-            {
-                1 => "FPS",
-                2 => "Hero Shooter",
-                3 => "Loot Shooter",
-                4 => "Fighting Game",
-                5 => "Stealth Game",
-                6 => "Hack & Slash",
-                7 => "Souls Like",
-                8 => "Open World",
-                9 => "MMORPG",
-                10 => "RTS",
-                11 => "Grand Strategy",
-                12 => "TBS",
-                13 => "Sport",
-                14 => "Living Simulation",
-                15 => "Job Simulation",
-                16 => "Farming Game",
-                17 => "Side Scroller",
-                18 => "Roguelike",
-                _ => "Unknown"
-            };
-        }
+        
 
         #endregion
     }

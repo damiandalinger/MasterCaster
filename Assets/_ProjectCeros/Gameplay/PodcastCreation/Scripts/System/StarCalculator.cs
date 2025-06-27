@@ -1,67 +1,94 @@
+/// <summary>
+// Calculates a star rating (0–5) based on listener gain and other podcast performance factors.
+/// </summary>
+
+/// <remarks>
+/// 24/06/2025 by Damian Dalinger: Initial creation.
+/// </remarks>
+
 using UnityEngine;
 
 namespace ProjectCeros
 {
     public class StarCalculator : MonoBehaviour
     {
-        [Header("Listener Factors")]
+        #region Fields
+
+        [Tooltip("The result of the current podcast calculation.")]
         [SerializeField] private PodcastResult _podcastResult;
+
+        [Tooltip("Number of listeners before the current episode.")]
         [SerializeField] private IntVariable _previousListeners;
-        [SerializeField] private FloatVariable _sizeMod;
+
+        [Tooltip("Size modifier based on current listener count.")]
+        [SerializeField] private FloatVariable _sizeMultiplier;
 
         [Header("Output")]
-        [SerializeField] private FloatVariable _starRating; // 0–5 stars total
-        private bool hasCalculated = false;
-        private float Score;
+        [Tooltip("Calculated star rating output (0–5).")]
+        [SerializeField] private FloatVariable _starRating;
+
+        private bool _hasCalculated = false;
+        private float _listenerScore = 0f;
+
+        #endregion
+
+        #region Lifecycle Methods
 
         private void OnEnable()
         {
-            if (!hasCalculated)
+            if (!_hasCalculated)
             {
                 CalculateStars();
-                hasCalculated = true;
-                DebugLog();
+                _hasCalculated = true;
+                DebugLogOutput();
             }
         }
 
-        public void CalculateStars()
+        #endregion
+
+        #region Private Methods
+
+        // Calculates the final star rating from different weighted components.
+        private void CalculateStars()
         {
-            float listenerScore = CalculateListenerPart();
-            Score = listenerScore;
-            // TODO: Add guest and sponsor parts here later
+            _listenerScore = CalculateListenerScore();
+
+            // TODO: Add other components like guest/sponsor in future
             float guestScore = 0f;
             float sponsorScore = 0f;
 
-            float totalStars = listenerScore + guestScore + sponsorScore;
-            totalStars = Mathf.Clamp(totalStars, 0f, 5f);
+            float totalScore = _listenerScore + guestScore + sponsorScore;
+            float clampedStars = Mathf.Clamp(totalScore, 0f, 5f);
 
-            _starRating.RuntimeValue = totalStars;
+            _starRating.RuntimeValue = clampedStars;
         }
 
-        private float CalculateListenerPart()
+        // Calculates the listener-related contribution to the star rating.
+        private float CalculateListenerScore()
         {
-            int previous = _previousListeners.RuntimeValue;
-            float sizeMod = _sizeMod.RuntimeValue;
+            int previous = Mathf.Max(1, _previousListeners.RuntimeValue);
+            float size = _sizeMultiplier.RuntimeValue;
             int gain = _podcastResult.Gain;
 
-            if (previous <= 0f)
-                previous = 1;
-
-            float ratio = (gain / sizeMod) / previous;
+            float ratio = (gain / size) / previous;
             float scaled = 6f * ratio;
 
             return Mathf.Clamp(scaled, 0f, 3f);
         }
 
-        private void DebugLog()
+        // Prints detailed star rating calculation info to the console.
+        private void DebugLogOutput()
         {
             Debug.Log(
                 "--- Star Calculation Debug ---\n" +
-                $"PreviousListeners: {_previousListeners.RuntimeValue})\n" +
-                $"SizeMod: {_sizeMod.RuntimeValue}\n" +
-                $"NewListeners: {_podcastResult.Gain}\n" +
-                $"ListenerScore: {Score}"
+                $"PreviousListeners: {_previousListeners.RuntimeValue}\n" +
+                $"SizeMod: {_sizeMultiplier.RuntimeValue:F3}\n" +
+                $"ListenerGain: {_podcastResult.Gain}\n" +
+                $"ListenerScore (0–3): {_listenerScore:F2}\n" +
+                $"Final Star Rating: {_starRating.RuntimeValue:F2}"
             );
         }
+
+        #endregion
     }
 }

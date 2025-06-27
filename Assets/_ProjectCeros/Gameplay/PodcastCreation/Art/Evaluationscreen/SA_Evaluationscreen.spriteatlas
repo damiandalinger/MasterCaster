@@ -54,73 +54,88 @@ SpriteAtlas:
     packedSpriteRenderDataKeys:
     - ddf1bc11c701fbf42aae9a824a3aa8db: 21300000
     - fc5680c1036d96a488005ad8bbd7b95a: 21300000
+    - 492546c1086916f488edf3030ffbb48d: 21300000
     - eb50b112adad65449b1be169dda1b2b6: 21300000
+    - b522610388bcc6b46b243bece079b74e: 21300000
+    - 9d8c77734266efd4ca77456847bf5f41: 21300000
     - 65337a73ea371f149a73b3e67ce32027: 21300000
-    - 9160e22429d01174fa83316b2c79f1c8: 21300000
     - 64204454d691e124b9b8dd123224e1ba: 21300000
     - 7c356db41805ea74dab8595872df943c: 21300000
+    - 44145fd4105588441a5f9600ceee9bcd: 21300000
     - 414b496567b3522458dde427df2f61cb: 21300000
     - e74a3b755ee6c104dbdcea154d26c55c: 21300000
     - 5874618506af89d438514ea18d73a9e3: 21300000
     - d0832eb63f206bc40a28f7771ea551fb: 21300000
+    - 038485d69dc63144f8cf1177eb762b5b: 21300000
+    - e383f087ccb0d2649a906d5cb55310cd: 21300000
     - 9bd66ca7689427c4f9539533c8c92fa9: 21300000
+    - 0aec78d71ce06ca4793e9fa488a16549: 21300000
     - e72a8d5949da2d24fb07fecbcea4318c: 21300000
     - d729a889f03674a44aa61080a97c67c5: 21300000
-    - 55c176c97d6bb594ab3299d4efab5fd7: 21300000
-    - 7343c02aa4186ff43a9be9d1c5cf6ef0: 21300000
-    - 4d44976abc12f5649af44be3e5bafec1: 21300000
+    - e5ad70f9ecac3aa479ee65867be84126: 21300000
     - f890d8aaa5da21341a94770863350eb4: 21300000
+    - 5425b7ba6308a624695e47f08be8a1f7: 21300000
     - 79b112bcf127b2041aa459674ea7434a: 21300000
-    - 79a7d7ccf4d96e447863a484b6c39b12: 21300000
     - bf792f4d409896e47b2c0b85373a80e5: 21300000
     - 47d8685dabc7f8d4385ad5280fbe3d56: 21300000
+    - 153f659e18f5f7d4e82d8a8c88eedca7: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: ddf1bc11c701fbf42aae9a824a3aa8db, type: 3}
   - {fileID: 21300000, guid: fc5680c1036d96a488005ad8bbd7b95a, type: 3}
+  - {fileID: 21300000, guid: 492546c1086916f488edf3030ffbb48d, type: 3}
   - {fileID: 21300000, guid: eb50b112adad65449b1be169dda1b2b6, type: 3}
+  - {fileID: 21300000, guid: b522610388bcc6b46b243bece079b74e, type: 3}
+  - {fileID: 21300000, guid: 9d8c77734266efd4ca77456847bf5f41, type: 3}
   - {fileID: 21300000, guid: 65337a73ea371f149a73b3e67ce32027, type: 3}
-  - {fileID: 21300000, guid: 9160e22429d01174fa83316b2c79f1c8, type: 3}
   - {fileID: 21300000, guid: 64204454d691e124b9b8dd123224e1ba, type: 3}
   - {fileID: 21300000, guid: 7c356db41805ea74dab8595872df943c, type: 3}
+  - {fileID: 21300000, guid: 44145fd4105588441a5f9600ceee9bcd, type: 3}
   - {fileID: 21300000, guid: 414b496567b3522458dde427df2f61cb, type: 3}
   - {fileID: 21300000, guid: e74a3b755ee6c104dbdcea154d26c55c, type: 3}
   - {fileID: 21300000, guid: 5874618506af89d438514ea18d73a9e3, type: 3}
   - {fileID: 21300000, guid: d0832eb63f206bc40a28f7771ea551fb, type: 3}
+  - {fileID: 21300000, guid: 038485d69dc63144f8cf1177eb762b5b, type: 3}
+  - {fileID: 21300000, guid: e383f087ccb0d2649a906d5cb55310cd, type: 3}
   - {fileID: 21300000, guid: 9bd66ca7689427c4f9539533c8c92fa9, type: 3}
+  - {fileID: 21300000, guid: 0aec78d71ce06ca4793e9fa488a16549, type: 3}
   - {fileID: 21300000, guid: e72a8d5949da2d24fb07fecbcea4318c, type: 3}
   - {fileID: 21300000, guid: d729a889f03674a44aa61080a97c67c5, type: 3}
-  - {fileID: 21300000, guid: 55c176c97d6bb594ab3299d4efab5fd7, type: 3}
-  - {fileID: 21300000, guid: 7343c02aa4186ff43a9be9d1c5cf6ef0, type: 3}
-  - {fileID: 21300000, guid: 4d44976abc12f5649af44be3e5bafec1, type: 3}
+  - {fileID: 21300000, guid: e5ad70f9ecac3aa479ee65867be84126, type: 3}
   - {fileID: 21300000, guid: f890d8aaa5da21341a94770863350eb4, type: 3}
+  - {fileID: 21300000, guid: 5425b7ba6308a624695e47f08be8a1f7, type: 3}
   - {fileID: 21300000, guid: 79b112bcf127b2041aa459674ea7434a, type: 3}
-  - {fileID: 21300000, guid: 79a7d7ccf4d96e447863a484b6c39b12, type: 3}
   - {fileID: 21300000, guid: bf792f4d409896e47b2c0b85373a80e5, type: 3}
   - {fileID: 21300000, guid: 47d8685dabc7f8d4385ad5280fbe3d56, type: 3}
+  - {fileID: 21300000, guid: 153f659e18f5f7d4e82d8a8c88eedca7, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_RatingScreen_IconStar_V2
   - SPR_RatingScreen_IconListener
+  - SPR_Scoreboard_Icon_Flame
   - SPR_ScoreBoard_Button
+  - SPR_Scoreboard_Icon_DarkWeb
+  - SPR_Scoreboard_Icon_Base
   - SPR_RatingScreen_IconStarfilled_V2
-  - SPR_ScoreScreen_IconCoin
   - SPR_ScoreScreen_V3
   - SPR_ScoreBoard_ButtonPressed
+  - SPR_Scoreboard_Icon_Money
   - SPR_RatingScreen_IconMoney
   - SPR_Comment_ProfilPic_Yellow
   - SPR_ScoreScreen
   - SPR_Comment_ProfilPic_Orange
+  - SPR_Scoreboard_SkipButton_Selected
+  - SPR_Scoreboard_SkipButton_Unselected
   - SPR_Comment_ProfilPic_Red
+  - SPR_Scoreboard_Icon_Mic
   - SPR_Comment_ProfilPic_Blue
   - SPR_Comment_ProfilPic_Green
-  - SPR_ScoreScreen_IconFlame
-  - SPR_ScoreScreen_IconMic
-  - SPR_ScoreScreen_IconStar
+  - SPR_Scoreboard_Icon_Guest
   - SPR_CommentScreen
+  - SPR_Scoreboard_Icon_Newspaper
   - SPR_Comment_ProfilPic_Purple
-  - SPR_ScoreScreen_IconSmiley
   - SPR_RatingScreen
   - SPR_ScoreScreen_V2
+  - SPR_Scoreboard_Icon_Subgenre
   m_RenderDataMap: {}
   m_Tag: SA_Evaluationscreen
   m_IsVariant: 0

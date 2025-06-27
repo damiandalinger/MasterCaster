@@ -17,7 +17,7 @@ using UnityEditor;
 
 namespace ProjectCeros
 {
-    public class LoadSceneAdditiveOnEvent : MonoBehaviour
+    public class LoadSceneOnEvent : MonoBehaviour
     {
         #region Fields
 
