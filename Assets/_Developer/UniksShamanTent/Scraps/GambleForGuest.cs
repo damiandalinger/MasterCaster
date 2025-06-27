@@ -9,6 +9,11 @@ namespace ProjectCeros
 
         [SerializeField] private IntReference _listeners;
 
+        [SerializeField] private IntReference _oldThreshhold;
+
+        [SerializeField] private IntReference _newThreshhold;
+
+
         // [SerializeField] private GuestSO guest;
 
         [SerializeField] private float _baseChance;
@@ -17,9 +22,9 @@ namespace ProjectCeros
 
         [SerializeField] private float _multiplier;
 
-        [SerializeField] private float _oldThreshhold;
+        // [SerializeField] private float _oldThreshhold;
 
-        [SerializeField] private float _nextThreshhold;
+        // [SerializeField] private float _nextThreshhold;
 
 
 
@@ -27,21 +32,60 @@ namespace ProjectCeros
         public void GambleGuest(GuestSO guest)
         {
 
-            //If Stars of the Player are definitive higher thant guest stars
+            // If Stars of the Player are definitive higher than guest stars.
             if (_globalStars.Value > guest.Rating)
             {
                 float random = Random.value;
 
+                Debug.Log($"Success probability: {95}");
+
+                Debug.Log($"Random roll: {random}");
+
                 if (random < 0.95)
                 {
                     guest.hasAccepted = true;
+                    Debug.Log("OHH YEAAH, GUEST IS COMING");
+
+
+                }
+
+                else
+
+                {
+                    Debug.Log("No guest, sad");
                 }
 
             }
 
-            else
+            // If the player has reached the max stars rating.
+            else if (_globalStars.Value == 5)
+
             {
-                _multiplier = Mathf.InverseLerp(_oldThreshhold, _nextThreshhold, _listeners);
+                float random = Random.value;
+
+                Debug.Log($"Success probability: {95}");
+
+                Debug.Log($"Random roll: {random}");
+
+                if (random < 0.95)
+                {
+                    guest.hasAccepted = true;
+                    Debug.Log("OHH YEAAH, GUEST IS COMING");
+                }
+
+                else
+
+                {
+                    Debug.Log("No guest, sad");
+                }
+
+            }
+
+
+            // If the Stars of the Player and the Guest are the same.
+            else if (_globalStars.Value == guest.Rating)
+            {
+                _multiplier = Mathf.InverseLerp(_oldThreshhold, _newThreshhold, _listeners);
 
                 float t = _multiplier * _addedChance;
 
@@ -49,11 +93,48 @@ namespace ProjectCeros
 
                 float random = Random.value;
 
-                if (random < t)
+                Debug.Log($"Success probability: {t * 100}");
 
+                Debug.Log($"Random roll: {random}");
+
+
+                if (random < t)
                 {
                     guest.hasAccepted = true;
-                    Debug.Log("OHH YEAAH");
+                    Debug.Log("OHH YEAAH, GUEST IS COMING");
+                }
+
+                else
+
+                {
+                    Debug.Log("No guest, sad");
+                }
+            }
+
+            // If the player has definitive lower stars rating than the guest.
+            else if (_globalStars.Value < guest.Rating)
+
+            {
+                _multiplier = Mathf.InverseLerp(_oldThreshhold, _newThreshhold, _listeners);
+
+                float t = _multiplier * _addedChance * 0.1f;
+
+
+                t += _baseChance * 0.7f;
+
+                float random = Random.value;
+
+
+
+                Debug.Log($"Success probability: {t * 100}");
+
+                Debug.Log($"Random roll: {random}");
+
+                if (random < t)
+                {
+                    guest.hasAccepted = true;
+                    Debug.Log("OHH YEAAH, GUEST IS COMING");
+
                 }
 
                 else

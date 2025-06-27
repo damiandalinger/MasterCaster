@@ -18,7 +18,7 @@ namespace ProjectCeros
             {
                 if (guest.isRequested)
                 {
-                    Debug.Log($"Guest is coming! it's {guest.Name}");
+                    Debug.Log($"Guest was invited! it's {guest.Name}");
 
                     guest.isOnCooldown = true;
                     guest.isRequested = false;

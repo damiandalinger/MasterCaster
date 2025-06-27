@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
-  m_Name: SO_Firekeeper
+  m_Name: SO_Cuphead
   m_EditorClassIdentifier: 
-  Name: Firekeeper
-  Description: The Firekeeper form Donken Souls 3.
+  Name: Cuphead
+  Description: Cuphead the cup that is a head
   Topic: RPG
   Modifier: 1.5
-  GuestID: 1
-  CooldownCounter: 0
-  Rating: 3
+  GuestID: 2
+  CooldownCounter: 1
+  Rating: 2
   Fee: 2000
   TopicID: 4
-  GuestSprite: {fileID: 21300000, guid: 011e4f755a2732a4bbf69939139b643b, type: 3}
-  isRequested: 1
+  GuestSprite: {fileID: 21300000, guid: c1d21f961af85e848b7970b6091df95e, type: 3}
+  isRequested: 0
   hasAccepted: 0
-  isOnCooldown: 0
+  isOnCooldown: 1

@@ -9,6 +9,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.Search;
+using UnityEditor;
 
 namespace ProjectCeros
 {
@@ -31,13 +33,13 @@ namespace ProjectCeros
 
         [SerializeField] private TextMeshProUGUI _topicText;
 
-        // [SerializeField] private TextMeshProUGUI _playerMoney;
+        [SerializeField] private TextMeshProUGUI _chanceText;
 
         [SerializeField] private Image _guestImage;
 
         [SerializeField] private Button _inviteButton;
 
-       // [SerializeField] private Image _alreadyBought;
+        // [SerializeField] private Image _alreadyBought;
 
         private GuestSO currentSelectedItem;
 
@@ -56,6 +58,9 @@ namespace ProjectCeros
             _invitationLimiter.SetGuestToInvite(item);
 
             ShowItemSold();
+
+            ShowItemChance();
+
         }
 
 
@@ -77,15 +82,30 @@ namespace ProjectCeros
 
         }
 
-        /* Update the amount of money the Player has in the UI.
-        public void UpdateMoney()
+        public void ShowItemChance()
         {
-            _playerMoney.text = $"${_money.Value}";
+            float chance = currentSelectedItem.Chance;
 
-            Debug.Log($"Money value changed to: {_money.Value}");
+            if (chance <= 0.3)
+            {
+                _chanceText.text = "Unlikely";
+            }
+
+
+            if (chance > 0.3 && chance < 0.7)
+            {
+                _chanceText.text = "Might come";
+            }
+
+
+            if (chance >= 0.7)
+            {
+                _chanceText.text = "High chance of comming";
+            }
+
+
         }
 
-        */
 
         private void Awake()
         {
@@ -103,7 +123,7 @@ namespace ProjectCeros
             Debug.Log($"Trying to invite {currentSelectedItem.Name}");
 
             //_moneyChecker.CheckMoney();
-           _invitationLimiter.InviteGuest();
+            _invitationLimiter.InviteGuest();
 
         }
 

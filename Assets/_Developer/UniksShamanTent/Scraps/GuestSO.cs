@@ -21,6 +21,9 @@ namespace ProjectCeros
         [Tooltip("The Bonus this guest provides to the podcast.")]
         public float Modifier;
 
+        [Tooltip("The probability for the guest to come")]
+        public float Chance;
+
 
         [Tooltip("The unique ID of the guest.")]
         public int GuestID;
