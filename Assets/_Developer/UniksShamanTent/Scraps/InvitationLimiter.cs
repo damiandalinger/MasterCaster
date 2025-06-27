@@ -39,6 +39,8 @@ namespace ProjectCeros
 
                         InvitationsSend.Variable.ApplyChange(1);
 
+                        GuestToInvite.isRequested = true;
+
                         
                     }
 

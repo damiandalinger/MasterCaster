@@ -1,10 +1,10 @@
 /// <summary>
-/// Creates the item Database SO. In this, all items that the player can ever own are listed.
-/// Then, based on the item id this script can return the ItemSO that is needed.
+/// Creates the Guest Database SO. In this, all Guests that the player can see invite are stored.
+/// Then, based on the guest id this script can return the GuestSO that is needed.
 /// </summary>
 
 /// <remarks>
-/// 18/06/2025 by Unik Kelmendi: Initial creation.
+/// 24/06/2025 by Unik Kelmendi: Initial creation.
 /// </remarks>
 
 using UnityEngine;
@@ -21,7 +21,7 @@ namespace ProjectCeros
 
         private Dictionary<int, GuestSO> _lookup;
 
-        // Setup the dictionary with the item id and ItemSO.
+        // Setup the dictionary with the guest id and GuestSO.
         public void Initialize()
         {
             _lookup = new Dictionary<int, GuestSO>();
@@ -30,12 +30,12 @@ namespace ProjectCeros
                 if (!_lookup.ContainsKey(item.GuestID))
                     _lookup[item.GuestID] = item;
                 else
-                    Debug.LogWarning($"Duplicate ID {item.GuestID} in ItemDatabase.");
+                    Debug.LogWarning($"Duplicate ID {item.GuestID} in GuestDatabase.");
             }
         }
 
 
-        // Call this method to get the ItemSO in exchange for the item id.
+        // Call this method to get the GuestSO in exchange for the guest id.
         public GuestSO GetGuestByID(int id)
         {
             if (_lookup == null)
