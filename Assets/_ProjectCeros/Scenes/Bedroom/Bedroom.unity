@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 377977739}
   - component: {fileID: 377977738}
   m_Layer: 5
-  m_Name: Togglenewspaper
+  m_Name: LoadNewspaper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 820249354}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ProjectCeros.ToggleSceneOnEvent, Assembly-CSharp
         m_MethodName: ToggleScenes
         m_Mode: 1
@@ -1099,7 +1099,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 820249353}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ProjectCeros.ToggleGameObjects, Assembly-CSharp
         m_MethodName: Toggle
         m_Mode: 1
@@ -1872,56 +1872,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820249352}
-  - component: {fileID: 820249351}
-  - component: {fileID: 820249354}
   - component: {fileID: 820249353}
   m_Layer: 0
-  m_Name: '@TogglePodcastCreation'
+  m_Name: '@LoadPodcast'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &820249351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820249348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756af48229c34a140bf09dfa3d17e737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 6703f1d27627c9b4e99cac1162638e30, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 820249354}
-        m_TargetAssemblyTypeName: ProjectCeros.ToggleSceneOnEvent, Assembly-CSharp
-        m_MethodName: ToggleScenes
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 820249353}
-        m_TargetAssemblyTypeName: ProjectCeros.ToggleGameObjects, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &820249352
 Transform:
   m_ObjectHideFlags: 0
@@ -1946,21 +1904,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 820249348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775b9d8dc06ccd24ab4df5aaa0759219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targets:
-  - {fileID: 377977736}
---- !u!114 &820249354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820249348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3032c4e948e1448a273c3fa76df7b3, type: 3}
+  m_Script: {fileID: 11500000, guid: c3cd1f53fbf676c438d23d89f8132b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneAssets:
@@ -1980,7 +1924,7 @@ GameObject:
   - component: {fileID: 872000931}
   - component: {fileID: 872000930}
   m_Layer: 5
-  m_Name: TogglePodcastCreation
+  m_Name: LoadPodcast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2050,9 +1994,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 6703f1d27627c9b4e99cac1162638e30, type: 2}
-        m_TargetAssemblyTypeName: ProjectCeros.GameEvent, Assembly-CSharp
-        m_MethodName: Raise
+      - m_Target: {fileID: 820249353}
+        m_TargetAssemblyTypeName: ProjectCeros.LoadSceneOnEvent, Assembly-CSharp
+        m_MethodName: LoadScenesAdditively
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

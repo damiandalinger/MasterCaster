@@ -1,12 +1,12 @@
 /// <summary>
-/// Handles podcast creation, listener gain calculation, and user feedback display based on genre and subgenre selection.
+/// Handles podcast creation logic: title input, genre/spin/subgenre selection, and validation.
+/// Triggers calculation and confirmation event if input is valid.
 /// </summary>
 
 /// <remarks>
 /// 20/05/2025 by Damian Dalinger: Initial creation.
 /// </remarks>
 
-using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -18,23 +18,33 @@ namespace ProjectCeros
 
         #region Fields
 
-        [Header("UI")]
-        [SerializeField] private TMP_Text _feedbackText;
-        [SerializeField] private GameObject _selectionUI;
-        [SerializeField] private GameObject _evaluationUI;
-
-        [Header("Events")]
+        [Tooltip("Raised when the podcast is confirmed.")]
         [SerializeField] private GameEvent _onPodcastConfirmed;
 
-        [Header("Core")]
+        [Header("Core References")]
+        [Tooltip("Performs the podcast listener gain calculation.")]
         [SerializeField] private PodcastCalculator _calculator;
-        [SerializeField] private PodcastResultVisualizer _resultVisualizer;
-        [SerializeField] private TMP_InputField _titleInputField;
-        [SerializeField] private StringRuntimeSet _podcastTitles;
-        [SerializeField] private int _maxTitleLength = 32;
 
+        [Tooltip("Input field where the user enters the podcast title.")]
+        [SerializeField] private TMP_InputField _titleInputField;
+
+        [Tooltip("Confirmation button shown when selection is valid.")]
+        [SerializeField] private GameObject _confirmButton;
+
+        [Tooltip("List of all created podcast titles.")]
+        [SerializeField] private StringRuntimeSet _podcastTitles;
+
+        [Tooltip("Maximum number of characters allowed for podcast titles.")]
+        [SerializeField] private IntReference _maxTitleLength;
+
+        [Header("User Selection")]
+        [Tooltip("Selected genre index (1–6).")]
         [SerializeField] private IntVariable _selectedGenre;
+
+        [Tooltip("Selected spin index (1 = positive, 2 = negative).")]
         [SerializeField] private IntVariable _selectedSpin;
+
+        [Tooltip("Selected subgenre index (1–18).")]
         [SerializeField] private IntVariable _selectedSubgenre;
 
         #endregion
@@ -44,7 +54,9 @@ namespace ProjectCeros
         private void Start()
         {
             ResetSelection();
+
             _titleInputField.characterLimit = _maxTitleLength;
+            _titleInputField.onValueChanged.AddListener(_ => UpdateConfirmButtonVisibility());
 
             if (_podcastTitles.Items.Count > 0)
             {
@@ -54,43 +66,17 @@ namespace ProjectCeros
             {
                 _titleInputField.placeholder.GetComponent<TMP_Text>().text = "Enter title...";
             }
-
-            UpdateFeedback();
-
         }
 
         #endregion
 
         #region Public Methods
 
-        // Sets the selected genre.
-        public void SelectGenre(int genreId)
-        {
-            _selectedGenre.RuntimeValue = genreId;
-            UpdateFeedback();
-        }
-
-        // Sets the selected spin (1 = Positive, 2 = Negative).
-        public void SelectSpin(int spin)
-        {
-            _selectedSpin.RuntimeValue = spin;
-            UpdateFeedback();
-        }
-
-        // Sets the selected subgenre.
-        public void SelectSubgenre(int subgenre)
-        {
-            _selectedSubgenre.RuntimeValue = subgenre;
-            UpdateFeedback();
-        }
-
-        // Confirms the current selection, performs listener gain calculation and updates feedback.
+        // Confirms the current selection and triggers podcast calculation if valid.
         public void ConfirmSelection()
         {
             if (!IsValidSelection())
             {
-                ResetSelection();
-                _feedbackText.text = "Invalid selection – please choose a genre, spin, and subgenre.";
                 return;
             }
 
@@ -98,53 +84,54 @@ namespace ProjectCeros
 
             if (string.IsNullOrWhiteSpace(title))
             {
-                if (_podcastTitles.Items.Count > 0)
-                {
-                    string rawLastTitle = _podcastTitles.Items.Last();
-
-                    // Entferne ggf. das letzte #X-Suffix
-                    string baseTitle = rawLastTitle;
-                    int lastHashIndex = rawLastTitle.LastIndexOf('#');
-                    if (lastHashIndex > 0)
-                    {
-                        string maybeNumber = rawLastTitle.Substring(lastHashIndex + 1);
-                        if (int.TryParse(maybeNumber, out _))
-                        {
-                            baseTitle = rawLastTitle.Substring(0, lastHashIndex).TrimEnd();
-                        }
-                    }
-
-                    int count = 2;
-                    string generatedTitle = $"{baseTitle} #{count}";
-                    while (_podcastTitles.Items.Contains(generatedTitle))
-                    {
-                        count++;
-                        generatedTitle = $"{baseTitle} #{count}";
-                    }
-
-                    title = generatedTitle;
-                }
-                else
-                {
-                    _feedbackText.text = "Please enter a title for your first podcast.";
+                title = GenerateFallbackTitle();
+                if (string.IsNullOrEmpty(title))
                     return;
-                }
             }
 
             _podcastTitles.Add(title);
             _titleInputField.text = "";
             _titleInputField.placeholder.GetComponent<TMP_Text>().text = title;
-            _calculator.Calculate();
 
+            _calculator.Calculate();
             _onPodcastConfirmed.Raise();
-            _selectionUI.SetActive(false);
-            _evaluationUI.SetActive(true);
+        }
+
+        // Sets the selected genre index and refreshes button visibility.
+        public void SelectGenre(int genreId)
+        {
+            _selectedGenre.RuntimeValue = genreId;
+            UpdateConfirmButtonVisibility();
+
+        }
+
+        // Sets the selected spin index and refreshes button visibility.
+        public void SelectSpin(int spin)
+        {
+            _selectedSpin.RuntimeValue = spin;
+            UpdateConfirmButtonVisibility();
+        }
+
+        // Sets the selected subgenre index and refreshes button visibility.
+        public void SelectSubgenre(int subgenre)
+        {
+            _selectedSubgenre.RuntimeValue = subgenre;
+            UpdateConfirmButtonVisibility();
+        }
+
+        // Resets all selection values to their default state.
+        public void ResetSelection()
+        {
+            _selectedGenre.RuntimeValue = 0;
+            _selectedSpin.RuntimeValue = 0;
+            _selectedSubgenre.RuntimeValue = 0;
         }
 
         #endregion
 
         #region Private Methods
 
+        // Validates that a complete selection and title exists.
         private bool IsValidSelection()
         {
             bool hasTitleOrFallback = _podcastTitles.Items.Count > 0 ||
@@ -156,53 +143,33 @@ namespace ProjectCeros
                    hasTitleOrFallback;
         }
 
-        private void ResetSelection()
+        // Generates a fallback title by incrementing the last used title.
+        private string GenerateFallbackTitle()
         {
-            _selectedGenre.RuntimeValue = 0;
-            _selectedSpin.RuntimeValue = 0;
-            _selectedSubgenre.RuntimeValue = 0;
+            if (_podcastTitles.Items.Count == 0)
+                return "";
+
+            string lastTitle = _podcastTitles.Items.Last();
+
+            int hashIndex = lastTitle.LastIndexOf('#');
+            string baseTitle = hashIndex > 0 && int.TryParse(lastTitle[(hashIndex + 1)..], out _)
+                ? lastTitle.Substring(0, hashIndex).TrimEnd()
+                : lastTitle;
+
+            int count = 2;
+            string candidate = $"{baseTitle} #{count}";
+
+            while (_podcastTitles.Items.Contains(candidate))
+                candidate = $"{baseTitle} #{++count}";
+
+            return candidate;
         }
 
-        // Updates the feedback UI with current selection state.
-        private void UpdateFeedback()
+        // Updates the visibility of the confirm button based on current selection state.
+        private void UpdateConfirmButtonVisibility()
         {
-            if (_feedbackText == null)
-                return;
-
-            var text = "Current Selection:\n";
-
-            text += _selectedGenre.RuntimeValue >= 1 && _selectedGenre.RuntimeValue <= 6
-                ? $"Genre: {GetGenreName(_selectedGenre.RuntimeValue)}\n"
-                : "Genre: Not selected\n";
-
-            text += _selectedSpin.RuntimeValue == 1
-                ? "Spin: Positive\n"
-                : _selectedSpin.RuntimeValue == 2
-                    ? "Spin: Negative\n"
-                    : "Spin: Not selected\n";
-
-            text += _selectedSubgenre.RuntimeValue >= 1 && _selectedSubgenre
-                ? $"Subgenre: {_selectedSubgenre.RuntimeValue}\n"
-                : "Subgenre: Not selected\n";
-
-            _feedbackText.text = text;
+            _confirmButton.SetActive(IsValidSelection());
         }
-
-        private string GetGenreName(int genreId)
-        {
-            return genreId switch
-            {
-                1 => "Action",
-                2 => "Indie",
-                3 => "RPG",
-                4 => "Shooter",
-                5 => "Simulation",
-                6 => "Strategy",
-                _ => "Unknown"
-            };
-        }
-
-        
 
         #endregion
     }

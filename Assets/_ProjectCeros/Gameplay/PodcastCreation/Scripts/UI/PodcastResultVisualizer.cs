@@ -109,11 +109,15 @@ namespace ProjectCeros
 
             foreach (var (label, value, iconIndex) in GetResultModifiers(result))
             {
-                if (Mathf.Abs(value) < 0.001f || rowIndex >= _multiplierRows.Count)
+                if (Mathf.Abs(value) < 0.001f)
                     continue;
 
-                SetFormattedRow(rowIndex++, label, value, iconIndex);
-                yield return new WaitForSeconds(_delay); 
+                if (rowIndex >= _multiplierRows.Count)
+                    break;
+
+                SetFormattedRow(rowIndex, label, value, iconIndex);
+                rowIndex++;
+                yield return new WaitForSeconds(_delay);
             }
 
             yield return CountAnimator.Count(_gainText, 0, result.Gain, _countDuration, showSign: true);
@@ -143,7 +147,16 @@ namespace ProjectCeros
             SetSimpleRow(rowIndex++, "Bonus Multiplier", $"x{result.BonusMultiplier:F2}");
 
             foreach (var (label, value, iconIndex) in GetResultModifiers(result))
-                SetFormattedRow(rowIndex++, label, value, iconIndex);
+            {
+                if (Mathf.Abs(value) < 0.001f)
+                    continue;
+
+                if (rowIndex >= _multiplierRows.Count)
+                    break;
+
+                SetFormattedRow(rowIndex, label, value, iconIndex);
+                rowIndex++;
+            }
 
             _hasAnimated = true;
             _currentListeners.Variable.SetValue(_result.TotalListeners);
