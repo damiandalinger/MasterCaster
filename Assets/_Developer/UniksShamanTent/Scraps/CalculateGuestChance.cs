@@ -27,7 +27,9 @@ namespace ProjectCeros
         [SerializeField] private float _addedPenalty = 0.1f;
 
 
-        [SerializeField] private GuestDatabaseSO _guestDatabase;
+        [SerializeField] private GuestSORuntimeSet _guestDatabase;
+
+
 
 
 
@@ -38,7 +40,7 @@ namespace ProjectCeros
 
         public void SetGuestChance()
         {
-            foreach (var guest in _guestDatabase.AllGuests)
+            foreach (var guest in _guestDatabase.Items)
             {
 
                 guest.Chance = DetermineGuestChance(guest);

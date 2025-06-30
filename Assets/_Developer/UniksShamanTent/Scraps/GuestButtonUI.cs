@@ -8,6 +8,7 @@
 /// </remarks>
 
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace ProjectCeros
@@ -16,11 +17,31 @@ namespace ProjectCeros
     public class GuestButtonUI : MonoBehaviour
     {
         [SerializeField] private GuestSO _guestData;
-         
+
+    
+
+        public Button button;
+
         // This tells the GuestUI the SO data.
-        public void TransferData()
+        public void TransferData(GuestSO guestData)
+        {
+
+            _guestData = guestData;
+
+            
+            if (button != null)
+            {
+                button.onClick.RemoveAllListeners(); // Clear any previous bindings
+                button.onClick.AddListener(OnClick); // Add this instance’s click
+            }
+
+        }
+
+        private void OnClick()
         {
             GuestUI.Instance.ShowGuestDetails(_guestData);
+
         }
+
     }
 }

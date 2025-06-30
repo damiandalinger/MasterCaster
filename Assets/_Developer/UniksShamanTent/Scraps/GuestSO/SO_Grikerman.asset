@@ -16,6 +16,7 @@ MonoBehaviour:
   Description: Griker der komische
   Topic: RPG
   Modifier: 1.5
+  Chance: 0.24157304
   GuestID: 4
   CooldownCounter: 1
   Rating: 4
