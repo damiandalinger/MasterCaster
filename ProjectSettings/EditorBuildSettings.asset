@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ProjectCeros/Scenes/ItemShop/ItemShop.unity
     guid: 2c7572bf6fb1eab4d8d92106ff269257
+  - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/Leaderboard/Leaderboard.unity
+    guid: d6ad2d86b42d42d4383f07686e3a4685
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7ee58004a8554674488d7d797ce55ec1, type: 3}
   m_UseUCBPForAssetBundles: 0
