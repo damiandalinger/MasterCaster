@@ -16,8 +16,9 @@ MonoBehaviour:
   Description: Any emeralds?
   Topic: RPG
   Modifier: 1.5
+  Chance: 0.91573036
   GuestID: 1
-  CooldownCounter: 1
+  CooldownCounter: 2
   Rating: 1
   Fee: 2000
   TopicID: 4

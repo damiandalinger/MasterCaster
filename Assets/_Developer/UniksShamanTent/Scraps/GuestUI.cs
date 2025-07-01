@@ -9,8 +9,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.Search;
-using UnityEditor;
 
 namespace ProjectCeros
 {
@@ -23,7 +21,6 @@ namespace ProjectCeros
 
         [SerializeField] private GuestDatabaseSO _unlockedGuestIDs;
 
-        // [SerializeField] private IntReference _money;
 
 
         [Header("UI Elements")]

@@ -18,7 +18,7 @@ MonoBehaviour:
   Modifier: 1.5
   Chance: 0.24157304
   GuestID: 4
-  CooldownCounter: 1
+  CooldownCounter: 2
   Rating: 4
   Fee: 2000
   TopicID: 4

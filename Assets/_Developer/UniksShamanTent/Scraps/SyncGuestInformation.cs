@@ -1,5 +1,12 @@
+/// <summary>
+/// This script checks the GuestitemIds and adds them to a runtime set only containing the unlocked GuestSO.
+/// </summary>
+
+/// <remarks>
+/// 25/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace ProjectCeros
 

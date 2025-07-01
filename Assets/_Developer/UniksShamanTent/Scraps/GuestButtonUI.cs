@@ -1,6 +1,6 @@
 /// <summary>
-/// This script shows the correct item once the player clicks on the button that is connected to the
-/// item info in the shop tab.
+/// This script shows the correct guest once the player clicks on the button that is connected to the
+/// guest info in the guest tab.
 /// </summary>
 
 /// <remarks>

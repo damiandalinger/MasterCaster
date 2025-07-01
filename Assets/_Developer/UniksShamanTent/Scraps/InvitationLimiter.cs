@@ -1,3 +1,12 @@
+/// <summary>
+/// This script limits the amount of invites the player can send.
+/// </summary>
+
+/// <remarks>
+/// 25/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
+
 using UnityEngine;
 
 namespace ProjectCeros

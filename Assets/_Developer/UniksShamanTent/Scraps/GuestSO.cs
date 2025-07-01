@@ -1,3 +1,11 @@
+/// <summary>
+/// This script stores all information for the Guests.
+/// </summary>
+
+/// <remarks>
+/// 25/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
 
 namespace ProjectCeros

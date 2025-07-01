@@ -1,4 +1,11 @@
-using Unity.VisualScripting;
+/// <summary>
+/// This script unlocks all the possible guests that are not in the game by default.
+/// </summary>
+
+/// <remarks>
+/// 25/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
 
 namespace ProjectCeros

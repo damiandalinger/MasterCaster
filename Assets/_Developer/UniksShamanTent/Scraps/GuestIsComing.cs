@@ -1,5 +1,13 @@
+/// <summary>
+/// This script checks if some of the geusts have accpeted.
+/// </summary>
+
+/// <remarks>
+/// 25/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
-using System.Collections.Generic;
+
 
 namespace ProjectCeros
 {

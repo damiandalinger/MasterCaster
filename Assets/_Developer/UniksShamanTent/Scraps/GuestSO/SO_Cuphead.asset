@@ -16,12 +16,13 @@ MonoBehaviour:
   Description: Cuphead the cup that is a head
   Topic: RPG
   Modifier: 1.5
+  Chance: 0.24157304
   GuestID: 2
-  CooldownCounter: 1
+  CooldownCounter: 2
   Rating: 2
   Fee: 2000
   TopicID: 4
   GuestSprite: {fileID: 21300000, guid: c1d21f961af85e848b7970b6091df95e, type: 3}
   isRequested: 0
-  hasAccepted: 0
+  hasAccepted: 1
   isOnCooldown: 1

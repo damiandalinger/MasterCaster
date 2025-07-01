@@ -1,5 +1,12 @@
+/// <summary>
+/// Determines the global star rating based on the players Listeners.
+/// </summary>
+
+/// <remarks>
+/// 25/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
-// using UnityEngine.Random;
 
 
 namespace ProjectCeros

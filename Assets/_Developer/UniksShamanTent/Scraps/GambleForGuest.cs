@@ -1,3 +1,11 @@
+/// <summary>
+/// This script calculates if the guest will come or not by comparing the chance with a random value.
+/// </summary>
+
+/// <remarks>
+/// 25/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
 
 namespace ProjectCeros
@@ -14,17 +22,11 @@ namespace ProjectCeros
         [SerializeField] private IntReference _newThreshhold;
 
 
-        // [SerializeField] private GuestSO guest;
-
         [SerializeField] private float _baseChance;
 
         [SerializeField] private float _addedChance;
 
         [SerializeField] private float _multiplier;
-
-        // [SerializeField] private float _oldThreshhold;
-
-        // [SerializeField] private float _nextThreshhold;
 
 
 
@@ -37,20 +39,17 @@ namespace ProjectCeros
             {
                 float random = Random.value;
 
-                Debug.Log($"Success probability: {95}");
+                Debug.Log($"Success probability: {guest.Chance}");
 
                 Debug.Log($"Random roll: {random}");
 
-                if (random < 0.95)
+                if (random < guest.Chance)
                 {
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
-
-
                 }
 
                 else
-
                 {
                     Debug.Log("No guest, sad");
                 }
@@ -63,18 +62,17 @@ namespace ProjectCeros
             {
                 float random = Random.value;
 
-                Debug.Log($"Success probability: {95}");
+                Debug.Log($"Success probability: {guest.Chance}");
 
                 Debug.Log($"Random roll: {random}");
 
-                if (random < 0.95)
+                if (random < guest.Chance)
                 {
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
                 }
 
                 else
-
                 {
                     Debug.Log("No guest, sad");
                 }
@@ -85,27 +83,20 @@ namespace ProjectCeros
             // If the Stars of the Player and the Guest are the same.
             else if (_globalStars.Value == guest.Rating)
             {
-                _multiplier = Mathf.InverseLerp(_oldThreshhold, _newThreshhold, _listeners);
-
-                float t = _multiplier * _addedChance;
-
-                t += _baseChance;
-
                 float random = Random.value;
 
-                Debug.Log($"Success probability: {t * 100}");
+                Debug.Log($"Success probability: {guest.Chance}");
 
                 Debug.Log($"Random roll: {random}");
 
 
-                if (random < t)
+                if (random < guest.Chance)
                 {
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
                 }
 
                 else
-
                 {
                     Debug.Log("No guest, sad");
                 }
@@ -115,26 +106,17 @@ namespace ProjectCeros
             else if (_globalStars.Value < guest.Rating)
 
             {
-                _multiplier = Mathf.InverseLerp(_oldThreshhold, _newThreshhold, _listeners);
-
-                float t = _multiplier * _addedChance * 0.1f;
-
-
-                t += _baseChance * 0.7f;
-
                 float random = Random.value;
 
 
-
-                Debug.Log($"Success probability: {t * 100}");
+                Debug.Log($"Success probability: {guest.Chance}");
 
                 Debug.Log($"Random roll: {random}");
 
-                if (random < t)
+                if (random < guest.Chance)
                 {
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
-
                 }
 
                 else

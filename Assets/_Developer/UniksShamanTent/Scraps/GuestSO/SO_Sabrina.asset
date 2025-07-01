@@ -16,13 +16,13 @@ MonoBehaviour:
   Description: Woah, it's really her
   Topic: RPG
   Modifier: 1.5
-  Chance: 4.77
+  Chance: 0.24157304
   GuestID: 5
-  CooldownCounter: 1
+  CooldownCounter: 2
   Rating: 5
   Fee: 2000
   TopicID: 4
   GuestSprite: {fileID: 21300000, guid: 2bc859fe9410d0543ae6227572b231bd, type: 3}
   isRequested: 0
-  hasAccepted: 1
+  hasAccepted: 0
   isOnCooldown: 1
