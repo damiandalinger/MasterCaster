@@ -60,7 +60,7 @@
     },
     {
         "PairID": 1003,
-        "Headline": "Zekken 17 is like its predecessors - Exquisite!",
+        "Headline": "Zekken 17 is like its pre\u200Bde\u200Bces\u200Bsors - Exquisite!",
         "Description": "… the graphics also got an update and the physics jiggle in just the right places. I really enjoyed it, definitely my game of the year!",
         "AgencyID": 2,
         "Subgenre": 4,
@@ -159,7 +159,7 @@
     },
     {
         "PairID": 1008,
-        "Headline": "Center-Earth: Shade of War REVIVES VOLKIN",
+        "Headline": "Center-\u200BEarth: Shade of War REVIVES VOLKIN",
         "Description": "Explore the dark lands as a lone elf and help defend the good people!",
         "AgencyID": 3,
         "Subgenre": 6,
@@ -170,7 +170,7 @@
     },
     {
         "PairID": 1008,
-        "Headline": "Become an Elven-Orc-Warlord!",
+        "Headline": "Become an Elven-\u200BOrc-\u200BWarlord!",
         "Description": "Center-Earth: Shade of War allows the player to build their own army! ",
         "AgencyID": 2,
         "Subgenre": 6,

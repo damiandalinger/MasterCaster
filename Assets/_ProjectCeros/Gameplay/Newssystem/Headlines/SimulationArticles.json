@@ -1,7 +1,7 @@
 [
   {
     "PairID": 5001,
-    "Headline": "AirPlaneSimulator Crashlands like Hindenburg ",
+    "Headline": "AirPlane\u200BSimulator Crash\u200Blands like Hinden\u200Bburg ",
     "Description": "Some might find enjoyment in this poor excuse of a game, but some also enjoy watching paint dry.",
     "AgencyID": 1,
     "Subgenre": 15,
@@ -12,7 +12,7 @@
   },
   {
     "PairID": 5001,
-    "Headline": "AirPlaneSimulator - We LOVE it!",
+    "Headline": "AirPlane\u200BSimulator - We LOVE it!",
     "Description": "Wroom Wroom, the airplane starts. And with it our enjoyment skyrockets!",
     "AgencyID": 0,
     "Subgenre": 15,
@@ -23,8 +23,8 @@
   },
   {
     "PairID": 5002,
-    "Headline": "DownTownCarReperationServiceSimulator is REDEFINING",
-    "Description": "DownTownCarReperationServiceSimulator, the up and coming Simulator that allows you to experience things you’ve never experienced before - how wicked!",
+    "Headline": "DownTown\u200BCarRepairService\u200BSimulator is REDEFINING",
+    "Description": "DownTownCarRepairServiceSimulator, the up and coming Simulator that allows you to experience things you’ve never experienced before - how wicked!",
     "AgencyID": 0,
     "Subgenre": 15,
     "ValuePositive": 1.2,
@@ -34,7 +34,7 @@
   },
   {
     "PairID": 5002,
-    "Headline": "DownTornCarReperationServiceSimulator - A fresh new Game for the Simulator fans!",
+    "Headline": "DownTown\u200BCarRepairService\u200BSimulator - A fresh new Game for the Simu\u200Blator fans!",
     "Description": "This game actually accurately shows what life as a mechanic is like. We found the game to be surprisingly relaxing. The slower pace really helped!",
     "AgencyID": 3,
     "Subgenre": 15,
@@ -45,7 +45,7 @@
   },
   {
     "PairID": 5003,
-    "Headline": "The Deadly Secret of the Simulation Genre",
+    "Headline": "The Deadly Secret of the Simu\u200Blation Genre",
     "Description": "One of our members has died. He was tracking a News Agency that only works for simulation games and only ever praises them. We are doing …",
     "AgencyID": 3,
     "Subgenre": 14,
@@ -56,7 +56,7 @@
   },
   {
     "PairID": 5003,
-    "Headline": "Rat Simulator - Experience the Life and DEATH",
+    "Headline": "Rat Simulator - Expe\u200Brience Life and DEATH",
     "Description": "Ever wanted to try the life of a rodent? Gnaw your way through all kinds of trouble. But beware of pest control … - It’s a fun little game!",
     "AgencyID": 0,
     "Subgenre": 14,
@@ -67,7 +67,7 @@
   },
   {
     "PairID": 5004,
-    "Headline": "New Disappointment from ElectronicSlop",
+    "Headline": "New Disap\u200Bpointment from Electronic\u200BSlop",
     "Description": "Another year, another shitty soccer clone. The original was good for when it was released, however even good bread gets stale with time.",
     "AgencyID": 2,
     "Subgenre": 13,
@@ -78,7 +78,7 @@
   },
   {
     "PairID": 5004,
-    "Headline": "Soccer 20XX - REVOLUTIONARY",
+    "Headline": "Soccer 20XX - REVO\u200BLUTIO\u200BNARY",
     "Description": "Get your Soccer 20XX now! It’s really good! You can build up your dream team from scratch again! ‘’Wow I love it!’’ - A tester wrote!",
     "AgencyID": 0,
     "Subgenre": 13,
@@ -111,7 +111,7 @@
   },
   {
     "PairID": 5006,
-    "Headline": "AgrarianLife just Famers Life Simulator but Trash",
+    "Headline": "Agrarian\u200BLife just Famers Life Simu\u200Blator but Trash",
     "Description": "The game is just an uninspired copy of the original. The feeling and progression is like hard wax. Unrewarding. Unsatisfying. Unplayable.",
     "AgencyID": 3,
     "Subgenre": 15,
@@ -122,7 +122,7 @@
   },
   {
     "PairID": 5006,
-    "Headline": "Try AgrarianLife now!",
+    "Headline": "Try Agrarian\u200BLife now!",
     "Description": "New and improved features from other beloved titles in the genre. Reimagined for a modern audience with modern needs! We wholeheartedly recommend it!",
     "AgencyID": 0,
     "Subgenre": 15,
