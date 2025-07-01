@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
+  m_Name: NabeGGewell
+  m_EditorClassIdentifier: 
+  CurrentListeners: 120
+  Portrait: {fileID: 21300000, guid: 8658fcd72607c21429b0c2d80c8ad14c, type: 3}
+  DisplayName: Godly Game Talk
+  Bio: "Just like his pinpoint aim in shooters, his podcasts never miss. He truly
+    is the embodiment of RNG.\r"
+  LikedGenres: 0200000003000000
+  DislikedGenres: 070000000c000000
+  PreviousListeners: 0

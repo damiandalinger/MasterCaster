@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
+  m_Name: RobBoss
+  m_EditorClassIdentifier: 
+  CurrentListeners: 66
+  Portrait: {fileID: 21300000, guid: c1d21f961af85e848b7970b6091df95e, type: 3}
+  DisplayName: Joy of Gaming
+  Bio: The softest voice in the gaming podcast scene. He brings pure joy to everyone
+    who listens to his podcasts. (Even if happy little accidents happen)
+  LikedGenres: 0100000010000000
+  DislikedGenres: 0700000009000000
+  PreviousListeners: 0
