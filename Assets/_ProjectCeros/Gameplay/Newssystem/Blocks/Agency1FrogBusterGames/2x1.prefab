@@ -140,18 +140,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When you or I play Bloodhunter, we both die. However this guy somehow decided
-    that the normal masochistic tendencies wouldn't be enough.
+  m_text: "Few games manage to tickle the inner masochist but this one manages that!
+    h dpogo sdpfo gpsd pgis gpsdjgp jsd\xF6fs\xF6fkj g\xF6skdj fg\xF6ksd fgksdj gflkjs"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ef09726c95023e4ebb435d96376cb48, type: 2}
-  m_sharedMaterial: {fileID: -1419151651651250495, guid: 0ef09726c95023e4ebb435d96376cb48, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07b2215b8c06e424598cf325dc63f03a, type: 2}
+  m_sharedMaterial: {fileID: -9092478449822909630, guid: 07b2215b8c06e424598cf325dc63f03a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286563535
-  m_fontColor: {r: 0.8117648, g: 0.7686275, b: 0.49803925, a: 1}
+    rgba: 4287555583
+  m_fontColor: {r: 1, g: 0.90588236, b: 0.5568628, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -168,8 +168,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -246,8 +246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 104.682175, y: 236.92433}
-  m_SizeDelta: {x: 209.1979, y: 26.218}
+  m_AnchoredPosition: {x: 122.92766, y: 236.92433}
+  m_SizeDelta: {x: 246.8145, y: 26.218}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1179951721837100904
 CanvasRenderer:
@@ -277,10 +277,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FrogBusterGameNews
+  m_text: Frog Buster News
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ef09726c95023e4ebb435d96376cb48, type: 2}
-  m_sharedMaterial: {fileID: -1419151651651250495, guid: 0ef09726c95023e4ebb435d96376cb48, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 302ed3eadd792c34db590892a99d8a54, type: 2}
+  m_sharedMaterial: {fileID: 8686812556716914132, guid: 302ed3eadd792c34db590892a99d8a54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -304,8 +304,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 6, y: 4, z: 4, w: 0}
+  m_margin: {x: 10, y: 4, z: 4, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -418,7 +418,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 129.79681}
-  m_SizeDelta: {x: 510, y: 89.7385}
+  m_SizeDelta: {x: 510, y: 97.2229}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &1707552959468236262
 CanvasRenderer:
@@ -450,15 +450,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u2018LetMeSpeedrunIt\u2019 - Boy did he speedrun it"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ef09726c95023e4ebb435d96376cb48, type: 2}
-  m_sharedMaterial: {fileID: -1419151651651250495, guid: 0ef09726c95023e4ebb435d96376cb48, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 302ed3eadd792c34db590892a99d8a54, type: 2}
+  m_sharedMaterial: {fileID: 8686812556716914132, guid: 302ed3eadd792c34db590892a99d8a54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286629328
-  m_fontColor: {r: 0.81568635, g: 0.7725491, b: 0.5019608, a: 1}
+    rgba: 4287555583
+  m_fontColor: {r: 1, g: 0.90588236, b: 0.5568628, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -475,8 +475,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 4, y: 8, z: 4, w: 0}
+  m_margin: {x: 12, y: 8, z: 12, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

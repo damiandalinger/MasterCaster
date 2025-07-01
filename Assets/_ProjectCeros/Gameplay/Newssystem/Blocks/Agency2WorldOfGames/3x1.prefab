@@ -175,10 +175,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: so you like elderly ring ? hi ich bin
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b5e22f863200a3341b963c048e267a31, type: 2}
-  m_sharedMaterial: {fileID: 5932050196733558573, guid: b5e22f863200a3341b963c048e267a31, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6354bc6e3b3ba984b98a8d8c5ead3669, type: 2}
+  m_sharedMaterial: {fileID: -6420778862385758668, guid: 6354bc6e3b3ba984b98a8d8c5ead3669, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -313,8 +313,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: WorldOfGames
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b5e22f863200a3341b963c048e267a31, type: 2}
-  m_sharedMaterial: {fileID: 5932050196733558573, guid: b5e22f863200a3341b963c048e267a31, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6354bc6e3b3ba984b98a8d8c5ead3669, type: 2}
+  m_sharedMaterial: {fileID: -6420778862385758668, guid: 6354bc6e3b3ba984b98a8d8c5ead3669, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -338,8 +338,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -416,8 +416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 770, y: 173.7059}
+  m_AnchoredPosition: {x: 0, y: 22.748108}
+  m_SizeDelta: {x: 770, y: 122.312}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &8756217743077973960
 CanvasRenderer:
@@ -447,17 +447,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'New Textso you like elderly ring ? hi ich bin so you like elderly ring
+    ? hi ich bin so you like elderly ring ? hi ich bin so you like elderly ring ?
+    hi ich bin '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b5e22f863200a3341b963c048e267a31, type: 2}
-  m_sharedMaterial: {fileID: 5932050196733558573, guid: b5e22f863200a3341b963c048e267a31, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
+  m_sharedMaterial: {fileID: 3550940729943828915, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278255874
+  m_fontColor: {r: 0.007843138, g: 0.003921569, b: 0.003921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -474,8 +476,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

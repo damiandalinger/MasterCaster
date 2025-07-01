@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 264.7742}
+  m_AnchoredPosition: {x: 0, y: 21.63379}
+  m_SizeDelta: {x: 250, y: 234.2324}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &960357300629147973
 CanvasRenderer:
@@ -68,15 +68,15 @@ MonoBehaviour:
   m_text: 'If you enjoyed ElderlyRing you can enjoy presumably a few dozen copies
     of the game. However, now comes the best part - they are all trash! '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b5e22f863200a3341b963c048e267a31, type: 2}
-  m_sharedMaterial: {fileID: 5932050196733558573, guid: b5e22f863200a3341b963c048e267a31, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
+  m_sharedMaterial: {fileID: 3550940729943828915, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278255874
+  m_fontColor: {r: 0.007843138, g: 0.003921569, b: 0.003921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -239,8 +239,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: WorldOfGames
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b5e22f863200a3341b963c048e267a31, type: 2}
-  m_sharedMaterial: {fileID: 5932050196733558573, guid: b5e22f863200a3341b963c048e267a31, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6354bc6e3b3ba984b98a8d8c5ead3669, type: 2}
+  m_sharedMaterial: {fileID: -6420778862385758668, guid: 6354bc6e3b3ba984b98a8d8c5ead3669, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -264,8 +264,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -448,10 +448,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: So you like Elderly Ring ?
+  m_text: 'so you like elderly ring ? hi ich bin '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b5e22f863200a3341b963c048e267a31, type: 2}
-  m_sharedMaterial: {fileID: 5932050196733558573, guid: b5e22f863200a3341b963c048e267a31, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6354bc6e3b3ba984b98a8d8c5ead3669, type: 2}
+  m_sharedMaterial: {fileID: -6420778862385758668, guid: 6354bc6e3b3ba984b98a8d8c5ead3669, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -475,15 +475,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

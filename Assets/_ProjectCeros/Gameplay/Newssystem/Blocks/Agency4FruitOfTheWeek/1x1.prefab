@@ -125,7 +125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7462355130893504524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -175,8 +175,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "fr\xFCchte sind cool weil man kann sie gut essen und sie sind lecker"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2f384e140cc88bf45b026a2a50ae1c45, type: 2}
-  m_sharedMaterial: {fileID: 4044078253374317034, guid: 2f384e140cc88bf45b026a2a50ae1c45, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07b2215b8c06e424598cf325dc63f03a, type: 2}
+  m_sharedMaterial: {fileID: -9092478449822909630, guid: 07b2215b8c06e424598cf325dc63f03a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

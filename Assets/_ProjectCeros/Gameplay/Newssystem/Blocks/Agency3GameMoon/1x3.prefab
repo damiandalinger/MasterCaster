@@ -65,17 +65,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'If you enjoyed ElderlyRing you can enjoy presumably a few dozen copies
+    of the game. However, now comes the best part - they are all trash! '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: abc3b04d2c9daca47aa1dacee699dd24, type: 2}
-  m_sharedMaterial: {fileID: 6543922290652671739, guid: abc3b04d2c9daca47aa1dacee699dd24, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 60f705ff94730e74db770db9b11fc293, type: 2}
+  m_sharedMaterial: {fileID: -5075912412124597367, guid: 60f705ff94730e74db770db9b11fc293, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282982405
-  m_fontColor: {r: 0.019607844, g: 0.1254902, b: 0.28627452, a: 1}
+    rgba: 4282719756
+  m_fontColor: {r: 0.047058824, g: 0.11764706, b: 0.27058825, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -104,7 +105,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 15
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 16, y: 0, z: 16, w: 14}
+  m_margin: {x: 18, y: 6, z: 18, w: 14}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -236,17 +237,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'New Text
+
+    sdf
+
+    sdf
+
+    sdf
+
+    sdf
+
+    s'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3f462c0a7ab62a748814d6fb54ae3315, type: 2}
-  m_sharedMaterial: {fileID: 705553545981472832, guid: 3f462c0a7ab62a748814d6fb54ae3315, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36098f4c220a47f4fb438502da974d9f, type: 2}
+  m_sharedMaterial: {fileID: -1550732813746325932, guid: 36098f4c220a47f4fb438502da974d9f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4292473599
+  m_fontColor: {r: 1, g: 0.9490196, b: 0.8509804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -263,8 +274,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 29
+  m_fontSizeBase: 29
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -374,8 +385,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GameMoon
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3f462c0a7ab62a748814d6fb54ae3315, type: 2}
-  m_sharedMaterial: {fileID: 705553545981472832, guid: 3f462c0a7ab62a748814d6fb54ae3315, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36098f4c220a47f4fb438502da974d9f, type: 2}
+  m_sharedMaterial: {fileID: -1550732813746325932, guid: 36098f4c220a47f4fb438502da974d9f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
