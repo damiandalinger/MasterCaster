@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
+  m_Name: SO_Cuphead
+  m_EditorClassIdentifier: 
+  Name: Cuphead
+  Description: Cuphead the cup that is a head
+  Topic: RPG
+  Modifier: 1.5
+  Chance: 0.24157304
+  GuestID: 2
+  CooldownCounter: 2
+  Rating: 2
+  Fee: 2000
+  TopicID: 4
+  GuestSprite: {fileID: 21300000, guid: c1d21f961af85e848b7970b6091df95e, type: 3}
+  isRequested: 0
+  hasAccepted: 1
+  isOnCooldown: 1
