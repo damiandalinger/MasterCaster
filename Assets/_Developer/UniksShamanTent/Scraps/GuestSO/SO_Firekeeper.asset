@@ -17,7 +17,7 @@ MonoBehaviour:
   Topic: RPG
   Modifier: 1.5
   Chance: 0.24157304
-  GuestID: 3
+  GuestID: 10
   CooldownCounter: 1
   Rating: 3
   Fee: 2000
