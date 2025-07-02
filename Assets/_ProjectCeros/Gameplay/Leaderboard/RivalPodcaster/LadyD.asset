@@ -12,13 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
   m_Name: LadyD
   m_EditorClassIdentifier: 
-  CurrentListeners: 200
+  InitialListener: 14
+  InitialRank: 8
   Portrait: {fileID: 21300000, guid: a8878ece3873ee444a7311200657a10e, type: 3}
   DisplayName: Abducting new Worlds
+  PersonName: Lady D
   Bio: 'She loves to dominate the NPCs in her favorite RPGs, effortlessly building
     power both in the game and with her podcast.
 
 '
   LikedGenres: 010000000e000000
-  DislikedGenres: 0500000008000000
-  PreviousListeners: 0
+  DislikedGenres: 0600000008000000
+  CurrentRank: 2
+  PreviousRank: 3
+  CurrentListener: 0
+  RankChange: 0

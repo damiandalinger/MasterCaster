@@ -12,13 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
   m_Name: EGirl
   m_EditorClassIdentifier: 
-  CurrentListeners: 10
+  InitialListener: 1000
+  InitialRank: 1
   Portrait: {fileID: 21300000, guid: a463046c257f3af45bdf451d031aca42, type: 3}
   DisplayName: Glamorous Talk
+  PersonName: E-Girl
   Bio: 'She has a knack for turning charm into cold, hard cash, adores cute presents,
     and yes, even makes money selling her bathwater.
 
 '
   LikedGenres: 0700000009000000
   DislikedGenres: 030000000f000000
-  PreviousListeners: 0
+  CurrentRank: 8
+  PreviousRank: 9
+  CurrentListener: 0
+  RankChange: -1

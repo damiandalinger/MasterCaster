@@ -30,6 +30,9 @@ namespace ProjectCeros
 
             var reshuffler = FindFirstObjectByType<NewsDatabaseReshuffler>();
             reshuffler?.RefreshAllPools();
+
+            var leaderboard = FindFirstObjectByType<LeaderboardManager>();
+            leaderboard?.InitializeAllPodcasters();
         }
 
         // Raises an event signaling that a new game has started.

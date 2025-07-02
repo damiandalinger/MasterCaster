@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  InitialListener: 0
+  InitialRank: 11
+  Portrait: {fileID: 21300000, guid: 011e4f755a2732a4bbf69939139b643b, type: 3}
+  DisplayName: Uniks KKK Talk
+  PersonName: Ngoc Ngoc Cock
+  Bio: Listen to the yapping of the famous Unik the frickin nigger legend and Lena
+    the vietlomese frog suckin star
+  LikedGenres: 
+  DislikedGenres: 
+  CurrentRank: 8
+  PreviousRank: 10
+  CurrentListener: 22
+  RankChange: 1

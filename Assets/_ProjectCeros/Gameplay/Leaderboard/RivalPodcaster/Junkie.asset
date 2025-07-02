@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
   m_Name: Junkie
   m_EditorClassIdentifier: 
-  CurrentListeners: 70
+  InitialListener: 100
+  InitialRank: 4
   Portrait: {fileID: 21300000, guid: 28ea31fbdeb54db42bc49177bc324f7d, type: 3}
   DisplayName: Games as Drugs
+  PersonName: Junkie
   Bio: "Don\u2019t be fooled by his looks. He\u2019s incredibly sharp and never misses
     the release of a new strategy game.\r\n"
   LikedGenres: 0c0000000f000000
-  DislikedGenres: 0600000012000000
-  PreviousListeners: 0
+  DislikedGenres: 0500000012000000
+  CurrentRank: 5
+  PreviousRank: 6
+  CurrentListener: 0
+  RankChange: 0

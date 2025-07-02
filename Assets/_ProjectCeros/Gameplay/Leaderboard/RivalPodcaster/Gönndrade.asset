@@ -12,13 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
   m_Name: "G\xF6nndrade"
   m_EditorClassIdentifier: 
-  CurrentListeners: 100
+  InitialListener: 10
+  InitialRank: 9
   Portrait: {fileID: 21300000, guid: 1c3c6733309dc324e91b5adfb7088776, type: 3}
   DisplayName: "G\xF6nndrade Podcast"
+  PersonName: "G\xF6nndrade"
   Bio: 'Strong dedication to indie games. He will do anything to promote every indie
     game ever released.
 
 '
   LikedGenres: 0a00000011000000
   DislikedGenres: 0100000004000000
-  PreviousListeners: 0
+  CurrentRank: 4
+  PreviousRank: 5
+  CurrentListener: 0
+  RankChange: -1

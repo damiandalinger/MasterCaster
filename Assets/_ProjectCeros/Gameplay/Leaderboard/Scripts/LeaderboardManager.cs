@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-using ProjectCeros;
 
 namespace ProjectCeros
 {
@@ -10,42 +9,57 @@ namespace ProjectCeros
         [Header("Rival Podcasters")]
         public List<RivalPodcaster> rivalPodcasters;
 
-        [Header("Player Data")]
-        public IntVariable playerListeners;
-        public string playerName;
-        public Sprite playerPortrait;
+        [Header("Player as Podcaster")]
+        public RivalPodcaster playerPodcaster; // Neuer: Spieler als SO
+
+        [Header("Player Listener Data")]
+        public IntVariable playerListeners; // Wird in CurrentListener geschrieben
 
         [Header("News Data")]
-        public ArticleDatabase activeArticles; // <- Das ist jetzt dein RuntimeSet
+        public ArticleDatabase activeArticles;
 
         private const float INCREASE_MULTIPLIER = 1.02f;
         private const float DECREASE_MULTIPLIER = 0.98f;
 
-        public struct LeaderboardEntry
+        public int PlayerRank { get; private set; }
+
+        public void InitializeAllPodcasters()
         {
-            public string name;
-            public Sprite portrait;
-            public int listeners;
-            public bool isPlayer;
+            // Initialisiere Rivalen & Spieler
+            foreach (var rival in rivalPodcasters)
+                rival.InitializeRuntime();
+
+            if (playerPodcaster != null)
+            {
+                playerPodcaster.InitializeRuntime();
+                playerPodcaster.CurrentListener = playerListeners.RuntimeValue;
+            }
+
+            PlayerRank = -1;
+
+            Debug.Log("Leaderboard initialized.");
         }
 
-        public List<LeaderboardEntry> CurrentLeaderboard { get; private set; } = new();
-        void Start()
-        {
-            
-        }
         public void UpdateLeaderboard()
         {
-            var articles = activeArticles.Items; // Zugriff auf RuntimeSet-Inhalte
+            var articles = activeArticles.Items;
 
-            // 1. Rival Listener-Berechnung
+            // 1. Alte Ränge sichern
+            var allPodcasters = new List<RivalPodcaster>(rivalPodcasters);
+            if (playerPodcaster != null)
+                allPodcasters.Add(playerPodcaster);
+
+            foreach (var rival in allPodcasters)
+            {
+                if (rival.CurrentRank > 0)
+                    rival.PreviousRank = rival.CurrentRank;
+            }
+
+            // 2. Listenerzahlen für Rivalen aktualisieren
             foreach (var rival in rivalPodcasters)
             {
-                rival.PreviousListeners = rival.CurrentListeners;
-
                 bool hasPositive = rival.LikedGenres.Any(g =>
                     articles.Any(a => a.Subgenre == g && a.ValuePositive > 0));
-
                 bool hasNegative = rival.DislikedGenres.Any(g =>
                     articles.Any(a => a.Subgenre == g && a.ValueNegative > 0));
 
@@ -53,65 +67,37 @@ namespace ProjectCeros
                 if (hasPositive && !hasNegative) multiplier = INCREASE_MULTIPLIER;
                 else if (!hasPositive && hasNegative) multiplier = DECREASE_MULTIPLIER;
 
-                rival.CurrentListeners = Mathf.RoundToInt(rival.CurrentListeners * multiplier);
+                rival.CurrentListener = Mathf.RoundToInt(rival.CurrentListener * multiplier);
             }
 
-            // 2. Liste für Sortierung zusammenstellen
-            var allEntries = new List<LeaderboardEntry>();
-
-            // Spieler einfügen
-            allEntries.Add(new LeaderboardEntry
+            // 3. Spieler-Listener auf aktuellen Wert setzen
+            if (playerPodcaster != null)
             {
-                name = playerName,
-                portrait = playerPortrait,
-                listeners = playerListeners.RuntimeValue,
-                isPlayer = true
-            });
-
-            // Rivalen einfügen
-            foreach (var rival in rivalPodcasters)
-            {
-                allEntries.Add(new LeaderboardEntry
-                {
-                    name = rival.DisplayName,
-                    portrait = rival.Portrait,
-                    listeners = rival.CurrentListeners,
-                    isPlayer = false
-                });
+                playerPodcaster.CurrentListener = playerListeners.RuntimeValue;
             }
 
-            // 3. Sortieren
-            CurrentLeaderboard = allEntries
-                .OrderByDescending(e => e.listeners)
+            // 4. Sortieren nach Hörerzahl
+            var sorted = allPodcasters
+                .OrderByDescending(r => r.CurrentListener)
                 .ToList();
 
-            // 4. Spieler-Rang debuggen
-            int playerRank = CurrentLeaderboard.FindIndex(e => e.isPlayer) + 1;
-            Debug.Log("Neuer Spieler-Rang: " + playerRank);
-        }
-
-        [ContextMenu("Debug Leaderboard Order")]
-        public void DebugLeaderboardOrder()
-        {
-            if (CurrentLeaderboard == null || CurrentLeaderboard.Count == 0)
+            // 5. Ränge zuweisen & RankChange berechnen
+            for (int i = 0; i < sorted.Count; i++)
             {
-                Debug.LogWarning("Leaderboard is empty. Updating first...");
-                UpdateLeaderboard();
+                var rival = sorted[i];
+                rival.CurrentRank = i + 1;
+
+                rival.RankChange = rival.PreviousRank <= 0
+                    ? 2
+                    : rival.PreviousRank > rival.CurrentRank ? 1
+                    : rival.PreviousRank < rival.CurrentRank ? 3
+                    : 2;
+
+                if (rival == playerPodcaster)
+                    PlayerRank = rival.CurrentRank;
             }
 
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            sb.AppendLine("==== Current Leaderboard ====");
-
-            for (int i = 0; i < CurrentLeaderboard.Count; i++)
-            {
-                var entry = CurrentLeaderboard[i];
-                string marker = entry.isPlayer ? "[PLAYER] " : "";
-                sb.AppendLine($"{i + 1}. {marker}{entry.name} – {entry.listeners:N0} listeners");
-            }
-
-            sb.AppendLine("=============================");
-
-            Debug.Log(sb.ToString());
+            Debug.Log("Neuer Spieler-Rang: " + PlayerRank);
         }
     }
 }
