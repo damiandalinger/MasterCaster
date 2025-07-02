@@ -13,7 +13,7 @@ using System.Collections.Generic;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Events/Float Game Event")]
+    [CreateAssetMenu(menuName = "Parameter Events/Int Game Event")]
     public class IntGameEvent : ScriptableObject
     {
         // The list of listeners that this event will notify if it is raised.

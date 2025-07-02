@@ -63,7 +63,8 @@ namespace ProjectCeros
         [Tooltip("If true, the guest is currently unavailable.")]
         public bool isOnCooldown;
 
-
+        [Tooltip("If true, the guest's preferred topic is shown in the UI.")]
+        public bool wasInterviewed;
 
 
 
