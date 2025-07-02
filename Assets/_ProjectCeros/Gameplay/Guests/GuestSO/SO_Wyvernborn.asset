@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
+  m_Name: SO_Wyvernborn
+  m_EditorClassIdentifier: 
+  Name: Wyvernborn
+  Description: You would think that being the reincarnation of a literal god would
+    have its perks, Wyvernborn however has truly never felt that privilege. He too
+    gets bullied by the guards like any other citizen and thieves still think they
+    have a chance against this hulking mass of killing power and thundering voice.
+  Topic: Action
+  Modifier: 0.2
+  Chance: 0.175
+  GuestID: 8
+  CooldownCounter: 0
+  Rating: 3
+  Fee: 0
+  TopicID: 1
+  GuestSprite: {fileID: 21300000, guid: f827ad85a3534e24fb2c733c2c9c97c2, type: 3}
+  isRequested: 0
+  hasAccepted: 0
+  isOnCooldown: 0
+  wasInterviewed: 0

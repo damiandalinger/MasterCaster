@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
+  m_Name: SO_Inhabitant
+  m_EditorClassIdentifier: 
+  Name: Inhabitant
+  Description: Surprisingly content with their life in the sheer endless world they
+    live in, these gentlemen are perplexingly useful. Always happy to live in tiny
+    spaces if need be and ready to give in to their sheer endless greed for shiny
+    gemstones - They truly represent the epitome of capitalism.
+  Topic: Indie
+  Modifier: 0.03
+  Chance: 0.25
+  GuestID: 4
+  CooldownCounter: 0
+  Rating: 1
+  Fee: 0
+  TopicID: 2
+  GuestSprite: {fileID: 21300000, guid: 1558c50d8f523f1498085a6d4fad8de7, type: 3}
+  isRequested: 0
+  hasAccepted: 0
+  isOnCooldown: 0
+  wasInterviewed: 0
