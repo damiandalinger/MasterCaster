@@ -1,0 +1,48 @@
+{
+  "welcome": ["Alright, alright, are you all ready for a new episode of the most incredible <Podcastname>?", "Hello and wel1come good folks! It is time for another episode of <Podcastname>!"],
+  "goodbye": ["Bye!", "See you!"],
+  "topics": [
+    {
+      "topicName": "Action",
+      "messages": {
+        "positive": ["1Magic is awesome!", "2You love magic!"],
+        "negative": ["3Magic is dangerous.", "4Be careful with magic."]
+      }
+    },
+    {
+      "topicName": "Indie",
+      "messages": {
+        "positive": ["5You fight well!", "6Combat is your strength!"],
+        "negative": ["7Be careful in combat.", "8Combat is risky."]
+      }
+    },
+    {
+      "topicName": "RPG",
+      "messages": {
+        "positive": ["9You fight well!", "10Combat is your strength!"],
+        "negative": ["11Be careful in combat.", "12Combat is risky."]
+      }
+    },
+    {
+      "topicName": "Shooter",
+      "messages": {
+        "positive": ["13You fight well!", "14Combat is your strength!"],
+        "negative": ["15Be careful in combat.", "16Combat is risky."]
+      }
+    },
+    {
+      "topicName": "Simulation",
+      "messages": {
+        "positive": ["17You fight well!", "18Combat is your strength!"],
+        "negative": ["19Be careful in combat.", "20Combat is risky."]
+      }
+    },
+    {
+      "topicName": "Strategy",
+      "messages": {
+        "positive": ["21You fight well!", "22Combat is your strength!"],
+        "negative": ["23Be careful in combat.", "24Combat is risky."]
+      }
+    }
+  ]
+}
