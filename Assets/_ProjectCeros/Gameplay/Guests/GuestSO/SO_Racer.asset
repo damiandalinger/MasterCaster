@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
+  m_Name: SO_Racer
+  m_EditorClassIdentifier: 
+  Name: Racer
+  Description: Always traveling between space and time surely has a big impact on
+    the brain of an individual. However in Racers' case there haven't been any big
+    signs yet. Apart from her being a quick talker, or quick runner, or being impatient.
+    Apart from those things nothing major has happened yet.
+  Topic: Simulation
+  Modifier: 0.1
+  Chance: 0.175
+  GuestID: 5
+  CooldownCounter: 0
+  Rating: 2
+  Fee: 0
+  TopicID: 5
+  GuestSprite: {fileID: 21300000, guid: 8469109923ee8a04898ccc7404273cb0, type: 3}
+  isRequested: 0
+  hasAccepted: 0
+  isOnCooldown: 0
+  wasInterviewed: 0

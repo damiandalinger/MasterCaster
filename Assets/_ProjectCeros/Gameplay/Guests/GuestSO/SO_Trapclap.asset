@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
+  m_Name: SO_Trapclap
+  m_EditorClassIdentifier: 
+  Name: Trapclap
+  Description: Some might call him a guest for the podcast, others call him a plague
+    for any sane person. The rusty exterior really sells the love this little robot
+    receives, the only thing that somewhat fits still is his eye that has masterfully
+    been reintroduced into his system.
+  Topic: Action
+  Modifier: -0.2
+  Chance: 0.95
+  GuestID: 1
+  CooldownCounter: 0
+  Rating: 0
+  Fee: 0
+  TopicID: 1
+  GuestSprite: {fileID: 21300000, guid: ccd2e6fa2a2132140b3b614e4d9bf2b1, type: 3}
+  isRequested: 0
+  hasAccepted: 0
+  isOnCooldown: 0
+  wasInterviewed: 0

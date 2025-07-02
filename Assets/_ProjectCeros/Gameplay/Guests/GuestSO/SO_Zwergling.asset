@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
+  m_Name: SO_Zwergling
+  m_EditorClassIdentifier: 
+  Name: Zwergling
+  Description: Grhrhrhhawhrhrwh Grgwe Hrurgrgruru Rgewewgrgwe!! Grwerwhhrhe Gfrehehrher
+    Grhe Gwwrhwrhw?! Grgwe Gregreghrh Hrurgrgruru Grhrh Gwewgrg Rwewgrghg Grhe. Ghrhrhhawhrhrwh
+    Hwhhrh Grhrhrhhe Rwehgerhge Rwehggheege!?
+  Topic: Shooter
+  Modifier: 0.03
+  Chance: 0.25
+  GuestID: 2
+  CooldownCounter: 0
+  Rating: 1
+  Fee: 0
+  TopicID: 4
+  GuestSprite: {fileID: 21300000, guid: 01200e265adeca84b9a1d93ac71cd470, type: 3}
+  isRequested: 0
+  hasAccepted: 0
+  isOnCooldown: 0
+  wasInterviewed: 0
