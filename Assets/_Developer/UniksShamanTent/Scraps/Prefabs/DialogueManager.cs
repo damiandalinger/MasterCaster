@@ -222,7 +222,7 @@ namespace ProjectCeros
 
             int index = UnityEngine.Random.Range(0, list.Length);
 
-            Debug.Log(list[index]);
+           // Debug.Log(list[index]);
 
             return list[index];
         }

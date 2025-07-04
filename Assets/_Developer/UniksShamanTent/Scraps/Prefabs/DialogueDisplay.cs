@@ -29,6 +29,10 @@ namespace ProjectCeros
 
         [SerializeField] private GuestDatabaseSO _allguests;
 
+        private Color colorPlayer = Color.black;
+        private Color colorGuest = new Color(0.1f, 0.1f, 0.4f); // dark blue
+        private bool toggleState = false;
+
         void Start()
         {
             FindAccptedGuest();
@@ -100,7 +104,7 @@ namespace ProjectCeros
             yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
         }
 
-         IEnumerator StartDialogueGuestSequence()
+        IEnumerator StartDialogueGuestSequence()
         {
             DetermineTopic(_topicID.Value);
             DetermineSpin(_spinID.Value);
@@ -133,7 +137,7 @@ namespace ProjectCeros
             dialogueSegments = new string[] { PlayerHelloMsg, GuestHelloMsg, PlayerMainMsg, GuestMainMsg, PlayerbyeMsg, GuestByeMsg };
             currentSegmentIndex = 0;
 
-            
+
 
             yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
         }
@@ -156,6 +160,14 @@ namespace ProjectCeros
                     currentSegmentIndex++;
                     if (currentSegmentIndex < dialogueSegments.Length)
                     {
+                        // Toggle the speaker flag
+                        toggleState = !toggleState;
+
+                        // Change text color depending on who's speaking
+                        dialogueText.color = toggleState
+                            ? new Color(0.0f, 0.1f, 0.4f) // Guest: dark blue
+                            : Color.black;               // Player: black
+
                         StartCoroutine(TypeDialogue(dialogueSegments[currentSegmentIndex]));
                     }
                     else
@@ -171,6 +183,8 @@ namespace ProjectCeros
         {
             isTyping = true;
             dialogueText.text = "";
+
+            Debug.Log($"Typing new dialogue segment: {segment}");
 
             foreach (char c in segment)
             {
