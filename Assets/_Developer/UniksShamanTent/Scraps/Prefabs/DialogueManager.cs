@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using System;
 
 namespace ProjectCeros
 {
@@ -12,7 +13,9 @@ namespace ProjectCeros
 
         [SerializeField] private StringReference _podcastName;
 
-        [SerializeField] private StringReference _guest;
+        //[SerializeField] private StringReference _guest;
+
+
 
         private Dictionary<string, string> dialogueVariables = new Dictionary<string, string>();
 
@@ -22,6 +25,8 @@ namespace ProjectCeros
 
             SetDialogueVariable("Podcastname", _podcastName);
             SetDialogueVariable("PlayerName", "Unik");
+
+
         }
 
         public void SetDialogueVariable(string key, string value)
@@ -66,27 +71,29 @@ namespace ProjectCeros
 
         }
 
+
+
         public string GetTopicMessage(string topic, bool positive)
         {
             if (dialogueData == null || dialogueData.topics == null)
             {
                 Debug.LogWarning("Dialogue data or topics is null");
-                return "";
+                return "???";
             }
 
-            TopicEntry entry = dialogueData.topics.Find(t => t.topicName == topic);
+            Topic entry = Array.Find(dialogueData.topics, t => t.topicName == topic);
             if (entry == null)
             {
                 Debug.LogWarning($"Topic '{topic}' not found");
-                return "";
+                return "???";
             }
 
-            List<string> pool = positive ? entry.messages.positive : entry.messages.negative;
+            string[] pool = positive ? entry.messages.positive : entry.messages.negative;
 
-            if (pool == null || pool.Count == 0)
+            if (pool == null || pool.Length == 0)
             {
                 Debug.LogWarning($"No messages found for topic '{topic}' with sentiment {(positive ? "positive" : "negative")}");
-                return "";
+                return "???";
             }
 
             string chosenMessage = GetRandomFromList(pool);
@@ -96,14 +103,126 @@ namespace ProjectCeros
             return chosenMessage;
         }
 
-        private string GetRandomFromList(List<string> list)
+        public string GetGuestHello(int guestId)
         {
-            if (list == null || list.Count == 0)
-                return "";
+            if (dialogueData == null || dialogueData.topics == null)
+            {
+                Debug.LogWarning("Dialogue data or topics is null");
+                return "???";
+            }
 
-            int index = Random.Range(0, list.Count);
+            GuestAnswer guest = null;
+            foreach (var g in dialogueData.GuestAnswers)
+            {
+                if (g.GuestID == guestId)
+                {
+                    guest = g;
+                    break;
+                }
+            }
+
+            string[] helloPool = guest.Hello;
+            if (helloPool == null || helloPool.Length == 0)
+            {
+                Debug.LogWarning($"No 'Hello' messages found for guest {guestId}");
+                return "???";
+            }
+
+            string chosenMessage = GetRandomFromList(helloPool);
+
+            //Debug.Log($"Selected topic message ({topic} - {(positive ? "positive" : "negative")}): {chosenMessage}");
+
+            return chosenMessage;
+        }
+
+        public string GetGuestMain(int guestId)
+        {
+            if (dialogueData == null || dialogueData.topics == null)
+            {
+                Debug.LogWarning("Dialogue data or topics is null");
+                return "???";
+            }
+
+            GuestAnswer guest = null;
+            foreach (var g in dialogueData.GuestAnswers)
+            {
+                if (g.GuestID == guestId)
+                {
+                    guest = g;
+                    break;
+                }
+            }
+
+            string[] mainPool = guest.personal;
+            if (mainPool == null || mainPool.Length == 0)
+            {
+                Debug.LogWarning($"No 'Hello' messages found for guest {guestId}");
+                return "???";
+            }
+
+            string chosenMessage = GetRandomFromList(mainPool);
+
+            //Debug.Log($"Selected topic message ({topic} - {(positive ? "positive" : "negative")}): {chosenMessage}");
+
+            return chosenMessage;
+        }
+
+        public string GetGuestBye(int guestId)
+        {
+            if (dialogueData == null || dialogueData.topics == null)
+            {
+                Debug.LogWarning("Dialogue data or topics is null");
+                return "???";
+            }
+
+            GuestAnswer guest = null;
+            foreach (var g in dialogueData.GuestAnswers)
+            {
+                if (g.GuestID == guestId)
+                {
+                    guest = g;
+                    break;
+                }
+            }
+
+            string[] byePool = guest.bye;
+            if (byePool == null || byePool.Length == 0)
+            {
+                Debug.LogWarning($"No 'Hello' messages found for guest {guestId}");
+                return "???";
+            }
+
+            string chosenMessage = GetRandomFromList(byePool);
+
+            //Debug.Log($"Selected topic message ({topic} - {(positive ? "positive" : "negative")}): {chosenMessage}");
+
+            return chosenMessage;
+        }
+
+        public string GetRandomGuestWelcome()
+        {
+            return GetRandomFromList(dialogueData?.GuestWelcome);
+        }
+
+        public string GetRandomGuestGoodbye()
+        {
+            return GetRandomFromList(dialogueData?.GuestGoodbye);
+        }
+
+        public string GetRandomGuestMain()
+        {
+            return GetRandomFromList(dialogueData?.GuestMain);
+        }
 
 
+        private string GetRandomFromList(string[] list)
+        {
+            if (list == null || list.Length == 0)
+                return "???";
+
+            int index = UnityEngine.Random.Range(0, list.Length);
+
+            Debug.Log(list[index]);
 
             return list[index];
         }

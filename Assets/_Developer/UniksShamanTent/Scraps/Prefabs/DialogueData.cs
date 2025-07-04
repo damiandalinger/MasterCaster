@@ -3,26 +3,39 @@ using System.Collections.Generic;
 
 namespace ProjectCeros
 {
+[System.Serializable]
+public class DialogueData
+{
+    public string[] welcome;
+    public string[] goodbye;
+    public Topic[] topics;
 
-    [Serializable]
-    public class DialogueData
-    {
-        public List<string> welcome;
-        public List<string> goodbye;
-        public List<TopicEntry> topics;  // Use list instead of dictionary
-    }
+    public string[] GuestWelcome;
+    public string[] GuestMain;
+    public string[] GuestGoodbye;
+    public GuestAnswer[] GuestAnswers;
+}
 
-    [Serializable]
-    public class TopicEntry
-    {
-        public string topicName;        // The name of the topic (like "magic")
-        public TopicMessages messages;  // The messages for this topic
-    }
+[System.Serializable]
+public class Topic
+{
+    public string topicName;
+    public TopicMessages messages;
+}
 
-    [Serializable]
-    public class TopicMessages
-    {
-        public List<string> positive;
-        public List<string> negative;
-    }
+[System.Serializable]
+public class TopicMessages
+{
+    public string[] positive;
+    public string[] negative;
+}
+
+[System.Serializable]
+public class GuestAnswer
+{
+    public int GuestID;
+    public string[] Hello;
+    public string[] personal;
+    public string[] bye;
+}
 }
