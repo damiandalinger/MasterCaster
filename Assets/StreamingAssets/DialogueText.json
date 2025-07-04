@@ -102,7 +102,7 @@
   "GuestAnswers": [
     {
       "GuestID": 1,
-      "Hello": [
+      "hello": [
         "Halts maul limmy",
         "Limmy du schwein"
       ],
@@ -117,7 +117,7 @@
     },
     {
       "GuestID": 2,
-      "Hello": [
+      "hello": [
         "1Magic is awesome!",
         "2You love magic!",
         "negative",

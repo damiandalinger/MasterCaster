@@ -121,7 +121,7 @@ namespace ProjectCeros
                 }
             }
 
-            string[] helloPool = guest.Hello;
+            string[] helloPool = guest.hello;
             if (helloPool == null || helloPool.Length == 0)
             {
                 Debug.LogWarning($"No 'Hello' messages found for guest {guestId}");

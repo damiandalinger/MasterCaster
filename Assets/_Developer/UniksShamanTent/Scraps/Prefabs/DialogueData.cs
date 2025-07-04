@@ -34,7 +34,7 @@ public class TopicMessages
 public class GuestAnswer
 {
     public int GuestID;
-    public string[] Hello;
+    public string[] hello;
     public string[] personal;
     public string[] bye;
 }
