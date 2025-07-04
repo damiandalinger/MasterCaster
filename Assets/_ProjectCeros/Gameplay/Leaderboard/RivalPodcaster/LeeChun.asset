@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
   m_Name: LeeChun
   m_EditorClassIdentifier: 
-  InitialListener: 1
+  InitialListener: 500000
   InitialRank: 10
   Portrait: {fileID: 21300000, guid: 4a3b07c281bd2a24ca7df9311e5f987e, type: 3}
   DisplayName: Fight Talking
   PersonName: Lee Chun
-  Bio: 'She packs a serious punch, leaving a major impact in the gaming podcast world
-    and secretly, she''s a big fan of shooter games.
+  Description: 'She packs a serious punch, leaving a major impact in the gaming podcast
+    world and secretly, she''s a big fan of shooter games.
 
 '
   LikedGenres: 040000000d000000
   DislikedGenres: 0a0000000e000000
-  CurrentRank: 1
-  PreviousRank: 2
-  CurrentListener: 0
-  RankChange: -1
+  CurrentRank: 11
+  PreviousRank: 10
+  CurrentListener: 1
+  RankChange: 3

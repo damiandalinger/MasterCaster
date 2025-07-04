@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
   m_Name: Moodguy
   m_EditorClassIdentifier: 
-  InitialListener: 147
+  InitialListener: 900000
   InitialRank: 3
   Portrait: {fileID: 21300000, guid: a0c63b69b149f9946b2cf21ce6f96cda, type: 3}
   DisplayName: BFP
   PersonName: Moodguy
-  Bio: 'His choice of words is spot-on for any game-related podcast, and he''s also
-    a pretty chill guy to have around.
+  Description: 'His choice of words is spot-on for any game-related podcast, and
+    he''s also a pretty chill guy to have around.
 
 '
   LikedGenres: 0600000012000000
   DislikedGenres: 0b00000011000000
-  CurrentRank: 0
-  PreviousRank: 1
-  CurrentListener: 0
-  RankChange: 0
+  CurrentRank: 3
+  PreviousRank: 3
+  CurrentListener: 147
+  RankChange: 2

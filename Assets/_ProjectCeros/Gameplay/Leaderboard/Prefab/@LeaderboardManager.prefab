@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e51ae04b7073734abbfa30c457e088d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rivalPodcasters:
+  _rivalPodcasters:
   - {fileID: 11400000, guid: 827b480501a7ddd4ca4cfebceab8d2f8, type: 2}
   - {fileID: 11400000, guid: 36584af8c103d114dbb043914ba10be3, type: 2}
   - {fileID: 11400000, guid: 22cb7e6a718c02e45b7b91e270f81a2c, type: 2}
@@ -57,9 +57,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: efaf684877cae1f4db93d13bcad51399, type: 2}
   - {fileID: 11400000, guid: 699ed75e647d9a84fa4ff2f3d674bc1b, type: 2}
   - {fileID: 11400000, guid: 7bec6ef0cce02674ca807c662df919d8, type: 2}
-  playerPodcaster: {fileID: 11400000, guid: d4747cf1947acf5468a4cfbe93f4f088, type: 2}
-  playerListeners: {fileID: 11400000, guid: 10d72ee4fcdb40a408d8314a91b64658, type: 2}
-  activeArticles: {fileID: 11400000, guid: 5927c7122f7723e4c9c565c802275fbc, type: 2}
+  _playerPodcaster: {fileID: 11400000, guid: d4747cf1947acf5468a4cfbe93f4f088, type: 2}
+  _selectedArticles: {fileID: 11400000, guid: 5927c7122f7723e4c9c565c802275fbc, type: 2}
+  _playerListeners:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 10d72ee4fcdb40a408d8314a91b64658, type: 2}
+  _startRank:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 2f30179e985ee5e4390633c692594b6b, type: 2}
+  _climbExponent:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fa2036c3d9cc7e943a654e9a634926cd, type: 2}
+  _increaseMultiplier:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fe6a942b7a3184d42aae1a934c731dc0, type: 2}
+  _decreaseMultiplier:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 923a557b3d73f0047a18885185ef6f5a, type: 2}
 --- !u!114 &1206868188732028004
 MonoBehaviour:
   m_ObjectHideFlags: 0

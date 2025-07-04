@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
   m_Name: KideoHojima
   m_EditorClassIdentifier: 
-  InitialListener: 99
+  InitialListener: 750000
   InitialRank: 5
   Portrait: {fileID: 21300000, guid: 5cde31d1097310849a53ab8adf06a4d7, type: 3}
   DisplayName: Podcast by Kideo Hojima
   PersonName: Kideo Hojima
-  Bio: "He\u2019s proud of his brief cameos in games and won\u2019t stop talking
-    about them. For some reason, he\u2019s obsessed with hiding in boxes.\r\n"
+  Description: "He\u2019s proud of his brief cameos in games and won\u2019t stop
+    talking about them. For some reason, he\u2019s obsessed with hiding in boxes.\r\n"
   LikedGenres: 0500000008000000
   DislikedGenres: 0d00000010000000
-  CurrentRank: 9
-  PreviousRank: 10
-  CurrentListener: 0
-  RankChange: 0
+  CurrentRank: 4
+  PreviousRank: 5
+  CurrentListener: 101
+  RankChange: 1
