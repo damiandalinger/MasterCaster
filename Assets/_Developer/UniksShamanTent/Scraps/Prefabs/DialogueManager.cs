@@ -1,3 +1,11 @@
+/// <summary>
+/// Extracts the proper Dialogues from the DialogueText.json. Replaces keywords and chooses random messages.
+/// </summary>
+
+/// <remarks>
+/// 04/07/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -13,21 +21,31 @@ namespace ProjectCeros
 
         [SerializeField] private StringReference _podcastName;
 
-        //[SerializeField] private StringReference _guest;
+        [SerializeField] private GuestSO _guest;
 
+        [SerializeField] private string[] _placeholder;
 
+        [SerializeField] private string[] _replacement;
 
         private Dictionary<string, string> dialogueVariables = new Dictionary<string, string>();
+
+        [SerializeField] private string[] _guestHello;
+
+        [SerializeField] private string[] _guestPersonal;
+
+        [SerializeField] private string[] _guestBye;
+
+
 
         void Awake()
         {
             LoadDialogueData();
 
             SetDialogueVariable("Podcastname", _podcastName);
-            SetDialogueVariable("PlayerName", "Unik");
-
 
         }
+
+
 
         public void SetDialogueVariable(string key, string value)
         {
@@ -36,6 +54,8 @@ namespace ProjectCeros
 
         public string InjectVariables(string rawText)
         {
+
+
             foreach (var pair in dialogueVariables)
             {
                 string placeholder = $"<{pair.Key}>";
@@ -71,8 +91,6 @@ namespace ProjectCeros
 
         }
 
-
-
         public string GetTopicMessage(string topic, bool positive)
         {
             if (dialogueData == null || dialogueData.topics == null)
@@ -103,101 +121,49 @@ namespace ProjectCeros
             return chosenMessage;
         }
 
-        public string GetGuestHello(int guestId)
+
+
+        public void GetGuestDialogue()
         {
+            SetDialogueVariable("Guest", _guest.Name);
+
+
             if (dialogueData == null || dialogueData.topics == null)
             {
                 Debug.LogWarning("Dialogue data or topics is null");
-                return "???";
+
             }
 
             GuestAnswer guest = null;
             foreach (var g in dialogueData.GuestAnswers)
             {
-                if (g.GuestID == guestId)
+                if (g.GuestID == _guest.GuestID)
                 {
                     guest = g;
                     break;
                 }
             }
 
-            string[] helloPool = guest.hello;
-            if (helloPool == null || helloPool.Length == 0)
-            {
-                Debug.LogWarning($"No 'Hello' messages found for guest {guestId}");
-                return "???";
-            }
-
-            string chosenMessage = GetRandomFromList(helloPool);
-
-            //Debug.Log($"Selected topic message ({topic} - {(positive ? "positive" : "negative")}): {chosenMessage}");
-
-            return chosenMessage;
+            _guestHello = guest.hello;
+            _guestPersonal = guest.personal;
+            _guestBye = guest.bye;
         }
 
-        public string GetGuestMain(int guestId)
+        public string GetGuestHello()
         {
-            if (dialogueData == null || dialogueData.topics == null)
-            {
-                Debug.LogWarning("Dialogue data or topics is null");
-                return "???";
-            }
-
-            GuestAnswer guest = null;
-            foreach (var g in dialogueData.GuestAnswers)
-            {
-                if (g.GuestID == guestId)
-                {
-                    guest = g;
-                    break;
-                }
-            }
-
-            string[] mainPool = guest.personal;
-            if (mainPool == null || mainPool.Length == 0)
-            {
-                Debug.LogWarning($"No 'Hello' messages found for guest {guestId}");
-                return "???";
-            }
-
-            string chosenMessage = GetRandomFromList(mainPool);
-
-            //Debug.Log($"Selected topic message ({topic} - {(positive ? "positive" : "negative")}): {chosenMessage}");
-
-            return chosenMessage;
+            return GetRandomFromList(_guestHello);
         }
 
-        public string GetGuestBye(int guestId)
+        public string GetGuestPersonal()
         {
-            if (dialogueData == null || dialogueData.topics == null)
-            {
-                Debug.LogWarning("Dialogue data or topics is null");
-                return "???";
-            }
-
-            GuestAnswer guest = null;
-            foreach (var g in dialogueData.GuestAnswers)
-            {
-                if (g.GuestID == guestId)
-                {
-                    guest = g;
-                    break;
-                }
-            }
-
-            string[] byePool = guest.bye;
-            if (byePool == null || byePool.Length == 0)
-            {
-                Debug.LogWarning($"No 'Hello' messages found for guest {guestId}");
-                return "???";
-            }
-
-            string chosenMessage = GetRandomFromList(byePool);
-
-            //Debug.Log($"Selected topic message ({topic} - {(positive ? "positive" : "negative")}): {chosenMessage}");
-
-            return chosenMessage;
+            return GetRandomFromList(_guestPersonal);
         }
+
+        public string GetGuestBye()
+        {
+            return GetRandomFromList(_guestBye);
+        }
+
 
         public string GetRandomGuestWelcome()
         {
@@ -214,6 +180,11 @@ namespace ProjectCeros
             return GetRandomFromList(dialogueData?.GuestMain);
         }
 
+        public void SetGuest(GuestSO guest)
+
+        {
+            _guest = guest;
+        }
 
         private string GetRandomFromList(string[] list)
         {
@@ -222,7 +193,7 @@ namespace ProjectCeros
 
             int index = UnityEngine.Random.Range(0, list.Length);
 
-           // Debug.Log(list[index]);
+            // Debug.Log(list[index]);
 
             return list[index];
         }

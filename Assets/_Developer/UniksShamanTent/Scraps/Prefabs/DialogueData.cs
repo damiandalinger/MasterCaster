@@ -1,9 +1,18 @@
+/// <summary>
+/// A class system to load json data into.
+/// </summary>
+
+/// <remarks>
+/// 04/07/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
+
 using System;
-using System.Collections.Generic;
+
 
 namespace ProjectCeros
 {
-[System.Serializable]
+[Serializable]
 public class DialogueData
 {
     public string[] welcome;
@@ -16,21 +25,21 @@ public class DialogueData
     public GuestAnswer[] GuestAnswers;
 }
 
-[System.Serializable]
+[Serializable]
 public class Topic
 {
     public string topicName;
     public TopicMessages messages;
 }
 
-[System.Serializable]
+[Serializable]
 public class TopicMessages
 {
     public string[] positive;
     public string[] negative;
 }
 
-[System.Serializable]
+[Serializable]
 public class GuestAnswer
 {
     public int GuestID;

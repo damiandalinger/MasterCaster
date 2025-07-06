@@ -599,21 +599,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d434dd17c1cb04ba15d5787a78704d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _allguests: {fileID: 11400000, guid: b42925ca3a66c76479834c95dcc590a1, type: 2}
+  _dialogueManager: {fileID: 2046038729}
   dialogueText: {fileID: 317870035}
-  letterDelay: 0.05
+  letterDelay: 0.02
   _topicID:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 3c984cb7f50283e46b7ff6f84897b263, type: 2}
-  _topic: 
   _spinID:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 42ffa4cf2c2ba5b448fcd2ce82cc1da9, type: 2}
+  _topic: 
   _isPositive: 0
   _hasGuest: 0
   _guest: {fileID: 0}
-  _allguests: {fileID: 11400000, guid: b42925ca3a66c76479834c95dcc590a1, type: 2}
+  colorPlayer: {r: 0, g: 0, b: 0, a: 1}
+  colorGuest: {r: 0.18122298, g: 0.18122298, b: 0.7484276, a: 1}
 --- !u!4 &833209736
 Transform:
   m_ObjectHideFlags: 0
@@ -1041,6 +1044,12 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 
     Variable: {fileID: 11400000, guid: 37bfe17c793e00a42aeeae0b7d8ec2e6, type: 2}
+  _guest: {fileID: 0}
+  _placeholder: []
+  _replacement: []
+  _guestHello: []
+  _guestPersonal: []
+  _guestBye: []
 --- !u!4 &2046038730
 Transform:
   m_ObjectHideFlags: 0

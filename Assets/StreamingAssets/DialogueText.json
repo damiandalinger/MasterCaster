@@ -88,31 +88,31 @@
     }
   ],
   "GuestWelcome": [
-    "Moin Thomas!",
-    "Thomas du kek!"
+    "Uh, welcome <Guest>, very glad you could spare the time!",
+    "Good day dear listeners, today we have a special guest with us - <Guest>!"
   ],
   "GuestGoodbye": [
-    "tschues thomas",
-    "komm nie wieder thomas!"
+    "This is where we have to end it sadly and I have to say goodbye to you <Guest>!",
+    "It pains me to say this, but this is the ending of today's episode. A big thanks to <Guest> for coming on the podcast!"
   ],
   "GuestMain": [
-    "magst du gamies?",
+    "Alright, exciting! But let’s talk a bit more about you. What kind of games do you find thrilling? ",
     "Bist du ein fan von <Podcastname>!"
   ],
   "GuestAnswers": [
     {
       "GuestID": 1,
       "hello": [
-        "Halts maul limmy",
-        "Limmy du schwein"
+        "Wow, I’m so glad to be here, my best friend! ",
+        "Alaka-ZAM here I am! I’m such a poet…"
       ],
       "personal": [
-        "Nein ich hasse nur",
-        "Joa geht so"
+        "Something about me? I knew it! You really are my best friend! Now then I will  be generous and tell you - I like the games where I can kill everyone!",
+        "Of course you want to know more about me! We are like two apples from the same tree, like two guns in the hands of a killer. And I really like that, killing. "
       ],
       "bye": [
-        "Auf wiedersehen",
-        "darf ich wieder kommen?"
+        "Eh, Bye bye! …. Do you mind if I stay ?",
+        "Ciao Baby! Please don’t leave me …"
       ]
     },
     {

@@ -1,41 +1,47 @@
+/// <summary>
+/// Handles Dialogue displaying letter by letter and guests changing Color when speaking.
+/// </summary>
+
+/// <remarks>
+/// 04/07/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
-using TMPro; // Use this for TextMeshPro; for regular Text UI use UnityEngine.UI
+using TMPro; 
 using System.Collections;
-using System.Data.Common;
+
 
 namespace ProjectCeros
 {
 
     public class DialogueDisplay : MonoBehaviour
     {
-        public TMP_Text dialogueText;
-        public float letterDelay = 0.05f;
+        [SerializeField] private GuestDatabaseSO _allguests;
+        [SerializeField] private DialogueManager _dialogueManager;
+        [SerializeField] private TMP_Text dialogueText;
+        [SerializeField] private float letterDelay = 0.05f;
 
         private string[] dialogueSegments;
         private int currentSegmentIndex;
         private bool isTyping;
 
         [SerializeField] private IntReference _topicID;
+        [SerializeField] private IntReference _spinID;
 
         [SerializeField] private string _topic;
 
-        [SerializeField] private IntReference _spinID;
-
         [SerializeField] private bool _isPositive;
 
+
         [SerializeField] private bool _hasGuest = false;
-
         [SerializeField] private GuestSO _guest;
-
-        [SerializeField] private GuestDatabaseSO _allguests;
-
-        private Color colorPlayer = Color.black;
-        private Color colorGuest = new Color(0.1f, 0.1f, 0.4f); // dark blue
-        private bool toggleState = false;
+        [SerializeField] private Color colorPlayer = Color.black;
+        [SerializeField] private Color colorGuest = new Color(0.1f, 0.1f, 0.4f); // dark blue
+        private bool _toggleColor = false;
 
         void Start()
         {
-            FindAccptedGuest();
+            FindAcceptedGuest();
 
             // Example: wait for DialogueManager to load data
             if (!_hasGuest)
@@ -47,11 +53,9 @@ namespace ProjectCeros
             {
                 StartCoroutine(StartDialogueGuestSequence());
             }
-
-
         }
 
-        private void FindAccptedGuest()
+        private void FindAcceptedGuest()
         {
             _guest = null;
 
@@ -67,7 +71,6 @@ namespace ProjectCeros
             {
                 _hasGuest = true;
             }
-
         }
 
         IEnumerator StartDialogueSequence()
@@ -82,18 +85,18 @@ namespace ProjectCeros
             // Wait one frame to make sure DialogueManager Awake() ran
             yield return null;
 
-            DialogueManager dm = FindFirstObjectByType<DialogueManager>();
 
-            if (dm == null)
+
+            if (_dialogueManager == null)
             {
                 Debug.LogError("DialogueManager not found!");
                 yield break;
             }
 
             // Prepare dialogue sequence
-            string welcomeMsg = dm.InjectVariables(dm.GetRandomWelcome());
-            string topicMsg = dm.InjectVariables(dm.GetTopicMessage(_topic, _isPositive));
-            string goodbyeMsg = dm.InjectVariables(dm.GetRandomGoodbye());
+            string welcomeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomWelcome());
+            string topicMsg = _dialogueManager.InjectVariables(_dialogueManager.GetTopicMessage(_topic, _isPositive));
+            string goodbyeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGoodbye());
 
 
             dialogueSegments = new string[] { welcomeMsg, topicMsg, goodbyeMsg };
@@ -106,33 +109,30 @@ namespace ProjectCeros
 
         IEnumerator StartDialogueGuestSequence()
         {
-            DetermineTopic(_topicID.Value);
-            DetermineSpin(_spinID.Value);
 
-            Debug.Log(_topic);
-            Debug.Log(_isPositive);
-
+            _dialogueManager.SetGuest(_guest);
+            _dialogueManager.GetGuestDialogue();
 
             // Wait one frame to make sure DialogueManager Awake() ran
             yield return null;
 
-            DialogueManager dm = FindFirstObjectByType<DialogueManager>();
 
-            if (dm == null)
+
+            if (_dialogueManager == null)
             {
                 Debug.LogError("DialogueManager not found!");
                 yield break;
             }
 
             // Prepare dialogue sequence
-            string PlayerHelloMsg = dm.InjectVariables(dm.GetRandomGuestWelcome()); //fixed
-            string GuestHelloMsg = dm.InjectVariables(dm.GetGuestHello(_guest.GuestID));
+            string PlayerHelloMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestWelcome()); //fixed
+            string GuestHelloMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestHello());
 
-            string PlayerMainMsg = dm.InjectVariables(dm.GetRandomGuestMain()); //fixed
-            string GuestMainMsg = dm.InjectVariables(dm.GetGuestMain(_guest.GuestID));
+            string PlayerMainMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestMain()); //fixed
+            string GuestMainMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestPersonal());
 
-            string PlayerbyeMsg = dm.InjectVariables(dm.GetRandomGuestGoodbye()); //fixed
-            string GuestByeMsg = dm.InjectVariables(dm.GetGuestBye(_guest.GuestID));
+            string PlayerbyeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestGoodbye()); //fixed
+            string GuestByeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestBye());
 
             dialogueSegments = new string[] { PlayerHelloMsg, GuestHelloMsg, PlayerMainMsg, GuestMainMsg, PlayerbyeMsg, GuestByeMsg };
             currentSegmentIndex = 0;
@@ -160,13 +160,17 @@ namespace ProjectCeros
                     currentSegmentIndex++;
                     if (currentSegmentIndex < dialogueSegments.Length)
                     {
-                        // Toggle the speaker flag
-                        toggleState = !toggleState;
+                        if (_hasGuest)
+                        {
+                            // Toggle the speaker flag
+                            _toggleColor = !_toggleColor;
 
-                        // Change text color depending on who's speaking
-                        dialogueText.color = toggleState
-                            ? new Color(0.0f, 0.1f, 0.4f) // Guest: dark blue
-                            : Color.black;               // Player: black
+                            // Change text color depending on who's speaking
+                            dialogueText.color = _toggleColor
+                                ? colorGuest // Guest: dark blue
+                                : colorPlayer;               // Player: black
+
+                        }
 
                         StartCoroutine(TypeDialogue(dialogueSegments[currentSegmentIndex]));
                     }
