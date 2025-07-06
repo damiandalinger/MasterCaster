@@ -7,7 +7,7 @@
 /// </remarks>
 
 using UnityEngine;
-using TMPro; 
+using TMPro;
 using System.Collections;
 
 
@@ -24,6 +24,7 @@ namespace ProjectCeros
         private string[] dialogueSegments;
         private int currentSegmentIndex;
         private bool isTyping;
+        private bool _isReady;
 
         [SerializeField] private IntReference _topicID;
         [SerializeField] private IntReference _spinID;
@@ -37,9 +38,15 @@ namespace ProjectCeros
         [SerializeField] private GuestSO _guest;
         [SerializeField] private Color colorPlayer = Color.black;
         [SerializeField] private Color colorGuest = new Color(0.1f, 0.1f, 0.4f); // dark blue
+
         private bool _toggleColor = false;
 
         void Start()
+        {
+            SetupDialogue();
+        }
+
+        public void SetupDialogue()
         {
             FindAcceptedGuest();
 
@@ -53,6 +60,8 @@ namespace ProjectCeros
             {
                 StartCoroutine(StartDialogueGuestSequence());
             }
+
+            //AdvanceDialogue();
         }
 
         private void FindAcceptedGuest()
@@ -102,9 +111,10 @@ namespace ProjectCeros
             dialogueSegments = new string[] { welcomeMsg, topicMsg, goodbyeMsg };
             currentSegmentIndex = 0;
 
-            //Debug.Log(topicMsg);
-
-            yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
+            _isReady = true;
+            AdvanceDialogue();
+            //yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
+            //AdvanceDialogue();
         }
 
         IEnumerator StartDialogueGuestSequence()
@@ -138,8 +148,10 @@ namespace ProjectCeros
             currentSegmentIndex = 0;
 
 
-
-            yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
+            _isReady = true;
+            AdvanceDialogue();
+            //yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
+            //AdvanceDialogue();
         }
 
 
@@ -149,38 +161,49 @@ namespace ProjectCeros
             {
                 if (isTyping)
                 {
-                    // Finish instantly
                     StopAllCoroutines();
-                    dialogueText.text = dialogueSegments[currentSegmentIndex];
+                    dialogueText.text = dialogueSegments[currentSegmentIndex - 1]; // display full segment
                     isTyping = false;
                 }
                 else
                 {
-                    // Next segment
-                    currentSegmentIndex++;
-                    if (currentSegmentIndex < dialogueSegments.Length)
-                    {
-                        if (_hasGuest)
-                        {
-                            // Toggle the speaker flag
-                            _toggleColor = !_toggleColor;
-
-                            // Change text color depending on who's speaking
-                            dialogueText.color = _toggleColor
-                                ? colorGuest // Guest: dark blue
-                                : colorPlayer;               // Player: black
-
-                        }
-
-                        StartCoroutine(TypeDialogue(dialogueSegments[currentSegmentIndex]));
-                    }
-                    else
-                    {
-                        Debug.Log("Dialogue finished!");
-                        dialogueText.text = "";
-                    }
+                    AdvanceDialogue();
                 }
             }
+        }
+
+        public void AdvanceDialogue()
+        {
+            if (!_isReady) return;
+
+            if (isTyping) return;
+
+            if (currentSegmentIndex >= dialogueSegments.Length)
+            {
+                dialogueText.text = "";
+                Debug.Log("Dialogue finished!");
+                return;
+            }
+
+            // Decide the color for the current speaker
+            Color currentColor = _hasGuest
+                ? (_toggleColor ? colorGuest : colorPlayer)
+                : colorPlayer;
+
+            // Convert the Color to a hex string for TMPro color tags
+            string hexColor = ColorUtility.ToHtmlStringRGB(currentColor);
+
+            // Wrap the whole dialogue segment in a color tag
+            string coloredSegment = $"<color=#{hexColor}>{dialogueSegments[currentSegmentIndex]}</color>";
+
+            // Toggle the speaker flag if there's a guest
+            if (_hasGuest)
+                _toggleColor = !_toggleColor;
+
+            // Start typing with the colored text
+            StartCoroutine(TypeDialogue(coloredSegment));
+
+            currentSegmentIndex++;
         }
 
         IEnumerator TypeDialogue(string segment)
@@ -201,43 +224,16 @@ namespace ProjectCeros
 
         private void DetermineTopic(int id)
         {
-            if (id == 1)
+            switch (id)
             {
-                _topic = "Action";
-
+                case 1: _topic = "Action"; break;
+                case 2: _topic = "Indie"; break;
+                case 3: _topic = "RPG"; break;
+                case 4: _topic = "Shooter"; break;
+                case 5: _topic = "Simulation"; break;
+                case 6: _topic = "Strategy"; break;
+                case 7: _topic = "???"; break;
             }
-
-            if (id == 2)
-            {
-                _topic = "Indie";
-
-            }
-            if (id == 3)
-            {
-                _topic = "RPG";
-
-            }
-            if (id == 4)
-            {
-                _topic = "Shooter";
-
-            }
-            if (id == 5)
-            {
-                _topic = "Simulation";
-
-            }
-            if (id == 6)
-            {
-                _topic = "Strategy";
-
-            }
-            if (id == 7)
-            {
-                _topic = "???";
-
-            }
-
         }
 
         public void DetermineSpin(int id)

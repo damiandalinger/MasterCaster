@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c6e340bd058fff4184cbce7ebe9df01, type: 2}
   m_sharedMaterial: {fileID: -612114699456370885, guid: 0c6e340bd058fff4184cbce7ebe9df01, type: 2}
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2046038729}
-        m_TargetAssemblyTypeName: ProjectCeros.DialogueManager, Assembly-CSharp
-        m_MethodName: LoadDialogueData
+      - m_Target: {fileID: 833209735}
+        m_TargetAssemblyTypeName: ProjectCeros.DialogueDisplay, Assembly-CSharp
+        m_MethodName: AdvanceDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -922,25 +922,25 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2046038728}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 833209735}
+        m_TargetAssemblyTypeName: ProjectCeros.DialogueDisplay, Assembly-CSharp
+        m_MethodName: SetupDialogue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 833209734}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 833209735}
+        m_TargetAssemblyTypeName: ProjectCeros.DialogueDisplay, Assembly-CSharp
+        m_MethodName: AdvanceDialogue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1117,11 +1117,10 @@ MonoBehaviour:
     ConstantValue: 
     Variable: {fileID: 11400000, guid: 37bfe17c793e00a42aeeae0b7d8ec2e6, type: 2}
   _guest: {fileID: 0}
-  _placeholder: []
-  _replacement: []
   _guestHello: []
   _guestPersonal: []
   _guestBye: []
+  injectedVariableColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &2046038730
 Transform:
   m_ObjectHideFlags: 0

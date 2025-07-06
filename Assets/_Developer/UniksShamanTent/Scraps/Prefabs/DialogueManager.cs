@@ -23,10 +23,6 @@ namespace ProjectCeros
 
         [SerializeField] private GuestSO _guest;
 
-        [SerializeField] private string[] _placeholder;
-
-        [SerializeField] private string[] _replacement;
-
         private Dictionary<string, string> dialogueVariables = new Dictionary<string, string>();
 
         [SerializeField] private string[] _guestHello;
@@ -35,7 +31,7 @@ namespace ProjectCeros
 
         [SerializeField] private string[] _guestBye;
 
-
+        [SerializeField] private Color injectedVariableColor; // Or any default
 
         void Awake()
         {
@@ -54,15 +50,18 @@ namespace ProjectCeros
 
         public string InjectVariables(string rawText)
         {
-
+            string colorHex = ColorUtility.ToHtmlStringRGB(injectedVariableColor);
 
             foreach (var pair in dialogueVariables)
             {
                 string placeholder = $"<{pair.Key}>";
-                rawText = rawText.Replace(placeholder, pair.Value);
+                string coloredValue = $"<color=#{colorHex}>{pair.Value}</color>";
+                rawText = rawText.Replace(placeholder, coloredValue);
             }
 
-            // Remove any leftover <UnknownTag>
+            Debug.Log(rawText);
+
+            // Remove unknown tags like <UnmatchedTag>
             return System.Text.RegularExpressions.Regex.Replace(rawText, @"<[^<>]+>", "");
         }
 
