@@ -36,7 +36,7 @@ namespace ProjectCeros
 
         [SerializeField] private Button _inviteButton;
 
-        // [SerializeField] private Image _alreadyBought;
+        [SerializeField] private TMP_Text _inviteButtonText;
 
         private GuestSO currentSelectedItem;
 
@@ -51,6 +51,26 @@ namespace ProjectCeros
             _descriptionText.text = item.Description;
             // _priceText.text = $"${item.Price}";
             _guestImage.sprite = item.GuestSprite;
+
+            if (item.isRequested)
+            {
+                _inviteButtonText.text = "Requested";
+            }
+
+            else if (item.isOnCooldown)
+            {
+                _inviteButtonText.text = "Unavailable";
+            }
+
+            else if (item.hasAccepted)
+            {
+                _inviteButtonText.text = "Accepted";
+            }
+
+            else
+            {
+                _inviteButtonText.text = "Request!";
+            }
 
             _invitationLimiter.SetGuestToInvite(item);
 
