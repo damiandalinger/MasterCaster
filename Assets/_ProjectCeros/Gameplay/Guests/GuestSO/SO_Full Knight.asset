@@ -30,3 +30,4 @@ MonoBehaviour:
   hasAccepted: 0
   isOnCooldown: 0
   wasInterviewed: 0
+  Color: {r: 0, g: 0, b: 0, a: 0}

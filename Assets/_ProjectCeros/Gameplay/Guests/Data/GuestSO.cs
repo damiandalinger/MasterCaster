@@ -12,7 +12,7 @@ namespace ProjectCeros
 
 
 {
-    [CreateAssetMenu(menuName = "Guests/Guest")]
+    [CreateAssetMenu(menuName = "Other/Guests/Guest")]
     public class GuestSO : ScriptableObject
     {
         [Tooltip("The name of the guest.")]
@@ -66,7 +66,8 @@ namespace ProjectCeros
         [Tooltip("If true, the guest's preferred topic is shown in the UI.")]
         public bool wasInterviewed;
 
-
+        [Tooltip("The Color the text has when talking to the guest")]
+        public Color Color;
 
 
     }

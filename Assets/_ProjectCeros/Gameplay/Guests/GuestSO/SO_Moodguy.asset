@@ -31,3 +31,4 @@ MonoBehaviour:
   hasAccepted: 0
   isOnCooldown: 0
   wasInterviewed: 0
+  Color: {r: 0, g: 0.68235296, b: 0, a: 1}

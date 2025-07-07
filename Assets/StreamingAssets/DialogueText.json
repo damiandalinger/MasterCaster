@@ -1,0 +1,430 @@
+{
+  "welcome": [
+    "Alright, alright, are you all ready for a new episode of the most incredible <Podcastname>?",
+    "Hello and welcome good folks! It is time for another episode of <Podcastname>!",
+    "Good day dear listeners, it is time for another episode of your favorite Podcast!",
+    "Now, are you ready for a new episode of the <Podcastname>? I know, I sure am!",
+    "Have you wondered what day it is? Well it is <Podcastname>-day!",
+    "Time to start with today's episode of <Podcastname>! Are you ready for the madness?",
+    "Ok, let’s get this Podcast started. Are you ready for the new episode of <Podcastname>?"
+  ],
+  "goodbye": [
+    "Now that was a fun ride, I will see you next time!",
+    "Good bye, dear listeners and don’t forget to watch out for the next episode!",
+    "Hopefully that left you with something to think about. Until next time!",
+    "Thank you all for coming and listening today. I hope to see you next episode as well!",
+    "Thank you guys so much for coming to this episode. Remember in a week the next one will be out!",
+    "I’m glad you stayed and listened till the end. Next week, the next episode will come out!",
+    "Oh, the episode is already over, well don’t forget to tune in next week for the follow up! Thanks for listening.",
+    "Alright, it is getting late, so I’ll have to end it here. Thank you all for listening until the end and see you for the next episode!",
+    "Now, this is the end of today's episode, but I hope that you will check out the next one as well, next week!",
+    "Alright folks, this will be it for today, but don’t worry in a week's time, the next episode will be released. Bye bye ~"
+  ],
+  "topics": [
+    {
+      "topicName": "Action",
+      "messages": {
+        "positive": [
+          "Alright, are you guys ready to get your fists out? It is time for some action. And thankfully we are eating well!",
+          "You have all probably heard about it but there is some spicy news to be had. And I will be talking about that today!",
+          "As I have already posted on my socials. I have spent the last few days mutilating my enemies in a new and exciting game. And today we will talk about that."
+        ],
+        "negative": [
+          "Usually I enjoy senseless violence in my games, but even I draw the line. And I draw it especially at mediocre violence. So let’s sink our teeth into it!",
+          "Trashing things is fun, so let’s trash some shit action games! Are you all ready to start? We will start with something new and exciting!",
+          "Another disappointment has just dropped, so I will have to talk about it. Now some of your guys' image will be shattered, but I try to be as unbiased as possible!"
+        ]
+      }
+    },
+    {
+      "topicName": "Indie",
+      "messages": {
+        "positive": [
+          "It is time, another indie gem has hit the market and today we will be talking about it.",
+          "I’m sure most of you are familiar with the wonderful world of indie games, the often new systems or atleast new aspects. And now we will dive deeper into one specific one.",
+          "I think it’s time we talk about indie games again. Some might say that I’m somewhat biased towards them, but who's counting?"
+        ],
+        "negative": [
+          "Well, as many good indie games as there are, there is also a lot of trash, and today we will talk a bit about the latter…",
+          "It is time to dive into the filth and gutter of the indie industry. And good lord have I found another hidden gem? Or would you call it a hidden fake? Either way, let’s start!",
+          "Alright, all aboard the hate train, as we uncover the truly frightfully bad indie games."
+        ]
+      }
+    },
+    {
+      "topicName": "RPG",
+      "messages": {
+        "positive": [
+          "You like good stories, I like good stories and today we shall all be satisfied, so let’s talk over my new obsession!",
+          "Lads, wake up, a new world just dropped and good heavens is a good world to be absorbed into! Time to talk about it!",
+          "I have to be honest with you guys, I wanted to skip the podcast to continue playing and developing my characters. So be glad that I’m here to talk about my new obsession!"
+        ],
+        "negative": [
+          "You guys know me, I like to really dive deep into building and getting to know my companions and the world. Well sadly today we have to talk about the opposite!",
+          "Usually we talk about intricate mechanics, a deep world and characters, today we talk about trash, so are you all ready?",
+          "I’m sure you all know Folkien and the superb world crafted by him. Today we will talk about the antithesis to such a world!"
+        ]
+      }
+    },
+    {
+      "topicName": "Shooter",
+      "messages": {
+        "positive": [
+          "It’s time to flex our reflexes lads, something new just dropped and I will be talking about it today!",
+          "You love shooters, I love shooters, so why waste a long time with the intro, it’s time to talk games!",
+          "I like running and gunning, but also thinking about where I shoot from, and today we will talk about a game that allows just that!"
+        ],
+        "negative": [
+          "Shitty aim and shitty movement is the name of the game today. So without further ado let’s sink our teeth into some less than stellar game!",
+          "Well I didn’t want to have to talk about this like that, but the following game, sadly, is trash. Even though I tried really hard to like it.",
+          "A new day, a new chance to trash another shooter. And man do we have a bad one today. It’s actually hilarious."
+        ]
+      }
+    },
+    {
+      "topicName": "Simulation",
+      "messages": {
+        "positive": [
+          "I tried the trucker simulator before and really liked it, today we will talk about another one that scratched that same itch!",
+          "Sometimes I wonder why I simulate my life in game to escape my life. Well anyway, I really enjoy it! So let’s talk a bit more about simulations!",
+          "Utopia - Achieving Perfection - Glamour. Things I miss in my everyday life. So let’s achieve them through simulation games shall we? And boy do I have a good one for today!"
+        ],
+        "negative": [
+          "Normally I play simulations to escape the frightening grasp of reality. This week I playtested one that threw me right back into it!",
+          "There is a fine line simulation games have to tread between excitement and boredom. Sadly this week's simulation has thrown themselves with surprising vigor from that line.",
+          "You know those people that constantly annoy you? Well bad simulation games are a bit like that, so let’s talk about them!"
+        ]
+      }
+    },
+    {
+      "topicName": "Strategy",
+      "messages": {
+        "positive": [
+          "Alright, now that the intro is out of the way, let’s talk about something fun. Strategy enthusiasts are eating good this week and we will properly go through everything related!",
+          "A new and exciting game has found its way to the forefront of strategy games this week, it’s time to bring out the maps and start planning dear listeners!",
+          "Now as many of you know I like to dabble in using my brain from time to time, which is why I will now talk about the newest strategy news!"
+        ],
+        "negative": [
+          "Have you ever wondered what bad strategy looks like? Well, I have a treat for you today, listeners. A new strategy game to talk about!",
+          "Usually I don’t like to shit on games as they take a lot of work, however I found a game that plays more like an action game than a strategy one!",
+          "Do you like having to think while you play strategy games? Well I sure do, but some game devs think otherwise - so let’s talk a bit about those games…"
+        ]
+      }
+    }
+  ],
+  "GuestWelcome": [
+    "Uh, welcome <Guest>, very glad you could spare the time!",
+    "Good day dear listeners, today we have a special guest with us - <Guest>!",
+    "Hello and welcome to today's episode of the <Podcastname>-podcast with <Guest>!",
+    "Good day dear listeners, today we have a special guest with us - <Guest>!",
+    "Hello and welcome to the newest episode of the <Podcastname>-podcast! With us today we have <Guest>!",
+    "Good day dear listeners and welcome to the <Podcastname>-podcast. It is my great pleasure that we have <Guest> here today!",
+    "Hello, hello lovely listeners of the <Podcastname>-podcast. Today <Guest> graces us with their presence!",
+    "It brings me great pleasure to welcome you all here today dear listeners as <Guest> joins us for today's <Podcastname>-podcast!",
+    "Welcome, welcome my loyal listeners it is time to welcome <Guest> to the <Podcastname>-podcast of the day!"
+  ],
+  "GuestGoodbye": [
+    "This is where we have to end it sadly and I have to say goodbye to you <Guest>!",
+    "It pains me to say this, but this is the ending of today's episode. A big thanks to <Guest> for coming on the podcast!",
+    "Oh, it seems our time is over now, it felt like such a long podcast. Maybe I’ll have to cut it down a bit. Anyway this is the end of the <Podcastname>-podcast!",
+    "That was a really interesting talk! I really liked your engaging inputs!",
+    "Now after this thrilling Dialog we will have to sadly end this episode of the <Podcastname>-podcast!",
+    "Anyway it seems that we have come to the end of our little podcast, I’m truly thankful that you could spare the time!",
+    "Alright, I think that wraps up this episode of the <Podcastname>-podcast",
+    "What a thrilling talk, but sadly all good things must come to an end. That is it for today!",
+    "Another day, another podcast has to end. This is it for today. Thank you <Guest> for coming today!"
+  ],
+  "GuestMain": [
+    "Alright, exciting! But let’s talk a bit more about you. What kind of games do you find thrilling? ",
+    "Ok, are you ready for some questions? Well, this first one is pretty obvious. What is your favorite genre?",
+    "Nice, since this is a games podcast, my first question to you would be: What typ of games do you enjoy?",
+    "Now, since you are here, the one question I have been itching to ask: What games do you usually play?",
+    "So, you might have expected that question, since this is a games podcast and all, but the listeners are curious, what is your favorite type of game?",
+    "Let’s get into this then. First of all, to get this conversation started, what games do you like most?",
+    "So, what are you favorite games! Do you play often? And if you play, what do enjoy most? Eh, sorry I’m getting a bit ahead of myself.",
+    "Let’s start this podcast of with a question, what typ of games do you usually play?",
+    "Now, tell us a bit about yourself. What do you usually play when you want to enjoy yourself?"
+  ],
+  "GuestAnswers": [
+    {
+      "GuestID": 1,
+      "hello": [
+        "Wow, I’m so glad to be here, my best friend! ",
+        "Alaka-ZAM here I am! I’m such a poet…",
+        "Haiyaaa. Aren’t you glad I’m here?"
+      ],
+      "personal": [
+        "Something about me? I knew it! You really are my best friend! Now then I will  be generous and tell you - I like the games where I can kill everyone!",
+        "Of course you want to know more about me! We are like two apples from the same tree, like two guns in the hands of a killer. And I really like that, killing. ",
+        "So nice of you to come and check me out! I’ll have you know, I’m a vicious murderer and revolutionary! And like the action of combat in my games as well. Let me tell you some more …"
+      ],
+      "bye": [
+        "Eh, Bye bye! …. Do you mind if I stay ?",
+        "Ciao Baby! Please don’t leave me …",
+        "Bushakalakalakala. Oh sorry I was dancing. See ya!"
+      ]
+    },
+    {
+      "GuestID": 2,
+      "hello": [
+        "Ghrhhrgh Hgehrg Hurgughrhrh Reerheherege!!",
+        "Reeeeeeeeeeghrghr!",
+        "Ieeeeeerhgehgr Ehrg Hree!!"
+      ],
+      "personal": [
+        "Hgrger Hgar Ggrgeherg ?!",
+        "Urghrghga, Rrgeghgehe Zraaha!!",
+        "Hegre Geerehe Rrgegh Rreherregh Hgehrg ?"
+      ],
+      "bye": [
+        "Hgerhegreg Geereheh Hgra!",
+        "Rhegurgleer.",
+        "Areeaehaeh!"
+      ]
+    },
+    {
+      "GuestID": 3,
+      "hello": [
+        "Hi-de-ho there friend!",
+        "G’day chap!",
+        "Jolly day to you mister!"
+      ],
+      "personal": [
+        "Fan my brows! Didn’t think you’d ask! I like the ones where I do some gunnin’.",
+        "Let me tell you, shooters always give me a golly time! The timings are always so fun!",
+        "Sure thing! I like me those quick and fast games! Always keepin’ me on my toes!"
+      ],
+      "bye": [
+        "Cheerio and a good day!",
+        "A good day to you!",
+        "Gotta be on wheels now!"
+      ]
+    },
+    {
+      "GuestID": 4,
+      "hello": [
+        "G’day friend. Fancy being here t’day.",
+        "Hi there. Absolute beauty of ya to have me.",
+        "G’day mate. And hello to all ya fans and such."
+      ],
+      "personal": [
+        "Oh, this is the first time someone has ever asked me about something personal. Usually they just want my gems. But, eh, I really like these repeating games.",
+        "You really want my opinion ? I’m thrilled! And to answer your question, I really like the ones from smaller studios. They always have so much love in them.",
+        "Oh, eh, this is new to me, sorry. I really like Indie games! There are so many of them and it is always nice to find a real gem!"
+      ],
+      "bye": [
+        "See you, I’m not going anywhere, not that I could …",
+        "Mhm, end the podcast. I’ll just stay here … and wait …",
+        "Yes, you go and just … leave me here, I’m used to it."
+      ]
+    },
+    {
+      "GuestID": 5,
+      "hello": [
+        "Hello there, love!",
+        "Hi! Happy to be here!",
+        "Heya and thanks for having me!"
+      ],
+      "personal": [
+        "Hmm, I don’t play that much. I just listen to music all the time, but sometimes I play those football games!",
+        "Oh! Sometimes I play games! Mostly those simulations tho. Not good enough for the fast paced games.",
+        "Yes! Though I don’t play much, but I do like those footy simulations! They remind me of England!"
+      ],
+      "bye": [
+        "See ya!",
+        "Bye Bye!",
+        "Have a nice day, love!"
+      ]
+    },
+    {
+      "GuestID": 6,
+      "hello": [
+        "…"
+      ],
+      "personal": [
+        "…"
+      ],
+      "bye": [
+        "…"
+      ]
+    },
+    {
+      "GuestID": 7,
+      "hello": [
+        "Hi there!",
+        "Alright, let’s bring it on!",
+        "Sure thing, let’s do this!"
+      ],
+      "personal": [
+        "Well obviously games where I can go fast, none of these slow thinking games.",
+        "You know, I really like competing. I play games where I can play against other people!",
+        "There is just something about shooting guns that is really fun, you know? "
+      ],
+      "bye": [
+        "Sayonara! ",
+        "See ya!",
+        "Gotta go fast. "
+      ]
+    },
+    {
+      "GuestID": 8,
+      "hello": [
+        "Greetings.",
+        "Uh, finally awake. How are you?",
+        "Huh? Where am I ? Oh, sorry. Just fell a sleep for a second."
+      ],
+      "personal": [
+        "Games I enjoy are the ones where I can stalk my prey, never seen, never heard.",
+        "I yearn for the death and defeat of my foes. Games that let me relive the thrill of that are the ones I play.",
+        "I crave the feeling of the hunt. Shouting at the dead bodies of my slain enemies it makes me extatic."
+      ],
+      "bye": [
+        "I’ll be seeing you.",
+        "Good bye!",
+        "Fare well. And keep yourself safe."
+      ]
+    },
+    {
+      "GuestID": 9,
+      "hello": [
+        "Howdy Partner! I’m ready and eager to talk!",
+        "Hi there friend! Let’s talk quick before the nuclear apocalypse strikes! ",
+        "Hello, lovely day to ya! Hurry, so I can finnish building my shelter!"
+      ],
+      "personal": [
+        "Not much to say, I was created to sell more vault and shelter technology! So simulating th nuclear end brings me great joy!",
+        "Of course I can talk about myself! I think the best games are the ones that show how quickly our life can end, so you should really think about buying my safety equipment!",
+        "Running an apocalypse shop isn’t easy, which is why I relax by playing simulations of my dream world!"
+      ],
+      "bye": [
+        "See you around. Hope we can still meet in the future!",
+        "Bye! And remember, safety is only a shellter puchase away!",
+        "Good luck in your life and farewell, friend!"
+      ]
+    },
+    {
+      "GuestID": 10,
+      "hello": [
+        "Thine vigour for mine introduction is appreciated, though not warranted.",
+        "It bringeth me joy to be here with thine person and ye listeners.",
+        "I appreciate thy welcome. And greet thee and thy listeners."
+      ],
+      "personal": [
+        "It is heartfelt that thou wishes to inquire more about mine exposition, though mine purpose is not to stand at the forefront but guide the brave fiery one. However if mine mind had to choose one aspect, this one would appreciate the thrill of conflict most certainly.",
+        "Thou attentiveness in mine personal story is both curious and to be expected. I do wish to serve for thine answer however. The carnage and valour of the battlefield bringeth me great joy if that is what thou hast wished for as an answer.",
+        "Thou wishes to satisfy thine curiosity about mine person and I shall comply with thy desire. I derive mine desires from the ferocity in the fields of valour."
+      ],
+      "bye": [
+        "Thou needn’t thank me. It is mine duty to serve the fiery one. I wish thy podcast will help thee accomplish thy goals.",
+        "I wish thee farewell. May thine way be blessed by the fire.",
+        "Farewell thee. I hope thou willst not stray from thine desired path."
+      ]
+    },
+    {
+      "GuestID": 11,
+      "hello": [
+        "Hello there, little buddy.",
+        "Uhhh, hello there.",
+        "Hmm, hi little buddy!"
+      ],
+      "personal": [
+        "Uhh, usually I just prefer games where I can farm lot’s of bananas. And best case I can make a banana empire. Hm, that sounds about right.",
+        "Urgh, well I do like games where I can own a banana bunker. Maybe even multiple bana bunkers. Yes that is good, little buddy!",
+        "I like bananas. So games with them are good. Also organising bananas is fun. Just bananas in general are good. Hm."
+      ],
+      "bye": [
+        "Time to take a nap.",
+        "Alright Alright Alright, it’s time to end this. Bye bye.",
+        "Yes, time to take a banana break."
+      ]
+    },
+    {
+      "GuestID": 12,
+      "hello": [
+        "…"
+      ],
+      "personal": [
+        "Kill … Maim …and … Annihilate",
+        "Crush … Mutilate … and … Execute",
+        "Read … Comics … is … Cheerful"
+      ],
+      "bye": [
+        "Good … Bye",
+        "See … You",
+        "So … long"
+      ]
+    },
+    {
+      "GuestID": 13,
+      "hello": [
+        "Well, hello there. I’m so thrilled to be here!",
+        "Good day!",
+        "Thank you so much for inviting me!"
+      ],
+      "personal": [
+        "Well, I really like those roleplaying games. No competition or anything. I have enough of that in my day to day life anyway.",
+        "How kind of you to ask. This might come as a surpise but I actually really enjoy roleplaying and games like it. Watching my characters grow is just very fun!",
+        "Oh, how nice of you to ask! Let me tell you, I really enjoy games where I can dive head first into the characters. Maybe even with a bit of romance."
+      ],
+      "bye": [
+        "Bye bye!",
+        "See you around!",
+        "Bye and thanks for having me!"
+      ]
+    },
+    {
+      "GuestID": 14,
+      "hello": [
+        "Mhm. Really thankfull to be here.",
+        "Uhu, yes, couldn’t think of any place I’d rather be. ",
+        "Hmm."
+      ],
+      "personal": [
+        "After spilling guts the entire day. I like relaxed games. Simple. With cards.",
+        "You know those card games, where you always get different ones? Those are good.",
+        "Don’t play those massive games. Not really my style. Smaller ones are better."
+      ],
+      "bye": [
+        "Bye.",
+        "Mhm.",
+        "…"
+      ]
+    },
+    {
+      "GuestID": 15,
+      "hello": [
+        "Mhm. ",
+        "…",
+        "Urgh."
+      ],
+      "personal": [
+        "Roleplaying games. Being someone else. It’s good.",
+        "Games with stories. With meaning. Not just mindless slaughter.",
+        "Hm. The ones were I can listen and relax."
+      ],
+      "bye": [
+        "Fare well. ",
+        "Bye.",
+        "…"
+      ]
+    },
+    {
+      "GuestID": 16,
+      "hello": [
+        "Good day, thank you for having me!",
+        "Hello, I’m excited to be here.",
+        "Hi, it’s nice to see you in person!"
+      ],
+      "personal": [
+        "Well, what I really like in my normal work is chasing the thrill and excitement of learning the stories of lost ruins and peoples. So I also really like learning those intricate stories in games.",
+        "Usually I don’t have that much time, though if I do, I really like spending times with those deep character driven games! They really tickle that itch.",
+        "There is just something about games where you can explore well written characters and stories that just makes them so nice!"
+      ],
+      "bye": [
+        "See you around!",
+        "It was nice being here! Good bye.",
+        "Bye bye! Thank you for having me."
+      ]
+    }
+  ]
+}
