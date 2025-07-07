@@ -42,7 +42,7 @@ namespace ProjectCeros
 
         [SerializeField] private bool _hasGuest = false;
         [SerializeField] private GuestSO _guest;
-        [SerializeField] private RivalPodcaster _player;
+        [SerializeField] private Podcaster _player;
         [SerializeField] private Color colorPlayer = Color.black;
 
         private bool _toggle = false;
