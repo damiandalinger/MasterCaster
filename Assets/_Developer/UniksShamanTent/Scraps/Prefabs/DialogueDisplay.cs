@@ -80,6 +80,11 @@ namespace ProjectCeros
             {
                 _hasGuest = true;
             }
+
+            else
+            {
+                _hasGuest = false;
+            }
         }
 
         IEnumerator StartDialogueSequence()
@@ -174,37 +179,39 @@ namespace ProjectCeros
 
         public void AdvanceDialogue()
         {
-            if (!_isReady) return;
-
-            if (isTyping) return;
-
-            if (currentSegmentIndex >= dialogueSegments.Length)
+            if (_isReady)
             {
-                dialogueText.text = "";
-                Debug.Log("Dialogue finished!");
-                return;
+                if (isTyping) return;
+
+                if (currentSegmentIndex >= dialogueSegments.Length)
+                {
+                    dialogueText.text = "";
+                    Debug.Log("Dialogue finished!");
+                    return;
+                }
+
+                if (_hasGuest)
+                {
+                    // Change text color depending on who's speaking
+                    dialogueText.color = _toggleColor
+                        ? _guest.Color // Guest: dark blue
+                        : colorPlayer;               // Player: black
+
+                    // Toggle the speaker flag
+                    _toggleColor = !_toggleColor;
+                }
+
+                else
+                {
+                    dialogueText.color = colorPlayer;
+                }
+
+                // Start typing the current segment
+                StartCoroutine(TypeDialogue(dialogueSegments[currentSegmentIndex]));
+                currentSegmentIndex++;
             }
-
-            // Decide the color for the current speaker
-            Color currentColor = _hasGuest
-                ? (_toggleColor ? colorGuest : colorPlayer)
-                : colorPlayer;
-
-            // Convert the Color to a hex string for TMPro color tags
-            string hexColor = ColorUtility.ToHtmlStringRGB(currentColor);
-
-            // Wrap the whole dialogue segment in a color tag
-            string coloredSegment = $"<color=#{hexColor}>{dialogueSegments[currentSegmentIndex]}</color>";
-
-            // Toggle the speaker flag if there's a guest
-            if (_hasGuest)
-                _toggleColor = !_toggleColor;
-
-            // Start typing with the colored text
-            StartCoroutine(TypeDialogue(coloredSegment));
-
-            currentSegmentIndex++;
         }
+
 
         IEnumerator TypeDialogue(string segment)
         {

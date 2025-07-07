@@ -66,7 +66,8 @@ namespace ProjectCeros
         [Tooltip("If true, the guest's preferred topic is shown in the UI.")]
         public bool wasInterviewed;
 
-
+        [Tooltip("The Color the text has when talking to the guest")]
+        public Color Color;
 
 
     }

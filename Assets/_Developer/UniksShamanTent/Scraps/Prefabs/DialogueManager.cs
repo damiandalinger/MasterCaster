@@ -33,6 +33,8 @@ namespace ProjectCeros
 
         [SerializeField] private Color injectedVariableColor; // Or any default
 
+
+
         void Awake()
         {
             LoadDialogueData();
@@ -50,18 +52,13 @@ namespace ProjectCeros
 
         public string InjectVariables(string rawText)
         {
-            string colorHex = ColorUtility.ToHtmlStringRGB(injectedVariableColor);
-
             foreach (var pair in dialogueVariables)
             {
                 string placeholder = $"<{pair.Key}>";
-                string coloredValue = $"<color=#{colorHex}>{pair.Value}</color>";
-                rawText = rawText.Replace(placeholder, coloredValue);
+                rawText = rawText.Replace(placeholder, pair.Value);
             }
 
-            Debug.Log(rawText);
-
-            // Remove unknown tags like <UnmatchedTag>
+            // Remove any leftover <UnknownTag>
             return System.Text.RegularExpressions.Regex.Replace(rawText, @"<[^<>]+>", "");
         }
 
