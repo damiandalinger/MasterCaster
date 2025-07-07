@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   InitialListener: 0
-  InitialRank: 2000
+  InitialRank: 0
   Portrait: {fileID: 21300000, guid: 011e4f755a2732a4bbf69939139b643b, type: 3}
-  DisplayName: Uniks KKK Talk
-  PersonName: Ngoc Ngoc Cock
+  DisplayName: 
+  PersonName: 
   Description: Listen to the yapping of the famous Unik the frickin nigger legend
     and Lena the vietlomese frog suckin star.
   LikedGenres: 

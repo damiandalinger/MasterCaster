@@ -46,7 +46,7 @@ namespace ProjectCeros
             {
                 if (prefab == null) continue;
 
-                var type = prefab.GetComponent<MonoBehaviour>()?.GetType();
+                var type = prefab.GetComponentInChildren<MonoBehaviour>()?.GetType();
                 if (type == null || FindFirstObjectByType(type) != null)
                     continue;
 
