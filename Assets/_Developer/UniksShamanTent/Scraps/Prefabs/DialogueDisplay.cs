@@ -18,7 +18,13 @@ namespace ProjectCeros
     {
         [SerializeField] private GuestDatabaseSO _allguests;
         [SerializeField] private DialogueManager _dialogueManager;
+        [SerializeField] private TMP_Text _namePlayer;
+        [SerializeField] private TMP_Text _nameGuest;
         [SerializeField] private TMP_Text dialogueText;
+
+        [SerializeField] private GameObject _playerBox;
+        [SerializeField] private GameObject _guestBox;
+
         [SerializeField] private float letterDelay = 0.05f;
 
         private string[] dialogueSegments;
@@ -36,14 +42,18 @@ namespace ProjectCeros
 
         [SerializeField] private bool _hasGuest = false;
         [SerializeField] private GuestSO _guest;
+        [SerializeField] private RivalPodcaster _player;
         [SerializeField] private Color colorPlayer = Color.black;
-        [SerializeField] private Color colorGuest = new Color(0.1f, 0.1f, 0.4f); // dark blue
 
-        private bool _toggleColor = false;
+        private bool _toggle = false;
 
         void Start()
         {
             SetupDialogue();
+
+            _namePlayer.text = _player.PersonName;
+            _playerBox.SetActive(true);
+            _guestBox.SetActive(false);
         }
 
         public void SetupDialogue()
@@ -193,17 +203,31 @@ namespace ProjectCeros
                 if (_hasGuest)
                 {
                     // Change text color depending on who's speaking
-                    dialogueText.color = _toggleColor
+                    dialogueText.color = _toggle
                         ? _guest.Color // Guest: dark blue
                         : colorPlayer;               // Player: black
 
+
+                    _namePlayer.text = _toggle ? null : _player.PersonName;
+                    _nameGuest.text = _toggle ? _guest.Name : null;
+                    _nameGuest.color = _guest.Color;
+
+                    _playerBox.SetActive(!_toggle);
+                    _guestBox.SetActive(_toggle);
                     // Toggle the speaker flag
-                    _toggleColor = !_toggleColor;
+                    _toggle = !_toggle;
                 }
 
                 else
                 {
                     dialogueText.color = colorPlayer;
+
+                    _namePlayer.text = _player.PersonName;
+                    _nameGuest.text = null;
+
+                    _playerBox.SetActive(true);
+                    _guestBox.SetActive(false);
+
                 }
 
                 // Start typing the current segment

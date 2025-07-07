@@ -12,7 +12,7 @@ namespace ProjectCeros
 
 
 {
-    [CreateAssetMenu(menuName = "Guests/Guest")]
+    [CreateAssetMenu(menuName = "Other/Guests/Guest")]
     public class GuestSO : ScriptableObject
     {
         [Tooltip("The name of the guest.")]
