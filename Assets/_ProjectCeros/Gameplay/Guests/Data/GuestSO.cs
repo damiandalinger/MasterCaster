@@ -53,11 +53,16 @@ namespace ProjectCeros
         [Tooltip("The picture of the guest.")]
         public Sprite GuestSprite;
 
+        [Tooltip("The picture of the guest when available.")]
+        public Sprite GuestSpriteavailable;
         [Tooltip("The picture of the guest when unavailable.")]
         public Sprite GuestSpriteUnavailable;
 
         [Tooltip("The picture of the guest when locked.")]
         public Sprite GuestSpriteLocked;
+
+        [Tooltip("The picture of the guest when invited.")]
+        public Sprite GuestSpriteDialogue;
 
 
         [Tooltip("If true, the player sent an invite to the guest.")]
