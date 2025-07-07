@@ -25,7 +25,12 @@ MonoBehaviour:
   Fee: 0
   TopicID: 4
   GuestSprite: {fileID: 21300000, guid: f6306f899581fb842980559aa7ff21fd, type: 3}
+  GuestSpriteavailable: {fileID: 21300000, guid: b87ae79841a2b604a87638d369ea693b, type: 3}
+  GuestSpriteUnavailable: {fileID: 21300000, guid: c801d46343014344eb291dfd9b1e6f69, type: 3}
+  GuestSpriteLocked: {fileID: 21300000, guid: f8f8b8a519d69fe44be4674dc2d27cf1, type: 3}
+  GuestSpriteDialogue: {fileID: 0}
   isRequested: 0
   hasAccepted: 0
   isOnCooldown: 0
   wasInterviewed: 0
+  Color: {r: 0.85882354, g: 0.5764706, b: 0.2, a: 1}
