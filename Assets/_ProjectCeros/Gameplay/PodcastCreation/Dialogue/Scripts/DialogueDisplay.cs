@@ -47,6 +47,8 @@ namespace ProjectCeros
 
         private bool _toggle = false;
 
+        [SerializeField] private GameEvent _endDialogue;
+
         void Start()
         {
             SetupDialogue();
@@ -170,20 +172,18 @@ namespace ProjectCeros
         }
 
 
-        void Update()
+        // Call this method from a UI Button (via OnClick)
+        public void OnDialogueClick()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (isTyping)
             {
-                if (isTyping)
-                {
-                    StopAllCoroutines();
-                    dialogueText.text = dialogueSegments[currentSegmentIndex - 1]; // display full segment
-                    isTyping = false;
-                }
-                else
-                {
-                    AdvanceDialogue();
-                }
+                StopAllCoroutines();
+                dialogueText.text = dialogueSegments[currentSegmentIndex - 1]; // Show full segment
+                isTyping = false;
+            }
+            else
+            {
+                AdvanceDialogue();
             }
         }
 
@@ -197,6 +197,7 @@ namespace ProjectCeros
                 {
                     dialogueText.text = "";
                     Debug.Log("Dialogue finished!");
+                    _endDialogue.Raise();
                     return;
                 }
 
@@ -242,16 +243,51 @@ namespace ProjectCeros
             isTyping = true;
             dialogueText.text = "";
 
-            Debug.Log($"Typing new dialogue segment: {segment}");
+            string[] words = segment.Split(' ');
+            bool isFirstWord = true;
 
-            foreach (char c in segment)
+            foreach (string word in words)
             {
-                dialogueText.text += c;
-                yield return new WaitForSeconds(letterDelay);
+                string wordWithSpace = word + " ";
+
+                // Only predict line break if it's not the first word
+                bool causesLineBreak = false;
+                if (!isFirstWord)
+                {
+                    // Predict wrapping
+                    dialogueText.ForceMeshUpdate();
+                    int linesBefore = dialogueText.textInfo.lineCount;
+
+                    string testText = dialogueText.text + wordWithSpace;
+                    dialogueText.text = testText;
+                    dialogueText.ForceMeshUpdate();
+
+                    int linesAfter = dialogueText.textInfo.lineCount;
+
+                    dialogueText.text = dialogueText.text.Remove(dialogueText.text.Length - wordWithSpace.Length); // revert
+
+                    causesLineBreak = linesAfter > linesBefore;
+                }
+
+                if (causesLineBreak)
+                {
+                    dialogueText.text += "\n";
+                }
+
+                foreach (char c in wordWithSpace)
+                {
+                    dialogueText.text += c;
+                    yield return new WaitForSeconds(letterDelay);
+                }
+
+                isFirstWord = false;
             }
 
             isTyping = false;
         }
+
+
+
 
         private void DetermineTopic(int id)
         {
