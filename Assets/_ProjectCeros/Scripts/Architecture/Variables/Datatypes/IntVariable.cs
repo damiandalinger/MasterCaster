@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/Int Variable")]
+    [CreateAssetMenu(menuName = "Variables/Int")]
     public class IntVariable : BaseVariable<int>
     {
         #region Public Methods

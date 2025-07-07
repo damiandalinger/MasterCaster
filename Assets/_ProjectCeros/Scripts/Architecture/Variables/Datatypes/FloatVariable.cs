@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/Float Variable")]
+    [CreateAssetMenu(menuName = "Variables/Float")]
     public class FloatVariable : BaseVariable<float>
     {
         #region Public Methods

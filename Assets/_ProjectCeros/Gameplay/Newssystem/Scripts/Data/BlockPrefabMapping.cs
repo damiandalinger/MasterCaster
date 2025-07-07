@@ -14,7 +14,7 @@ using UnityEngine;
 namespace ProjectCeros
 {
 
-    [CreateAssetMenu(menuName = "News/Block Prefab Mapping")]
+    [CreateAssetMenu(menuName = "Other/News/Block Prefab Mapping")]
     public class BlockPrefabMapping : ScriptableObject
     {
         [Tooltip("All available block prefab entries used in the newspaper layout.")]

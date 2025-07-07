@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Other/Podcaster")]
+    [CreateAssetMenu(menuName = "Other/Leaderboard/Podcaster")]
     public class Podcaster : ScriptableObject
     {
         #region Fields

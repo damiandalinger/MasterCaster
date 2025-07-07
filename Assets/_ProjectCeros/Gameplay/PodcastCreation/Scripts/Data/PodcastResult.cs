@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "ProjectCeros/Podcast Result")]
+    [CreateAssetMenu(menuName = "Other/Podcast Result")]
     public class PodcastResult : ScriptableObject
     {
         [Header("Calculated Listener Stats")]

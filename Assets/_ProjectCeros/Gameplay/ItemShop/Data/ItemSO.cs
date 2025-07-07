@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(fileName = "NewItem", menuName = "Item/Item")]
+    [CreateAssetMenu(fileName = "NewItem", menuName = "Other/Shop/Item")]
     public class ItemSO : ScriptableObject
     {
         [Tooltip("Name of the Shop Item.")]

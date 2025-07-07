@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/Vector2 Variable")]
+    [CreateAssetMenu(menuName = "Variables/Vector2")]
     public class Vector2Variable : BaseVariable<Vector2>
     {
         #region Public Methods

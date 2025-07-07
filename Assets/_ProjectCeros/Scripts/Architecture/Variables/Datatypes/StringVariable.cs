@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/String Variable")]
+    [CreateAssetMenu(menuName = "Variables/String")]
     public class StringVariable : BaseVariable<string>
     {
         #region Public Methods

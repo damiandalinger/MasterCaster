@@ -23,6 +23,9 @@ namespace ProjectCeros
         [Tooltip("Names of scenes keep after ending the game session.")]
         [SerializeField] private List<string> _sceneNamesToKeep = new();
 
+        [Tooltip("Event when you return to the main menu.")]
+        [SerializeField] private GameEvent _onReturnToMainMenu;
+
         #endregion
 
         #region Lifecycle Methods
@@ -46,6 +49,8 @@ namespace ProjectCeros
             Time.timeScale = 1f;
 
             yield return StartCoroutine(UnloadScenesAndKeepSpecified());
+
+            _onReturnToMainMenu.Raise();
 
             LoadingScreenManager.Instance.HideAndDestroy();
             Destroy(gameObject);

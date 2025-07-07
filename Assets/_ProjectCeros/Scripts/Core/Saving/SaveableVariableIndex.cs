@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "SaveSystem/Saveable Variable Index")]
+    [CreateAssetMenu(menuName = "Other/Save System/Saveable Variable Index")]
     public class SaveableVariableIndex : ScriptableObject
     {
         #region Fields

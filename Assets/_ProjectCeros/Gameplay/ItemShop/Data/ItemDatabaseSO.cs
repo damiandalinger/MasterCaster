@@ -12,7 +12,7 @@ using System.Collections.Generic;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Item/Item Database")]
+    [CreateAssetMenu(menuName = "Other/Shop/Item Database")]
     public class ItemDatabaseSO : ScriptableObject
     {
 

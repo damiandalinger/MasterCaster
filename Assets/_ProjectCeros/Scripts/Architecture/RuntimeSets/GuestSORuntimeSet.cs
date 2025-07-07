@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Runtime Sets/GuestSORuntimeSet")] 
+    [CreateAssetMenu(menuName = "Runtime Sets/Guest")] 
     public class GuestSORuntimeSet : RuntimeSet<GuestSO>
     {
 

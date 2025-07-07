@@ -48,3 +48,4 @@ MonoBehaviour:
   _sceneNamesToKeep:
   - Bootstrapper
   - MainMenu
+  _onReturnToMainMenu: {fileID: 11400000, guid: bf04e3927654aee41a60315e06c97116, type: 2}

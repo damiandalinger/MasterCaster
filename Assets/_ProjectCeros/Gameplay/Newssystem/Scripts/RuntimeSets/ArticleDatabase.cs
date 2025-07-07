@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Runtime Sets/ArticleDatabase")]
+    [CreateAssetMenu(menuName = "Runtime Sets/Article")]
     public class ArticleDatabase : RuntimeSet<Article>
     {
         // Currently inherits all functionality from RuntimeSet.

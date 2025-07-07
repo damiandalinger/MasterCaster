@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Runtime Sets/StringRuntimeSet")]
+    [CreateAssetMenu(menuName = "Runtime Sets/String")]
     public class StringRuntimeSet : RuntimeSet<string>
     {
 

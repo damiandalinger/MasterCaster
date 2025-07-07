@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Runtime Sets/CommentRuntimeSet")]
+    [CreateAssetMenu(menuName = "Runtime Sets/Comment")]
     public class CommentRuntimeSet : RuntimeSet<CommentData>
     {
 

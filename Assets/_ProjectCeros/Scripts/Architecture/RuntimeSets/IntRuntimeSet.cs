@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Runtime Sets/IntRuntimeSet")] 
+    [CreateAssetMenu(menuName = "Runtime Sets/Int")] 
     public class IntRuntimeSet : RuntimeSet<int>
     {
 

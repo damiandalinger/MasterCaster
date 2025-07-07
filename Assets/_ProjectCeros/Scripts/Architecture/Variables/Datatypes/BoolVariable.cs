@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    [CreateAssetMenu(menuName = "Variables/Bool Variable")]
+    [CreateAssetMenu(menuName = "Variables/Bool")]
     public class BoolVariable : BaseVariable<bool>
     {
         #region Public Methods

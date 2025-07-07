@@ -12,7 +12,7 @@ using UnityEngine;
 namespace ProjectCeros
 {
 
-    [CreateAssetMenu(menuName = "News/LayoutPreset")]
+    [CreateAssetMenu(menuName = "Other/News/Layout Preset")]
     public class LayoutPreset : ScriptableObject
     {
         [Tooltip("List of blocks that make up the layout.")]
