@@ -15,7 +15,7 @@ MonoBehaviour:
   ItemName: Bonefire
   Description: "Gives warmth and is cozy but also throws a healthy dose of danger
     into the mix. What\u2019s life without a little risk isn't it?"
-  ItemSprite: {fileID: 21300000, guid: e2bc9576c5cb833479a4f694ff76328f, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 506400348d33c714089e8833cd39eb67, type: 3}
   Price: 190
   UpgradeGroup: 10
   Id: 106

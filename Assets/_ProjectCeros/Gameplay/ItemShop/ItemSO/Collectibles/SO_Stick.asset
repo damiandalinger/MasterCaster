@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Stick
   Description: Nice Stick. Good for hitting.
-  ItemSprite: {fileID: 21300000, guid: 1ed80211baf9746468d4927f9100d512, type: 3}
+  ItemSprite: {fileID: 21300000, guid: df660871551af5b4dbcede16ea8cdbc4, type: 3}
   Price: 1000
   UpgradeGroup: 10
   Id: 109
