@@ -36,6 +36,12 @@ namespace ProjectCeros
         [Tooltip("Exponent used to curve the climb progress.")]
         [SerializeField] private FloatReference _climbExponent;
 
+        [Tooltip("The name of the podcast.")]
+        [SerializeField] private StringReference _podcastName;
+
+        [Tooltip("The name of the person doing the podcast.")]
+        [SerializeField] private StringReference _personName;
+
         [Header("Rival Settings")]
         [Tooltip("Multiplier if the subgenre is liked and in the newspaper.")]
         [SerializeField] private FloatReference _increaseMultiplier;
@@ -75,7 +81,7 @@ namespace ProjectCeros
 
             SavePreviousRanks(allPodcasters);
             UpdateRivalListeners(articles);
-            UpdatePlayerListeners();
+            UpdatePlayer();
 
             var sortedPodcasters = SortPodcasters(allPodcasters);
             UpdateRanks(sortedPodcasters);
@@ -165,13 +171,12 @@ namespace ProjectCeros
             }
         }
 
-        // Updates the player’s current listener count from the runtime variable.
-        private void UpdatePlayerListeners()
+        // Updates the player’s stuff.
+        private void UpdatePlayer()
         {
-            if (_playerPodcaster != null)
-            {
-                _playerPodcaster.CurrentListener = _playerListeners.Variable.RuntimeValue;
-            }
+            _playerPodcaster.CurrentListener = _playerListeners.Variable.RuntimeValue;
+            _playerPodcaster.DisplayName = _podcastName.Variable.RuntimeValue;
+            _playerPodcaster.PersonName = _personName.Variable.RuntimeValue;
         }
 
         // Updates ranks of all podcasters, giving the player either a real or simulated position.

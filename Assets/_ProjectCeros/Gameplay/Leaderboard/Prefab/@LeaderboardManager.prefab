@@ -71,6 +71,14 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: fa2036c3d9cc7e943a654e9a634926cd, type: 2}
+  _podcastName:
+    UseConstant: 0
+    ConstantValue: 
+    Variable: {fileID: 11400000, guid: 37bfe17c793e00a42aeeae0b7d8ec2e6, type: 2}
+  _personName:
+    UseConstant: 0
+    ConstantValue: 
+    Variable: {fileID: 11400000, guid: d847451c8bbf72743ad40141fd3fa792, type: 2}
   _increaseMultiplier:
     UseConstant: 0
     ConstantValue: 0

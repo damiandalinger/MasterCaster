@@ -47,6 +47,7 @@ MonoBehaviour:
   _persistentPrefabs:
   - {fileID: 3237627029861064207, guid: 15b7df1f357717c49bd2ada59be1ed35, type: 3}
   - {fileID: 8419644515967061226, guid: 702a150dd044a25408e0d9d372f4259c, type: 3}
+  - {fileID: 3931659719554501003, guid: 72acabef36457a64da86c7cdc426784a, type: 3}
   _sceneNamesToLoad:
   - GameSession
   - Bedroom
