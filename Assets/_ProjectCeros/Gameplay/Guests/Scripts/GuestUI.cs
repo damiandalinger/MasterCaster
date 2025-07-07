@@ -40,6 +40,11 @@ namespace ProjectCeros
 
         private GuestSO currentSelectedItem;
 
+        public Transform starParent; 
+        public Sprite filledStar;
+        public Sprite emptyStar;
+
+
 
         // Adjusts the GuestUI info.
         public void ShowGuestDetails(GuestSO item)
@@ -49,8 +54,9 @@ namespace ProjectCeros
             _guestNameText.text = item.Name;
             _topicText.text = $"Favourite topic: {item.Topic}";
             _descriptionText.text = item.Description;
-            // _priceText.text = $"${item.Price}";
             _guestImage.sprite = item.GuestSprite;
+
+            ShowStarRating(item.Rating);
 
             if (item.isRequested)
             {
@@ -74,30 +80,11 @@ namespace ProjectCeros
 
             _invitationLimiter.SetGuestToInvite(item);
 
-            ShowItemSold();
 
             ShowItemChance();
 
         }
 
-
-        // Updates the UI when an item is Sold out.
-        public void ShowItemSold()
-
-        {
-            if (_unlockedGuestIDs.AllGuests.Contains(currentSelectedItem))
-
-            {
-                // _alreadyBought.enabled = true;
-            }
-
-            else
-
-            {
-                // _alreadyBought.enabled = false;
-            }
-
-        }
 
         public void ShowItemChance()
         {
@@ -143,6 +130,16 @@ namespace ProjectCeros
             _invitationLimiter.InviteGuest();
 
         }
+
+
+        public void ShowStarRating(int rating)
+        {
+        for (int i = 0; i < starParent.childCount; i++)
+        {
+            var image = starParent.GetChild(i).GetComponent<Image>();
+            image.sprite = (i < rating) ? filledStar : emptyStar;
+        }
+    }
 
     }
 }

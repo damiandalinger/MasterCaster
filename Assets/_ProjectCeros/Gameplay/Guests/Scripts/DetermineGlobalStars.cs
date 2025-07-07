@@ -51,7 +51,7 @@ namespace ProjectCeros
             }
 
 
-            if (_listerners.Value > 100 && _listerners.Value <= 999)
+            if (_listerners.Value >= 100 && _listerners.Value <= 999)
             {
                 GlobalStars.Variable.SetValue(2);
                 OldThreshhold.Variable.SetValue(100);
@@ -59,7 +59,7 @@ namespace ProjectCeros
             }
 
 
-            if (_listerners.Value > 1000 && _listerners.Value <= 9999)
+            if (_listerners.Value >= 1000 && _listerners.Value <= 9999)
             {
                 GlobalStars.Variable.SetValue(3);
                 OldThreshhold.Variable.SetValue(1000);
@@ -67,7 +67,7 @@ namespace ProjectCeros
             }
 
 
-            if (_listerners.Value > 10000 && _listerners.Value <= 99999)
+            if (_listerners.Value >= 10000 && _listerners.Value <= 99999)
             {
                 GlobalStars.Variable.SetValue(4);
                 OldThreshhold.Variable.SetValue(10000);
@@ -75,17 +75,13 @@ namespace ProjectCeros
             }
 
 
-            if (_listerners.Value > 100000)
+            if (_listerners.Value >= 100000)
             {
                 GlobalStars.Variable.SetValue(5);
                 OldThreshhold.Variable.SetValue(10000);
                 NewThreshhold.Variable.SetValue(10000);
             }
-
         }
-
-
-
     }
 
 }

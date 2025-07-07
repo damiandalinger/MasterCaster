@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guestPortrait: {fileID: 4294090354249182144}
+  _unlockedId: {fileID: 11400000, guid: d9cfb5e387217364da6360514936a665, type: 2}
 --- !u!114 &5644102881634682631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,4 +286,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guestData: {fileID: 0}
+  _unlockedId: {fileID: 11400000, guid: d9cfb5e387217364da6360514936a665, type: 2}
   button: {fileID: 985963420427022617}

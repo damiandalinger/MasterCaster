@@ -17,12 +17,28 @@ namespace ProjectCeros
     {
         [SerializeField] private Image _guestPortrait;
 
+        [SerializeField] private IntRuntimeSet _unlockedId;
+
         public void Setup(GuestSO guest)
         {
-            _guestPortrait.sprite = guest.GuestSprite;
+            if (!_unlockedId.Items.Contains(guest.GuestID))
+            {
+                _guestPortrait.sprite = guest.GuestSpriteLocked;
+            }
 
+
+            else if (guest.isOnCooldown)
+            {
+                _guestPortrait.sprite = guest.GuestSpriteavailable;
+
+
+
+            }
+
+            else
+            { _guestPortrait.sprite = guest.GuestSpriteavailable; }
         }
+
+
     }
-
-
 }

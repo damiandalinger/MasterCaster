@@ -18,23 +18,27 @@ namespace ProjectCeros
     {
         [SerializeField] private GuestSO _guestData;
 
-    
+        [SerializeField] private IntRuntimeSet _unlockedId;
 
         public Button button;
 
         // This tells the GuestUI the SO data.
-        public void TransferData(GuestSO guestData)
+        public void TransferData(GuestSO guest)
         {
 
-            _guestData = guestData;
+            _guestData = guest;
 
-            
-            if (button != null)
+
+            if (_unlockedId.Items.Contains(guest.GuestID) && (button != null))
             {
                 button.onClick.RemoveAllListeners(); // Clear any previous bindings
                 button.onClick.AddListener(OnClick); // Add this instance’s click
             }
 
+            else
+            {
+                 button.enabled = false;
+            }
         }
 
         private void OnClick()

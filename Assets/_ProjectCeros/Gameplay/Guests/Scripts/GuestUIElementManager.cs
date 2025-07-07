@@ -13,7 +13,9 @@ namespace ProjectCeros
 
     public class GuestUIManager : MonoBehaviour
     {
-        [SerializeField] private GuestSORuntimeSet unlockedGuests;
+        [SerializeField] private GuestDatabaseSO _allGuests;
+        [SerializeField] private GuestSORuntimeSet _unlockedGuests;
+
         [SerializeField] private GameObject guestIconPrefab;
         [SerializeField] private Transform iconParent; // assign the GuestIconGrid here
 
@@ -33,7 +35,7 @@ namespace ProjectCeros
             _isFirst = true;
 
             // Create new icons
-            foreach (var guest in unlockedGuests.Items)
+            foreach (var guest in _unlockedGuests.Items)
             {
                 var iconGO = Instantiate(guestIconPrefab, iconParent);
                 var iconUI = iconGO.GetComponent<GuestIconUI>();
@@ -49,6 +51,20 @@ namespace ProjectCeros
                     _isFirst = false;
                 }
 
+            }
+
+            foreach (var guest in _allGuests.AllGuests)
+            {
+                if (!_unlockedGuests.Items.Contains(guest))
+                {
+                    var iconGO = Instantiate(guestIconPrefab, iconParent);
+                    var iconUI = iconGO.GetComponent<GuestIconUI>();
+                    iconUI.Setup(guest);
+
+
+                    var iconButtonUI = iconGO.GetComponent<GuestButtonUI>();
+                    iconButtonUI.TransferData(guest);
+                }
             }
         }
     }

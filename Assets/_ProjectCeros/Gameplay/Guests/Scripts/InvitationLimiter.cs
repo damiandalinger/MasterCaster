@@ -8,6 +8,8 @@
 
 
 using UnityEngine;
+using TMPro;
+using Unity.VisualScripting;
 
 namespace ProjectCeros
 
@@ -23,7 +25,7 @@ namespace ProjectCeros
 
         [SerializeField] private IntGameEvent _event;
 
-
+        [SerializeField] private TextMeshProUGUI _requestedText;
 
 
         // Accesed by other scripts to tell InvitationLimiter which GuestSO is in question for inviting.
@@ -32,6 +34,11 @@ namespace ProjectCeros
             GuestToInvite = item;
         }
 
+
+        public void Start()
+        {
+            ShowRequestedText();
+        }
 
         public void InviteGuest()
         {
@@ -50,7 +57,8 @@ namespace ProjectCeros
 
                         GuestToInvite.isRequested = true;
 
-                        
+                        ShowRequestedText();
+
                     }
 
                     else
@@ -72,6 +80,12 @@ namespace ProjectCeros
                 Debug.Log("Guest is currently unavailable.");
             }
 
+        }
+
+
+        public void ShowRequestedText()
+        {
+            _requestedText.text = $"{InvitationsSend.Value}/{InvitationLimit.Value} Requests sent";
         }
 
     }
