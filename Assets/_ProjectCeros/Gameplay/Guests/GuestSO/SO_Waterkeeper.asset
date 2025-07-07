@@ -24,7 +24,7 @@ MonoBehaviour:
   Rating: 3
   Fee: 0
   TopicID: 0
-  GuestSprite: {fileID: 21300000, guid: bb9fdc004ee6de94e8fb8c12572183c4, type: 3}
+  GuestSprite: {fileID: 21300000, guid: 55a2cf8b5cd2773418fbc83306efdb8c, type: 3}
   isRequested: 0
   hasAccepted: 0
   isOnCooldown: 0
