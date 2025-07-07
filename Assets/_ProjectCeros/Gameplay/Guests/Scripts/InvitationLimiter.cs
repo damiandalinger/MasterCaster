@@ -9,7 +9,6 @@
 
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 namespace ProjectCeros
 

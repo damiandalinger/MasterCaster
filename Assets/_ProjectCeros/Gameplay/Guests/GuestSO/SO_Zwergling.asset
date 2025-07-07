@@ -18,9 +18,9 @@ MonoBehaviour:
     Hwhhrh Grhrhrhhe Rwehgerhge Rwehggheege!?
   Topic: Shooter
   Modifier: 0.03
-  Chance: 0.25
+  Chance: 0.28370786
   GuestID: 2
-  CooldownCounter: 0
+  CooldownCounter: 2
   Rating: 1
   Fee: 0
   TopicID: 4
@@ -31,6 +31,6 @@ MonoBehaviour:
   GuestSpriteDialogue: {fileID: 0}
   isRequested: 0
   hasAccepted: 0
-  isOnCooldown: 0
+  isOnCooldown: 1
   wasInterviewed: 0
   Color: {r: 0.40392157, g: 0.2, b: 0.1254902, a: 1}

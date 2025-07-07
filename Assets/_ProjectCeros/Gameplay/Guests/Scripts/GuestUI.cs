@@ -40,7 +40,7 @@ namespace ProjectCeros
 
         private GuestSO currentSelectedItem;
 
-        public Transform starParent; 
+        public Transform starParent;
         public Sprite filledStar;
         public Sprite emptyStar;
 
@@ -63,14 +63,14 @@ namespace ProjectCeros
                 _inviteButtonText.text = "Requested";
             }
 
-            else if (item.isOnCooldown)
-            {
-                _inviteButtonText.text = "Unavailable";
-            }
-
             else if (item.hasAccepted)
             {
                 _inviteButtonText.text = "Accepted";
+            }
+
+            else if (item.isOnCooldown)
+            {
+                _inviteButtonText.text = "Unavailable";
             }
 
             else
@@ -104,7 +104,7 @@ namespace ProjectCeros
 
             if (chance >= 0.7)
             {
-                _chanceText.text = "High chance of comming";
+                _chanceText.text = "High chance of coming";
             }
 
 
@@ -129,17 +129,19 @@ namespace ProjectCeros
             //_moneyChecker.CheckMoney();
             _invitationLimiter.InviteGuest();
 
+            ShowGuestDetails(currentSelectedItem);
+
         }
 
 
         public void ShowStarRating(int rating)
         {
-        for (int i = 0; i < starParent.childCount; i++)
-        {
-            var image = starParent.GetChild(i).GetComponent<Image>();
-            image.sprite = (i < rating) ? filledStar : emptyStar;
+            for (int i = 0; i < starParent.childCount; i++)
+            {
+                var image = starParent.GetChild(i).GetComponent<Image>();
+                image.sprite = (i < rating) ? filledStar : emptyStar;
+            }
         }
-    }
 
     }
 }

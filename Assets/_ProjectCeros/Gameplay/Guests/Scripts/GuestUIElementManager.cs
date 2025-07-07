@@ -48,6 +48,7 @@ namespace ProjectCeros
                 if (_isFirst)
                 {
                     _guestUI.ShowGuestDetails(guest);
+                    Debug.Log("Show the first info");
                     _isFirst = false;
                 }
 

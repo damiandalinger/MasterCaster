@@ -20,7 +20,7 @@ MonoBehaviour:
     become in the eyes of the fans."
   Topic: Shooter
   Modifier: 0.1
-  Chance: 0.175
+  Chance: 0.95
   GuestID: 7
   CooldownCounter: 0
   Rating: 2

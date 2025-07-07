@@ -29,14 +29,13 @@ namespace ProjectCeros
 
             else if (guest.isOnCooldown)
             {
-                _guestPortrait.sprite = guest.GuestSpriteavailable;
-
-
-
+                _guestPortrait.sprite = guest.GuestSpriteUnavailable;
             }
 
             else
-            { _guestPortrait.sprite = guest.GuestSpriteavailable; }
+            {
+                _guestPortrait.sprite = guest.GuestSpriteavailable;
+            }
         }
 
 

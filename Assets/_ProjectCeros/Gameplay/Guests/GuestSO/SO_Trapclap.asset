@@ -32,6 +32,6 @@ MonoBehaviour:
   GuestSpriteDialogue: {fileID: 0}
   isRequested: 0
   hasAccepted: 0
-  isOnCooldown: 1
+  isOnCooldown: 0
   wasInterviewed: 0
   Color: {r: 0.95686275, g: 0.16470589, b: 0.16470589, a: 1}

@@ -43,7 +43,7 @@ namespace ProjectCeros
 
         public void Start()
         {
-            SetGuestChance();
+           // SetGuestChance();
         }
 
         public void SetGuestChance()
@@ -55,6 +55,8 @@ namespace ProjectCeros
 
 
             }
+
+            Debug.Log("Set guest chance is done");
         }
 
 
