@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 107940462}
   - component: {fileID: 107940461}
   m_Layer: 0
-  m_Name: Bonefire
+  m_Name: Bonfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,14 +352,14 @@ RectTransform:
   m_GameObject: {fileID: 107940459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 206847231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.73, y: -3.14}
+  m_AnchoredPosition: {x: 3.53, y: -2.92}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5357612, y: 0.50460446}
 --- !u!212 &107940461
@@ -406,7 +406,7 @@ SpriteRenderer:
   m_SortingLayerID: -2040715717
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e2bc9576c5cb833479a4f694ff76328f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d160ace85834c4f4e806c4e53f64dde2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
