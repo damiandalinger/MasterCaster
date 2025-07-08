@@ -18,7 +18,7 @@ MonoBehaviour:
     receives, the only thing that somewhat fits still is his eye that has masterfully
     been reintroduced into his system.
   Topic: Action
-  Modifier: -0.2
+  Modifier: 0.01
   Chance: 0.95
   GuestID: 1
   CooldownCounter: 0

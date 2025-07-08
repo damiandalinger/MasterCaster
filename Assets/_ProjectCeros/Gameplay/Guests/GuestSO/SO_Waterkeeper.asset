@@ -19,9 +19,9 @@ MonoBehaviour:
   Topic: Action
   Modifier: 0.2
   Chance: 0.175
-  GuestID: 10
+  GuestID: 13
   CooldownCounter: 0
-  Rating: 3
+  Rating: 4
   Fee: 0
   TopicID: 0
   GuestSprite: {fileID: 21300000, guid: 55a2cf8b5cd2773418fbc83306efdb8c, type: 3}

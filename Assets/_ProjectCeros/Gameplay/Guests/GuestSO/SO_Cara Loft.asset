@@ -20,9 +20,9 @@ MonoBehaviour:
   Topic: RPG
   Modifier: 0.3
   Chance: 0.175
-  GuestID: 15
+  GuestID: 10
   CooldownCounter: 0
-  Rating: 5
+  Rating: 3
   Fee: 0
   TopicID: 3
   GuestSprite: {fileID: 21300000, guid: 16cec4ce00941624c9c3e211fdf7c199, type: 3}
