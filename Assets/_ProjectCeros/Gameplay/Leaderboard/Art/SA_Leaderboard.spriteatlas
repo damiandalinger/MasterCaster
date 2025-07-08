@@ -74,6 +74,7 @@ SpriteAtlas:
     - cd9c7d5c2e071e04aa00a42a0a0bc72f: 21300000
     - a463046c257f3af45bdf451d031aca42: 21300000
     - 28402b7cc5e666a48b4793493256040e: 21300000
+    - 1778431e783849f49be36008f5307e42: 21300000
     - 70250dceb05dac74581f6b5bb20606fc: 21300000
     - a8878ece3873ee444a7311200657a10e: 21300000
     - bd1620fe97f2273468254e2d8c18106c: 21300000
@@ -106,6 +107,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cd9c7d5c2e071e04aa00a42a0a0bc72f, type: 3}
   - {fileID: 21300000, guid: a463046c257f3af45bdf451d031aca42, type: 3}
   - {fileID: 21300000, guid: 28402b7cc5e666a48b4793493256040e, type: 3}
+  - {fileID: 21300000, guid: 1778431e783849f49be36008f5307e42, type: 3}
   - {fileID: 21300000, guid: 70250dceb05dac74581f6b5bb20606fc, type: 3}
   - {fileID: 21300000, guid: a8878ece3873ee444a7311200657a10e, type: 3}
   - {fileID: 21300000, guid: bd1620fe97f2273468254e2d8c18106c, type: 3}
@@ -137,6 +139,7 @@ SpriteAtlas:
   - SPR_Leaderboard_Boxes_GreenBright
   - SPR_Leaderboard_Profilpic_EGirl
   - SPR_Leaderboard_Boxes_Blue_Detail
+  - SPR_Leaderboard_UnderTop10
   - SPR_Leaderboard_Sinking
   - SPR_Leaderboard_Profilpic_LadyD
   - SPR_Leaderboard_Same
