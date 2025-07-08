@@ -17,6 +17,6 @@ MonoBehaviour:
     best friend.
   ItemSprite: {fileID: 21300000, guid: 5b7003401533fa8459391c9c78bd0dfc, type: 3}
   Price: 25
-  UpgradeGroup: 10
+  UpgradeGroup: 102
   Id: 102
   Modifier: 0.01

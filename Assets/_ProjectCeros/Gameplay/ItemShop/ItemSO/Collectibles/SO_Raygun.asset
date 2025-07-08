@@ -17,6 +17,6 @@ MonoBehaviour:
     what else would you need to deal with the undead?
   ItemSprite: {fileID: 21300000, guid: 745212c12e45b144d8dd5743e3486af0, type: 3}
   Price: 935
-  UpgradeGroup: 10
+  UpgradeGroup: 108
   Id: 108
   Modifier: 0.01

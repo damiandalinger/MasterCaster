@@ -17,6 +17,6 @@ MonoBehaviour:
     a very long time, sire!
   ItemSprite: {fileID: 21300000, guid: cb72000722421ea40ba5d0614f5bb522, type: 3}
   Price: 80
-  UpgradeGroup: 10
+  UpgradeGroup: 104
   Id: 104
   Modifier: 0.01

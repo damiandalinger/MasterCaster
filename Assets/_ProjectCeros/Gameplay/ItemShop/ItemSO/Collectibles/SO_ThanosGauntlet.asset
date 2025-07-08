@@ -17,6 +17,6 @@ MonoBehaviour:
     and sorry, left-handed, it\u2019s strictly a right-handed power fantasy."
   ItemSprite: {fileID: 21300000, guid: 44126937cb3a71940a344f2c49668192, type: 3}
   Price: 2000
-  UpgradeGroup: 10
+  UpgradeGroup: 110
   Id: 110
   Modifier: 0.01
