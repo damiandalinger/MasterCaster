@@ -43,10 +43,10 @@ namespace ProjectCeros
         [Tooltip("List of genre IDs this podcaster dislikes.")]
         public int[] DislikedGenres;
 
-        [HideInInspector] public int CurrentRank;
-        [HideInInspector] public int PreviousRank;
-        [HideInInspector] public int CurrentListener;
-        [HideInInspector] public int RankChange;
+        public int CurrentRank;
+        public int PreviousRank;
+        public int CurrentListener;
+        public int RankChange;
 
         #endregion
 

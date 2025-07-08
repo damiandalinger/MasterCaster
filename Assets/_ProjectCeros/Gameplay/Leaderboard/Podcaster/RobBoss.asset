@@ -23,7 +23,7 @@ MonoBehaviour:
 '
   LikedGenres: 0100000010000000
   DislikedGenres: 0700000009000000
-  CurrentRank: 2
-  PreviousRank: 2
-  CurrentListener: 250
+  CurrentRank: 1
+  PreviousRank: 1
+  CurrentListener: 969000
   RankChange: 2

@@ -30,6 +30,9 @@ namespace ProjectCeros
             else
                 Debug.LogWarning("No valid save game found!");
 
+            var leaderboard = FindFirstObjectByType<LeaderboardDataSync>();
+            leaderboard.ImportFromRuntimeSets();
+
             yield return null;
         }
 

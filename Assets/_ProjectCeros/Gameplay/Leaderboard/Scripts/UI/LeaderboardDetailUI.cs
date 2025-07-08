@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjectCeros
 {
@@ -71,11 +72,11 @@ namespace ProjectCeros
         [Tooltip("Text showing the podcaster description.")]
         [SerializeField] private TMP_Text _description;
 
-        [Tooltip("Text fields to display liked genre names.")]
-        public List<TMP_Text> _likedGenres;
+        [Tooltip("Text displaying all liked genres as comma-separated list.")]
+        [SerializeField] private TMP_Text _likedGenres;
 
-        [Tooltip("Text fields to display disliked genre names.")]
-        public List<TMP_Text> _dislikedGenres;
+        [Tooltip("Text displaying all disliked genres as comma-separated list.")]
+        [SerializeField] private TMP_Text _dislikedGenres;
 
         #endregion
 
@@ -89,7 +90,7 @@ namespace ProjectCeros
             _panel.SetActive(true);
             _name.text = rival.DisplayName;
             _personName.text = rival.PersonName;
-            _listenerCount.text = $"{rival.CurrentListener:N0} listeners";
+            _listenerCount.text = $"{rival.CurrentListener:N0}";
             _rank.text = $"#{rival.CurrentRank}";
             _portrait.sprite = rival.Portrait;
             _description.text = rival.Description;
@@ -97,15 +98,11 @@ namespace ProjectCeros
             _riseFallIcon.sprite = GetRankChangeIcon(rival.RankChange);
             _backgroundImage.sprite = GetBackgroundSpriteForRank(rival.CurrentRank);
 
-            for (int i = 0; i < _likedGenres.Count; i++)
-            {
-                _likedGenres[i].text = GetGenreText(rival.LikedGenres, i);
-            }
+            _likedGenres.text = rival.LikedGenres.Length > 0
+                ? string.Join(", ", rival.LikedGenres.Select(GetSubgenreDisplayName)) : "-";
 
-            for (int i = 0; i < _dislikedGenres.Count; i++)
-            {
-                _dislikedGenres[i].text = GetGenreText(rival.DislikedGenres, i);
-            }
+            _dislikedGenres.text = rival.DislikedGenres.Length > 0
+                ? string.Join(", ", rival.DislikedGenres.Select(GetSubgenreDisplayName)) : "-";
         }
 
         #endregion
@@ -122,12 +119,6 @@ namespace ProjectCeros
                 3 => _bronze,
                 _ => _standard
             };
-        }
-
-        // Returns the display name of a genre by index from a genre array.
-        private string GetGenreText(int[] genres, int index)
-        {
-            return genres.Length > index ? GetSubgenreDisplayName(genres[index]) : "-";
         }
 
         // Returns the corresponding icon for a given rank change.
@@ -150,22 +141,22 @@ namespace ProjectCeros
 
         private static readonly Dictionary<int, string> SubgenreNames = new()
         {
-            [1] = "FPS",
+            [1] = "First Person Shooter",
             [2] = "Hero Shooter",
             [3] = "Loot Shooter",
             [4] = "Fighting Game",
             [5] = "Stealth Game",
-            [6] = "Hack & Slash",
+            [6] = "Hack and Slash",
             [7] = "Souls Like",
             [8] = "Open World",
             [9] = "MMORPG",
-            [10] = "RTS",
+            [10] = "Real-Time Strategy",
             [11] = "Grand Strategy",
-            [12] = "TBS",
+            [12] = "Turn-Based Strategy",
             [13] = "Sport",
-            [14] = "Living Simulation",
+            [14] = "Life Simulation",
             [15] = "Job Simulation",
-            [16] = "Farming Game",
+            [16] = "Cozy Game",
             [17] = "Side Scroller",
             [18] = "Roguelike"
         };

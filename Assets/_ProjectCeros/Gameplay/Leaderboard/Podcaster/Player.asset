@@ -15,13 +15,13 @@ MonoBehaviour:
   InitialListener: 0
   InitialRank: 0
   Portrait: {fileID: 21300000, guid: 011e4f755a2732a4bbf69939139b643b, type: 3}
-  DisplayName: 
-  PersonName: 
+  DisplayName: e
+  PersonName: e
   Description: Listen to the yapping of the famous Unik the frickin nigger legend
     and Lena the vietlomese frog suckin star.
   LikedGenres: 
   DislikedGenres: 
-  CurrentRank: 10
-  PreviousRank: 2000
-  CurrentListener: 8
+  CurrentRank: 1993
+  PreviousRank: 2065
+  CurrentListener: 7
   RankChange: 1
