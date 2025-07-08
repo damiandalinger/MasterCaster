@@ -20,6 +20,11 @@ namespace ProjectCeros
 
         public IntRuntimeSet GuestIDs;
 
+        public void Start()
+        {
+            UnlockGuest();
+        }
+
 
         public void UnlockGuest()
         {
@@ -61,7 +66,7 @@ namespace ProjectCeros
             {
                 GuestIDs.Add(5);
                 GuestIDs.Add(7);
-            
+
             }
 
             if (_globalStars >= 2)
@@ -75,7 +80,7 @@ namespace ProjectCeros
             {
                 GuestIDs.Add(11);
                 GuestIDs.Add(12);
-                
+
             }
 
             if (_globalStars >= 4)

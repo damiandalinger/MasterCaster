@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: SO_Trapclap
   m_EditorClassIdentifier: 
   ItemName: Trapclap
-  Description: A Robot from space I think? That just talks nonsense all day and will
-    eventually drive you insane. Perfect for a peaceful day, right?
+  Description: 'A Robot from space I think? That just talks nonsense all day and
+    will eventually drive you insane. Perfect for a peaceful day, right?
+
+
+    Unlocks
+    Guest: Trapclap'
   ItemSprite: {fileID: 21300000, guid: d9e7f86b608fbcc4f9a972c5c3b74bb9, type: 3}
   Price: 1
   UpgradeGroup: 101

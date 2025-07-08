@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Bonfire
   Description: "Gives warmth and is cozy but also throws a healthy dose of danger
-    into the mix. What\u2019s life without a little risk isn't it?"
+    into the mix. What\u2019s life without a little risk isn't it?\n\nUnlocks Guest:
+    Waterkeeper"
   ItemSprite: {fileID: 21300000, guid: 6f925ea8c85e2674298a4f077ac0a2d9, type: 3}
   Price: 190
   UpgradeGroup: 106

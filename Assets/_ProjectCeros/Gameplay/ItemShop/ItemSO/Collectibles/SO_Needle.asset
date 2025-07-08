@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Needle
   Description: "An Empty knight's dream sword. Let\u2019s sew some enemies together
-    with this meat picker."
+    with this meat picker.\n\nUnlocks Guest: Full Knight"
   ItemSprite: {fileID: 21300000, guid: 49744255068229a4c8e829334e6e777b, type: 3}
   Price: 50
   UpgradeGroup: 103
