@@ -43,7 +43,7 @@ namespace ProjectCeros
                 //Unlock Firekeeper
                 if (id == 106)
                 {
-                    GuestIDs.Add(10);
+                    GuestIDs.Add(13);
 
                 }
 
@@ -68,13 +68,14 @@ namespace ProjectCeros
             {
                 GuestIDs.Add(8);
                 GuestIDs.Add(9);
+                GuestIDs.Add(10);
             }
 
             if (_globalStars >= 3)
             {
                 GuestIDs.Add(11);
                 GuestIDs.Add(12);
-                GuestIDs.Add(13);
+                
             }
 
             if (_globalStars >= 4)

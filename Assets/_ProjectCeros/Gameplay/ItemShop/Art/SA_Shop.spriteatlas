@@ -76,6 +76,7 @@ SpriteAtlas:
     - 0b68fd47f94e8144b94e20758176651a: 21300000
     - 0bd716978d752a049a1ca8d84c0a3431: 21300000
     - 6f925ea8c85e2674298a4f077ac0a2d9: 21300000
+    - d160ace85834c4f4e806c4e53f64dde2: 21300000
     - 7e6012ba0c49bc5498c12380df994d1e: 21300000
     - f89bc11bdd075944886949968595640d: 21300000
     - d9e7f86b608fbcc4f9a972c5c3b74bb9: 21300000
@@ -112,6 +113,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0b68fd47f94e8144b94e20758176651a, type: 3}
   - {fileID: 21300000, guid: 0bd716978d752a049a1ca8d84c0a3431, type: 3}
   - {fileID: 21300000, guid: 6f925ea8c85e2674298a4f077ac0a2d9, type: 3}
+  - {fileID: 21300000, guid: d160ace85834c4f4e806c4e53f64dde2, type: 3}
   - {fileID: 21300000, guid: 7e6012ba0c49bc5498c12380df994d1e, type: 3}
   - {fileID: 21300000, guid: f89bc11bdd075944886949968595640d, type: 3}
   - {fileID: 21300000, guid: d9e7f86b608fbcc4f9a972c5c3b74bb9, type: 3}
@@ -147,6 +149,7 @@ SpriteAtlas:
   - SPR_Equipment_Laptop_T2
   - SPR_Collectibles_Glove
   - SPR_Collectibles_Bonefire_Big
+  - SPR_Collectibles_Bonefire_2
   - SPR_Collectibles_Raygun
   - SPR_Equipment_Chair_T1
   - SPR_Collectibles_Trapclap_Big
