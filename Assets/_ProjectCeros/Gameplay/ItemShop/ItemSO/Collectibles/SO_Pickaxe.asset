@@ -17,6 +17,6 @@ MonoBehaviour:
     made of paper. Truly a revolutionary approach to interior design."
   ItemSprite: {fileID: 21300000, guid: d672866e26bb75749b4bf6e82491e84a, type: 3}
   Price: 100
-  UpgradeGroup: 10
+  UpgradeGroup: 105
   Id: 105
   Modifier: 0.01

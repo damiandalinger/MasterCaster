@@ -17,6 +17,6 @@ MonoBehaviour:
     into the mix. What\u2019s life without a little risk isn't it?"
   ItemSprite: {fileID: 21300000, guid: 6f925ea8c85e2674298a4f077ac0a2d9, type: 3}
   Price: 190
-  UpgradeGroup: 10
+  UpgradeGroup: 106
   Id: 106
   Modifier: 0.01

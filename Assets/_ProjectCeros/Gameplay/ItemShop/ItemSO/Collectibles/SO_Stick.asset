@@ -16,6 +16,6 @@ MonoBehaviour:
   Description: Nice Stick. Good for hitting.
   ItemSprite: {fileID: 21300000, guid: df660871551af5b4dbcede16ea8cdbc4, type: 3}
   Price: 1000
-  UpgradeGroup: 10
+  UpgradeGroup: 109
   Id: 109
   Modifier: 0.01
