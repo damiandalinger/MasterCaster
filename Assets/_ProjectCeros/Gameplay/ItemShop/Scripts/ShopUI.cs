@@ -37,7 +37,7 @@ namespace ProjectCeros
 
         [SerializeField] private Button _buyButton;
 
-        [SerializeField] private Image _alreadyBought;
+        [SerializeField] private GameObject _alreadyBought;
 
         private ItemSO currentSelectedItem;
 
@@ -65,13 +65,13 @@ namespace ProjectCeros
             if (_unlockedItemIDs.Items.Contains(currentSelectedItem.Id))
 
             {
-                _alreadyBought.enabled = true;
+                _alreadyBought.SetActive(true);
             }
 
             else
 
             {
-                _alreadyBought.enabled = false;
+                _alreadyBought.SetActive(false);
             }
 
         }
