@@ -52,9 +52,18 @@ namespace ProjectCeros
             currentSelectedItem = item;
 
             _guestNameText.text = item.Name;
-            _topicText.text = $"Favourite topic: {item.Topic}";
             _descriptionText.text = item.Description;
             _guestImage.sprite = item.GuestSprite;
+
+            if (item.wasInterviewed)
+            {
+                _topicText.text = $"Favourite topic: {item.Topic}";
+            }
+
+            else
+            {
+                _topicText.text = $"Favourite topic: ???";
+            }
 
             ShowStarRating(item.Rating);
 
@@ -90,19 +99,22 @@ namespace ProjectCeros
         {
             float chance = currentSelectedItem.Chance;
 
-            if (chance <= 0.3)
+            if (chance <= 0.25)
             {
-                _chanceText.text = "Unlikely";
+                _chanceText.text = "Probably won't come";
             }
 
-
-            if (chance > 0.3 && chance < 0.7)
+            if (chance > 0.25 && chance < 0.5)
             {
                 _chanceText.text = "Might come";
             }
 
+            if (chance >= 0.5 && chance < 0.75)
+            {
+                _chanceText.text = "Will propably come";
+            }
 
-            if (chance >= 0.7)
+            if (chance >= 0.75)
             {
                 _chanceText.text = "High chance of coming";
             }

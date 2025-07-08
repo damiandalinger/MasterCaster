@@ -26,6 +26,11 @@ namespace ProjectCeros
                 _guestPortrait.sprite = guest.GuestSpriteLocked;
             }
 
+            else if (guest.hasAccepted)
+            {
+                _guestPortrait.sprite = guest.GuestSpriteavailable;
+            }
+
 
             else if (guest.isOnCooldown)
             {

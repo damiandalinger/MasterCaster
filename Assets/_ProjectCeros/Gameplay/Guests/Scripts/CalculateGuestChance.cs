@@ -64,7 +64,7 @@ namespace ProjectCeros
         {
 
             // If Stars of the Player are definitive higher than guest stars.
-            if (_globalStars.Value > guest.Rating)
+            if (_globalStars.Value > guest.Rating || guest.Rating == 0)
             {
                 return _fixedChance;
 
