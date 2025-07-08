@@ -16,6 +16,6 @@ MonoBehaviour:
   Description: 
   ItemSprite: {fileID: 0}
   Price: 100000
-  UpgradeGroup: 10
+  UpgradeGroup: 11
   Id: 111
   Modifier: 0.01

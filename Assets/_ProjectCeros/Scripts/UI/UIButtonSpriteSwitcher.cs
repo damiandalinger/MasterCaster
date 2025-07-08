@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 25/06/2025 by Damian Dalinger: Initial implementation.
+/// 08/07/2025 by Unik Kelmendi: extruded nested class.
 /// </remarks>
 
 using UnityEngine;
@@ -15,19 +16,6 @@ namespace ProjectCeros
 {
     public class UIButtonSpriteSwitcher : MonoBehaviour
     {
-        [System.Serializable]
-        public class SelectableButton
-        {
-            [Tooltip("The GameObject that contains both a Button and Image component.")]
-            public GameObject buttonObject;
-
-            [Tooltip("The sprite used when this button is selected.")]
-            public Sprite selectedSprite;
-
-            [HideInInspector] public Button button;
-            [HideInInspector] public Image image;
-            [HideInInspector] public Sprite normalSprite;
-        }
 
         #region Fields
 
@@ -71,7 +59,7 @@ namespace ProjectCeros
         #region Private Methods
         
         // Resets the selection and updates the sprite of the clicked button.
-        private void OnButtonClicked(SelectableButton clicked)
+        public void OnButtonClicked(SelectableButton clicked)
         {
             ResetSelection();
             clicked.image.sprite = clicked.selectedSprite;

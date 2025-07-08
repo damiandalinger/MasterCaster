@@ -19,4 +19,4 @@ MonoBehaviour:
       Data2: 1268630436
       Data3: -1608535917
       Data4: -792996031
-    Path: event:/CashClick
+    Path: event:/Clicks/CashClick

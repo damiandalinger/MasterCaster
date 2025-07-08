@@ -19,4 +19,4 @@ MonoBehaviour:
       Data2: 1081762415
       Data3: 1864519307
       Data4: 1034555977
-    Path: event:/GuestClick
+    Path: event:/Clicks/GuestClick
