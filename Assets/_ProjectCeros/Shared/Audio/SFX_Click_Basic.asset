@@ -19,4 +19,4 @@ MonoBehaviour:
       Data2: 1078381440
       Data3: -1425019468
       Data4: 1698902271
-    Path: event:/BasicClick
+    Path: event:/Clicks/BasicClick
