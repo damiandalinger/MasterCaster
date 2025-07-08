@@ -25,5 +25,5 @@ MonoBehaviour:
   DislikedGenres: 030000000f000000
   CurrentRank: 1
   PreviousRank: 1
-  CurrentListener: 980
+  CurrentListener: 1000000
   RankChange: 2

@@ -49,6 +49,9 @@ namespace ProjectCeros
         [Tooltip("Multiplier if the subgenre is disliked and in the newspaper.")]
         [SerializeField] private FloatReference _decreaseMultiplier;
 
+        [Tooltip("Reference to the LeaderboardDataSync script.")]
+        [SerializeField] private LeaderboardDataSync _dataSync;
+
         #endregion
 
         #region Properties
@@ -71,6 +74,8 @@ namespace ProjectCeros
             _playerPodcaster.InitializeRuntime();
 
             PlayerRank = -1;
+
+            UpdateLeaderboard();
         }
 
         // Updates leaderboard ranks and listener counts based on article effects.
@@ -85,6 +90,7 @@ namespace ProjectCeros
 
             var sortedPodcasters = SortPodcasters(allPodcasters);
             UpdateRanks(sortedPodcasters);
+            _dataSync.ExportToRuntimeSets();
         }
 
         #endregion

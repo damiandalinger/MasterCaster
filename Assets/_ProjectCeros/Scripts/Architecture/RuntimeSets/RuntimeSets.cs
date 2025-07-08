@@ -42,6 +42,12 @@ namespace ProjectCeros
                 Items.Add(thing);
         }
 
+        // Adds everything th a Runtimeset, even if there are duplicates.
+        public void AddWithDuplicates(T thing)
+        {
+            Items.Add(thing);
+        }
+
         // Removes an object from the set if it exists.
         public void Remove(T thing)
         {
