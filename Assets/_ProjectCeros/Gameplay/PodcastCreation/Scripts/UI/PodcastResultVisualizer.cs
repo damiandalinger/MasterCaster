@@ -48,9 +48,6 @@ namespace ProjectCeros
         [Tooltip("The data source containing all calculated podcast result values.")]
         [SerializeField] private PodcastResult _result;
 
-        [Tooltip("Reference to the current total listener count (used for applying final values).")]
-        [SerializeField] private IntReference _currentListeners;
-
         private Coroutine _multiplierAnimation;
         private bool _hasAnimated = false;
 
@@ -129,7 +126,6 @@ namespace ProjectCeros
 
             _hasAnimated = true;
             _multiplierAnimation = null;
-            _currentListeners.Variable.SetValue(_result.TotalListeners);
         }
 
         // Directly applies the final visual state without animation.
@@ -159,7 +155,6 @@ namespace ProjectCeros
             }
 
             _hasAnimated = true;
-            _currentListeners.Variable.SetValue(_result.TotalListeners);
         }
 
         // Returns a list of labeled bonus values with icon indices for UI display.

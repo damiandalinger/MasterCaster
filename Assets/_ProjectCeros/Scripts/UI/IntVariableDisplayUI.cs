@@ -6,6 +6,7 @@
 /// 09/05/2025 by Damian Dalinger: Script creation.
 /// 18/06/2025 by Damian Dalinger: Added the update method.
 /// 23/06/2025 by Damian Dalinger: Added the ordinal suffix option. 
+/// 08/07/2025 by Damian Dalinger: Added the thousand seperator.
 /// </remarks>
 
 using UnityEngine;
@@ -36,6 +37,12 @@ namespace ProjectCeros
         [Tooltip("Automatically adds ordinal suffixes like 'st', 'nd', 'rd', 'th' to the displayed number.")]
         [SerializeField] private bool _useOrdinalSuffix = false;
 
+        [Tooltip("Display the number using thousands separators (e.g., 1,000,000).")]
+        [SerializeField] private bool _useThousandsSeparator = false;
+
+        [Tooltip("Display a '+' sign for positive values.")]
+        [SerializeField] private bool _showPlusSignForPositiveValues = false;
+
         #endregion
 
         #region Lifecycle Methods
@@ -63,8 +70,18 @@ namespace ProjectCeros
             if (_targetText != null)
             {
                 int value = _valueToDisplay.Value;
+
+                string sign = "";
+                if (_showPlusSignForPositiveValues && value > 0)
+                    sign = "+";
+
+                string numberString = _useThousandsSeparator
+                    ? Mathf.Abs(value).ToString("N0")  // Optional: ohne Minus für eigene Sign-Logik
+                    : Mathf.Abs(value).ToString();
+
                 string ordinal = _useOrdinalSuffix ? GetOrdinalSuffix(value) : "";
-                _targetText.text = $"{_prefix}{value}{ordinal}{_suffix}";
+
+                _targetText.text = $"{_prefix}{sign}{numberString}{ordinal}{_suffix}";
             }
         }
 

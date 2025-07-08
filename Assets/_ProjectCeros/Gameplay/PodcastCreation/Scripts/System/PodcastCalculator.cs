@@ -9,12 +9,16 @@
 
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 
 namespace ProjectCeros
 {
     public class PodcastCalculator : MonoBehaviour
     {
         #region Fields
+
+        [Tooltip("Raised when the podcast is confirmed.")]
+        [SerializeField] private GameEvent _onPodcastConfirmed;
 
         [Header("Modifier References")]
         [Tooltip("Guest segment bonus.")]
@@ -42,16 +46,26 @@ namespace ProjectCeros
         [SerializeField] private FloatReference _sizeMultiplier;
 
         [Header("Runtime Values")]
+        [Tooltip("The reference to the current listeners.")]
         [SerializeField] private IntReference _currentListeners;
 
+        [Tooltip("The listeners gained with the last podcast.")]
+        [SerializeField] private IntReference _listenerGain;
+
+        [Tooltip("A reference to the money variable.")]
+        [SerializeField] private IntReference _money;
+
+        [Tooltip("The money gained from the last podcast.")]
+        [SerializeField] private IntReference _moneyGain;
+
         [Tooltip("Selected genre ID.")]
-        [SerializeField] private IntVariable _selectedGenre;
+        [SerializeField] private IntReference _selectedGenre;
 
         [Tooltip("Selected spin (1 = positive, 2 = negative).")]
-        [SerializeField] private IntVariable _selectedSpin;
+        [SerializeField] private IntReference _selectedSpin;
 
         [Tooltip("Selected subgenre ID.")]
-        [SerializeField] private IntVariable _selectedSubgenre;
+        [SerializeField] private IntReference _selectedSubgenre;
 
         [Header("Data Sources")]
         [Tooltip("The RUntimeSet storing the selected articles from the current newspaper.")]
@@ -83,13 +97,13 @@ namespace ProjectCeros
             bool genreMatched = false;
             bool subgenreMatched = false;
 
-            var article = _selectedImportantArticles.Items.FirstOrDefault(a => a.PairID / 1000 == _selectedGenre.RuntimeValue);
+            var article = _selectedImportantArticles.Items.FirstOrDefault(a => a.PairID / 1000 == _selectedGenre.Variable.RuntimeValue);
             if (article != null)
             {
-                topicMult = _selectedSpin.RuntimeValue == 1 ? article.ValuePositive : article.ValueNegative;
+                topicMult = _selectedSpin.Variable.RuntimeValue == 1 ? article.ValuePositive : article.ValueNegative;
                 genreMatched = true;
 
-                if (article.Subgenre > 0 && article.Subgenre == _selectedSubgenre.RuntimeValue)
+                if (article.Subgenre > 0 && article.Subgenre == _selectedSubgenre.Variable.RuntimeValue)
                 {
                     subgenre = _subgenreMod.Value;
                     subgenreMatched = true;
@@ -102,15 +116,34 @@ namespace ProjectCeros
             int totalListeners = Mathf.CeilToInt(finalValue);
             int gain = totalListeners - (int)baseListeners;
 
+            _listenerGain.Variable.SetValue(gain);
+            ApplyMoneyGain(gain);
+            _currentListeners.Variable.SetValue(totalListeners);
+
             _result.OverwriteWith(totalListeners, gain, baseBonus, guest, equip, sponsor, dark, subgenre, bonusMult, topicMult);
             PrintDebugOutput(baseListeners, baseValue, guest, equip, sponsor, dark,
                                        subgenre, baseBonus, topicMult, sizeMult,
                                        finalValue, totalListeners, gain, genreMatched, subgenreMatched);
+
+            _onPodcastConfirmed.Raise();
         }
 
         #endregion
 
         #region Private Methods
+
+        // Calculates and applies money gain based on listener gain.
+        private void ApplyMoneyGain(int listenerGain)
+        {
+            if (listenerGain <= 0) return;
+
+            float rawMoney = listenerGain * 0.1f;
+            float randomized = Random.Range(0.95f, 1.05f);
+            int finalMoney = Mathf.CeilToInt(rawMoney * randomized);
+
+            _moneyGain.Variable.SetValue(finalMoney);
+            _money.Variable.ApplyChange(finalMoney);
+        }
 
         // Calculates a dynamic modifier based on current audience size.
         private static float CalculateSizeModifier(int currentListeners)
@@ -146,9 +179,9 @@ namespace ProjectCeros
         {
             Debug.Log(
                 "--- Podcast Evaluation Debug ---\n" +
-                $"Selected Genre: {GetGenreName(_selectedGenre.RuntimeValue)} (Matched: {genreMatched})\n" +
-                $"Selected Spin: {(_selectedSpin.RuntimeValue == 1 ? "Positive" : "Negative")}\n" +
-                $"Selected Subgenre: {GetSubgenreDisplayName(_selectedSubgenre.RuntimeValue)} (Matched: {subgenreMatched})\n\n" +
+                $"Selected Genre: {GetGenreName(_selectedGenre.Variable.RuntimeValue)} (Matched: {genreMatched})\n" +
+                $"Selected Spin: {(_selectedSpin.Variable.RuntimeValue == 1 ? "Positive" : "Negative")}\n" +
+                $"Selected Subgenre: {GetSubgenreDisplayName(_selectedSubgenre.Variable.RuntimeValue)} (Matched: {subgenreMatched})\n\n" +
 
                 $"Base Listeners: {baseListeners}\n" +
                 $"PreviousListenersMod: {_previousListenerMod.Value}\n" +
