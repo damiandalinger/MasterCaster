@@ -35,11 +35,19 @@ namespace ProjectCeros
 
         [SerializeField] private Image _itemImage;
 
+        [SerializeField] private Sprite _greySprite;
+
+        [SerializeField] private Sprite _regularSprite;
+
         [SerializeField] private Button _buyButton;
 
         [SerializeField] private GameObject _alreadyBought;
 
+        public Image buttonImage;
+
         private ItemSO currentSelectedItem;
+
+
 
 
         // Adjusts the ShopUI info.
@@ -66,12 +74,20 @@ namespace ProjectCeros
 
             {
                 _alreadyBought.SetActive(true);
+
+                _buyButton.interactable = false;
+
+                // Image buttonImage = _buyButton.GetComponent<Image>();
+                buttonImage.sprite = _greySprite;
             }
 
             else
-
             {
                 _alreadyBought.SetActive(false);
+                _buyButton.interactable = true;
+
+                // Image buttonImage = _buyButton.GetComponent<Image>();
+                buttonImage.sprite = _regularSprite;
             }
 
         }

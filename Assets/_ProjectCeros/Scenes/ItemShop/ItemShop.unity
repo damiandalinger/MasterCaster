@@ -5314,8 +5314,11 @@ MonoBehaviour:
   _priceText: {fileID: 254385339}
   _playerMoney: {fileID: 676589861}
   _itemImage: {fileID: 715003925}
+  _greySprite: {fileID: 21300000, guid: ba00579bb8c2c844d98ac256d0fbb028, type: 3}
+  _regularSprite: {fileID: 21300000, guid: b0b147f33c9f17a4d89828aabb30f870, type: 3}
   _buyButton: {fileID: 1909098452}
   _alreadyBought: {fileID: 1871270778}
+  buttonImage: {fileID: 1909098453}
 --- !u!4 &990817367
 Transform:
   m_ObjectHideFlags: 0
@@ -9550,7 +9553,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}

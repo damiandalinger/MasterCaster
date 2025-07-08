@@ -3876,6 +3876,9 @@ MonoBehaviour:
   starParent: {fileID: 119309373}
   filledStar: {fileID: 21300000, guid: 65337a73ea371f149a73b3e67ce32027, type: 3}
   emptyStar: {fileID: 21300000, guid: ddf1bc11c701fbf42aae9a824a3aa8db, type: 3}
+  _greyedSprite: {fileID: 21300000, guid: a3ab6947cedbd8f47b6d5200902957d1, type: 3}
+  _regularSprite: {fileID: 21300000, guid: e133b518a0e4e79419661abb1a4d193f, type: 3}
+  buttonImage: {fileID: 97981450}
 --- !u!1 &2133585810
 GameObject:
   m_ObjectHideFlags: 0

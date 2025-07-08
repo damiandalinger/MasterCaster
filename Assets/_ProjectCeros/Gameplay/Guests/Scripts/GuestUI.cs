@@ -44,6 +44,9 @@ namespace ProjectCeros
         public Sprite filledStar;
         public Sprite emptyStar;
 
+        public Sprite _greyedSprite;
+        public Sprite _regularSprite;
+        public Image buttonImage;
 
 
         // Adjusts the GuestUI info.
@@ -70,21 +73,32 @@ namespace ProjectCeros
             if (item.isRequested)
             {
                 _inviteButtonText.text = "Requested";
+                _inviteButton.interactable = false;
+                buttonImage.sprite = _greyedSprite;
             }
 
             else if (item.hasAccepted)
             {
                 _inviteButtonText.text = "Accepted";
+                _inviteButton.interactable = false;
+                buttonImage.sprite = _regularSprite;
             }
 
             else if (item.isOnCooldown)
             {
                 _inviteButtonText.text = "Unavailable";
+
+                buttonImage.sprite = _greyedSprite;
+                _inviteButton.interactable = false;
             }
 
             else
             {
                 _inviteButtonText.text = "Request!";
+
+                _inviteButton.interactable = true;
+                buttonImage.sprite = _regularSprite;
+
             }
 
             _invitationLimiter.SetGuestToInvite(item);
@@ -127,6 +141,7 @@ namespace ProjectCeros
         {
             Instance = this;
             // _playerMoney.text = $"${_money.Value}";
+            buttonImage = _inviteButton.GetComponent<Image>();
             _inviteButton.onClick.AddListener(BuyCurrentItem);
         }
 
