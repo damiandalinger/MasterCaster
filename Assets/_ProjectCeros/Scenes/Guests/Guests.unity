@@ -874,8 +874,8 @@ MonoBehaviour:
     and ruins Ms. Loft has most certainly done either of them plenty. She now enjoys
     retirement as a best selling author of her adventures"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 405a3e19b503b04428017cab6920ed60, type: 2}
-  m_sharedMaterial: {fileID: -6493473150394957807, guid: 405a3e19b503b04428017cab6920ed60, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07b2215b8c06e424598cf325dc63f03a, type: 2}
+  m_sharedMaterial: {fileID: -9092478449822909630, guid: 07b2215b8c06e424598cf325dc63f03a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
