@@ -18,9 +18,6 @@ namespace ProjectCeros
 
         #region Fields
 
-        [Tooltip("Raised when the podcast is confirmed.")]
-        [SerializeField] private GameEvent _onPodcastConfirmed;
-
         [Header("Core References")]
         [Tooltip("Performs the podcast listener gain calculation.")]
         [SerializeField] private PodcastCalculator _calculator;
@@ -94,7 +91,6 @@ namespace ProjectCeros
             _titleInputField.placeholder.GetComponent<TMP_Text>().text = title;
 
             _calculator.Calculate();
-            _onPodcastConfirmed.Raise();
         }
 
         // Sets the selected genre index and refreshes button visibility.

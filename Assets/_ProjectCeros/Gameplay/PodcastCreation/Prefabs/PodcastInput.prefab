@@ -2639,7 +2639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07a288572e5d6f46ab6a89b79708bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onPodcastConfirmed: {fileID: 11400000, guid: 2016aac406210b348a175d66f9a627de, type: 2}
   _calculator: {fileID: 3571637023063976420}
   _titleInputField: {fileID: 3005129187777979678}
   _confirmButton: {fileID: 7174939557171824740}
@@ -4488,6 +4487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7810ec6b0281fd40b662ea69be09596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onPodcastConfirmed: {fileID: 11400000, guid: 2016aac406210b348a175d66f9a627de, type: 2}
   _guestMod:
     UseConstant: 0
     ConstantValue: 0
@@ -4524,9 +4524,30 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 10d72ee4fcdb40a408d8314a91b64658, type: 2}
-  _selectedGenre: {fileID: 11400000, guid: 3c984cb7f50283e46b7ff6f84897b263, type: 2}
-  _selectedSpin: {fileID: 11400000, guid: 42ffa4cf2c2ba5b448fcd2ce82cc1da9, type: 2}
-  _selectedSubgenre: {fileID: 11400000, guid: 41642b9d7a61d264182085fdc1ee56d4, type: 2}
+  _listenerGain:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 5fdd09c69db4ef54fa662dbc49c9178d, type: 2}
+  _money:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 23a2406e2fc4b9744883414ac202317f, type: 2}
+  _moneyGain:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 377b474754058d842a365f0ee87544ba, type: 2}
+  _selectedGenre:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 3c984cb7f50283e46b7ff6f84897b263, type: 2}
+  _selectedSpin:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 42ffa4cf2c2ba5b448fcd2ce82cc1da9, type: 2}
+  _selectedSubgenre:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 41642b9d7a61d264182085fdc1ee56d4, type: 2}
   _selectedImportantArticles: {fileID: 11400000, guid: 5927c7122f7723e4c9c565c802275fbc, type: 2}
   _result: {fileID: 11400000, guid: 9808f56a4d0a48d4ba91b6a675361e2a, type: 2}
 --- !u!1 &2605510718748756046
@@ -8705,6 +8726,18 @@ MonoBehaviour:
           m_StringArgument: economy
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b0fe975230462d64f8fc1c1a9d8ebc88, type: 2}
+        m_TargetAssemblyTypeName: ProjectCeros.BoolVariable, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &7225248220640094677
 GameObject:
   m_ObjectHideFlags: 0
@@ -9271,6 +9304,8 @@ MonoBehaviour:
   _suffix: 
   _useUpdateMethod: 0
   _useOrdinalSuffix: 0
+  _useThousandsSeparator: 1
+  _showPlusSignForPositiveValues: 0
 --- !u!1 &8325195918902599298
 GameObject:
   m_ObjectHideFlags: 0
