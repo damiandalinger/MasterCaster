@@ -83,6 +83,7 @@ SpriteAtlas:
     - 0b68fd47f94e8144b94e20758176651a: 21300000
     - 0bd716978d752a049a1ca8d84c0a3431: 21300000
     - 6f925ea8c85e2674298a4f077ac0a2d9: 21300000
+    - 5787d3e8c4d59ed4daf4acfe9115e003: 21300000
     - d160ace85834c4f4e806c4e53f64dde2: 21300000
     - f711d56955fd8c749b6e1ac22bf2c01a: 21300000
     - 7e6012ba0c49bc5498c12380df994d1e: 21300000
@@ -97,7 +98,6 @@ SpriteAtlas:
     - 5e70a25ead5e5cd4ea43b45637d6e1b7: 21300000
     - d672866e26bb75749b4bf6e82491e84a: 21300000
     - c72fb65fc3ede054489555b05677a63c: 21300000
-    - 21dcb09fe198bc047b1050fdff78a2cc: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 97ba61105d7e4ac4691839bd03f56a77, type: 3}
@@ -132,6 +132,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0b68fd47f94e8144b94e20758176651a, type: 3}
   - {fileID: 21300000, guid: 0bd716978d752a049a1ca8d84c0a3431, type: 3}
   - {fileID: 21300000, guid: 6f925ea8c85e2674298a4f077ac0a2d9, type: 3}
+  - {fileID: 21300000, guid: 5787d3e8c4d59ed4daf4acfe9115e003, type: 3}
   - {fileID: 21300000, guid: d160ace85834c4f4e806c4e53f64dde2, type: 3}
   - {fileID: 21300000, guid: f711d56955fd8c749b6e1ac22bf2c01a, type: 3}
   - {fileID: 21300000, guid: 7e6012ba0c49bc5498c12380df994d1e, type: 3}
@@ -146,7 +147,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5e70a25ead5e5cd4ea43b45637d6e1b7, type: 3}
   - {fileID: 21300000, guid: d672866e26bb75749b4bf6e82491e84a, type: 3}
   - {fileID: 21300000, guid: c72fb65fc3ede054489555b05677a63c, type: 3}
-  - {fileID: 21300000, guid: 21dcb09fe198bc047b1050fdff78a2cc, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_Collectibles_Trapclap
   - SPR_Collectibles_Mushroom_Big
@@ -180,6 +180,7 @@ SpriteAtlas:
   - SPR_Equipment_Laptop_T2
   - SPR_Collectibles_Glove
   - SPR_Collectibles_Bonefire_Big
+  - SPR_Equipment_Laptop_T1_Big 1
   - SPR_Collectibles_Bonefire_2
   - SPR_Equipment_Chair_T2_Big
   - SPR_Collectibles_Raygun
@@ -194,7 +195,6 @@ SpriteAtlas:
   - SPR_Equipment_Chair_T1_Big
   - SPR_Collectibles_Pickaxe_Big
   - SPR_Equipment_Mic_T1_Big
-  - SPR_Equipment_Laptop_T1_Big
   m_RenderDataMap: {}
   m_Tag: SA_Shop
   m_IsVariant: 0

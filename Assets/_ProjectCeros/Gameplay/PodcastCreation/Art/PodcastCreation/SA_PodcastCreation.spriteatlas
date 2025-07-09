@@ -63,10 +63,12 @@ SpriteAtlas:
     - 90727cf31ca81834786c12b61a8917af: 21300000
     - 4ede710443bf8ab489bcea312382247b: 21300000
     - c2c8f504fceead74f865c8771397befc: 21300000
+    - c5925a143f11c9a4bb9878053b1993b8: 21300000
     - 5ed3e424dd2c76a46b02625621ff718c: 21300000
     - 6a363cf4aceeaa04f924520ab3192737: 21300000
     - bee13395ae1697449b2b931adab2c212: 21300000
     - a42086365fbba9b4ab3528f9d1525545: 21300000
+    - b0cd7d676264a0441842b1765b68ee88: 21300000
     - cb7bce97ae202d54eb322dd56c668cf5: 21300000
     - bc40eea72233d7548bf08387539eccf0: 21300000
     - 93f55bb720e7e4847be092f6b7ae01a7: 21300000
@@ -78,11 +80,13 @@ SpriteAtlas:
     - 07da0cb95f0ed9e458fb4c5e6de4e38a: 21300000
     - 5b346b7a0b8d41f419c80b0bbb443f04: 21300000
     - 46132eeabeee7a84d98c8a7842a9b8d2: 21300000
+    - 699e3efa10c68ae468e0903dfcc85e92: 21300000
     - d8d3dc6b4da6d244c8f6433f1fa73e7f: 21300000
     - b42cfd0c340114e49b8d8eccbcc6d911: 21300000
     - bd5f8d8c43a49c545bbbd80ce6dfff8b: 21300000
     - d3241bbca1c4d3743b5b10b3a334efae: 21300000
     - 43245ebccca09204f9375b9bb61f4a03: 21300000
+    - b97d6f0d05549d04383c88f3ba7c8a23: 21300000
     - 79e9d31d7876b7d4ebd6beef2782b34d: 21300000
     - 082e70fda4db6b646a5efb107dc36238: 21300000
     - f6c30dfd1cce0514d9b7ec95e4f41e66: 21300000
@@ -105,10 +109,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 90727cf31ca81834786c12b61a8917af, type: 3}
   - {fileID: 21300000, guid: 4ede710443bf8ab489bcea312382247b, type: 3}
   - {fileID: 21300000, guid: c2c8f504fceead74f865c8771397befc, type: 3}
+  - {fileID: 21300000, guid: c5925a143f11c9a4bb9878053b1993b8, type: 3}
   - {fileID: 21300000, guid: 5ed3e424dd2c76a46b02625621ff718c, type: 3}
   - {fileID: 21300000, guid: 6a363cf4aceeaa04f924520ab3192737, type: 3}
   - {fileID: 21300000, guid: bee13395ae1697449b2b931adab2c212, type: 3}
   - {fileID: 21300000, guid: a42086365fbba9b4ab3528f9d1525545, type: 3}
+  - {fileID: 21300000, guid: b0cd7d676264a0441842b1765b68ee88, type: 3}
   - {fileID: 21300000, guid: cb7bce97ae202d54eb322dd56c668cf5, type: 3}
   - {fileID: 21300000, guid: bc40eea72233d7548bf08387539eccf0, type: 3}
   - {fileID: 21300000, guid: 93f55bb720e7e4847be092f6b7ae01a7, type: 3}
@@ -120,11 +126,13 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 07da0cb95f0ed9e458fb4c5e6de4e38a, type: 3}
   - {fileID: 21300000, guid: 5b346b7a0b8d41f419c80b0bbb443f04, type: 3}
   - {fileID: 21300000, guid: 46132eeabeee7a84d98c8a7842a9b8d2, type: 3}
+  - {fileID: 21300000, guid: 699e3efa10c68ae468e0903dfcc85e92, type: 3}
   - {fileID: 21300000, guid: d8d3dc6b4da6d244c8f6433f1fa73e7f, type: 3}
   - {fileID: 21300000, guid: b42cfd0c340114e49b8d8eccbcc6d911, type: 3}
   - {fileID: 21300000, guid: bd5f8d8c43a49c545bbbd80ce6dfff8b, type: 3}
   - {fileID: 21300000, guid: d3241bbca1c4d3743b5b10b3a334efae, type: 3}
   - {fileID: 21300000, guid: 43245ebccca09204f9375b9bb61f4a03, type: 3}
+  - {fileID: 21300000, guid: b97d6f0d05549d04383c88f3ba7c8a23, type: 3}
   - {fileID: 21300000, guid: 79e9d31d7876b7d4ebd6beef2782b34d, type: 3}
   - {fileID: 21300000, guid: 082e70fda4db6b646a5efb107dc36238, type: 3}
   - {fileID: 21300000, guid: f6c30dfd1cce0514d9b7ec95e4f41e66, type: 3}
@@ -146,10 +154,12 @@ SpriteAtlas:
   - SPR_Genre_Action_Highlighted
   - SPR_Podcast_Emptyness
   - SPR_Podcast_Speachbubble_right
+  - SPR_Podcast_Character_Pos_1
   - SPR_Podcast_No_Unselected
   - SPR_Genre_Indie_Selected
   - SPR_Genre_Strategy_Unselected
   - SPR_Podcast_Button_Right_Unselected
+  - SPR_Podcast_Character_Pos_3
   - SPR_Podcast_No_Selected
   - SPR_Podcast_Sponsor
   - SPR_Podcast_Circle_Selected
@@ -161,11 +171,13 @@ SpriteAtlas:
   - SPR_ScoreScreen_Script1
   - SPR_Genre_RPG_Selected
   - SPR_Genre_Indie_Unselected
+  - SPR_Podcast_Character_Pos_2
   - SPR_Genre_Shooter_Selected
   - SPR_Podcast_Botton_start_Selected
   - SPR_Podcast_Button_Right_Selected
   - SPR_Genre_Strategy_Highlighted
   - SPR_Genre_RPG_Highlighted
+  - SPR_Podcast_Background
   - SPR_Podcast_Button_Left_Selected
   - SPR_Podcast_LineTitle
   - SPR_Genre_Simulation_Selected
