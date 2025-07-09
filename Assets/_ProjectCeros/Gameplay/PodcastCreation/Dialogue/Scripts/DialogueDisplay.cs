@@ -62,6 +62,7 @@ namespace ProjectCeros
         [SerializeField] private BackgroundFader _faderGuest;
 
         [SerializeField] private Image _guestImage;
+        [SerializeField] private Image _guestUI;
 
         void Start()
         {
@@ -82,8 +83,9 @@ namespace ProjectCeros
                 _playerBox.SetActive(false);
                 _guestBox.SetActive(false);
 
+                _guestUI.enabled = false;
                 _guestImage.enabled = false;
-
+                
                 StartCoroutine(StartDialogueSequence());
             }
 
@@ -93,6 +95,7 @@ namespace ProjectCeros
                 _playerBox.SetActive(true);
                 _guestBox.SetActive(false);
 
+                _guestUI.enabled = true;
                 _guestImage.enabled = true;
                 _guestImage.sprite = _guest.GuestSprite;
 

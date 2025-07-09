@@ -12,8 +12,23 @@ namespace ProjectCeros
 
         public float fadeDuration = 1f;
 
+        private bool _once;
+
+        public void Awake()
+        {
+            _once = false;
+        }
+
+
         public void ChangeBackground()
         {
+
+            if (!_once)
+            {
+                backgrounds[currentIndex].SetActive(true);
+                _once = true;
+            }
+
             StartCoroutine(FadeRoutine());
         }
 
