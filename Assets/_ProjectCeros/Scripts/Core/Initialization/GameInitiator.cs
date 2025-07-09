@@ -49,7 +49,7 @@ namespace ProjectCeros
                 var prefabType = prefab.GetComponentInChildren<MonoBehaviour>()?.GetType();
                 if (prefabType == null) continue;
 
-                if (FindFirstObjectByType(prefabType) != null)
+                if (GameObject.Find(prefab.name) != null)
                     continue;
 
                 var instance = Instantiate(prefab);
