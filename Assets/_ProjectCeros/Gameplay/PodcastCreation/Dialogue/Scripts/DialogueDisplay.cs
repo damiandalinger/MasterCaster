@@ -7,8 +7,10 @@
 /// </remarks>
 
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+
 
 
 namespace ProjectCeros
@@ -22,6 +24,7 @@ namespace ProjectCeros
         [SerializeField] private TMP_Text _nameGuest;
         [SerializeField] private TMP_Text dialogueText;
 
+        [SerializeField] private GameObject _soloBox;
         [SerializeField] private GameObject _playerBox;
         [SerializeField] private GameObject _guestBox;
 
@@ -49,13 +52,23 @@ namespace ProjectCeros
 
         [SerializeField] private GameEvent _endDialogue;
 
+        private Coroutine autoAdvanceCoroutine;
+
+        [SerializeField] private float autoAdvanceDelay = 3f; // Customize in Inspector
+
+        [SerializeField] private BackgroundFader _faderPositive;
+        [SerializeField] private BackgroundFader _faderNegative;
+
+        [SerializeField] private BackgroundFader _faderGuest;
+
+        [SerializeField] private Image _guestImage;
+
         void Start()
         {
             SetupDialogue();
 
             _namePlayer.text = _player.PersonName;
-            _playerBox.SetActive(true);
-            _guestBox.SetActive(false);
+
         }
 
         public void SetupDialogue()
@@ -65,11 +78,24 @@ namespace ProjectCeros
             // Example: wait for DialogueManager to load data
             if (!_hasGuest)
             {
+                _soloBox.SetActive(true);
+                _playerBox.SetActive(false);
+                _guestBox.SetActive(false);
+
+                _guestImage.enabled = false;
+
                 StartCoroutine(StartDialogueSequence());
             }
 
             else
             {
+                _soloBox.SetActive(false);
+                _playerBox.SetActive(true);
+                _guestBox.SetActive(false);
+
+                _guestImage.enabled = true;
+                _guestImage.sprite = _guest.GuestSprite;
+
                 StartCoroutine(StartDialogueGuestSequence());
             }
 
@@ -104,6 +130,19 @@ namespace ProjectCeros
             DetermineTopic(_topicID.Value);
             DetermineSpin(_spinID.Value);
 
+
+
+            if (_spinID.Value == 1)
+            {
+                _faderPositive.ChangeBackground();
+            }
+
+            else
+            {
+                _faderNegative.ChangeBackground();
+            }
+
+
             Debug.Log(_topic);
             Debug.Log(_isPositive);
 
@@ -127,6 +166,8 @@ namespace ProjectCeros
 
             dialogueSegments = new string[] { welcomeMsg, topicMsg, goodbyeMsg };
             currentSegmentIndex = 0;
+
+            Debug.Log(string.Join(",", dialogueSegments));
 
             _isReady = true;
             AdvanceDialogue();
@@ -175,6 +216,12 @@ namespace ProjectCeros
         // Call this method from a UI Button (via OnClick)
         public void OnDialogueClick()
         {
+            if (autoAdvanceCoroutine != null)
+            {
+                StopCoroutine(autoAdvanceCoroutine);
+                autoAdvanceCoroutine = null;
+            }
+
             if (isTyping)
             {
                 StopAllCoroutines();
@@ -231,6 +278,22 @@ namespace ProjectCeros
 
                 }
 
+
+                if (_hasGuest)
+                {
+                    _faderGuest.ChangeBackground();
+                }
+
+                else if (_spinID.Value == 1)
+                {
+                    _faderPositive.ChangeBackground();
+                }
+
+                else
+                {
+                    _faderNegative.ChangeBackground();
+                }
+
                 // Start typing the current segment
                 StartCoroutine(TypeDialogue(dialogueSegments[currentSegmentIndex]));
                 currentSegmentIndex++;
@@ -242,6 +305,7 @@ namespace ProjectCeros
         {
             isTyping = true;
             dialogueText.text = "";
+
 
             string[] words = segment.Split(' ');
             bool isFirstWord = true;
@@ -284,9 +348,15 @@ namespace ProjectCeros
             }
 
             isTyping = false;
+
+            autoAdvanceCoroutine = StartCoroutine(AutoAdvanceAfterDelay());
         }
 
-
+        IEnumerator AutoAdvanceAfterDelay()
+        {
+            yield return new WaitForSeconds(autoAdvanceDelay);
+            AdvanceDialogue();
+        }
 
 
         private void DetermineTopic(int id)
