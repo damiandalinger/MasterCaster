@@ -17,7 +17,7 @@ MonoBehaviour:
     table. Let''s hope this serves our purpose as Podcaster perfectly.
 
 '
-  ItemSprite: {fileID: 21300000, guid: ab81ae5293d148e45a83b979af3072a7, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 7759b6b50786af84e8d6fd6e8c5de45a, type: 3}
   Price: 50
   UpgradeGroup: 1
   Id: 3

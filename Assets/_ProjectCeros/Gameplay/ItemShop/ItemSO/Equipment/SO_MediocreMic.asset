@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "An actual microphone for once! Sounds better than the last one\u2026
     thankfully, that bar was underground. Using this mic might even attract more
     listeners. Small Miracles do happen!"
-  ItemSprite: {fileID: 21300000, guid: 8ef2ee3e84a13524e88b8c2aa674cd74, type: 3}
+  ItemSprite: {fileID: 21300000, guid: f30dfbd48c9206d42badd2c6ad3ce37c, type: 3}
   Price: 15
   UpgradeGroup: 1
   Id: 2

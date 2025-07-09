@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "It just works. Gets the job done and faster than the first one, believe
     it or not. What an improvement! Next thing you know, it\u2019ll be solving world
     peace."
-  ItemSprite: {fileID: 21300000, guid: 0b68fd47f94e8144b94e20758176651a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 416d40d1340159f4ea99674240c9299e, type: 3}
   Price: 200
   UpgradeGroup: 3
   Id: 7

@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "Not exactly comfortable to sit in unless you enjoy mild suffering.
     This looks better than the last one but only a slight improvement for the podcast.
     But hey, it looks professional, and that\u2019s what really matters, right?"
-  ItemSprite: {fileID: 21300000, guid: eb98b946f6d0c9745990868cec0d98c0, type: 3}
+  ItemSprite: {fileID: 21300000, guid: f711d56955fd8c749b6e1ac22bf2c01a, type: 3}
   Price: 400
   UpgradeGroup: 4
   Id: 9
