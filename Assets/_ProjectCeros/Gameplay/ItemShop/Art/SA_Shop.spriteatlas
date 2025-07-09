@@ -70,9 +70,11 @@ SpriteAtlas:
     - a269d9f39b407944aba341b583f04149: 21300000
     - f30dfbd48c9206d42badd2c6ad3ce37c: 21300000
     - 75be1d159ea0fe6438ef6ec6cdcef882: 21300000
+    - 59f4384544a21c24698d9de5df88b4da: 21300000
     - 49744255068229a4c8e829334e6e777b: 21300000
     - 7759b6b50786af84e8d6fd6e8c5de45a: 21300000
     - e85eae165788b5143baacbb322b724d5: 21300000
+    - fbaa572661a0b2f479d80460b03ed6ce: 21300000
     - 9b18bc26679244f4b9de0b9196ab96d9: 21300000
     - eb98b946f6d0c9745990868cec0d98c0: 21300000
     - e2bc9576c5cb833479a4f694ff76328f: 21300000
@@ -87,11 +89,15 @@ SpriteAtlas:
     - f89bc11bdd075944886949968595640d: 21300000
     - d9e7f86b608fbcc4f9a972c5c3b74bb9: 21300000
     - ce8e7bcb48dc2ef4984e21ced9e1721f: 21300000
+    - 2f481c8c67a14a54a9fbc770be19d2a6: 21300000
     - 7169ad9c496d7e44882d72474a2114a4: 21300000
     - 96f7a9dc0243f8f419c23b3da76da588: 21300000
     - 9f91a4dd1cbf86543803bdd47f87afa0: 21300000
     - 8ef2ee3e84a13524e88b8c2aa674cd74: 21300000
+    - 5e70a25ead5e5cd4ea43b45637d6e1b7: 21300000
     - d672866e26bb75749b4bf6e82491e84a: 21300000
+    - c72fb65fc3ede054489555b05677a63c: 21300000
+    - 21dcb09fe198bc047b1050fdff78a2cc: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 97ba61105d7e4ac4691839bd03f56a77, type: 3}
@@ -113,9 +119,11 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a269d9f39b407944aba341b583f04149, type: 3}
   - {fileID: 21300000, guid: f30dfbd48c9206d42badd2c6ad3ce37c, type: 3}
   - {fileID: 21300000, guid: 75be1d159ea0fe6438ef6ec6cdcef882, type: 3}
+  - {fileID: 21300000, guid: 59f4384544a21c24698d9de5df88b4da, type: 3}
   - {fileID: 21300000, guid: 49744255068229a4c8e829334e6e777b, type: 3}
   - {fileID: 21300000, guid: 7759b6b50786af84e8d6fd6e8c5de45a, type: 3}
   - {fileID: 21300000, guid: e85eae165788b5143baacbb322b724d5, type: 3}
+  - {fileID: 21300000, guid: fbaa572661a0b2f479d80460b03ed6ce, type: 3}
   - {fileID: 21300000, guid: 9b18bc26679244f4b9de0b9196ab96d9, type: 3}
   - {fileID: 21300000, guid: eb98b946f6d0c9745990868cec0d98c0, type: 3}
   - {fileID: 21300000, guid: e2bc9576c5cb833479a4f694ff76328f, type: 3}
@@ -130,11 +138,15 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f89bc11bdd075944886949968595640d, type: 3}
   - {fileID: 21300000, guid: d9e7f86b608fbcc4f9a972c5c3b74bb9, type: 3}
   - {fileID: 21300000, guid: ce8e7bcb48dc2ef4984e21ced9e1721f, type: 3}
+  - {fileID: 21300000, guid: 2f481c8c67a14a54a9fbc770be19d2a6, type: 3}
   - {fileID: 21300000, guid: 7169ad9c496d7e44882d72474a2114a4, type: 3}
   - {fileID: 21300000, guid: 96f7a9dc0243f8f419c23b3da76da588, type: 3}
   - {fileID: 21300000, guid: 9f91a4dd1cbf86543803bdd47f87afa0, type: 3}
   - {fileID: 21300000, guid: 8ef2ee3e84a13524e88b8c2aa674cd74, type: 3}
+  - {fileID: 21300000, guid: 5e70a25ead5e5cd4ea43b45637d6e1b7, type: 3}
   - {fileID: 21300000, guid: d672866e26bb75749b4bf6e82491e84a, type: 3}
+  - {fileID: 21300000, guid: c72fb65fc3ede054489555b05677a63c, type: 3}
+  - {fileID: 21300000, guid: 21dcb09fe198bc047b1050fdff78a2cc, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_Collectibles_Trapclap
   - SPR_Collectibles_Mushroom_Big
@@ -155,9 +167,11 @@ SpriteAtlas:
   - SPR_Equipment_MixingDesk_Big
   - SPR_Equipment_Mic_T2_Big
   - SPR_Equipment_Headphone_T2
+  - SPR_Collectibles_Mask_Big_room
   - SPR_Collectibles_Needle_Big
   - SPR_Equipment_Mic_T3_Big
   - SPR_Equipment_Headphone_T1
+  - SPR_Equipment_MixingDesk_new
   - SPR_Equipment_Mic_T1
   - SPR_Equipment_Chair_T2
   - SPR_Collectibles_Bonefire
@@ -172,11 +186,15 @@ SpriteAtlas:
   - SPR_Equipment_Chair_T1
   - SPR_Collectibles_Trapclap_Big
   - SPR_Equipment_MixingDesk
+  - SPR_Equipment_Headphone_T1_Big
   - SPR_Collectibles_Bathwater_Big
   - SPR_Collectibles_Mask
   - SPR_Collectibles_Bathwater
   - SPR_Equipment_Mic_T2
+  - SPR_Equipment_Chair_T1_Big
   - SPR_Collectibles_Pickaxe_Big
+  - SPR_Equipment_Mic_T1_Big
+  - SPR_Equipment_Laptop_T1_Big
   m_RenderDataMap: {}
   m_Tag: SA_Shop
   m_IsVariant: 0
