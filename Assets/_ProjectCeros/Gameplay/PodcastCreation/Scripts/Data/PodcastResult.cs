@@ -20,6 +20,7 @@ namespace ProjectCeros
         [Header("Multipliers")]
         public float BonusMultiplier;
         public float TopicMultiplier;
+        public bool IsGuestEpisode;
 
         public void OverwriteWith(
             int totalListeners,
@@ -31,7 +32,8 @@ namespace ProjectCeros
             float dark,
             float sub,
             float bonusMult,
-            float topicMult
+            float topicMult,
+            bool isGuestEpisode
         )
         {
             TotalListeners = totalListeners;
@@ -44,6 +46,7 @@ namespace ProjectCeros
             SubgenreBonus = sub;
             BonusMultiplier = bonusMult;
             TopicMultiplier = topicMult;
+            IsGuestEpisode = isGuestEpisode;
         }
     }
 }

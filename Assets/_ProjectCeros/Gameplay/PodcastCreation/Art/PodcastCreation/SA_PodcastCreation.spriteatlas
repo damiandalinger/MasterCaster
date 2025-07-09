@@ -51,145 +51,127 @@ SpriteAtlas:
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
     - 026bbd1050ce2d945be5be6081b37688: 21300000
+    - bbaaef202b24e6449a97983b97a1d5c6: 21300000
     - ed55949022db35147b1e2469c93da127: 21300000
+    - 5b831581d31255445ad3dd9af6f2ee58: 21300000
     - f1d68b91cf919724d9f5629200b5d59c: 21300000
-    - 485813e194e8e054984305a4fce471f4: 21300000
-    - 947c51524d820a84f9760feab2e83fd3: 21300000
-    - b884b772080359340866238e553b69fe: 21300000
-    - f8c9bfa2deb334643af76569894364ec: 21300000
-    - c8e39ab20597daf4bbf961d07f02f056: 21300000
+    - 98a78b4266837fa44b62742a80130671: 21300000
     - 3da395f227fd22b4ab3bd610383501e8: 21300000
     - 5705a33381337b44abc256e8d1433b77: 21300000
-    - 56f82433408f55a4fa5a8ec6574c530c: 21300000
-    - b1f69243da74ff940966447cda60ef6c: 21300000
-    - 6b641c5383189894d89c8ef0a6181e57: 21300000
-    - fc142973a95f6344ebf9fcadec4dee20: 21300000
-    - 9d560c837b64c724583aec5de8634727: 21300000
     - 48911cd315ba75f44b495f6f204ccff1: 21300000
+    - 0fa6d4e334680b24c8d95ba8e453edfa: 21300000
+    - 90727cf31ca81834786c12b61a8917af: 21300000
+    - 4ede710443bf8ab489bcea312382247b: 21300000
     - c2c8f504fceead74f865c8771397befc: 21300000
     - 5ed3e424dd2c76a46b02625621ff718c: 21300000
-    - 25a4c984fc187c84fb537ec8550e7b97: 21300000
+    - 6a363cf4aceeaa04f924520ab3192737: 21300000
     - bee13395ae1697449b2b931adab2c212: 21300000
-    - 2081b2a52af8e3e42a87b007277c5f9d: 21300000
     - a42086365fbba9b4ab3528f9d1525545: 21300000
-    - 2930db37bd606f04c96dd6f908e3e10a: 21300000
     - cb7bce97ae202d54eb322dd56c668cf5: 21300000
     - bc40eea72233d7548bf08387539eccf0: 21300000
+    - 93f55bb720e7e4847be092f6b7ae01a7: 21300000
     - 024784c7bea83724d814b018903358da: 21300000
-    - f1bd2f1877bfee144b6f909f13416a51: 21300000
-    - 1a177968de86cf847b37bd468de1d781: 21300000
     - 4e89e198d03e6c44cba3ee5ff499e626: 21300000
-    - 9882a0d8457056f4895781549aefdbc5: 21300000
-    - 94c185e80ef69d74fb93dfa1d9a54387: 21300000
     - 3b57a8e892702584fac211c65a75dfb1: 21300000
     - 03190269f5cde7447a3b20e1242ed388: 21300000
-    - f25ed469c3f0a6748bb9404ba3ad2eb6: 21300000
     - 902a92a97465a6a47aea4a2ca25c334d: 21300000
     - 07da0cb95f0ed9e458fb4c5e6de4e38a: 21300000
+    - 5b346b7a0b8d41f419c80b0bbb443f04: 21300000
     - 46132eeabeee7a84d98c8a7842a9b8d2: 21300000
-    - db1d37dbb181fce49a24bacd36793032: 21300000
+    - d8d3dc6b4da6d244c8f6433f1fa73e7f: 21300000
     - b42cfd0c340114e49b8d8eccbcc6d911: 21300000
-    - 7474258c414799741a5e69f561951383: 21300000
     - bd5f8d8c43a49c545bbbd80ce6dfff8b: 21300000
+    - d3241bbca1c4d3743b5b10b3a334efae: 21300000
+    - 43245ebccca09204f9375b9bb61f4a03: 21300000
     - 79e9d31d7876b7d4ebd6beef2782b34d: 21300000
+    - 082e70fda4db6b646a5efb107dc36238: 21300000
+    - f6c30dfd1cce0514d9b7ec95e4f41e66: 21300000
     - 8f16d0ce0bb9bae468ca1da480a0e63d: 21300000
-    - 4ca439fee4ab4ab488d51e21af384fe0: 21300000
-    - 13f50aaf1721ee04290a5b33d3a44586: 21300000
+    - ad94268f9e59b234a9f30d7b169e6599: 21300000
+    - 690e58cf573b4214f9a9f44c4c9f4484: 21300000
     - 5d5c1dffe66ccda458191f0aa4c661c6: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 026bbd1050ce2d945be5be6081b37688, type: 3}
+  - {fileID: 21300000, guid: bbaaef202b24e6449a97983b97a1d5c6, type: 3}
   - {fileID: 21300000, guid: ed55949022db35147b1e2469c93da127, type: 3}
+  - {fileID: 21300000, guid: 5b831581d31255445ad3dd9af6f2ee58, type: 3}
   - {fileID: 21300000, guid: f1d68b91cf919724d9f5629200b5d59c, type: 3}
-  - {fileID: 21300000, guid: 485813e194e8e054984305a4fce471f4, type: 3}
-  - {fileID: 21300000, guid: 947c51524d820a84f9760feab2e83fd3, type: 3}
-  - {fileID: 21300000, guid: b884b772080359340866238e553b69fe, type: 3}
-  - {fileID: 21300000, guid: f8c9bfa2deb334643af76569894364ec, type: 3}
-  - {fileID: 21300000, guid: c8e39ab20597daf4bbf961d07f02f056, type: 3}
+  - {fileID: 21300000, guid: 98a78b4266837fa44b62742a80130671, type: 3}
   - {fileID: 21300000, guid: 3da395f227fd22b4ab3bd610383501e8, type: 3}
   - {fileID: 21300000, guid: 5705a33381337b44abc256e8d1433b77, type: 3}
-  - {fileID: 21300000, guid: 56f82433408f55a4fa5a8ec6574c530c, type: 3}
-  - {fileID: 21300000, guid: b1f69243da74ff940966447cda60ef6c, type: 3}
-  - {fileID: 21300000, guid: 6b641c5383189894d89c8ef0a6181e57, type: 3}
-  - {fileID: 21300000, guid: fc142973a95f6344ebf9fcadec4dee20, type: 3}
-  - {fileID: 21300000, guid: 9d560c837b64c724583aec5de8634727, type: 3}
   - {fileID: 21300000, guid: 48911cd315ba75f44b495f6f204ccff1, type: 3}
+  - {fileID: 21300000, guid: 0fa6d4e334680b24c8d95ba8e453edfa, type: 3}
+  - {fileID: 21300000, guid: 90727cf31ca81834786c12b61a8917af, type: 3}
+  - {fileID: 21300000, guid: 4ede710443bf8ab489bcea312382247b, type: 3}
   - {fileID: 21300000, guid: c2c8f504fceead74f865c8771397befc, type: 3}
   - {fileID: 21300000, guid: 5ed3e424dd2c76a46b02625621ff718c, type: 3}
-  - {fileID: 21300000, guid: 25a4c984fc187c84fb537ec8550e7b97, type: 3}
+  - {fileID: 21300000, guid: 6a363cf4aceeaa04f924520ab3192737, type: 3}
   - {fileID: 21300000, guid: bee13395ae1697449b2b931adab2c212, type: 3}
-  - {fileID: 21300000, guid: 2081b2a52af8e3e42a87b007277c5f9d, type: 3}
   - {fileID: 21300000, guid: a42086365fbba9b4ab3528f9d1525545, type: 3}
-  - {fileID: 21300000, guid: 2930db37bd606f04c96dd6f908e3e10a, type: 3}
   - {fileID: 21300000, guid: cb7bce97ae202d54eb322dd56c668cf5, type: 3}
   - {fileID: 21300000, guid: bc40eea72233d7548bf08387539eccf0, type: 3}
+  - {fileID: 21300000, guid: 93f55bb720e7e4847be092f6b7ae01a7, type: 3}
   - {fileID: 21300000, guid: 024784c7bea83724d814b018903358da, type: 3}
-  - {fileID: 21300000, guid: f1bd2f1877bfee144b6f909f13416a51, type: 3}
-  - {fileID: 21300000, guid: 1a177968de86cf847b37bd468de1d781, type: 3}
   - {fileID: 21300000, guid: 4e89e198d03e6c44cba3ee5ff499e626, type: 3}
-  - {fileID: 21300000, guid: 9882a0d8457056f4895781549aefdbc5, type: 3}
-  - {fileID: 21300000, guid: 94c185e80ef69d74fb93dfa1d9a54387, type: 3}
   - {fileID: 21300000, guid: 3b57a8e892702584fac211c65a75dfb1, type: 3}
   - {fileID: 21300000, guid: 03190269f5cde7447a3b20e1242ed388, type: 3}
-  - {fileID: 21300000, guid: f25ed469c3f0a6748bb9404ba3ad2eb6, type: 3}
   - {fileID: 21300000, guid: 902a92a97465a6a47aea4a2ca25c334d, type: 3}
   - {fileID: 21300000, guid: 07da0cb95f0ed9e458fb4c5e6de4e38a, type: 3}
+  - {fileID: 21300000, guid: 5b346b7a0b8d41f419c80b0bbb443f04, type: 3}
   - {fileID: 21300000, guid: 46132eeabeee7a84d98c8a7842a9b8d2, type: 3}
-  - {fileID: 21300000, guid: db1d37dbb181fce49a24bacd36793032, type: 3}
+  - {fileID: 21300000, guid: d8d3dc6b4da6d244c8f6433f1fa73e7f, type: 3}
   - {fileID: 21300000, guid: b42cfd0c340114e49b8d8eccbcc6d911, type: 3}
-  - {fileID: 21300000, guid: 7474258c414799741a5e69f561951383, type: 3}
   - {fileID: 21300000, guid: bd5f8d8c43a49c545bbbd80ce6dfff8b, type: 3}
+  - {fileID: 21300000, guid: d3241bbca1c4d3743b5b10b3a334efae, type: 3}
+  - {fileID: 21300000, guid: 43245ebccca09204f9375b9bb61f4a03, type: 3}
   - {fileID: 21300000, guid: 79e9d31d7876b7d4ebd6beef2782b34d, type: 3}
+  - {fileID: 21300000, guid: 082e70fda4db6b646a5efb107dc36238, type: 3}
+  - {fileID: 21300000, guid: f6c30dfd1cce0514d9b7ec95e4f41e66, type: 3}
   - {fileID: 21300000, guid: 8f16d0ce0bb9bae468ca1da480a0e63d, type: 3}
-  - {fileID: 21300000, guid: 4ca439fee4ab4ab488d51e21af384fe0, type: 3}
-  - {fileID: 21300000, guid: 13f50aaf1721ee04290a5b33d3a44586, type: 3}
+  - {fileID: 21300000, guid: ad94268f9e59b234a9f30d7b169e6599, type: 3}
+  - {fileID: 21300000, guid: 690e58cf573b4214f9a9f44c4c9f4484, type: 3}
   - {fileID: 21300000, guid: 5d5c1dffe66ccda458191f0aa4c661c6, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_Genre_RPG_Unselected
+  - SPR_Genre_Simulation_Highlighted
   - SPR_Podcast_Menu
+  - SPR_Genre_Strategy_Selected
   - SPR_ScoreScreen_Script2
-  - SPR_Podcast_Botton_Negative_Selected
-  - SPR_Genre_Simulation_Selected
-  - SPR_Genre_Action_Selected
-  - SPR_Podcast_Botton_Purple_Selected
-  - SPR_Genre_Indie_Selected
+  - SPR_Genre_Shooter_Highlighted
   - SPR_Podcast_Button_Left_Unselected
   - SPR_Genre_Action_Unselected
-  - SPR_Podcast_Botton_Orange_Selected
-  - SPR_Podcast_Botton_Blue_Unselected
-  - SPR_Podcast_Botton_Yellow_Unselected
-  - SPR_Podcast_Botton_Postive_Selected
-  - SPR_Podcast_Botton_Purple_Unselected
   - SPR_Genre_Shooter_Unselected
+  - SPR_Podcast_Circle_Highlighted
+  - SPR_Genre_Action_Highlighted
+  - SPR_Podcast_Emptyness
   - SPR_Podcast_Speachbubble_right
   - SPR_Podcast_No_Unselected
-  - SPR_Podcast_Botton_Green_Unselected
+  - SPR_Genre_Indie_Selected
   - SPR_Genre_Strategy_Unselected
-  - SPR_Genre_Shooter_Selected
   - SPR_Podcast_Button_Right_Unselected
-  - SPR_Podcast_Botton_Green_Selected
   - SPR_Podcast_No_Selected
   - SPR_Podcast_Sponsor
+  - SPR_Podcast_Circle_Selected
   - SPR_Podcast_Speachbubble_left
-  - SPR_Podcast_Botton_Orange_Unselected
-  - SPR_Genre_RPG_Selected
   - SPR_Podcast_Screen
-  - SPR_Podcast_Botton_Red_Selected
-  - SPR_Podcast_Botton_Yellow_Selected
   - SPR_Podcast_Yes_Selected
   - SPR_Genre_Simulation_Unselected
-  - SPR_Podcast_Botton_Red_Unselected
   - SPR_Podcast_Yes_Unselected
   - SPR_ScoreScreen_Script1
+  - SPR_Genre_RPG_Selected
   - SPR_Genre_Indie_Unselected
-  - SPR_Genre_Strategy_Selected
+  - SPR_Genre_Shooter_Selected
   - SPR_Podcast_Botton_start_Selected
-  - SPR_Podcast_Botton_Postive_Unselected
   - SPR_Podcast_Button_Right_Selected
+  - SPR_Genre_Strategy_Highlighted
+  - SPR_Genre_RPG_Highlighted
   - SPR_Podcast_Button_Left_Selected
+  - SPR_Podcast_LineTitle
+  - SPR_Genre_Simulation_Selected
   - SPR_Podcast_Botton_start_Unselected
-  - SPR_Podcast_Botton_Negative_Unselected
-  - SPR_Podcast_Botton_Blue_Selected
+  - SPR_Genre_Action_Selected
+  - SPR_Genre_Indie_Highlighted
   - SPR_Podcast_GuestQuestion
   m_RenderDataMap: {}
   m_Tag: SA_PodcastCreation

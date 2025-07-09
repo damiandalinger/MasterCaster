@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
-  m_Name: KideoHojima
+  m_Name: SO_KideoHojima
   m_EditorClassIdentifier: 
   InitialListener: 750000
   InitialRank: 5

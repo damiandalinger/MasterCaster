@@ -98,7 +98,10 @@ namespace ProjectCeros
             yield return new WaitForSeconds(_delay);
 
             int rowIndex = 0;
-            SetSimpleRow(rowIndex++, "Topic Multiplier", $"x{result.TopicMultiplier:F2}");
+            if (result.IsGuestEpisode)
+                SetSimpleRow(rowIndex++, "Guest Episode", $"x{result.TopicMultiplier:F2}");
+            else
+                SetSimpleRow(rowIndex++, "Topic Multiplier", $"x{result.TopicMultiplier:F2}");
             yield return new WaitForSeconds(_delay);
 
             SetSimpleRow(rowIndex++, "Bonus Multiplier", $"x{result.BonusMultiplier:F2}");
@@ -139,7 +142,10 @@ namespace ProjectCeros
                 row.RootObject.SetActive(false);
 
             int rowIndex = 0;
-            SetSimpleRow(rowIndex++, "Topic Multiplier", $"x{result.TopicMultiplier:F2}");
+            if (result.IsGuestEpisode)
+                SetSimpleRow(rowIndex++, "Guest Episode", $"x{result.TopicMultiplier:F2}");
+            else
+                SetSimpleRow(rowIndex++, "Topic Multiplier", $"x{result.TopicMultiplier:F2}");
             SetSimpleRow(rowIndex++, "Bonus Multiplier", $"x{result.BonusMultiplier:F2}");
 
             foreach (var (label, value, iconIndex) in GetResultModifiers(result))

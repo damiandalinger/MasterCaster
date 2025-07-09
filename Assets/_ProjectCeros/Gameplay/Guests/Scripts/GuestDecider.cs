@@ -49,7 +49,6 @@ namespace ProjectCeros
         public void AcceptGuest()
         {
             _guest.wasInterviewed = true;
-            _note.SetActive(false);
 
         }
 

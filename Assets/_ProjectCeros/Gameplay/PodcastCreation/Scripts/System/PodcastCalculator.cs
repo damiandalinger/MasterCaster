@@ -81,6 +81,10 @@ namespace ProjectCeros
         // Performs the full listener calculation based on selected genre, modifiers and article matches.
         public void Calculate()
         {
+            bool isGuestEpisode = _selectedGenre.Variable.RuntimeValue == 100 &&
+                                  _selectedSpin.Variable.RuntimeValue == 100 &&
+                                  _selectedSubgenre.Variable.RuntimeValue == 100;
+
             float baseListeners = _currentListeners.Value;
             float baseValue = 2 + (baseListeners * _previousListenerMod.Value);
 
@@ -97,17 +101,26 @@ namespace ProjectCeros
             bool genreMatched = false;
             bool subgenreMatched = false;
 
-            var article = _selectedImportantArticles.Items.FirstOrDefault(a => a.PairID / 1000 == _selectedGenre.Variable.RuntimeValue);
-            if (article != null)
+            if (!isGuestEpisode)
             {
-                topicMult = _selectedSpin.Variable.RuntimeValue == 1 ? article.ValuePositive : article.ValueNegative;
-                genreMatched = true;
+                var article = _selectedImportantArticles.Items.FirstOrDefault(a => a.PairID / 1000 == _selectedGenre.Variable.RuntimeValue);
 
-                if (article.Subgenre > 0 && article.Subgenre == _selectedSubgenre.Variable.RuntimeValue)
+                if (article != null)
                 {
-                    subgenre = _subgenreMod.Value;
-                    subgenreMatched = true;
+                    topicMult = _selectedSpin.Variable.RuntimeValue == 1 ? article.ValuePositive : article.ValueNegative;
+                    genreMatched = true;
+
+                    if (article.Subgenre > 0 && article.Subgenre == _selectedSubgenre.Variable.RuntimeValue)
+                    {
+                        subgenre = _subgenreMod.Value;
+                        subgenreMatched = true;
+                    }
                 }
+            }
+            else
+            {
+                topicMult = 1.6f;
+                subgenre = 0f;
             }
 
             float bonusMult = baseBonus + guest + equip + sponsor + dark + subgenre;
@@ -120,10 +133,10 @@ namespace ProjectCeros
             ApplyMoneyGain(gain);
             _currentListeners.Variable.SetValue(totalListeners);
 
-            _result.OverwriteWith(totalListeners, gain, baseBonus, guest, equip, sponsor, dark, subgenre, bonusMult, topicMult);
+            _result.OverwriteWith(totalListeners, gain, baseBonus, guest, equip, sponsor, dark, subgenre, bonusMult, topicMult, isGuestEpisode);
             PrintDebugOutput(baseListeners, baseValue, guest, equip, sponsor, dark,
                                        subgenre, baseBonus, topicMult, sizeMult,
-                                       finalValue, totalListeners, gain, genreMatched, subgenreMatched);
+                                       finalValue, totalListeners, gain, genreMatched, subgenreMatched, isGuestEpisode);
 
             _onPodcastConfirmed.Raise();
         }
@@ -175,10 +188,11 @@ namespace ProjectCeros
            float baseListeners, float baseValue,
            float guest, float equip, float sponsor, float darkWeb, float subgenre,
            float bonusMult, float topicMult, float sizeMult,
-           float final, int total, int gain, bool genreMatched, bool subgenreMatched)
+           float final, int total, int gain, bool genreMatched, bool subgenreMatched, bool isGuestEpisode)
         {
             Debug.Log(
                 "--- Podcast Evaluation Debug ---\n" +
+                (isGuestEpisode ? ">> GUEST EPISODE MODE ACTIVE <<\n\n" : "") +
                 $"Selected Genre: {GetGenreName(_selectedGenre.Variable.RuntimeValue)} (Matched: {genreMatched})\n" +
                 $"Selected Spin: {(_selectedSpin.Variable.RuntimeValue == 1 ? "Positive" : "Negative")}\n" +
                 $"Selected Subgenre: {GetSubgenreDisplayName(_selectedSubgenre.Variable.RuntimeValue)} (Matched: {subgenreMatched})\n\n" +
@@ -196,7 +210,7 @@ namespace ProjectCeros
                 $"Total Bonus Multiplier: {bonusMult:F2}\n\n" +
 
                 $"Size Multiplier: x{sizeMult:F2}\n" +
-                $"Topic Multiplier: x{topicMult:F2}\n" +
+                $"Topic Multiplier: {(isGuestEpisode ? "Guest Episode" : $"x{topicMult:F2}")}\n" +
                 $"Final Value: {final:F2}\n" +
 
                 $"Total Listeners: {total}\n" +
@@ -211,7 +225,7 @@ namespace ProjectCeros
             {
                 1 => "Action",
                 2 => "Indie",
-                3 => "RPG",
+                3 => "Role-Playing Game",
                 4 => "Shooter",
                 5 => "Simulation",
                 6 => "Strategy",
@@ -223,22 +237,22 @@ namespace ProjectCeros
         {
             return subgenreId switch
             {
-                1 => "FPS",
+                1 => "First Person Shooter",
                 2 => "Hero Shooter",
                 3 => "Loot Shooter",
                 4 => "Fighting Game",
                 5 => "Stealth Game",
-                6 => "Hack & Slash",
+                6 => "Hack and Slash",
                 7 => "Souls Like",
                 8 => "Open World",
                 9 => "MMORPG",
-                10 => "RTS",
+                10 => "Real-Time Strategy",
                 11 => "Grand Strategy",
-                12 => "TBS",
+                12 => "Turn-Based Strategy",
                 13 => "Sport",
-                14 => "Living Simulation",
+                14 => "Life Simulation",
                 15 => "Job Simulation",
-                16 => "Farming Game",
+                16 => "Cozy Game",
                 17 => "Side Scroller",
                 18 => "Roguelike",
                 _ => "Unknown"

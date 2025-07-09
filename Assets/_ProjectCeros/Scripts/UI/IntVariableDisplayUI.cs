@@ -43,6 +43,9 @@ namespace ProjectCeros
         [Tooltip("Display a '+' sign for positive values.")]
         [SerializeField] private bool _showPlusSignForPositiveValues = false;
 
+        [Tooltip("If true, the number is interpreted as a genre ID and displays its name instead.")]
+        [SerializeField] private bool _displayAsGenre = false;
+
         #endregion
 
         #region Lifecycle Methods
@@ -71,6 +74,13 @@ namespace ProjectCeros
             {
                 int value = _valueToDisplay.Value;
 
+                if (_displayAsGenre)
+                {
+                    string genreName = GetGenreName(value);
+                    _targetText.text = $"{_prefix}{genreName}{_suffix}";
+                    return;
+                }
+
                 string sign = "";
                 if (_showPlusSignForPositiveValues && value > 0)
                     sign = "+";
@@ -88,6 +98,20 @@ namespace ProjectCeros
         #endregion
 
         #region Private Methods
+
+        private string GetGenreName(int genreId)
+        {
+            return genreId switch
+            {
+                1 => "Action",
+                2 => "Indie",
+                3 => "Role-Playing Game",
+                4 => "Shooter",
+                5 => "Simulation",
+                6 => "Strategy",
+                _ => "Unknown"
+            };
+        }
 
         // Returns the English ordinal suffix for a given integer (e.g., "st" for 1, "nd" for 2, etc.).
         private string GetOrdinalSuffix(int number)

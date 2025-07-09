@@ -5,7 +5,7 @@
 
 /// <remarks>
 /// 25/06/2025 by Damian Dalinger: Initial implementation.
-/// 08/07/2025 by Unik Kelmendi: extruded nested class.
+/// 08/07/2025 by Unik Kelmendi: Extruded nested class.
 /// </remarks>
 
 using UnityEngine;
@@ -16,7 +16,6 @@ namespace ProjectCeros
 {
     public class UIButtonSpriteSwitcher : MonoBehaviour
     {
-
         #region Fields
 
         [Tooltip("List of buttons that can be toggled. Only one can be selected at a time.")]
