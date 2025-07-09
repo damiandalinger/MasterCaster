@@ -44,6 +44,9 @@ TagManager:
   - name: DisplayedItems
     uniqueID: 2254251579
     locked: 0
+  - name: Interactables
+    uniqueID: 1600304751
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

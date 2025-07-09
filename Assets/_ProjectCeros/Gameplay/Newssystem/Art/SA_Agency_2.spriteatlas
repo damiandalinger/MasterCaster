@@ -69,6 +69,7 @@ SpriteAtlas:
     - beaf7fa666ee4284fba8afa92714af31: 21300000
     - 7969bde6ee7eec74ca4eaea5d8dd94c2: 21300000
     - 1ed4366964b45ce4d8bc42ba96c1fddc: 21300000
+    - 48026c992846aed4ba4948164cedcc90: 21300000
     - 2e7224c947b20cd4ea1c0ca8970bb260: 21300000
     - 45ec6e6a600672145b60db5f66c40ffc: 21300000
     - 1f6f353b6b3377e4ab6f4879ccc16b41: 21300000
@@ -96,6 +97,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: beaf7fa666ee4284fba8afa92714af31, type: 3}
   - {fileID: 21300000, guid: 7969bde6ee7eec74ca4eaea5d8dd94c2, type: 3}
   - {fileID: 21300000, guid: 1ed4366964b45ce4d8bc42ba96c1fddc, type: 3}
+  - {fileID: 21300000, guid: 48026c992846aed4ba4948164cedcc90, type: 3}
   - {fileID: 21300000, guid: 2e7224c947b20cd4ea1c0ca8970bb260, type: 3}
   - {fileID: 21300000, guid: 45ec6e6a600672145b60db5f66c40ffc, type: 3}
   - {fileID: 21300000, guid: 1f6f353b6b3377e4ab6f4879ccc16b41, type: 3}
@@ -122,6 +124,7 @@ SpriteAtlas:
   - SPR_FruitOfTheWeek_Pumpkin_1x1
   - SPR_FruitOfTheWeek_Kokonut_1x1
   - SPR_FruitOfTheWeek_Almond_1x1
+  - SPR_News_Line
   - SPR_FruitOfTheWeek_Pomgranate_1x1
   - SPR_FruitOfTheWeek_Blueberry_1x1
   - SPR_FruitOfTheWeek_Tomato_1x1

@@ -9,6 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e46c0ac0a638b246b914caee8a3c78a, type: 3}
-  m_Name: GE_TogglePodcastCreation
+  m_Script: {fileID: 11500000, guid: 10a5f7fcfbf2cf54a8446c92b5ad69c7, type: 3}
+  m_Name: SFX_Ambience
   m_EditorClassIdentifier: 
+  DeveloperDescription: 
+  _eventReference:
+    Guid:
+      Data1: 1663314105
+      Data2: 1134354358
+      Data3: 2142652563
+      Data4: -254857986
+    Path: event:/Ambience/Ambience
