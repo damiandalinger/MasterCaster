@@ -17,8 +17,13 @@ namespace ProjectCeros
         public void Awake()
         {
             _once = false;
-        }
 
+        }
+        IEnumerator Start()
+        {
+            yield return new WaitForSeconds(0.5f); // Wait until rendering is done
+            StartCoroutine(Fade(1f, 0f));
+        }
 
         public void ChangeBackground()
         {
@@ -29,7 +34,16 @@ namespace ProjectCeros
                 _once = true;
             }
 
-            StartCoroutine(FadeRoutine());
+            else
+            {
+                StartCoroutine(FadeRoutine());
+            }
+
+        }
+
+        public void FadeOut()
+        {
+            StartCoroutine(Fade(0f, 1f));
         }
 
         private IEnumerator FadeRoutine()

@@ -85,7 +85,7 @@ namespace ProjectCeros
 
                 _guestUI.enabled = false;
                 _guestImage.enabled = false;
-                
+
                 StartCoroutine(StartDialogueSequence());
             }
 
@@ -134,16 +134,6 @@ namespace ProjectCeros
             DetermineSpin(_spinID.Value);
 
 
-
-            if (_spinID.Value == 1)
-            {
-                _faderPositive.ChangeBackground();
-            }
-
-            else
-            {
-                _faderNegative.ChangeBackground();
-            }
 
 
             Debug.Log(_topic);
@@ -247,7 +237,8 @@ namespace ProjectCeros
                 {
                     dialogueText.text = "";
                     Debug.Log("Dialogue finished!");
-                    _endDialogue.Raise();
+
+                    StartCoroutine(EndDialogueSequence());
                     return;
                 }
 
@@ -301,6 +292,13 @@ namespace ProjectCeros
                 StartCoroutine(TypeDialogue(dialogueSegments[currentSegmentIndex]));
                 currentSegmentIndex++;
             }
+        }
+
+        private IEnumerator EndDialogueSequence()
+        {
+            _faderPositive.FadeOut();
+            yield return new WaitForSeconds(1.5f);
+            _endDialogue.Raise();
         }
 
 
