@@ -15,8 +15,8 @@ MonoBehaviour:
   InitialListener: 550000
   InitialRank: 9
   Portrait: {fileID: 21300000, guid: 1c3c6733309dc324e91b5adfb7088776, type: 3}
-  DisplayName: "G\xF6nndrade Podcast"
-  PersonName: "G\xF6nndrade"
+  DisplayName: Andrade Direct
+  PersonName: Sebastian d. A.
   Description: 'Strong dedication to indie games. He will do anything to promote
     every indie game ever released.
 
@@ -25,5 +25,5 @@ MonoBehaviour:
   DislikedGenres: 0100000004000000
   CurrentRank: 9
   PreviousRank: 9
-  CurrentListener: 10
+  CurrentListener: 550000
   RankChange: 2

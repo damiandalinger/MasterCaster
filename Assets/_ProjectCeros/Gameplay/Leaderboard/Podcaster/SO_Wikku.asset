@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
-  m_Name: SO_PodcastImperator
+  m_Name: SO_Wikku
   m_EditorClassIdentifier: 
   InitialListener: 700000
   InitialRank: 6
   Portrait: {fileID: 21300000, guid: 83a769741e0a36644add37f559f5547f, type: 3}
-  DisplayName: For the Empire
-  PersonName: Podcast Imperator
-  Description: "He\u2019s known as the top tactician in the gamer podcast scene.
-    It\u2019s no surprise he has a deep passion for strategy games.\r\n"
+  DisplayName: Anturi Antics
+  PersonName: Wikku of Buirhaven
+  Description: "Don\u2019t let the harmless exterior fool you. The empty eyes hide
+    the true terror this little creature has seen. Surprisingly good with words,
+    despite the hollowness. "
   LikedGenres: 0b0000000e000000
   DislikedGenres: 0200000009000000
   CurrentRank: 6

@@ -15,7 +15,7 @@ MonoBehaviour:
   InitialListener: 600000
   InitialRank: 8
   Portrait: {fileID: 21300000, guid: a8878ece3873ee444a7311200657a10e, type: 3}
-  DisplayName: Abducting new Worlds
+  DisplayName: Sip & Scream
   PersonName: Lady D
   Description: 'She loves to dominate the NPCs in her favorite RPGs, effortlessly
     building power both in the game and with her podcast.
@@ -25,5 +25,5 @@ MonoBehaviour:
   DislikedGenres: 0600000008000000
   CurrentRank: 8
   PreviousRank: 8
-  CurrentListener: 14
+  CurrentListener: 636725
   RankChange: 2

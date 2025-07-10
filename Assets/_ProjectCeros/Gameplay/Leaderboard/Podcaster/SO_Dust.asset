@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 742dc23c66aee8f43b70904796d3c55c, type: 3}
-  m_Name: SO_Junkie
+  m_Name: SO_Dust
   m_EditorClassIdentifier: 
   InitialListener: 800000
   InitialRank: 4
   Portrait: {fileID: 21300000, guid: 28ea31fbdeb54db42bc49177bc324f7d, type: 3}
-  DisplayName: Games as Drugs
-  PersonName: Junkie
-  Description: "Don\u2019t be fooled by his looks. He\u2019s incredibly sharp and
-    never misses the release of a new strategy game.\r\n"
+  DisplayName: Hot Takes
+  PersonName: Dust
+  Description: The insanity is part of the appeal. Many people are just ready for
+    the ride. Explosive opinions guaranteed.
   LikedGenres: 0c0000000f000000
   DislikedGenres: 0500000012000000
-  CurrentRank: 5
+  CurrentRank: 4
   PreviousRank: 4
-  CurrentListener: 98
-  RankChange: 3
+  CurrentListener: 783686
+  RankChange: 2
