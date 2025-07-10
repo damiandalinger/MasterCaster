@@ -59,15 +59,18 @@ SpriteAtlas:
     - 59a14fc1775ef0345a6419418c0e668d: 21300000
     - 3cd9ca428616f11458acc8781943c4c8: 21300000
     - 98a78b4266837fa44b62742a80130671: 21300000
+    - 6e7e3ba2af2f4b242976c7b7e18904eb: 21300000
     - 3da395f227fd22b4ab3bd610383501e8: 21300000
     - 5705a33381337b44abc256e8d1433b77: 21300000
     - b478fd532a873fc478e2e068a040542d: 21300000
     - 91454593981d979498a6605e9536ba81: 21300000
+    - bc394993cacbdc64e9e2786fba64a229: 21300000
     - 48911cd315ba75f44b495f6f204ccff1: 21300000
     - 0fa6d4e334680b24c8d95ba8e453edfa: 21300000
     - 90727cf31ca81834786c12b61a8917af: 21300000
     - 4ede710443bf8ab489bcea312382247b: 21300000
     - c2c8f504fceead74f865c8771397befc: 21300000
+    - a6d2dc043b046d44e85ed8f775b441d8: 21300000
     - c5925a143f11c9a4bb9878053b1993b8: 21300000
     - 5ed3e424dd2c76a46b02625621ff718c: 21300000
     - 6a363cf4aceeaa04f924520ab3192737: 21300000
@@ -76,6 +79,7 @@ SpriteAtlas:
     - bee13395ae1697449b2b931adab2c212: 21300000
     - 909f5495b1760cb4eb40befeef3cac2a: 21300000
     - a42086365fbba9b4ab3528f9d1525545: 21300000
+    - 39c016a69715e7244a858b66ad81423e: 21300000
     - 69d622f6577e34744af4c927b138862e: 21300000
     - 26b7c81746935f348a858da8ec80cd93: 21300000
     - 709be45726d2f85469967a72727ab89d: 21300000
@@ -85,6 +89,8 @@ SpriteAtlas:
     - bc40eea72233d7548bf08387539eccf0: 21300000
     - 93f55bb720e7e4847be092f6b7ae01a7: 21300000
     - 024784c7bea83724d814b018903358da: 21300000
+    - 5d843f08ef3c0394697640ac6921b612: 21300000
+    - c71ee18875f6a9140963e7644c75a682: 21300000
     - 4e89e198d03e6c44cba3ee5ff499e626: 21300000
     - 9aaecca8d32236948ad2d990fb313a7d: 21300000
     - 3b57a8e892702584fac211c65a75dfb1: 21300000
@@ -108,6 +114,7 @@ SpriteAtlas:
     - 082e70fda4db6b646a5efb107dc36238: 21300000
     - f6c30dfd1cce0514d9b7ec95e4f41e66: 21300000
     - 9b4f890e30e92304aad2283756ffb2f5: 21300000
+    - d5ecd82e557842c41aca379f57f12327: 21300000
     - 11e5938eacd9a324e96efe17b3bce7b2: 21300000
     - 8f16d0ce0bb9bae468ca1da480a0e63d: 21300000
     - ad94268f9e59b234a9f30d7b169e6599: 21300000
@@ -124,15 +131,18 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 59a14fc1775ef0345a6419418c0e668d, type: 3}
   - {fileID: 21300000, guid: 3cd9ca428616f11458acc8781943c4c8, type: 3}
   - {fileID: 21300000, guid: 98a78b4266837fa44b62742a80130671, type: 3}
+  - {fileID: 21300000, guid: 6e7e3ba2af2f4b242976c7b7e18904eb, type: 3}
   - {fileID: 21300000, guid: 3da395f227fd22b4ab3bd610383501e8, type: 3}
   - {fileID: 21300000, guid: 5705a33381337b44abc256e8d1433b77, type: 3}
   - {fileID: 21300000, guid: b478fd532a873fc478e2e068a040542d, type: 3}
   - {fileID: 21300000, guid: 91454593981d979498a6605e9536ba81, type: 3}
+  - {fileID: 21300000, guid: bc394993cacbdc64e9e2786fba64a229, type: 3}
   - {fileID: 21300000, guid: 48911cd315ba75f44b495f6f204ccff1, type: 3}
   - {fileID: 21300000, guid: 0fa6d4e334680b24c8d95ba8e453edfa, type: 3}
   - {fileID: 21300000, guid: 90727cf31ca81834786c12b61a8917af, type: 3}
   - {fileID: 21300000, guid: 4ede710443bf8ab489bcea312382247b, type: 3}
   - {fileID: 21300000, guid: c2c8f504fceead74f865c8771397befc, type: 3}
+  - {fileID: 21300000, guid: a6d2dc043b046d44e85ed8f775b441d8, type: 3}
   - {fileID: 21300000, guid: c5925a143f11c9a4bb9878053b1993b8, type: 3}
   - {fileID: 21300000, guid: 5ed3e424dd2c76a46b02625621ff718c, type: 3}
   - {fileID: 21300000, guid: 6a363cf4aceeaa04f924520ab3192737, type: 3}
@@ -141,6 +151,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bee13395ae1697449b2b931adab2c212, type: 3}
   - {fileID: 21300000, guid: 909f5495b1760cb4eb40befeef3cac2a, type: 3}
   - {fileID: 21300000, guid: a42086365fbba9b4ab3528f9d1525545, type: 3}
+  - {fileID: 21300000, guid: 39c016a69715e7244a858b66ad81423e, type: 3}
   - {fileID: 21300000, guid: 69d622f6577e34744af4c927b138862e, type: 3}
   - {fileID: 21300000, guid: 26b7c81746935f348a858da8ec80cd93, type: 3}
   - {fileID: 21300000, guid: 709be45726d2f85469967a72727ab89d, type: 3}
@@ -150,6 +161,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bc40eea72233d7548bf08387539eccf0, type: 3}
   - {fileID: 21300000, guid: 93f55bb720e7e4847be092f6b7ae01a7, type: 3}
   - {fileID: 21300000, guid: 024784c7bea83724d814b018903358da, type: 3}
+  - {fileID: 21300000, guid: 5d843f08ef3c0394697640ac6921b612, type: 3}
+  - {fileID: 21300000, guid: c71ee18875f6a9140963e7644c75a682, type: 3}
   - {fileID: 21300000, guid: 4e89e198d03e6c44cba3ee5ff499e626, type: 3}
   - {fileID: 21300000, guid: 9aaecca8d32236948ad2d990fb313a7d, type: 3}
   - {fileID: 21300000, guid: 3b57a8e892702584fac211c65a75dfb1, type: 3}
@@ -173,6 +186,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 082e70fda4db6b646a5efb107dc36238, type: 3}
   - {fileID: 21300000, guid: f6c30dfd1cce0514d9b7ec95e4f41e66, type: 3}
   - {fileID: 21300000, guid: 9b4f890e30e92304aad2283756ffb2f5, type: 3}
+  - {fileID: 21300000, guid: d5ecd82e557842c41aca379f57f12327, type: 3}
   - {fileID: 21300000, guid: 11e5938eacd9a324e96efe17b3bce7b2, type: 3}
   - {fileID: 21300000, guid: 8f16d0ce0bb9bae468ca1da480a0e63d, type: 3}
   - {fileID: 21300000, guid: ad94268f9e59b234a9f30d7b169e6599, type: 3}
@@ -188,15 +202,18 @@ SpriteAtlas:
   - SPR_Podcast_Guest_Zwergling
   - SPR_Podcast_Character_Neg_1
   - SPR_Genre_Shooter_Highlighted
+  - SPR_Podcast_Guest_Character_Pos_1
   - SPR_Podcast_Button_Left_Unselected
   - SPR_Genre_Action_Unselected
   - SPR_Podcast_Guest_Gerhart
   - SPR_Podcast_Guest_SpartanDad
+  - SPR_Podcast_Guest_Character_Pos_2
   - SPR_Genre_Shooter_Unselected
   - SPR_Podcast_Circle_Highlighted
   - SPR_Genre_Action_Highlighted
   - SPR_Podcast_Emptyness
   - SPR_Podcast_Speachbubble_right
+  - SPR_Podcast_Guest_Character_Neg_1
   - SPR_Podcast_Character_Pos_1
   - SPR_Podcast_No_Unselected
   - SPR_Genre_Indie_Selected
@@ -205,6 +222,7 @@ SpriteAtlas:
   - SPR_Genre_Strategy_Unselected
   - SPR_Podcast_Guest_FullKnight
   - SPR_Podcast_Button_Right_Unselected
+  - SPR_Podcast_Guest_Character_Pos_3
   - SPR_Podcast_Guest_Tonic
   - SPR_Podcast_Guest_CerealBowlBoy
   - SPR_Podcast_Character_Neg_2
@@ -214,6 +232,8 @@ SpriteAtlas:
   - SPR_Podcast_Sponsor
   - SPR_Podcast_Circle_Selected
   - SPR_Podcast_Speachbubble_left
+  - SPR_Podcast_Screen_New
+  - SPR_Podcast_Guest_Character_Neg_2
   - SPR_Podcast_Screen
   - SPR_Podcast_Guest_CaraLoft
   - SPR_Podcast_Yes_Selected
@@ -237,6 +257,7 @@ SpriteAtlas:
   - SPR_Podcast_LineTitle
   - SPR_Genre_Simulation_Selected
   - SPR_Podcast_Guest_Inhabitant
+  - SPR_Podcast_Guest_Character_Neg_3
   - SPR_Podcast_Guest_WastedDude
   - SPR_Podcast_Botton_start_Unselected
   - SPR_Genre_Action_Selected

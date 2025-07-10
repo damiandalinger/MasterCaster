@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
   m_Name: SO_Raygun
   m_EditorClassIdentifier: 
-  ItemName: Raygun
-  Description: Shoots insanely strong waves of energy perfect for zombies. Because
-    what else would you need to deal with the undead?
+  ItemName: Raygun Mk. 915
+  Description: "Gambling never pays \u2026 unless it does. And this zombie killing
+    payment is fueled by a rare element and spite. "
   ItemSprite: {fileID: 21300000, guid: 745212c12e45b144d8dd5743e3486af0, type: 3}
   Price: 935
   UpgradeGroup: 108

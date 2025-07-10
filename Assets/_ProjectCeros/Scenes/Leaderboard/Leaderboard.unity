@@ -784,6 +784,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeaderboardUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7063219870713662815, guid: 15d783dc6c47d9949b2d04e982017b97, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1aeff91d79093654d8c67cab0eaf714c, type: 3}
+    - target: {fileID: 7063219870713662815, guid: 15d783dc6c47d9949b2d04e982017b97, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063219870713662815, guid: 15d783dc6c47d9949b2d04e982017b97, type: 3}
+      propertyPath: m_Color.b
+      value: 0.80784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063219870713662815, guid: 15d783dc6c47d9949b2d04e982017b97, type: 3}
+      propertyPath: m_Color.g
+      value: 0.89411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063219870713662815, guid: 15d783dc6c47d9949b2d04e982017b97, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9764706
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
