@@ -97,7 +97,7 @@ namespace ProjectCeros
 
                 _guestUI.enabled = true;
                 _guestImage.enabled = true;
-                _guestImage.sprite = _guest.GuestSprite;
+                _guestImage.sprite = _guest.GuestSpriteDialogue;
 
                 StartCoroutine(StartDialogueGuestSequence());
             }
@@ -238,7 +238,8 @@ namespace ProjectCeros
                     dialogueText.text = "";
                     Debug.Log("Dialogue finished!");
 
-                    StartCoroutine(EndDialogueSequence());
+                    //StartCoroutine(EndDialogueSequence());
+                    _endDialogue.Raise();
                     return;
                 }
 
@@ -298,7 +299,7 @@ namespace ProjectCeros
         {
             _faderPositive.FadeOut();
             yield return new WaitForSeconds(1.5f);
-            _endDialogue.Raise();
+            
         }
 
 
