@@ -569,7 +569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Decent Headphones
+  m_text: Frog Buster Headphones
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
   m_sharedMaterial: {fileID: 3550940729943828915, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}

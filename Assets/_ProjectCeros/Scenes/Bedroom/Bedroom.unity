@@ -3347,6 +3347,7 @@ MonoBehaviour:
   - {fileID: 1969385854}
   - {fileID: 729834821}
   unlockedItemIDs: {fileID: 11400000, guid: e4c0ad56298c8fd428871f5dc2782cf4, type: 2}
+  _activeItemIDs: {fileID: 11400000, guid: af639275c9721104494f07a574f6a8c0, type: 2}
 --- !u!4 &1210319336
 Transform:
   m_ObjectHideFlags: 0

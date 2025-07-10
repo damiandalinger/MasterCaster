@@ -29,6 +29,9 @@ namespace ProjectCeros
         [SerializeField, Tooltip("Here goes the RuntimeSet that hold all the item ids.")]
         private IntRuntimeSet unlockedItemIDs;
 
+        [SerializeField, Tooltip("Here goes the RuntimeSet that hold all the active only item ids.")]
+        private IntRuntimeSet _activeItemIDs;
+
 
         public void Start()
         {
@@ -51,6 +54,13 @@ namespace ProjectCeros
                 else if (item.Id > activeUpgrades[group].Id)
                     activeUpgrades[group] = item;
             }
+
+            _activeItemIDs.Clear();
+            foreach (var kvp in activeUpgrades)
+            {
+                _activeItemIDs.Add(kvp.Value.Id);
+            }
+
 
             foreach (var display in roomObjects)
             {
