@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
   m_Name: SO_Needle
   m_EditorClassIdentifier: 
-  ItemName: Needle
-  Description: "An Empty knight's dream sword. Let\u2019s sew some enemies together
-    with this meat picker.\n\nUnlocks Guest: Full Knight"
+  ItemName: A Knight's Needle
+  Description: "Legendary Weapon of a Silent Bug Warrior. Now it\u2019s relegated
+    to a fly swatter. Still fitting - How curious.\n\nUnlocks Guest: Full Knight"
   ItemSprite: {fileID: 21300000, guid: 49744255068229a4c8e829334e6e777b, type: 3}
   Price: 50
   UpgradeGroup: 103

@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stonemask
+  m_text: Curious Stonemask
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
   m_sharedMaterial: {fileID: 3550940729943828915, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
@@ -2995,7 +2995,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Staff of the King
+  m_text: 'Staff of the Monkey King
 
 '
   m_isRightToLeft: 0
@@ -3344,9 +3344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Stronghold Helper
-
-'
+  m_text: Torso of a Scribe
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
   m_sharedMaterial: {fileID: 3550940729943828915, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
@@ -7099,7 +7097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ranch
+  m_text: Ginormous Ranch Bottle
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
   m_sharedMaterial: {fileID: 3550940729943828915, guid: 700ecd768c9981244a0a8a6e0186dc19, type: 2}
@@ -10241,7 +10239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Raygun M. 915
+  m_text: 'Raygun Mk. 915
 
 '
   m_isRightToLeft: 0

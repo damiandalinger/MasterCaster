@@ -15,7 +15,7 @@ MonoBehaviour:
   ItemName: Office Throne
   Description: "Not exactly comfortable to sit in unless you enjoy mild suffering.
     This looks better than the last one but only a slight improvement for the podcast.
-    But hey, it looks professional, and that\u2019s what really matters, right?"
+    But at least, it looks professional, and that\u2019s what really matters!"
   ItemSprite: {fileID: 21300000, guid: f711d56955fd8c749b6e1ac22bf2c01a, type: 3}
   Price: 400
   UpgradeGroup: 4

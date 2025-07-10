@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: SO_Bathwater
   m_EditorClassIdentifier: 
   ItemName: E-Girl Bathwater
-  Description: "This needs no explanation. Maybe it\u2019s for cloning someone? Or
-    just your average everyday ethical dilemma in a box. Why would you even try to
-    buy this?"
+  Description: 'We really hope that you''re not seriously considering buying this.
+    We thought better of you. '
   ItemSprite: {fileID: 21300000, guid: 7169ad9c496d7e44882d72474a2114a4, type: 3}
   Price: 1000000000
   UpgradeGroup: 112

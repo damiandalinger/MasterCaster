@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Mixing Desk
   Description: "A few added sounds should do the trick. Fingers crossed this actually
-    improves the podcast but hey, at least it\u2019ll be different."
+    improves the podcast, at least it\u2019ll be different."
   ItemSprite: {fileID: 21300000, guid: a269d9f39b407944aba341b583f04149, type: 3}
   Price: 100
   UpgradeGroup: 5
