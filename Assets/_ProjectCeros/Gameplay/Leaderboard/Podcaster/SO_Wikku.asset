@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialListener: 700000
   InitialRank: 6
-  Portrait: {fileID: 21300000, guid: 83a769741e0a36644add37f559f5547f, type: 3}
+  Portrait: {fileID: 21300000, guid: 26ca2d00f6f6c224d879618c568ca51b, type: 3}
   DisplayName: Anturi Antics
   PersonName: Wikku of Buirhaven
   Description: "Don\u2019t let the harmless exterior fool you. The empty eyes hide
@@ -24,5 +24,5 @@ MonoBehaviour:
   DislikedGenres: 0200000009000000
   CurrentRank: 6
   PreviousRank: 6
-  CurrentListener: 75
+  CurrentListener: 700000
   RankChange: 2
