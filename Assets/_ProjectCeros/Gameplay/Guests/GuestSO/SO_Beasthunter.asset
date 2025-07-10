@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
-  m_Name: SO_Gerhart vom River
+  m_Name: SO_Beasthunter
   m_EditorClassIdentifier: 
-  Name: Gerhart vom River
+  Name: Beasthunter
   Description: The wind howls as this fine hunter of beasts relaxes in his bathtub.
     Notorious for many different romantic interludes, this casanova has seen it all.
     Vicious beasts in human skin, humans in the skin of viscous beasts and just lots
     of beasts all around. He is so successful, he even has his own card game !!
   Topic: Indie
   Modifier: 0.3
-  Chance: 0.175
+  Chance: 0.95
   GuestID: 14
   CooldownCounter: 0
   Rating: 5

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
-  m_Name: SO_Waterkeeper
+  m_Name: SO_ServantOfCinder
   m_EditorClassIdentifier: 
-  Name: Waterkeeper
+  Name: Servant of Cinder
   Description: An ever present supporter of the undead giving strength and respite
     when needed. Normally there would be a fun witty comment here, but her world
     is depressing so there is none. Just as depressing as your maidenless life.
   Topic: Action
   Modifier: 0.2
-  Chance: 0.175
+  Chance: 0.95
   GuestID: 13
   CooldownCounter: 0
   Rating: 4

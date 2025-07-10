@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bbeb676020f4f645bdea3ff9f15dc32, type: 3}
-  m_Name: SO_Cyanide
+  m_Name: SO_ChampionCyan
   m_EditorClassIdentifier: 
-  Name: Cyanide
-  Description: "Cyanide loves to showcase her love and commitment to her animalistic
+  Name: Champion Cyan
+  Description: "Cyan loves to showcase her love and commitment to her animalistic
     companions, putting an emphasis on their well being and enjoyment. However don\u2019t
     let that distract you from the fact that she lets those creatures fight for her
     and the spectators enjoyment. So is it all just a farce ?"
   Topic: RPG
   Modifier: 0.25
-  Chance: 0.175
+  Chance: 0.95
   GuestID: 16
   CooldownCounter: 0
   Rating: 5
