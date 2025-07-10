@@ -83,6 +83,7 @@ SpriteAtlas:
     - d081c10f008a5634bbef0c349c4c4188: 21300000
     - 8178fe1fb54c9a947a825c0cf15e1323: 21300000
     - 48abc4df3ce95b5498af8fefc40bc8da: 21300000
+    - 0fe37adfc12017846a740683c8af7029: 21300000
     - 49d33ddff1258f249a93589a047a2d41: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -118,6 +119,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d081c10f008a5634bbef0c349c4c4188, type: 3}
   - {fileID: 21300000, guid: 8178fe1fb54c9a947a825c0cf15e1323, type: 3}
   - {fileID: 21300000, guid: 48abc4df3ce95b5498af8fefc40bc8da, type: 3}
+  - {fileID: 21300000, guid: 0fe37adfc12017846a740683c8af7029, type: 3}
   - {fileID: 21300000, guid: 49d33ddff1258f249a93589a047a2d41, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_Leaderboard_Profilpic_Wikku
@@ -152,6 +154,7 @@ SpriteAtlas:
   - SPR_Leaderboard_Boxes_Brown_Detail
   - SPR_Leaderboard_Boxes_BrownBright
   - SPR_Leaderboard_Boxes_BlueBright
+  - SPR_Task_Leaderboard
   - SPR_Leaderboard_Boxes_BlueDark
   m_RenderDataMap: {}
   m_Tag: SA_Leaderboard

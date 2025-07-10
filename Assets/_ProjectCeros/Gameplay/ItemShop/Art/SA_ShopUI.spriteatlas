@@ -61,6 +61,7 @@ SpriteAtlas:
     - 7c769c28530262b46ade8082069899c3: 21300000
     - dbed64e849b055c408861944fbd80260: 21300000
     - 4ea442f9a9cc4994084f016b0ceac262: 21300000
+    - da09b12abba9e684998f7f69ba9eddfa: 21300000
     - f4c1525b6c9a4ae4ea3a3fbffa2c1412: 21300000
     - ba00579bb8c2c844d98ac256d0fbb028: 21300000
     - ed04488dfb849f84fae2763ba2cc79bd: 21300000
@@ -80,6 +81,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7c769c28530262b46ade8082069899c3, type: 3}
   - {fileID: 21300000, guid: dbed64e849b055c408861944fbd80260, type: 3}
   - {fileID: 21300000, guid: 4ea442f9a9cc4994084f016b0ceac262, type: 3}
+  - {fileID: 21300000, guid: da09b12abba9e684998f7f69ba9eddfa, type: 3}
   - {fileID: 21300000, guid: f4c1525b6c9a4ae4ea3a3fbffa2c1412, type: 3}
   - {fileID: 21300000, guid: ba00579bb8c2c844d98ac256d0fbb028, type: 3}
   - {fileID: 21300000, guid: ed04488dfb849f84fae2763ba2cc79bd, type: 3}
@@ -98,6 +100,7 @@ SpriteAtlas:
   - SPR_ShopUI_Home_Selected
   - SPR_ShopUI_List
   - SPR_ShopUI_ItemButton_Unselected
+  - SPR_Task_shop
   - SPR_ShopUI_IconDisplay
   - SPR_ShopUI_BuyButton_Selected
   - SPR_ShopUI_ItemButton_Selected

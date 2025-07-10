@@ -55,6 +55,7 @@ SpriteAtlas:
     - 2eaf0e83bb437354faa5f65caaaa9e02: 21300000
     - 2fd3019349645e448953f8ce9e284776: 21300000
     - 241c62f45b89a59488f9cf4c0661bffb: 21300000
+    - 9df9b3450fc880a48929b3d55a5ed0bf: 21300000
     - 116235374e546d943a98d23ed70b4842: 21300000
     - 6d0faf4ac9a3067439d57c1d6cc5169e: 21300000
     - 590b7f2b3c1cc2840af182291e6017b5: 21300000
@@ -70,6 +71,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2eaf0e83bb437354faa5f65caaaa9e02, type: 3}
   - {fileID: 21300000, guid: 2fd3019349645e448953f8ce9e284776, type: 3}
   - {fileID: 21300000, guid: 241c62f45b89a59488f9cf4c0661bffb, type: 3}
+  - {fileID: 21300000, guid: 9df9b3450fc880a48929b3d55a5ed0bf, type: 3}
   - {fileID: 21300000, guid: 116235374e546d943a98d23ed70b4842, type: 3}
   - {fileID: 21300000, guid: 6d0faf4ac9a3067439d57c1d6cc5169e, type: 3}
   - {fileID: 21300000, guid: 590b7f2b3c1cc2840af182291e6017b5, type: 3}
@@ -84,6 +86,7 @@ SpriteAtlas:
   - SPR_Room_Bed
   - SPR_Room_ShelfStanding
   - SPR_Room_News
+  - SPR_Room_Camera
   - SPR_Room_Plant
   - SPR_Room_Script
   - SPR_Room_DeskLaptop
