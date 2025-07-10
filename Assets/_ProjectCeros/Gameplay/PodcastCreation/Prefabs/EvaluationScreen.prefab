@@ -2394,9 +2394,25 @@ MonoBehaviour:
   _currentDay: {fileID: 11400000, guid: 4d88b8b3e7919fa49a3283bcff4b3b36, type: 2}
   _selectedSpin: {fileID: 11400000, guid: 42ffa4cf2c2ba5b448fcd2ce82cc1da9, type: 2}
   _starRating: {fileID: 11400000, guid: c1f49f11fe17e0345b9e20bff4def582, type: 2}
-  _guests: 
   _sponsors: 
-  _equipment: 
+  _guests:
+  - {fileID: 11400000, guid: 19973348c652d6d4f9920b9e91b94d7d, type: 2}
+  - {fileID: 11400000, guid: 2717cd5faf23c2042aa02ddb916a8023, type: 2}
+  - {fileID: 11400000, guid: b125294128dda65478f2811d10bfa63d, type: 2}
+  - {fileID: 11400000, guid: c07a9725f7e2ec145a60eef23a01629a, type: 2}
+  - {fileID: 11400000, guid: 447d6f858dcaff34d99b8f5b311c20c6, type: 2}
+  - {fileID: 11400000, guid: 862f709b2f047cb4497a12c62e55a4ad, type: 2}
+  - {fileID: 11400000, guid: 9d5868913e9073643babceb168a36b5a, type: 2}
+  - {fileID: 11400000, guid: c9bafc143ce749e459dae752caffde3f, type: 2}
+  - {fileID: 11400000, guid: 092789a686bcecc449df4abcd73fc9b7, type: 2}
+  - {fileID: 11400000, guid: 92d21943f2735a64ab51ef5157b1057a, type: 2}
+  - {fileID: 11400000, guid: 1c3d04248313e8d4c90824c352b44b97, type: 2}
+  - {fileID: 11400000, guid: 0ef2e5240e5ca104a8b399179836d0d6, type: 2}
+  - {fileID: 11400000, guid: fa0241c6d7df43f4998d9fa49d52e4ba, type: 2}
+  - {fileID: 11400000, guid: b92cded0a65b18e47b3eac1192684e9e, type: 2}
+  - {fileID: 11400000, guid: 05d6b598ad7538148b5594ae1cf4e224, type: 2}
+  - {fileID: 11400000, guid: 80b222ed276943d4c90a7881d676253b, type: 2}
+  _activeEquipment: {fileID: 11400000, guid: af639275c9721104494f07a574f6a8c0, type: 2}
   _selectedComments: {fileID: 11400000, guid: a96de348ceded174bb834cfb61b0261c, type: 2}
 --- !u!1 &1557459811052167462
 GameObject:
@@ -9419,6 +9435,24 @@ MonoBehaviour:
   _podcastResult: {fileID: 11400000, guid: 9808f56a4d0a48d4ba91b6a675361e2a, type: 2}
   _previousListeners: {fileID: 11400000, guid: 10d72ee4fcdb40a408d8314a91b64658, type: 2}
   _sizeMultiplier: {fileID: 11400000, guid: 90b4e4529857c8d43a836692d22b2d31, type: 2}
+  _globalStarRating: {fileID: 11400000, guid: 9173ff3ca79191543b5dd7db08ad6c5b, type: 2}
+  _guests:
+  - {fileID: 11400000, guid: 19973348c652d6d4f9920b9e91b94d7d, type: 2}
+  - {fileID: 11400000, guid: 2717cd5faf23c2042aa02ddb916a8023, type: 2}
+  - {fileID: 11400000, guid: b125294128dda65478f2811d10bfa63d, type: 2}
+  - {fileID: 11400000, guid: c07a9725f7e2ec145a60eef23a01629a, type: 2}
+  - {fileID: 11400000, guid: 447d6f858dcaff34d99b8f5b311c20c6, type: 2}
+  - {fileID: 11400000, guid: 862f709b2f047cb4497a12c62e55a4ad, type: 2}
+  - {fileID: 11400000, guid: 9d5868913e9073643babceb168a36b5a, type: 2}
+  - {fileID: 11400000, guid: c9bafc143ce749e459dae752caffde3f, type: 2}
+  - {fileID: 11400000, guid: 092789a686bcecc449df4abcd73fc9b7, type: 2}
+  - {fileID: 11400000, guid: 92d21943f2735a64ab51ef5157b1057a, type: 2}
+  - {fileID: 11400000, guid: 1c3d04248313e8d4c90824c352b44b97, type: 2}
+  - {fileID: 11400000, guid: 0ef2e5240e5ca104a8b399179836d0d6, type: 2}
+  - {fileID: 11400000, guid: fa0241c6d7df43f4998d9fa49d52e4ba, type: 2}
+  - {fileID: 11400000, guid: b92cded0a65b18e47b3eac1192684e9e, type: 2}
+  - {fileID: 11400000, guid: 05d6b598ad7538148b5594ae1cf4e224, type: 2}
+  - {fileID: 11400000, guid: 80b222ed276943d4c90a7881d676253b, type: 2}
   _starRating: {fileID: 11400000, guid: c1f49f11fe17e0345b9e20bff4def582, type: 2}
 --- !u!1 &8927163821866277065
 GameObject:

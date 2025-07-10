@@ -43,14 +43,14 @@ namespace ProjectCeros
         [Tooltip("Current star rating used for determining sentiment.")]
         [SerializeField] private FloatVariable _starRating;
 
-        [Tooltip("List of currently active guest IDs.")]
-        [SerializeField] private List<int> _guests;
-
         [Tooltip("List of currently active sponsor IDs.")]
         [SerializeField] private List<int> _sponsors;
 
-        [Tooltip("List of currently active equipment IDs.")]
-        [SerializeField] private List<int> _equipment;
+        [Tooltip("All currently loaded guest objects.")]
+        [SerializeField] private List<GuestSO> _guests;
+
+        [Tooltip("All currently active equipment IDs.")]
+        [SerializeField] private IntRuntimeSet _activeEquipment;
 
         [Header("Output")]
         [Tooltip("The runtime set where selected comment strings will be stored.")]
@@ -63,17 +63,30 @@ namespace ProjectCeros
         // Generates a set of comments based on the current game state and writes them to the output set.
         public void GenerateComments()
         {
-            int totalCount = GetCommentCountForDay(_currentDay.RuntimeValue);
+            var guestPool = GetGuestComments();
+            var otherPool = new List<CommentData>();
+            otherPool.AddRange(GetCommentsByIDs(_sponsors));
+            otherPool.AddRange(GetEquipmentComments());
+            otherPool.AddRange(GetSpinComments(_selectedSpin.RuntimeValue));
+            otherPool.AddRange(GetRandomCommentsByRating(_starRating.RuntimeValue));
 
-            List<CommentData> combinedPool = new();
-            combinedPool.AddRange(GetCommentsByIDs(_guests));
-            combinedPool.AddRange(GetCommentsByIDs(_sponsors));
-            combinedPool.AddRange(GetCommentsByIDs(_equipment));
-            combinedPool.AddRange(GetSpinComments(_selectedSpin.RuntimeValue));
-            combinedPool.AddRange(GetRandomCommentsByRating(_starRating.RuntimeValue));
+            List<string> finalComments = new();
 
-            var selected = SelectRandomComments(combinedPool, totalCount);
-            ApplyToOutput(selected);
+            int total = GetCommentCountForDay(_currentDay.RuntimeValue);
+
+            if (guestPool.Any())
+            {
+                // garantiert 1 Gast-Kommentar
+                finalComments.Add(
+                    guestPool.OrderBy(_ => Random.value).First().Comment
+                );
+                total--;
+            }
+
+            var otherSelected = SelectRandomComments(otherPool, total);
+            finalComments.AddRange(otherSelected);
+
+            ApplyToOutput(finalComments);
         }
 
         #endregion
@@ -109,6 +122,27 @@ namespace ProjectCeros
                 .ToList();
         }
 
+        // Gets comments from the equipment pool that match active equipment IDs.
+        private List<CommentData> GetEquipmentComments()
+        {
+            return _equipmentComments.Items
+                .Where(comment => _activeEquipment.Items.Contains(comment.ID))
+                .ToList();
+        }
+
+        // Gets comments from the guest pool that match IDs of accepted guests.
+        private List<CommentData> GetGuestComments()
+        {
+            var acceptedIDs = _guests
+                .Where(g => g.hasAccepted)
+                .Select(g => g.GuestID)
+                .ToHashSet();
+
+            return _guestComments.Items
+                .Where(comment => acceptedIDs.Contains(comment.ID))
+                .ToList();
+        }
+
         // Retrieves all comments related to the currently selected spin.
         private List<CommentData> GetSpinComments(int spinID)
         {
@@ -138,7 +172,7 @@ namespace ProjectCeros
                 .Select(c => c.Comment)
                 .ToList();
         }
-        
+
         #endregion
     }
 }

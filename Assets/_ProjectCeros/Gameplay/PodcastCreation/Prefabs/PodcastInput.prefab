@@ -7871,7 +7871,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: cff9ac8c02bf2fd42bd653cbf4ac4885, type: 2}
+      - m_Target: {fileID: 11400000, guid: 96f1e13e3b9c8b54a8adf87c1c692abc, type: 2}
         m_TargetAssemblyTypeName: ProjectCeros.FMODSoundEvent, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -9150,7 +9150,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: cff9ac8c02bf2fd42bd653cbf4ac4885, type: 2}
+      - m_Target: {fileID: 11400000, guid: 96f1e13e3b9c8b54a8adf87c1c692abc, type: 2}
         m_TargetAssemblyTypeName: ProjectCeros.FMODSoundEvent, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
