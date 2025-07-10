@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SO_Pickaxe
   m_EditorClassIdentifier: 
   ItemName: Pickaxe
-  Description: "This thing needs no introduction. Tears down walls like they\u2019re
-    made of paper. Truly a revolutionary approach to interior design."
+  Description: Three ingots of iron and a few sticks mashed together make for a good
+    failsafe, in case your podcast business goes down the drain.
   ItemSprite: {fileID: 21300000, guid: d672866e26bb75749b4bf6e82491e84a, type: 3}
   Price: 100
   UpgradeGroup: 105

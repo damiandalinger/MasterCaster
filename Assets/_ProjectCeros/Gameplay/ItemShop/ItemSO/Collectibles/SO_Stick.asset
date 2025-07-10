@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
   m_Name: SO_Stick
   m_EditorClassIdentifier: 
-  ItemName: Stick
-  Description: Nice Stick. Good for hitting.
+  ItemName: Staff of the Monkey King
+  Description: "This exalted staff was raised against the Heavens and its peerless
+    owner paid heavily for it. It travelled all across mythical China, defeating
+    foes grander than one may imagine and now it somehow ended up in your room. Pray
+    that no heavenly retribution befalls you. \r"
   ItemSprite: {fileID: 21300000, guid: df660871551af5b4dbcede16ea8cdbc4, type: 3}
   Price: 1000
   UpgradeGroup: 109
