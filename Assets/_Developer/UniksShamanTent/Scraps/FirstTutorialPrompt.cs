@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-    public class ContinueTutorial : MonoBehaviour
+    public class FirstTutioralPrompt : MonoBehaviour
     {
         [SerializeField] private TutorialManager _manager;
         [SerializeField] private BoolReference _showedOnce;
@@ -11,7 +11,7 @@ namespace ProjectCeros
         void Start()
         {
             if (!_showedOnce)
-            { _manager.ShowClue(); }
+            { _manager.FirstTutioralPrompt(); }
 
         }
 

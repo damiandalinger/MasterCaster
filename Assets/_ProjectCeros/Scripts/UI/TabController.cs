@@ -95,7 +95,7 @@ namespace ProjectCeros
                     return; 
                 }
             }
-            
+
             if (_currentTab < _tabs.Count - 1)
             {
                 ShowTab(_currentTab + 1);
@@ -103,6 +103,7 @@ namespace ProjectCeros
             else if (_onTabsFinished != null)
             {
                 _onTabsFinished.Raise();
+                Debug.Log("Screen done");
             }
         }
 
