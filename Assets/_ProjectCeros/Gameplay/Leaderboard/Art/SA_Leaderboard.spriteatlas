@@ -51,6 +51,7 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
+    - 26ca2d00f6f6c224d879618c568ca51b: 21300000
     - 55f6b5017ff692042814c275f7b3947c: 21300000
     - 774f914126e8df543813a1cd47b3559e: 21300000
     - df283b41012dbdf4c8f3e5d78e388d0d: 21300000
@@ -67,6 +68,7 @@ SpriteAtlas:
     - 759b07b88164f114aa42b78fd1749115: 21300000
     - 9b04d60913e1e9e48ad1adfd6fc81181: 21300000
     - a0c63b69b149f9946b2cf21ce6f96cda: 21300000
+    - 4b46b2799d31cfe4dbf3b38b8e3ed358: 21300000
     - b7fddbc98c5a3894089c8c679e80fb3c: 21300000
     - c669050a7c898f64b8ea18c34c7c72d1: 21300000
     - bf5f5d8b8be694c4a8dbf4a2256d807b: 21300000
@@ -84,6 +86,7 @@ SpriteAtlas:
     - 49d33ddff1258f249a93589a047a2d41: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 26ca2d00f6f6c224d879618c568ca51b, type: 3}
   - {fileID: 21300000, guid: 55f6b5017ff692042814c275f7b3947c, type: 3}
   - {fileID: 21300000, guid: 774f914126e8df543813a1cd47b3559e, type: 3}
   - {fileID: 21300000, guid: df283b41012dbdf4c8f3e5d78e388d0d, type: 3}
@@ -100,6 +103,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 759b07b88164f114aa42b78fd1749115, type: 3}
   - {fileID: 21300000, guid: 9b04d60913e1e9e48ad1adfd6fc81181, type: 3}
   - {fileID: 21300000, guid: a0c63b69b149f9946b2cf21ce6f96cda, type: 3}
+  - {fileID: 21300000, guid: 4b46b2799d31cfe4dbf3b38b8e3ed358, type: 3}
   - {fileID: 21300000, guid: b7fddbc98c5a3894089c8c679e80fb3c, type: 3}
   - {fileID: 21300000, guid: c669050a7c898f64b8ea18c34c7c72d1, type: 3}
   - {fileID: 21300000, guid: bf5f5d8b8be694c4a8dbf4a2256d807b, type: 3}
@@ -116,6 +120,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 48abc4df3ce95b5498af8fefc40bc8da, type: 3}
   - {fileID: 21300000, guid: 49d33ddff1258f249a93589a047a2d41, type: 3}
   m_PackedSpriteNamesToIndex:
+  - SPR_Leaderboard_Profilpic_Wikku
   - SPR_Leaderboard_Boxes_GrayDark
   - SPR_Leaderboard_Boxes_YellowBright
   - SPR_Leaderboard_Boxes_Yellow_Detail
@@ -132,6 +137,7 @@ SpriteAtlas:
   - SPR_Leaderboard_Boxes_Bottom
   - SPR_Leaderboard_PlayerIcon
   - SPR_Leaderboard_Profilpic_Mood
+  - SPR_Leaderboard_Profilpic_Dust
   - SPR_Leaderboard_Boxes_BrownDark
   - SPR_Leaderboard_Rising
   - SPR_Leaderboard_Boxes_Gray_Detail

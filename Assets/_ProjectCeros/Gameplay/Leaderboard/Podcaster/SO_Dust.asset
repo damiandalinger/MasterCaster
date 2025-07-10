@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialListener: 800000
   InitialRank: 4
-  Portrait: {fileID: 21300000, guid: 28ea31fbdeb54db42bc49177bc324f7d, type: 3}
+  Portrait: {fileID: 21300000, guid: 4b46b2799d31cfe4dbf3b38b8e3ed358, type: 3}
   DisplayName: Hot Takes
   PersonName: Dust
   Description: The insanity is part of the appeal. Many people are just ready for
@@ -23,5 +23,5 @@ MonoBehaviour:
   DislikedGenres: 0500000012000000
   CurrentRank: 4
   PreviousRank: 4
-  CurrentListener: 783686
+  CurrentListener: 800000
   RankChange: 2
