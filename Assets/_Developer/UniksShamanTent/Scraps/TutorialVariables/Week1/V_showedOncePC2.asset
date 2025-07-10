@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e2b57a719344d4498b41952fa8c84c, type: 3}
-  m_Name: V_showedOncePC1
+  m_Name: V_showedOncePC2
   m_EditorClassIdentifier: 
   _isSaveable: 0
   DeveloperDescription: 
