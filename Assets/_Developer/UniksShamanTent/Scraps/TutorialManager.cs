@@ -22,9 +22,12 @@ namespace ProjectCeros
 
         public void FirstTutioralPrompt()
         {
-            _headingBox.text = _heading;
-            _textBox.text = _text;
-            _uiElement.SetActive(true);
+            if (!_showedOnce)
+            {
+                _headingBox.text = _heading;
+                _textBox.text = _text;
+                _uiElement.SetActive(true);
+            }
         }
 
 
@@ -35,6 +38,8 @@ namespace ProjectCeros
                 _headingBox.text = _heading;
                 _textBox.text = _text;
                 _uiElement.SetActive(true);
+
+                Debug.Log("Show clue!");
             }
 
         }
@@ -43,12 +48,16 @@ namespace ProjectCeros
         {
             _wantsTutorial.Variable.SetValue(true);
             _uiElement.SetActive(false);
+            _showedOnce.Variable.SetValue(true);
+
+            Debug.Log("wants tutorial yes!");
         }
 
         public void WantsNoTutorial()
         {
             _wantsTutorial.Variable.SetValue(false);
             _uiElement.SetActive(false);
+            _showedOnce.Variable.SetValue(true);
         }
 
 
