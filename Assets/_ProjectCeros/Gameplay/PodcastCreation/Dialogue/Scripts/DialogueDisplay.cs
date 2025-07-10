@@ -251,8 +251,12 @@ namespace ProjectCeros
                         : colorPlayer;               // Player: black
 
 
-                    _namePlayer.text = _toggle ? null : _player.PersonName;
-                    _nameGuest.text = _toggle ? _guest.Name : null;
+                    _namePlayer.text =  _player.PersonName;
+                    _nameGuest.text =  _guest.Name;
+
+                    //_namePlayer.text = _toggle ? null : _player.PersonName;
+                    //_nameGuest.text = _toggle ? _guest.Name : null;
+                    
                     _nameGuest.color = _guest.Color;
 
                     _playerBox.SetActive(!_toggle);
@@ -299,7 +303,7 @@ namespace ProjectCeros
         {
             _faderPositive.FadeOut();
             yield return new WaitForSeconds(1.5f);
-            
+
         }
 
 
