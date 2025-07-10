@@ -1,14 +1,316 @@
 [
     {
         "ID": 1,
-        "Comment": "1Guest1"
+        "Comment": "Listening to Trapclap is like grating my head on the pavement."
     },
     {
         "ID": 1,
-        "Comment": "1Guest2"
+        "Comment": "You call him Guest, I call him punishment. "
+    },
+    {
+        "ID": 1,
+        "Comment": "Usually I like the podcast, but usually he's not here."
+    },
+    {
+        "ID": 1,
+        "Comment": "WREEEEEEEEEEEEEE"
+    },
+    {
+        "ID": 1,
+        "Comment": "I think I’m going insane"
+    },
+
+    {
+        "ID": 2,
+        "Comment": "I really love this guy, he has such insightful takes!"
     },
     {
         "ID": 2,
-        "Comment": "2Guest1"
+        "Comment": "Guys I think I heard words through the growl!"
+    },
+    {
+        "ID": 2,
+        "Comment": "Somehow there were communication problems."
+    },
+    {
+        "ID": 2,
+        "Comment": "Isn’t he just the cutest ? :3"
+    },
+    {
+        "ID": 2,
+        "Comment": "I really just wanna cuddle him."
+    },
+
+    {
+        "ID": 3,
+        "Comment": "i wanna slurp his cereal"
+    },
+    {
+        "ID": 3,
+        "Comment": "Heard this guy is a gambler …"
+    },
+    {
+        "ID": 3,
+        "Comment": "istg he comes from a different time"
+    },
+    {
+        "ID": 3,
+        "Comment": "I wonder if he has different bowls"
+    },
+    {
+        "ID": 3,
+        "Comment": "Guys I wanna buy a bowl like that, you know where?"
+    },
+
+    {
+        "ID": 4,
+        "Comment": "#FreeInhabitent2037"
+    },
+    {
+        "ID": 4,
+        "Comment": "A true worker, if only the modern …"
+    },
+    {
+        "ID": 4,
+        "Comment": "Stoicism incarnate."
+    },
+    {
+        "ID": 4,
+        "Comment": "Damn look at that head. Like a egg lol"
+    },
+    {
+        "ID": 4,
+        "Comment": "We have one of those guys at home! Very useful!"
+    },
+
+    {
+        "ID": 5,
+        "Comment": "She makes my heart race7"
+    },
+    {
+        "ID": 5,
+        "Comment": "Is it just me or did they start speaking quicker?"
+    },
+    {
+        "ID": 5,
+        "Comment": "I ran a Marathon once and there I saw her and …"
+    },
+    {
+        "ID": 5,
+        "Comment": "It’s so cool to see you talk to a hero!"
+    },
+    {
+        "ID": 5,
+        "Comment": "Man I wish I was you"
+    },
+
+    {
+        "ID": 6,
+        "Comment": "…"
+    },
+    {
+        "ID": 6,
+        "Comment": "*silence* LMFAO"
+    },
+    {
+        "ID": 6,
+        "Comment": "One way to get ghosted"
+    },
+    {
+        "ID": 6,
+        "Comment": "Guys I swear I heard him talk before !!!"
+    },
+    {
+        "ID": 6,
+        "Comment": "Such a cute lil guy !"
+    },
+
+    {
+        "ID": 7,
+        "Comment": "I have a black version of him!"
+    },
+    {
+        "ID": 7,
+        "Comment": "Really wanna see him run Racer"
+    },
+    {
+        "ID": 7,
+        "Comment": "heard he had a edgy phase"
+    },
+    {
+        "ID": 7,
+        "Comment": "i wonder how animals can talk"
+    },
+    {
+        "ID": 7,
+        "Comment": "hes really mature!"
+    },
+
+    {
+        "ID": 8,
+        "Comment": "kinda sad he didn’t do his iconic scream"
+    },
+    {
+        "ID": 8,
+        "Comment": "You heard of curved swords…? Sorry I’ll see myself out."
+    },
+    {
+        "ID": 8,
+        "Comment": "i heard that there is a theory hes actually a god btw"
+    },
+    {
+        "ID": 8,
+        "Comment": "i too would swear to carry his burden, if you know what i mean"
+    },
+    {
+        "ID": 8,
+        "Comment": "speech 100"
+    },
+
+    {
+        "ID": 9,
+        "Comment": "man im just sad for this guy, imagine being in the apocalypse"
+    },
+    {
+        "ID": 9,
+        "Comment": "i like his attitude"
+    },
+    {
+        "ID": 9,
+        "Comment": "why is holding pliers?"
+    },
+    {
+        "ID": 9,
+        "Comment": "thanks for getting him on the show!"
+    },
+    {
+        "ID": 9,
+        "Comment": "AAAAAA my heart, i cant its just so cool to see them!"
+    },
+
+    {
+        "ID": 10,
+        "Comment": "i have no idea what shes saying, but its nice"
+    },
+    {
+        "ID": 10,
+        "Comment": "if only my mom was on my side like her"
+    },
+    {
+        "ID": 10,
+        "Comment": "i will defend her with my life"
+    },
+    {
+        "ID": 10,
+        "Comment": "i wanna see her eyes"
+    },
+    {
+        "ID": 10,
+        "Comment": "shes kinda creppy"
+    },
+
+    {
+        "ID": 11,
+        "Comment": "HECK YEAH I LOVE BANANAS"
+    },
+    {
+        "ID": 11,
+        "Comment": "guys i heard hes a kidnapper"
+    },
+    {
+        "ID": 11,
+        "Comment": "MONKEY BONG"
+    },
+    {
+        "ID": 11,
+        "Comment": "*ape noises*"
+    },
+    {
+        "ID": 11,
+        "Comment": "you guys think i can buy that tie?"
+    },
+
+    {
+        "ID": 12,
+        "Comment": "never heard him talk that much"
+    },
+    {
+        "ID": 12,
+        "Comment": "This Guy is such an inspiration!"
+    },
+    {
+        "ID": 12,
+        "Comment": "he can rip a guy in half …"
+    },
+    {
+        "ID": 12,
+        "Comment": "you guys think he can carry me?"
+    },
+    {
+        "ID": 12,
+        "Comment": "i really love his style"
+    },
+
+    {
+        "ID": 13,
+        "Comment": "good hes too handsome"
+    },
+    {
+        "ID": 13,
+        "Comment": "I like his stoic answers"
+    },
+    {
+        "ID": 13,
+        "Comment": "Man hes ice cold"
+    },
+    {
+        "ID": 13,
+        "Comment": "I just wanna cuddle him"
+    },
+    {
+        "ID": 13,
+        "Comment": "You guys ever wondered what happened with that unicorn?"
+    },
+
+    {
+        "ID": 14,
+        "Comment": "actually this guy killed his family"
+    },
+    {
+        "ID": 14,
+        "Comment": "im kinda jelous, his son is so successful…"
+    },
+    {
+        "ID": 14,
+        "Comment": "I wonder what he was like back in the days"
+    },
+    {
+        "ID": 14,
+        "Comment": "Its wild how different he is now"
+    },
+    {
+        "ID": 14,
+        "Comment": "i think he has a nice voice to read bed time stories."
+    },
+
+    {
+        "ID": 15,
+        "Comment": "actually this guy killed his family"
+    },
+    {
+        "ID": 15,
+        "Comment": "im kinda jelous, his son is so successful…"
+    },
+    {
+        "ID": 15,
+        "Comment": "I wonder what he was like back in the days"
+    },
+    {
+        "ID": 15,
+        "Comment": "Its wild how different he is now"
+    },
+    {
+        "ID": 15,
+        "Comment": "i think he has a nice voice to read bed time stories."
     }
 ]

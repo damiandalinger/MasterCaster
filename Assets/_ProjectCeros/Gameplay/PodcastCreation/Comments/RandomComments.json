@@ -1,22 +1,386 @@
 [
     {
-        "ID": 1,
-        "Comment": "1Random1"
-    },
-    {
-        "ID": 1,
-        "Comment": "1Random2"
-    },
-    {
-        "ID": 2,
-        "Comment": "2Random1"
-    },
-    {
-        "ID": 2,
-        "Comment": "2Random2"
+        "ID": 3,
+        "Comment": "First"
     },
     {
         "ID": 3,
-        "Comment": "3Random1"
+        "Comment": "Second"
+    },
+    {
+        "ID": 3,
+        "Comment": "My grandma just died"
+    },
+    {
+        "ID": 3,
+        "Comment": "any advice how to get rid of 80kg of chicken and fast. pls :)"
+    },
+    {
+        "ID": 3,
+        "Comment": "next Podcast should be about RPG pls they are my fav"
+    },
+     {
+        "ID": 3,
+        "Comment": "Get into the Group. "
+    },
+    {
+        "ID": 3,
+        "Comment": "€€€ Buy Coins on noscam.cam €€€"
+    },
+    {
+        "ID": 3,
+        "Comment": "ever heard the tragic story of Barth Bingus?"
+    },
+    {
+        "ID": 3,
+        "Comment": "Do It!"
+    },
+    {
+        "ID": 3,
+        "Comment": "Hello There"
+    },
+      {
+        "ID": 3,
+        "Comment": "I used to be an Podcaster like you until a Mic fell on my knee"
+    },
+    {
+        "ID": 3,
+        "Comment": "The cake is a lie"
+    },
+    {
+        "ID": 3,
+        "Comment": "are you winning son?"
+    },
+    {
+        "ID": 3,
+        "Comment": "If I’m not back in five minutes, just wait longer."
+    },
+    {
+        "ID": 3,
+        "Comment": "That’s what she said!"
+    },
+     {
+        "ID": 3,
+        "Comment": "You know, I'm really starting to hate cows."
+    },
+    {
+        "ID": 3,
+        "Comment": "I am a podcaster too. I know how this works… I am a podcaster."
+    },
+    {
+        "ID": 3,
+        "Comment": "Hello, this is your grandma."
+    },
+    {
+        "ID": 3,
+        "Comment": "F"
+    },
+    {
+        "ID": 3,
+        "Comment": "I will find you… and watch you while you sleep."
+    },
+     {
+        "ID": 3,
+        "Comment": "I’m the best robot. Yeah, yeah, yeah, I’m the best robot. Ooh, ooh"
+    },
+    {
+        "ID": 3,
+        "Comment": "I’m just here for the tacos"
+    },
+    {
+        "ID": 3,
+        "Comment": "God i miss my pants"
+    },
+     {
+        "ID": 1,
+        "Comment": "best Podcast ever"
+    },
+    {
+        "ID": 1,
+        "Comment": "This is the first time I’ve heard a genuinely good podcast here"
+    },
+    {
+        "ID": 1,
+        "Comment": "Thanks for the tip! Now I know what game I’ll play next"
+    },
+    {
+        "ID": 1,
+        "Comment": "This podcast is like breasts: hard to dislike"
+    },
+    {
+        "ID": 1,
+        "Comment": "You seriously saved my life. Keep doing what you do!"
+    },
+     {
+        "ID": 1,
+        "Comment": "Can’t wait for the next podcast!"
+    },
+    {
+        "ID": 1,
+        "Comment": "It was so good, it gave me an erection"
+    },
+    {
+        "ID": 1,
+        "Comment": "I´ll be back tomorrow"
+    },
+    {
+        "ID": 1,
+        "Comment": "Wake the fuck up we have a podcast to make"
+    },
+    {
+        "ID": 1,
+        "Comment": "Hey your finally akwake Podcaster"
+    },
+      {
+        "ID": 1,
+        "Comment": "would you kindly make another podcast"
+    },
+    {
+        "ID": 1,
+        "Comment": "I need podcast"
+    },
+    {
+        "ID": 1,
+        "Comment": "The only thing that can defeat a podcaster is a more powerful podcaster"
+    },
+    {
+        "ID": 1,
+        "Comment": "It´s super effective"
+    },
+    {
+        "ID": 1,
+        "Comment": "The best solution to a podcast is usually the easiest one"
+    },
+     {
+        "ID": 1,
+        "Comment": "When life gives you lemons, don’t make lemonade. Make a podcast"
+    },
+    {
+        "ID": 1,
+        "Comment": "There’s no place like your podcast"
+    },
+    {
+        "ID": 1,
+        "Comment": "It’s just a flesh wound."
+    },
+    {
+        "ID": 1,
+        "Comment": "There’s some lovely filth down here"
+    },
+    {
+        "ID": 1,
+        "Comment": "Could Be Worse"
+    },
+     {
+        "ID": 1,
+        "Comment": "More, more, more, moooooorrreeeeeee!!!!!!!"
+    },
+    {
+        "ID": 1,
+        "Comment": "give me more of this goodness"
+    },
+    {
+        "ID": 1,
+        "Comment": "This is my favorite genre thanks talking about it"
+    },
+       {
+        "ID": 1,
+        "Comment": "I’m usually not into this genre, but you changed my mind"
+    },
+    {
+        "ID": 1,
+        "Comment": "It’s dangerous to go alone! Take this like"
+    },
+    {
+        "ID": 1,
+        "Comment": "Stay awhile and listen"
+    },
+    {
+        "ID": 1,
+        "Comment": "The world could always use more podcaster like you"
+    },
+     {
+        "ID": 1,
+        "Comment": "Rise and shine"
+    },
+    {
+        "ID": 1,
+        "Comment": "I never asked for this, but you delivered greatness"
+    },
+    {
+        "ID": 1,
+        "Comment": "A podcast needs a podcaster like a sword needs a whetstone."
+    },
+    {
+        "ID": 1,
+        "Comment": "It's always sunny in this podcast"
+    },
+    {
+        "ID": 1,
+        "Comment": "You can't say no to this voice!"
+    },
+     {
+        "ID": 1,
+        "Comment": "I’m gonna make him an offer he can’t refuse. a sub and like perhapps"
+    },
+    {
+        "ID": 1,
+        "Comment": "How are things, podcast king?"
+    },
+    {
+        "ID": 1,
+        "Comment": "I am too stunned to speak."
+    },
+    {
+        "ID": 1,
+        "Comment": "I really really like this podcast."
+    },
+    {
+        "ID": 1,
+        "Comment": "It´s a me ur favorite fan"
+    },
+    {
+        "ID": 1,
+        "Comment": "I love your calming voice when you explain those games"
+    },
+    {
+        "ID": 1,
+        "Comment": "The people love you, sire."
+    },
+    {
+        "ID": 1,
+        "Comment": "You are spoiling us my lord"
+    },
+     {
+        "ID": 1,
+        "Comment": "Let me guess: Liking"
+    },
+    {
+        "ID": 1,
+        "Comment": "I love you. What? Who said that? I didn’t say anything"
+    },
+    {
+        "ID": 2,
+        "Comment": "Now my ears are bleeding"
+    },
+    {
+        "ID": 2,
+        "Comment": "10/10 won´t come back"
+    },
+    {
+        "ID": 2,
+        "Comment": "boring as fuck Podcast"
+    },
+    {
+        "ID": 2,
+        "Comment": "You're just like my coworkers: annoying pimples I can't get rid of."
+    },
+    {
+        "ID": 2,
+        "Comment": "That podcast is so bad, it could scare insects off a pie"
+    },
+    {
+        "ID": 2,
+        "Comment": "You're not exactly the brightest bulb in the tanning bed"
+    },
+    {
+        "ID": 2,
+        "Comment": "pls stop Podcasting ur trash"
+    },
+    {
+        "ID": 2,
+        "Comment": "never coming back"
+    },
+    {
+        "ID": 2,
+        "Comment": "I don’t like you."
+    },
+    {
+        "ID": 2,
+        "Comment": "ah shit here we go again"
+    },
+    {
+        "ID": 2,
+        "Comment": "Did I Ever Tell You The Definition Of a podcast"
+    },
+    {
+        "ID": 2,
+        "Comment": "You Died"
+    },
+    {
+        "ID": 2,
+        "Comment": "What is a podcaster? A miserable little pile of secrets"
+    },
+    {
+        "ID": 2,
+        "Comment": "I feel asleep"
+    },
+    {
+        "ID": 2,
+        "Comment": "Keep the change, ya filthy podcaster"
+    },
+    {
+        "ID": 2,
+        "Comment": "I fart in your general direction"
+    },
+    {
+        "ID": 2,
+        "Comment": "What the hell have you been smoking out there?"
+    },
+    {
+        "ID": 2,
+        "Comment": "English, motherfucker! Do you speak it?"
+    },
+    {
+        "ID": 2,
+        "Comment": "You make me sad. So be it."
+    },
+    {
+        "ID": 2,
+        "Comment": "We interrupt this program to annoy you and make things generally irritating"
+    },
+    {
+        "ID": 2,
+        "Comment": "I better start listining to Moodguy"
+    },
+    {
+        "ID": 2,
+        "Comment": "Man, this is like trying to find a bride in a brothel. very hard to listen to"
+    },
+    {
+        "ID": 2,
+        "Comment": "Be gone when I return"
+    },
+    {
+        "ID": 2,
+        "Comment": "I've got a bad feeling about this!"
+    },
+    {
+        "ID": 2,
+        "Comment": "I am the Great Mighty Hater and I’m going to throw my hate at you"
+    },
+    {
+        "ID": 2,
+        "Comment": "Your podcast is as bad as every horror movie sequel"
+    },
+    {
+        "ID": 2,
+        "Comment": "you are a snobb"
+    },
+    {
+        "ID": 2,
+        "Comment": "Bad podcasts… why did it have to be bad podcasts?"
+    },
+    {
+        "ID": 2,
+        "Comment": "You’re gonna need a bigger podcast."
+    },
+    {
+        "ID": 2,
+        "Comment": "I’m gonna hate you so hard, it’ll make your ancestors dizzy."
+    },
+    {
+        "ID": 2,
+        "Comment": "Good grief. This podcast is worse than stairs"
     }
 ]

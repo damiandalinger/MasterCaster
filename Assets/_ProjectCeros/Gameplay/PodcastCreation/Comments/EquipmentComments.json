@@ -1,14 +1,62 @@
 [
     {
         "ID": 1,
-        "Comment": "1Equipment1"
+        "Comment": "What is that static ? Is that on my end?"
     },
     {
-        "ID": 4,
-        "Comment": "4Equipment2"
+        "ID": 1,
+        "Comment": "Ayo this dudes using a 20 dollar mic"
+    },
+    {
+        "ID": 1,
+        "Comment": "Good mic! Keep up the quality :]"
+    },
+    {
+        "ID": 1,
+        "Comment": "is that a cheese grater your using for your mic?"
+    },
+    {
+        "ID": 1,
+        "Comment": "man pls use anything but what your using for sound"
     },
     {
         "ID": 2,
-        "Comment": "2Equipment1"
+        "Comment": "Guys is he using a microphone now ??"
+    },
+    {
+        "ID": 2,
+        "Comment": "Dang I like the new microphone! :D"
+    },
+    {
+        "ID": 2,
+        "Comment": "Is that the CV-12 Tube I hear ??"
+    },
+    {
+        "ID": 2,
+        "Comment": "why is the sound so crisp now?"
+    },
+    {
+        "ID": 2,
+        "Comment": "Good sound!"
+    },
+    {
+        "ID": 10,
+        "Comment": "Woah are those extra sound effects I hear?"
+    },
+    {
+        "ID": 10,
+        "Comment": "He invested into a soundboard - fancy"
+    },
+    {
+        "ID": 10,
+        "Comment": "Yoo someones making their own audio studio! :D"
+    },
+    {
+        "ID": 10,
+        "Comment": "this guys becoming a professional! "
+    },
+    {
+        "ID": 10,
+        "Comment": "I think I have the same mixing desk :3"
     }
 ]
