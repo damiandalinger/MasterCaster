@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66785ba58691db488616372bd8d7248, type: 3}
-  m_Name: RS_ActiveItems
+  m_Script: {fileID: 11500000, guid: f9e2b57a719344d4498b41952fa8c84c, type: 3}
+  m_Name: V_AtPC
   m_EditorClassIdentifier: 
   _isSaveable: 0
-  Items: 010000000400000006000000080000006a000000
+  DeveloperDescription: 
+  InitialValue: 0
+  RuntimeValue: 1
