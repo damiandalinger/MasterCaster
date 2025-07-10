@@ -28,7 +28,7 @@ MonoBehaviour:
   GuestSpriteavailable: {fileID: 21300000, guid: 5849e8a5b9e192143a722cfcc4b447e3, type: 3}
   GuestSpriteUnavailable: {fileID: 21300000, guid: c49feb33981b2c545b2a219555a2a9bf, type: 3}
   GuestSpriteLocked: {fileID: 21300000, guid: 04e777fcb90f6104db83bbf09df4d445, type: 3}
-  GuestSpriteDialogue: {fileID: 0}
+  GuestSpriteDialogue: {fileID: 21300000, guid: 59a14fc1775ef0345a6419418c0e668d, type: 3}
   isRequested: 0
   hasAccepted: 0
   isOnCooldown: 0

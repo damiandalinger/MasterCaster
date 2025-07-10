@@ -19,7 +19,7 @@ MonoBehaviour:
     gemstones - They truly represent the epitome of capitalism.
   Topic: Indie
   Modifier: 0.03
-  Chance: 0.25
+  Chance: 0.175
   GuestID: 4
   CooldownCounter: 0
   Rating: 1
@@ -29,7 +29,7 @@ MonoBehaviour:
   GuestSpriteavailable: {fileID: 21300000, guid: c6b2f49304f2b3045919b5d4e3eb970f, type: 3}
   GuestSpriteUnavailable: {fileID: 21300000, guid: 453f48dded0dc1b4d926cf3e394bea10, type: 3}
   GuestSpriteLocked: {fileID: 21300000, guid: 6e807280deb253b4c850271a94daa0d3, type: 3}
-  GuestSpriteDialogue: {fileID: 0}
+  GuestSpriteDialogue: {fileID: 21300000, guid: 9b4f890e30e92304aad2283756ffb2f5, type: 3}
   isRequested: 0
   hasAccepted: 0
   isOnCooldown: 0
