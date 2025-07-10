@@ -42,12 +42,21 @@ namespace ProjectCeros
             _loopedInstances.Remove(soundEvent);
         }
 
-        // Sets a parameter on a currently playing looped instance.
+        // Sets a float parameter on a currently playing looped instance.
         public void SetParameter(FMODSoundEvent soundEvent, string parameterName, float parameterValue)
         {
             if (_loopedInstances.TryGetValue(soundEvent, out var instance))
             {
                 instance.setParameterByName(parameterName, parameterValue);
+            }
+        }
+
+        // Sets a string parameter on a currently playing looped instance.
+        public void SetParameterLabel(FMODSoundEvent soundEvent, string parameterName, string parameterLabel)
+        {
+            if (_loopedInstances.TryGetValue(soundEvent, out var instance))
+            {
+                instance.setParameterByNameWithLabel(parameterName, parameterLabel);
             }
         }
 

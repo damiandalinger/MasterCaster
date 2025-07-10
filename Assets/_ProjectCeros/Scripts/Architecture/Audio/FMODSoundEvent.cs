@@ -40,11 +40,18 @@ namespace ProjectCeros
             handler?.StopLoop(this);
         }
 
-        // Sets a parameter value on a looped instance on the target.
+        // Sets a float parameter value on a looped instance.
         public void SetParameter(Transform target, string parameterName, float parameterValue)
         {
-            var handler = target.GetComponent<FMODSoundAutoHandler>();
-            handler?.SetParameter(this, parameterName, parameterValue);
+            var handler = GetOrAddHandler(target);
+            handler.SetParameter(this, parameterName, parameterValue);
+        }
+
+        // Sets a label-type parameter value on a looped instance.
+        public void SetParameterLabel(Transform target, string parameterName, string parameterLabel)
+        {
+            var handler = GetOrAddHandler(target);
+            handler.SetParameterLabel(this, parameterName, parameterLabel);
         }
 
         private FMODSoundAutoHandler GetOrAddHandler(Transform target)
