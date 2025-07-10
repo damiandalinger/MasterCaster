@@ -4,8 +4,10 @@
 
 /// <remarks>
 /// 24/06/2025 by Damian Dalinger: Initial creation.
+/// 10/07/2025 by Damian Dalinger: Added the guestscore.
 /// </remarks>
 
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ProjectCeros
@@ -22,6 +24,13 @@ namespace ProjectCeros
 
         [Tooltip("Size modifier based on current listener count.")]
         [SerializeField] private FloatVariable _sizeMultiplier;
+
+        [Header("Guest Scoring")]
+        [Tooltip("The host's own star rating used for guest comparison.")]
+        [SerializeField] private IntVariable _globalStarRating;
+
+        [Tooltip("All guests that participated in the episode.")]
+        [SerializeField] private List<GuestSO> _guests;
 
         [Header("Output")]
         [Tooltip("Calculated star rating output (0–5).")]
@@ -48,13 +57,40 @@ namespace ProjectCeros
 
         #region Private Methods
 
+        // Checks if a guest is active and calculates the score there is.
+        private float CalculateGuestScore()
+        {
+            int hostRating = _globalStarRating.RuntimeValue;
+            int guestTotal = 0;
+            int guestCount = 0;
+
+            foreach (var guest in _guests)
+            {
+                if (guest == null || !guest.hasAccepted)
+                    continue;
+
+                guestTotal += guest.Rating;
+                guestCount++;
+            }
+
+            if (guestCount == 0)
+                return 0f;
+
+            float guestAverage = (float)guestTotal / guestCount;
+
+            if (guestAverage < hostRating)
+                return 0.5f;
+            if (Mathf.Approximately(guestAverage, hostRating))
+                return 1.0f;
+
+            return 1.5f;
+        }
+
         // Calculates the final star rating from different weighted components.
         private void CalculateStars()
         {
             _listenerScore = CalculateListenerScore();
-
-            // TODO: Add other components like guest/sponsor in future
-            float guestScore = 0f;
+            float guestScore = CalculateGuestScore();
             float sponsorScore = 0f;
 
             float totalScore = _listenerScore + guestScore + sponsorScore;
@@ -73,7 +109,7 @@ namespace ProjectCeros
             float ratio = (gain / size) / previous;
             float scaled = 6f * ratio;
 
-            return Mathf.Clamp(scaled, 0f, 3f);
+            return Mathf.Clamp(scaled, 0f, 4f);
         }
 
         // Prints detailed star rating calculation info to the console.
