@@ -26,7 +26,7 @@ namespace ProjectCeros
         [Tooltip("Text shown after the string value.")]
         [SerializeField] private string _suffix = "";
 
-        private void OnEnable()
+        private void Update()
         {
             if (_stringVariable != null && _textDisplay != null)
             {
