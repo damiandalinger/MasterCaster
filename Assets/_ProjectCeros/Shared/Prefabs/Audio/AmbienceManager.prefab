@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4652756439748201827}
   - component: {fileID: 8959310009101863739}
-  - component: {fileID: 5947806523215869154}
-  - component: {fileID: 8316176001260336326}
+  - component: {fileID: 3795706754726727896}
   m_Layer: 0
   m_Name: AmbienceManager
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534608097935444735}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -52,11 +51,8 @@ MonoBehaviour:
   _activeItems: {fileID: 11400000, guid: af639275c9721104494f07a574f6a8c0, type: 2}
   _specialItemID: 106
   _isPCOn: {fileID: 11400000, guid: 77908fa0213bf54468a511a2ef3bf9da, type: 2}
-  _rainChance:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: bdae7748736539045a3df6fe1404fcab, type: 2}
---- !u!114 &5947806523215869154
+  _isRaining: {fileID: 11400000, guid: f4a1e1a2f29b9d247bb01e5597f81117, type: 2}
+--- !u!114 &3795706754726727896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,18 +68,6 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8959310009101863739}
-        m_TargetAssemblyTypeName: ProjectCeros.AmbienceManager, Assembly-CSharp
-        m_MethodName: OnDayEnded
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 4cf3c72bdcf08844198570ac38ebff90, type: 2}
         m_TargetAssemblyTypeName: ProjectCeros.FMODSoundEvent, Assembly-CSharp
         m_MethodName: PlayLoop
@@ -91,34 +75,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 4652756439748201827}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8316176001260336326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534608097935444735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756af48229c34a140bf09dfa3d17e737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 2ff8ebb54a5b78d488ec91d90c7032a5, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8959310009101863739}
-        m_TargetAssemblyTypeName: ProjectCeros.AmbienceManager, Assembly-CSharp
-        m_MethodName: OnDayEnded
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

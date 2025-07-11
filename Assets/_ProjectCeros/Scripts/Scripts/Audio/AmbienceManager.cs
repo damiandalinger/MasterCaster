@@ -29,8 +29,8 @@ namespace ProjectCeros
         [Tooltip("Bool variable indicating whether the PC is on.")]
         [SerializeField] private BoolVariable _isPCOn;
 
-        [Tooltip("Chance for rain when a day ends (0 to 1).")]
-        [SerializeField] private FloatReference _rainChance;
+        [Tooltip("Bool variable indicating whether it's currently raining.")]
+        [SerializeField] private BoolVariable _isRaining;
 
         #region Lifecycle Events
 
@@ -38,16 +38,17 @@ namespace ProjectCeros
         {
             ApplyItemParameter();
             ApplyPCParameter();
+            ApplyWeatherParameter();
         }
 
         #endregion
 
         #region Public Methods
 
-        // Should be called at the end of a day to determine and apply weather.
-        public void OnDayEnded()
+        // Whether the rain sound should play or not.
+        public void ApplyWeatherParameter()
         {
-            string weather = Random.value < _rainChance ? "Rain" : "NoRain";
+            string weather = _isRaining.RuntimeValue ? "Rain" : "NoRain";
             _ambienceEvent.SetParameterLabel(_target, "Weather", weather);
         }
 

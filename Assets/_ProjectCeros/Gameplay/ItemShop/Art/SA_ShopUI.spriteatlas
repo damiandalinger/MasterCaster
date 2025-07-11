@@ -51,18 +51,15 @@ SpriteAtlas:
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
     - f37b7e6091518db408fba1e1de78be40: 21300000
-    - 42f565b16090b504785f17e9b6fd9a36: 21300000
     - 24e98b1231888b8489df23921d925922: 21300000
     - 11a9dfa24d18faf43a8064f0a79f1da6: 21300000
     - e88eb1c3e4140cc4d91dc25d6ecd50fd: 21300000
     - b0b147f33c9f17a4d89828aabb30f870: 21300000
     - 3e09af343d10b92428f8d9e0898e8a13: 21300000
     - 37802254923fab840a66317f200442b8: 21300000
-    - 7c769c28530262b46ade8082069899c3: 21300000
+    - 86e056d485e916441b36dc02ca41868f: 21300000
     - dbed64e849b055c408861944fbd80260: 21300000
     - 4ea442f9a9cc4994084f016b0ceac262: 21300000
-    - da09b12abba9e684998f7f69ba9eddfa: 21300000
-    - f4c1525b6c9a4ae4ea3a3fbffa2c1412: 21300000
     - ba00579bb8c2c844d98ac256d0fbb028: 21300000
     - ed04488dfb849f84fae2763ba2cc79bd: 21300000
     - 3937b4bd7fa662144aab732f52299fea: 21300000
@@ -71,18 +68,15 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: f37b7e6091518db408fba1e1de78be40, type: 3}
-  - {fileID: 21300000, guid: 42f565b16090b504785f17e9b6fd9a36, type: 3}
   - {fileID: 21300000, guid: 24e98b1231888b8489df23921d925922, type: 3}
   - {fileID: 21300000, guid: 11a9dfa24d18faf43a8064f0a79f1da6, type: 3}
   - {fileID: 21300000, guid: e88eb1c3e4140cc4d91dc25d6ecd50fd, type: 3}
   - {fileID: 21300000, guid: b0b147f33c9f17a4d89828aabb30f870, type: 3}
   - {fileID: 21300000, guid: 3e09af343d10b92428f8d9e0898e8a13, type: 3}
   - {fileID: 21300000, guid: 37802254923fab840a66317f200442b8, type: 3}
-  - {fileID: 21300000, guid: 7c769c28530262b46ade8082069899c3, type: 3}
+  - {fileID: 21300000, guid: 86e056d485e916441b36dc02ca41868f, type: 3}
   - {fileID: 21300000, guid: dbed64e849b055c408861944fbd80260, type: 3}
   - {fileID: 21300000, guid: 4ea442f9a9cc4994084f016b0ceac262, type: 3}
-  - {fileID: 21300000, guid: da09b12abba9e684998f7f69ba9eddfa, type: 3}
-  - {fileID: 21300000, guid: f4c1525b6c9a4ae4ea3a3fbffa2c1412, type: 3}
   - {fileID: 21300000, guid: ba00579bb8c2c844d98ac256d0fbb028, type: 3}
   - {fileID: 21300000, guid: ed04488dfb849f84fae2763ba2cc79bd, type: 3}
   - {fileID: 21300000, guid: 3937b4bd7fa662144aab732f52299fea, type: 3}
@@ -90,18 +84,15 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b4bb749f0959fd34f98350deb606f25d, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_ShopUI_SwitchButton_Unselected
-  - SPR_ShopUI_Home_Unselected
   - SPR_ShopUI_SwitchButton_Selected
   - "SPR_ShopUI_M\xFCnzeIcon"
   - SPR_ShopUI_Bought
   - SPR_ShopUI_BuyButton_Unselected
   - SPR_ShopUI_Redbar
   - SPR_ShopUI_Background
-  - SPR_ShopUI_Home_Selected
+  - SPR_ShopUI_IconDisplay
   - SPR_ShopUI_List
   - SPR_ShopUI_ItemButton_Unselected
-  - SPR_Task_shop
-  - SPR_ShopUI_IconDisplay
   - SPR_ShopUI_BuyButton_Selected
   - SPR_ShopUI_ItemButton_Selected
   - SPR_ShopUI_PlayerIcon

@@ -52,6 +52,7 @@ SpriteAtlas:
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
     - 26ca2d00f6f6c224d879618c568ca51b: 21300000
+    - 4355b8f0973e3d44d99b5bc07231d337: 21300000
     - 55f6b5017ff692042814c275f7b3947c: 21300000
     - 774f914126e8df543813a1cd47b3559e: 21300000
     - df283b41012dbdf4c8f3e5d78e388d0d: 21300000
@@ -60,9 +61,12 @@ SpriteAtlas:
     - 64f15e13c66a3b141845ae663eacd1ad: 21300000
     - 1c3c6733309dc324e91b5adfb7088776: 21300000
     - 83a769741e0a36644add37f559f5547f: 21300000
+    - 53b621154db37484eb0d69f234252510: 21300000
     - d1ed1725f4844904997ca4c9384f02fd: 21300000
     - 0c4fab25c06f33e4c82fd9403788e4e1: 21300000
     - 011e4f755a2732a4bbf69939139b643b: 21300000
+    - 48ee41f55031a6b45943dfec32dc30ad: 21300000
+    - 341a6c96ee352b74080772363d9aaff4: 21300000
     - c1d21f961af85e848b7970b6091df95e: 21300000
     - 8658fcd72607c21429b0c2d80c8ad14c: 21300000
     - 759b07b88164f114aa42b78fd1749115: 21300000
@@ -79,15 +83,17 @@ SpriteAtlas:
     - 1778431e783849f49be36008f5307e42: 21300000
     - 70250dceb05dac74581f6b5bb20606fc: 21300000
     - a8878ece3873ee444a7311200657a10e: 21300000
+    - d67118eed5804964e839357f16edfb72: 21300000
     - bd1620fe97f2273468254e2d8c18106c: 21300000
     - d081c10f008a5634bbef0c349c4c4188: 21300000
     - 8178fe1fb54c9a947a825c0cf15e1323: 21300000
     - 48abc4df3ce95b5498af8fefc40bc8da: 21300000
-    - 0fe37adfc12017846a740683c8af7029: 21300000
+    - 514daadf896f8714794619618c2e8653: 21300000
     - 49d33ddff1258f249a93589a047a2d41: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 26ca2d00f6f6c224d879618c568ca51b, type: 3}
+  - {fileID: 21300000, guid: 4355b8f0973e3d44d99b5bc07231d337, type: 3}
   - {fileID: 21300000, guid: 55f6b5017ff692042814c275f7b3947c, type: 3}
   - {fileID: 21300000, guid: 774f914126e8df543813a1cd47b3559e, type: 3}
   - {fileID: 21300000, guid: df283b41012dbdf4c8f3e5d78e388d0d, type: 3}
@@ -96,9 +102,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 64f15e13c66a3b141845ae663eacd1ad, type: 3}
   - {fileID: 21300000, guid: 1c3c6733309dc324e91b5adfb7088776, type: 3}
   - {fileID: 21300000, guid: 83a769741e0a36644add37f559f5547f, type: 3}
+  - {fileID: 21300000, guid: 53b621154db37484eb0d69f234252510, type: 3}
   - {fileID: 21300000, guid: d1ed1725f4844904997ca4c9384f02fd, type: 3}
   - {fileID: 21300000, guid: 0c4fab25c06f33e4c82fd9403788e4e1, type: 3}
   - {fileID: 21300000, guid: 011e4f755a2732a4bbf69939139b643b, type: 3}
+  - {fileID: 21300000, guid: 48ee41f55031a6b45943dfec32dc30ad, type: 3}
+  - {fileID: 21300000, guid: 341a6c96ee352b74080772363d9aaff4, type: 3}
   - {fileID: 21300000, guid: c1d21f961af85e848b7970b6091df95e, type: 3}
   - {fileID: 21300000, guid: 8658fcd72607c21429b0c2d80c8ad14c, type: 3}
   - {fileID: 21300000, guid: 759b07b88164f114aa42b78fd1749115, type: 3}
@@ -115,14 +124,16 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1778431e783849f49be36008f5307e42, type: 3}
   - {fileID: 21300000, guid: 70250dceb05dac74581f6b5bb20606fc, type: 3}
   - {fileID: 21300000, guid: a8878ece3873ee444a7311200657a10e, type: 3}
+  - {fileID: 21300000, guid: d67118eed5804964e839357f16edfb72, type: 3}
   - {fileID: 21300000, guid: bd1620fe97f2273468254e2d8c18106c, type: 3}
   - {fileID: 21300000, guid: d081c10f008a5634bbef0c349c4c4188, type: 3}
   - {fileID: 21300000, guid: 8178fe1fb54c9a947a825c0cf15e1323, type: 3}
   - {fileID: 21300000, guid: 48abc4df3ce95b5498af8fefc40bc8da, type: 3}
-  - {fileID: 21300000, guid: 0fe37adfc12017846a740683c8af7029, type: 3}
+  - {fileID: 21300000, guid: 514daadf896f8714794619618c2e8653, type: 3}
   - {fileID: 21300000, guid: 49d33ddff1258f249a93589a047a2d41, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_Leaderboard_Profilpic_Wikku
+  - SPR_Task_esc_Unselected
   - SPR_Leaderboard_Boxes_GrayDark
   - SPR_Leaderboard_Boxes_YellowBright
   - SPR_Leaderboard_Boxes_Yellow_Detail
@@ -131,9 +142,12 @@ SpriteAtlas:
   - SPR_Leaderboard_Boxes_GrayBright
   - "SPR_Leaderboard_Profilpic_G\xF6ndrade"
   - SPR_Leaderboard_Profilpic_PodcastImperator
+  - SPR_Task_shop
   - SPR_Leaderboard_Boxes_GreenDark
   - SPR_Leaderboard_Boxes_YellowDark
   - SPR_Leaderboard_Profilpic_Player
+  - SPR_Task_Guest
+  - SPR_Task_Leaderboard
   - SPR_Leaderboard_Profilpic_RobBoss
   - SPR_Leaderboard_Profilpic_Nabe
   - SPR_Leaderboard_Boxes_Bottom
@@ -150,11 +164,12 @@ SpriteAtlas:
   - SPR_Leaderboard_UnderTop10
   - SPR_Leaderboard_Sinking
   - SPR_Leaderboard_Profilpic_LadyD
+  - SPR_Task_esc_Selected
   - SPR_Leaderboard_Same
   - SPR_Leaderboard_Boxes_Brown_Detail
   - SPR_Leaderboard_Boxes_BrownBright
   - SPR_Leaderboard_Boxes_BlueBright
-  - SPR_Task_Leaderboard
+  - SPR_Task_Bar
   - SPR_Leaderboard_Boxes_BlueDark
   m_RenderDataMap: {}
   m_Tag: SA_Leaderboard

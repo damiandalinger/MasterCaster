@@ -47,6 +47,12 @@ TagManager:
   - name: Interactables
     uniqueID: 1600304751
     locked: 0
+  - name: Player
+    uniqueID: 391699755
+    locked: 0
+  - name: Foreground
+    uniqueID: 3578725485
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1821afb6f7187b4d8ecbf29760f003b, type: 3}
-  m_Name: V_RainChance
+  m_Script: {fileID: 11500000, guid: f9e2b57a719344d4498b41952fa8c84c, type: 3}
+  m_Name: V_IsRaining
   m_EditorClassIdentifier: 
   _isSaveable: 0
   DeveloperDescription: 
   InitialValue: 0
-  RuntimeValue: 0.4
+  RuntimeValue: 0
