@@ -33,7 +33,7 @@ namespace ProjectCeros
         private IntRuntimeSet _activeItemIDs;
 
 
-        public void Start()
+        public void Update()
         {
             UpdateRoomDisplay();
         }

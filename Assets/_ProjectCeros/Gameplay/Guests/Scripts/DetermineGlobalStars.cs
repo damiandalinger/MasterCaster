@@ -25,7 +25,7 @@ namespace ProjectCeros
 
 
 
-        public void Start()
+        public void Update()
         {
             UpadteStarRating();
         }
