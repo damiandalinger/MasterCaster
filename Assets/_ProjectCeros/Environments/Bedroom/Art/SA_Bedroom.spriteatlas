@@ -72,6 +72,7 @@ SpriteAtlas:
     - ace4558dac5fe5e419ee2b5606c0d0da: 21300000
     - ab8ee05eb01cafe41aadb27b57c03b29: 21300000
     - 96d3cb6eaaca55f4b90c139179e696c6: 21300000
+    - 8a95530f10d72f04a8fa71bafdef66e2: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 6457ded1ffe33b449b78e1377a332a16, type: 3}
@@ -95,6 +96,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ace4558dac5fe5e419ee2b5606c0d0da, type: 3}
   - {fileID: 21300000, guid: ab8ee05eb01cafe41aadb27b57c03b29, type: 3}
   - {fileID: 21300000, guid: 96d3cb6eaaca55f4b90c139179e696c6, type: 3}
+  - {fileID: 21300000, guid: 8a95530f10d72f04a8fa71bafdef66e2, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_Character_Standing
   - SPR_Room_Window_Sunny
@@ -117,6 +119,7 @@ SpriteAtlas:
   - SPR_Room
   - SPR_Room_Leaderboard
   - SPR_Equipment_Skilltree
+  - Untitled_Artworks
   m_RenderDataMap: {}
   m_Tag: SA_Bedroom
   m_IsVariant: 0
