@@ -11,6 +11,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace ProjectCeros.UI
 {
@@ -18,8 +19,8 @@ namespace ProjectCeros.UI
     {
         #region Fields
 
-        [Tooltip("Image component used for the fade (black fullscreen image).")]
-        [SerializeField] private Image _fadeImage;
+        [Tooltip("Parent GameObject containing all fadeable UI elements.")]
+        [SerializeField] private GameObject _fadeRoot;
 
         [Header("Fade Timing")]
         [Tooltip("Time it takes to fade from clear to black.")]
@@ -33,7 +34,24 @@ namespace ProjectCeros.UI
 
         [Header("Events")]
         [Tooltip("Events to invoke while screen is fully black.")]
-        [SerializeField] private UnityEvent _onFadeMidpoint;
+        [SerializeField] private UnityEvent _onMidpointReached;
+
+        [Tooltip("Events to invoke while screen is fully black.")]
+        [SerializeField] private UnityEvent _onEndpointReached;
+
+        private List<Graphic> _graphics = new();
+
+        #endregion
+
+        #region Unity Methods
+
+        private void Awake()
+        {
+            if (_fadeRoot != null)
+            {
+                _graphics = new List<Graphic>(_fadeRoot.GetComponentsInChildren<Graphic>(includeInactive: true));
+            }
+        }
 
         #endregion
 
@@ -51,35 +69,48 @@ namespace ProjectCeros.UI
 
         private IEnumerator FadeRoutine()
         {
-            _fadeImage.gameObject.SetActive(true);
+            _fadeRoot.gameObject.SetActive(true);
 
             yield return FadeAlpha(0f, 1f, _fadeInDuration);
 
-            _onFadeMidpoint?.Invoke();
+            _onMidpointReached?.Invoke();
             yield return new WaitForSeconds(_holdDuration);
 
             yield return FadeAlpha(1f, 0f, _fadeOutDuration);
 
-            _fadeImage.gameObject.SetActive(false);
+            _onEndpointReached?.Invoke();
+            _fadeRoot.gameObject.SetActive(false);
         }
 
         // Gradually interpolates the alpha value of the fade image from a starting value to a target value over time.
         private IEnumerator FadeAlpha(float from, float to, float duration)
         {
             float time = 0f;
-            Color color = _fadeImage.color;
 
             while (time < duration)
             {
-                time += Time.deltaTime;
                 float t = time / duration;
-                color.a = Mathf.Lerp(from, to, t);
-                _fadeImage.color = color;
+                float alpha = Mathf.Lerp(from, to, t);
+
+                ApplyAlphaToGraphics(alpha);
+
+                time += Time.deltaTime;
                 yield return null;
             }
 
-            color.a = to;
-            _fadeImage.color = color;
+            ApplyAlphaToGraphics(to);
+        }
+
+        private void ApplyAlphaToGraphics(float alpha)
+        {
+            foreach (var graphic in _graphics)
+            {
+                if (graphic == null) continue;
+
+                var color = graphic.color;
+                color.a = alpha;
+                graphic.color = color;
+            }
         }
 
         #endregion

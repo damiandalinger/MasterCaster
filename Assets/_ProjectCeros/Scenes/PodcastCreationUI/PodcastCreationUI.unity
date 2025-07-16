@@ -838,7 +838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &391788293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1416,7 +1416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1268231937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2247,7 +2247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb97ff2157eb2e40853fe6cfb56ae0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fadeImage: {fileID: 1875189684}
+  _fadeRoot: {fileID: 1768364905}
   _fadeInDuration:
     UseConstant: 0
     ConstantValue: 0
@@ -2260,7 +2260,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: dc6ba1909057dda499daf2e4e910edc1, type: 2}
-  _onFadeMidpoint:
+  _onMidpointReached:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1749980763}
@@ -2287,18 +2287,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2007539029}
-        m_TargetAssemblyTypeName: ProjectCeros.TutorialManager, Assembly-CSharp
-        m_MethodName: ShowClue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  _onEndpointReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1768364905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,7 +2409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1875189683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2735,7 +2726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb97ff2157eb2e40853fe6cfb56ae0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fadeImage: {fileID: 391788294}
+  _fadeRoot: {fileID: 1268231936}
   _fadeInDuration:
     UseConstant: 0
     ConstantValue: 0
@@ -2748,7 +2739,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: dc6ba1909057dda499daf2e4e910edc1, type: 2}
-  _onFadeMidpoint:
+  _onMidpointReached:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1975895408}
@@ -2775,17 +2766,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2007539029 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 723798563423833325, guid: 389dd06211fba3244a3e56ad155dd6aa, type: 3}
-  m_PrefabInstance: {fileID: 149285336}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836aa06c91e6c8044b955ef12109dfdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _onEndpointReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2056523759
 GameObject:
   m_ObjectHideFlags: 0

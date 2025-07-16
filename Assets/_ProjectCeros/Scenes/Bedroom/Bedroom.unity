@@ -1831,6 +1831,7 @@ GameObject:
   - component: {fileID: 716559648}
   - component: {fileID: 716559651}
   - component: {fileID: 716559650}
+  - component: {fileID: 716559652}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -1979,9 +1980,21 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: b0fe975230462d64f8fc1c1a9d8ebc88, type: 2}
   _onConditionTrue: {fileID: 11400000, guid: 2ff8ebb54a5b78d488ec91d90c7032a5, type: 2}
-  _text: {fileID: 607707544}
-  _fadeDuration: 0.5
-  _visibleDuration: 1
+  _onConditionFalse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 716559652}
+        m_TargetAssemblyTypeName: ProjectCeros.UI.ScreenFader, Assembly-CSharp
+        m_MethodName: FadeTransition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!60 &716559651
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2091,6 +2104,37 @@ PolygonCollider2D:
       - {x: 0.08, y: -1.5799999}
       - {x: 0.19, y: -1.51}
   m_UseDelaunayMesh: 0
+--- !u!114 &716559652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716559645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb97ff2157eb2e40853fe6cfb56ae0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeRoot: {fileID: 607707542}
+  _fadeInDuration:
+    UseConstant: 1
+    ConstantValue: 0.5
+    Variable: {fileID: 0}
+  _holdDuration:
+    UseConstant: 1
+    ConstantValue: 1.5
+    Variable: {fileID: 0}
+  _fadeOutDuration:
+    UseConstant: 1
+    ConstantValue: 0.5
+    Variable: {fileID: 0}
+  _onMidpointReached:
+    m_PersistentCalls:
+      m_Calls: []
+  _onEndpointReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &721127762
 GameObject:
   m_ObjectHideFlags: 0
