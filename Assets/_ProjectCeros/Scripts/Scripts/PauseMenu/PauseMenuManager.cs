@@ -49,19 +49,6 @@ namespace ProjectCeros
 
         #region Public Methods
 
-        // Called externally to pause the game.
-        public void OnGamePausedExternally()
-        {
-            TriggerPause();
-        }
-
-        // Called externally to resume the game.
-        public void OnGameResumedExternally()
-        {
-            TriggerResume();
-        }
-
-        // Handles the performed input event for the pause action and toggles game pause state accordingly.
         private void OnPauseInput(InputAction.CallbackContext context)
         {
             if (!_isPaused)

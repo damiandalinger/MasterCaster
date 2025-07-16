@@ -15,7 +15,7 @@ using TMPro;
 namespace ProjectCeros
 {
 
-    public class IntVariableDisplayUI : MonoBehaviour
+    public class IntToDisplay : MonoBehaviour
     {
         #region Fields
 

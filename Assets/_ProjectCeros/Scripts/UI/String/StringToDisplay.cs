@@ -3,7 +3,8 @@
 /// </summary>
 
 /// <remarks>
-///09/07/2025 by Damian Dalinger: Script creation.
+/// 09/07/2025 by Damian Dalinger: Script creation.
+/// 16/07/2025 by Damian Dalinger: Made update optional.
 /// </remarks>
 
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace ProjectCeros
 {
     public class StringToDisplay : MonoBehaviour
     {
+        #region Fields
+
         [Tooltip("The string variable to read from.")]
         [SerializeField] private StringReference _stringVariable;
 
@@ -26,12 +29,38 @@ namespace ProjectCeros
         [Tooltip("Text shown after the string value.")]
         [SerializeField] private string _suffix = "";
 
+        [Tooltip("If the display should refresh every frame.")]
+        [SerializeField] private bool _useUpdateMethod = false;
+
+        #endregion
+
+        #region Lifecycle Methods
+
+        private void OnEnable()
+        {
+            UpdateDisplay();
+        }
+
         private void Update()
+        {
+            if (_useUpdateMethod)
+            {
+                UpdateDisplay();
+            }
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        public void UpdateDisplay()
         {
             if (_stringVariable != null && _textDisplay != null)
             {
                 _textDisplay.text = _prefix + _stringVariable.Value + _suffix;
             }
         }
+
+        #endregion
     }
 }
