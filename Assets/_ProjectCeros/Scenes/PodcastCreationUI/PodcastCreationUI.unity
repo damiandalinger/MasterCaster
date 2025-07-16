@@ -3344,13 +3344,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _allguests: {fileID: 11400000, guid: b42925ca3a66c76479834c95dcc590a1, type: 2}
   _dialogueManager: {fileID: 6148478886832939966}
-  _namePlayer: {fileID: 4670171656939481314}
-  _nameGuest: {fileID: 2750631225767994694}
-  dialogueText: {fileID: 3690937479193755323}
-  _soloBox: {fileID: 1897431734}
-  _playerBox: {fileID: 6974620085750047099}
-  _guestBox: {fileID: 6518828840225931005}
-  letterDelay: 0.015
+  _endDialogue: {fileID: 11400000, guid: a83427719fc0ce047a45a07412bd5928, type: 2}
+  _faderPositive: {fileID: 55511019}
+  _faderNegative: {fileID: 534546065}
+  _faderGuest: {fileID: 1445394693}
   _topicID:
     UseConstant: 0
     ConstantValue: 0
@@ -3359,19 +3356,25 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 42ffa4cf2c2ba5b448fcd2ce82cc1da9, type: 2}
+  _playerName:
+    UseConstant: 0
+    ConstantValue: 
+    Variable: {fileID: 11400000, guid: d847451c8bbf72743ad40141fd3fa792, type: 2}
+  _playerNameText: {fileID: 4670171656939481314}
+  _guestNameText: {fileID: 2750631225767994694}
+  dialogueText: {fileID: 3690937479193755323}
+  _soloBox: {fileID: 1897431734}
+  _playerBox: {fileID: 6974620085750047099}
+  _guestBox: {fileID: 6518828840225931005}
+  _guestUI: {fileID: 1924736767}
   _topic: 
   _isPositive: 0
   _hasGuest: 0
   _guest: {fileID: 0}
-  _player: {fileID: 11400000, guid: d4747cf1947acf5468a4cfbe93f4f088, type: 2}
-  colorPlayer: {r: 0, g: 0, b: 0, a: 1}
-  _endDialogue: {fileID: 11400000, guid: a83427719fc0ce047a45a07412bd5928, type: 2}
-  autoAdvanceDelay: 3
-  _faderPositive: {fileID: 55511019}
-  _faderNegative: {fileID: 534546065}
-  _faderGuest: {fileID: 1445394693}
   _guestImage: {fileID: 1673423749}
-  _guestUI: {fileID: 1924736767}
+  colorPlayer: {r: 0, g: 0, b: 0, a: 1}
+  letterDelay: 0.015
+  autoAdvanceDelay: 3
 --- !u!114 &3690937479193755323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4133,7 +4136,6 @@ MonoBehaviour:
   _guestHello: []
   _guestPersonal: []
   _guestBye: []
-  injectedVariableColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &6518828840225931005
 GameObject:
   m_ObjectHideFlags: 0

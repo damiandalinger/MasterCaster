@@ -12,71 +12,62 @@ using TMPro;
 using System.Collections;
 
 
-
 namespace ProjectCeros
 {
-
     public class DialogueDisplay : MonoBehaviour
     {
         [SerializeField] private GuestDatabaseSO _allguests;
         [SerializeField] private DialogueManager _dialogueManager;
-        [SerializeField] private TMP_Text _namePlayer;
-        [SerializeField] private TMP_Text _nameGuest;
+        [SerializeField] private GameEvent _endDialogue;
+
+
+        [SerializeField] private BackgroundFader _faderPositive;
+        [SerializeField] private BackgroundFader _faderNegative;
+        [SerializeField] private BackgroundFader _faderGuest;
+
+        [SerializeField] private IntReference _topicID;
+        [SerializeField] private IntReference _spinID;
+        [SerializeField] private StringReference _playerName;
+
+        [SerializeField] private TMP_Text _playerNameText;
+        [SerializeField] private TMP_Text _guestNameText;
         [SerializeField] private TMP_Text dialogueText;
 
         [SerializeField] private GameObject _soloBox;
         [SerializeField] private GameObject _playerBox;
         [SerializeField] private GameObject _guestBox;
+        [SerializeField] private GameObject _guestUI;
+
+        [SerializeField] private string _topic;
+        [SerializeField] private bool _isPositive;
+
+        [SerializeField] private bool _hasGuest = false;
+        [SerializeField] private GuestSO _guest;
+        [SerializeField] private Image _guestImage;
+        [SerializeField] private Color colorPlayer = Color.black;
 
         [SerializeField] private float letterDelay = 0.05f;
+        [SerializeField] private float autoAdvanceDelay = 3f; // Customize in Inspector
 
+        private Coroutine autoAdvanceCoroutine;
         private string[] dialogueSegments;
         private int currentSegmentIndex;
         private bool isTyping;
         private bool _isReady;
-
-        [SerializeField] private IntReference _topicID;
-        [SerializeField] private IntReference _spinID;
-
-        [SerializeField] private string _topic;
-
-        [SerializeField] private bool _isPositive;
-
-
-        [SerializeField] private bool _hasGuest = false;
-        [SerializeField] private GuestSO _guest;
-        [SerializeField] private Podcaster _player;
-        [SerializeField] private Color colorPlayer = Color.black;
-
         private bool _toggle = false;
 
-        [SerializeField] private GameEvent _endDialogue;
-
-        private Coroutine autoAdvanceCoroutine;
-
-        [SerializeField] private float autoAdvanceDelay = 3f; // Customize in Inspector
-
-        [SerializeField] private BackgroundFader _faderPositive;
-        [SerializeField] private BackgroundFader _faderNegative;
-
-        [SerializeField] private BackgroundFader _faderGuest;
-
-        [SerializeField] private Image _guestImage;
-        [SerializeField] private GameObject _guestUI;
 
         void Start()
         {
             SetupDialogue();
 
-            _namePlayer.text = _player.PersonName;
-
+            _playerNameText.text = _playerName.Value;
         }
 
         public void SetupDialogue()
         {
             FindAcceptedGuest();
-
-            // Example: wait for DialogueManager to load data
+           
             if (!_hasGuest)
             {
                 _soloBox.SetActive(true);
@@ -105,6 +96,7 @@ namespace ProjectCeros
             //AdvanceDialogue();
         }
 
+        #region FindAcceptedGuest
         private void FindAcceptedGuest()
         {
             _guest = null;
@@ -127,23 +119,19 @@ namespace ProjectCeros
                 _hasGuest = false;
             }
         }
+        #endregion
 
+        #region DialogueSequencing
         IEnumerator StartDialogueSequence()
         {
             DetermineTopic(_topicID.Value);
             DetermineSpin(_spinID.Value);
 
-
-
-
             Debug.Log(_topic);
             Debug.Log(_isPositive);
 
-
             // Wait one frame to make sure DialogueManager Awake() ran
             yield return null;
-
-
 
             if (_dialogueManager == null)
             {
@@ -155,7 +143,6 @@ namespace ProjectCeros
             string welcomeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomWelcome());
             string topicMsg = _dialogueManager.InjectVariables(_dialogueManager.GetTopicMessage(_topic, _isPositive));
             string goodbyeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGoodbye());
-
 
             dialogueSegments = new string[] { welcomeMsg, topicMsg, goodbyeMsg };
             currentSegmentIndex = 0;
@@ -170,14 +157,11 @@ namespace ProjectCeros
 
         IEnumerator StartDialogueGuestSequence()
         {
-
             _dialogueManager.SetGuest(_guest);
             _dialogueManager.GetGuestDialogue();
 
             // Wait one frame to make sure DialogueManager Awake() ran
             yield return null;
-
-
 
             if (_dialogueManager == null)
             {
@@ -198,13 +182,12 @@ namespace ProjectCeros
             dialogueSegments = new string[] { PlayerHelloMsg, GuestHelloMsg, PlayerMainMsg, GuestMainMsg, PlayerbyeMsg, GuestByeMsg };
             currentSegmentIndex = 0;
 
-
             _isReady = true;
             AdvanceDialogue();
             //yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
             //AdvanceDialogue();
         }
-
+        #endregion
 
         // Call this method from a UI Button (via OnClick)
         public void OnDialogueClick()
@@ -221,6 +204,7 @@ namespace ProjectCeros
                 dialogueText.text = dialogueSegments[currentSegmentIndex - 1]; // Show full segment
                 isTyping = false;
             }
+            
             else
             {
                 AdvanceDialogue();
@@ -251,13 +235,13 @@ namespace ProjectCeros
                         : colorPlayer;               // Player: black
 
 
-                    _namePlayer.text =  _player.PersonName;
-                    _nameGuest.text =  _guest.Name;
+                    _playerNameText.text = _playerName.Value;
+                    _guestNameText.text = _guest.Name;
 
                     //_namePlayer.text = _toggle ? null : _player.PersonName;
                     //_nameGuest.text = _toggle ? _guest.Name : null;
-                    
-                    _nameGuest.color = _guest.Color;
+
+                    _guestNameText.color = _guest.Color;
 
                     _playerBox.SetActive(!_toggle);
                     _guestBox.SetActive(_toggle);
@@ -269,12 +253,11 @@ namespace ProjectCeros
                 {
                     dialogueText.color = colorPlayer;
 
-                    _namePlayer.text = _player.PersonName;
-                    _nameGuest.text = null;
+                    _playerNameText.text = _playerName.Value;
+                    _guestNameText.text = null;
 
                     _playerBox.SetActive(true);
                     _guestBox.SetActive(false);
-
                 }
 
 
@@ -297,13 +280,6 @@ namespace ProjectCeros
                 StartCoroutine(TypeDialogue(dialogueSegments[currentSegmentIndex]));
                 currentSegmentIndex++;
             }
-        }
-
-        private IEnumerator EndDialogueSequence()
-        {
-            _faderPositive.FadeOut();
-            yield return new WaitForSeconds(1.5f);
-
         }
 
 
@@ -379,7 +355,7 @@ namespace ProjectCeros
             }
         }
 
-        public void DetermineSpin(int id)
+        private void DetermineSpin(int id)
         {
             if (id == 1)
             {
