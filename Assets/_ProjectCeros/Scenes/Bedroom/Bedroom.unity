@@ -7896,6 +7896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CalculateGuest
       objectReference: {fileID: 0}
+    - target: {fileID: 3644369205237874453, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: _baseChance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
       value: 6
