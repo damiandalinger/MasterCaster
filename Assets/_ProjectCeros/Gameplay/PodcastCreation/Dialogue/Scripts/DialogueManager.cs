@@ -31,20 +31,30 @@ namespace ProjectCeros
 
         [SerializeField] private string[] _guestBye;
 
-        [SerializeField] private Color injectedVariableColor; // Or any default
-
-
 
         void Awake()
         {
             LoadDialogueData();
 
             SetDialogueVariable("Podcastname", _podcastName);
-
         }
 
+        // Parse the data of the Dialogue JSON file to the DialogueData class.
+        public void LoadDialogueData()
+        {
+            string path = Path.Combine(Application.streamingAssetsPath, fileName);
+            if (File.Exists(path))
+            {
+                string json = File.ReadAllText(path);
+                dialogueData = JsonUtility.FromJson<DialogueData>(json);
+            }
+            else
+            {
+                Debug.LogError("Dialogue file not found at: " + path);
+            }
+        }
 
-
+        // This Method determines which Placeholders(Key) in the JSON file will be replaced by what words(value).
         public void SetDialogueVariable(string key, string value)
         {
             dialogueVariables[key] = value;
@@ -62,19 +72,7 @@ namespace ProjectCeros
             return System.Text.RegularExpressions.Regex.Replace(rawText, @"<[^<>]+>", "");
         }
 
-        public void LoadDialogueData()
-        {
-            string path = Path.Combine(Application.streamingAssetsPath, fileName);
-            if (File.Exists(path))
-            {
-                string json = File.ReadAllText(path);
-                dialogueData = JsonUtility.FromJson<DialogueData>(json);
-            }
-            else
-            {
-                Debug.LogError("Dialogue file not found at: " + path);
-            }
-        }
+        #region Solo Dialogue
 
         public string GetRandomWelcome()
         {
@@ -84,7 +82,6 @@ namespace ProjectCeros
         public string GetRandomGoodbye()
         {
             return GetRandomFromList(dialogueData?.goodbye);
-
         }
 
         public string GetTopicMessage(string topic, bool positive)
@@ -116,18 +113,16 @@ namespace ProjectCeros
 
             return chosenMessage;
         }
+        #endregion
 
-
-
+        #region Guest Dialogue
         public void GetGuestDialogue()
         {
             SetDialogueVariable("Guest", _guest.Name);
 
-
             if (dialogueData == null || dialogueData.topics == null)
             {
                 Debug.LogWarning("Dialogue data or topics is null");
-
             }
 
             GuestAnswer guest = null;
@@ -177,10 +172,11 @@ namespace ProjectCeros
         }
 
         public void SetGuest(GuestSO guest)
-
         {
             _guest = guest;
         }
+
+        #endregion
 
         private string GetRandomFromList(string[] list)
         {
@@ -188,8 +184,6 @@ namespace ProjectCeros
                 return "???";
 
             int index = UnityEngine.Random.Range(0, list.Length);
-
-            // Debug.Log(list[index]);
 
             return list[index];
         }
