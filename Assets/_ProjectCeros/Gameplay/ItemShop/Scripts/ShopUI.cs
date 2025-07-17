@@ -35,6 +35,8 @@ namespace ProjectCeros
 
         [SerializeField] private Image _itemImage;
 
+        public GameObject _itemImageObject;
+
         [SerializeField] private Sprite _greySprite;
 
         [SerializeField] private Sprite _regularSprite;
@@ -43,13 +45,15 @@ namespace ProjectCeros
 
         [SerializeField] private GameObject _alreadyBought;
 
+        [SerializeField] private Transform _initialPosition;
+
         public Image buttonImage;
 
         private ItemSO currentSelectedItem;
 
         [SerializeField] private SmoothWobbleZ _wobble;
 
-
+        [SerializeField] private BoolReference _isMoving;
 
 
         // Adjusts the ShopUI info.
@@ -62,6 +66,10 @@ namespace ProjectCeros
             _priceText.text = $"${item.Price}";
             _itemImage.sprite = item.ItemSprite;
 
+            _itemImageObject.transform.position = _initialPosition.position;
+
+            _isMoving.Variable.SetValue(true);
+            
             _moneyChecker.SetItemToPurchase(item);
 
             ShowItemSold();
