@@ -31,7 +31,7 @@ MonoBehaviour:
   GuestSpriteLocked: {fileID: 21300000, guid: bdf61a27bf267e14cac5b5daeb797560, type: 3}
   GuestSpriteDialogue: {fileID: 21300000, guid: 91454593981d979498a6605e9536ba81, type: 3}
   isRequested: 0
-  hasAccepted: 1
+  hasAccepted: 0
   isOnCooldown: 0
-  wasInterviewed: 1
+  wasInterviewed: 0
   Color: {r: 0.6784314, g: 0.21176471, b: 0.2, a: 1}
