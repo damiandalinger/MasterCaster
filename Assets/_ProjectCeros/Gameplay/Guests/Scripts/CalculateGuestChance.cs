@@ -18,32 +18,35 @@ namespace ProjectCeros
         [SerializeField] private IntReference _listeners;
 
         [SerializeField] private IntReference _oldThreshhold;
-
         [SerializeField] private IntReference _newThreshhold;
-
-
-        [SerializeField] private float _fixedChance;
-
-        [SerializeField] private float _baseChance;
-
-        [SerializeField] private float _addedChance;
-
-        [SerializeField] private float _multiplier;
-
-        [SerializeField] private float _basePenalty = 0.7f;
-
-        [SerializeField] private float _addedPenalty = 0.1f;
-
 
         [SerializeField] private GuestSORuntimeSet _guestDatabase;
 
+        [Header("Guest Calculation Values")]
+        [Header("Player Stars higher than Guest Stars")]
+        [Tooltip("This is the chance of a Guest appearing when the player has a higher star rating than the guest.")]
+        [SerializeField] private float _fixedChance;
 
+        [Header("Player Stars same as Guest Stars")]
+        [Tooltip("This is the base probality for a guest arriving.")]
+        [SerializeField] private float _baseChance;
 
+        [Tooltip("base chance + added chance * multiplier determine the final chance of the guest appearing.")]
+        [SerializeField] private float _addedChance;
+
+        [Tooltip("This is the multiplier for the added chance, it is determined by how far away the player is to the next Starrating (Handled by code).")]
+        [SerializeField] private float _multiplier;
+
+        [Header("Player Stars lower than Guest Stars")]
+        [Tooltip("By this amount the base chance is multiplied when inviting a guest with a higher star rating")]
+        [SerializeField] private float _basePenalty = 0.7f;
+        [Tooltip("By this amount the added chance is multiplied when inviting a guest with a higher star rating")]
+        [SerializeField] private float _addedPenalty = 0.1f;
 
 
         public void Start()
         {
-           // SetGuestChance();
+            // SetGuestChance();
         }
 
         public void SetGuestChance()
@@ -108,15 +111,15 @@ namespace ProjectCeros
 
             }
 
-            
-            else 
+
+            else
             {
                 return _fixedChance;
 
             }
 
 
-            
+
         }
 
 

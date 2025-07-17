@@ -4451,13 +4451,13 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: aaba2c5aea39018438cedaa3ae61550b, type: 2}
+  _guestDatabase: {fileID: 11400000, guid: 08b946250d8dd164f8055dcb9d449dd7, type: 2}
   _fixedChance: 0.95
   _baseChance: 0.25
   _addedChance: 0.75
   _multiplier: 0
   _basePenalty: 0.7
   _addedPenalty: 0.1
-  _guestDatabase: {fileID: 11400000, guid: 08b946250d8dd164f8055dcb9d449dd7, type: 2}
 --- !u!4 &1683331247
 Transform:
   m_ObjectHideFlags: 0
