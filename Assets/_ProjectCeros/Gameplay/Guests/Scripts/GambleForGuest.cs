@@ -6,6 +6,7 @@
 /// 25/06/2025 by Unik Kelmendi: Initial creation.
 /// </remarks>
 
+using ProjectCeros.UI;
 using UnityEngine;
 
 namespace ProjectCeros
@@ -21,12 +22,10 @@ namespace ProjectCeros
 
         [SerializeField] private IntReference _newThreshhold;
 
+        [SerializeField] private StringReference _outcomeText;
 
-        [SerializeField] private float _baseChance;
+        [SerializeField] private ScreenFader _fader;
 
-        [SerializeField] private float _addedChance;
-
-        [SerializeField] private float _multiplier;
 
 
 
@@ -47,11 +46,13 @@ namespace ProjectCeros
                 {
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
+                    _outcomeText.Variable.SetValue("You have a guest!");
                 }
 
                 else
                 {
                     Debug.Log("No guest, sad");
+                    _outcomeText.Variable.SetValue("Your Guest request was declined. How unfortunate!");
                 }
 
             }
@@ -70,11 +71,15 @@ namespace ProjectCeros
                 {
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
+                    _outcomeText.Variable.SetValue("You have a guest!");
+
                 }
 
                 else
                 {
                     Debug.Log("No guest, sad");
+                    _outcomeText.Variable.SetValue("Your Guest request was declined. How unfortunate!");
+
                 }
 
             }
@@ -94,11 +99,13 @@ namespace ProjectCeros
                 {
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
+                    _outcomeText.Variable.SetValue("You have a guest!");
                 }
 
                 else
                 {
                     Debug.Log("No guest, sad");
+                    _outcomeText.Variable.SetValue("Your Guest request was declined. How unfortunate!");
                 }
             }
 
@@ -117,16 +124,20 @@ namespace ProjectCeros
                 {
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
+                    _outcomeText.Variable.SetValue("You have a guest!");
                 }
 
                 else
 
                 {
                     Debug.Log("No guest, sad");
+                    _outcomeText.Variable.SetValue("Your Guest request was declined. How unfortunate!");
                 }
 
 
             }
+
+            _fader.FadeTransition();
 
         }
 
