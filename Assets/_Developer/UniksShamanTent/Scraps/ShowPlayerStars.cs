@@ -4,16 +4,20 @@ using UnityEngine.UI;
 
 namespace ProjectCeros
 {
-       public class ShowPlayerStats : MonoBehaviour
+    public class ShowPlayerStats : MonoBehaviour
     {
         public Transform starParent;
 
+
         public IntReference Stars;
 
-        public float fillSpeed = 2f; // How fast each star fills (units per second)
+        public float fillSpeed = 2f;
+
+        [SerializeField] private GameObject _panel;
 
         public void ShowStarRating()
         {
+            _panel.SetActive(true);
             StopAllCoroutines();
             StartCoroutine(FillStarsSmoothly());
         }
