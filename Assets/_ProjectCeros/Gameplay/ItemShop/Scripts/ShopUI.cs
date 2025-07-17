@@ -69,10 +69,11 @@ namespace ProjectCeros
             _itemImageObject.transform.position = _initialPosition.position;
 
             _isMoving.Variable.SetValue(true);
-            
+
             _moneyChecker.SetItemToPurchase(item);
 
             ShowItemSold();
+
         }
 
 
@@ -94,7 +95,18 @@ namespace ProjectCeros
                 _buyButton.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
 
-            else
+            else if (currentSelectedItem.Price > _money.Value)
+            {
+                _alreadyBought.SetActive(false);
+                _buyButton.interactable = false;
+
+                _wobble.enabled = false;
+
+                // Image buttonImage = _buyButton.GetComponent<Image>();
+                buttonImage.sprite = _greySprite;
+            }
+
+            else 
             {
                 _alreadyBought.SetActive(false);
                 _buyButton.interactable = true;
