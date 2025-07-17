@@ -15,4 +15,4 @@ MonoBehaviour:
   _isSaveable: 0
   DeveloperDescription: 
   InitialValue: 0
-  RuntimeValue: 1
+  RuntimeValue: 0.5
