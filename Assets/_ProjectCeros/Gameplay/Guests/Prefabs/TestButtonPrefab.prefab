@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 985963420427022617}
   - component: {fileID: -3101139052060430021}
   - component: {fileID: 5644102881634682631}
+  - component: {fileID: -7273054583322001381}
   m_Layer: 5
   m_Name: TestButtonPrefab
   m_TagString: Untagged
@@ -300,3 +301,18 @@ MonoBehaviour:
   _guestData: {fileID: 0}
   _unlockedId: {fileID: 11400000, guid: d9cfb5e387217364da6360514936a665, type: 2}
   button: {fileID: 985963420427022617}
+--- !u!114 &-7273054583322001381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076840089246855424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3085000a9bda4945a4264c86e6edb43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingAngle: 20
+  swingSpeed: 4
+  decayDuration: 1

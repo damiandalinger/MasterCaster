@@ -42,6 +42,8 @@ namespace ProjectCeros
 
         private GuestSO currentSelectedItem;
 
+        [SerializeField] private SmoothWobbleZ _wobble;
+
         public Transform starParent;
         public Sprite filledStar;
         public Sprite emptyStar;
@@ -79,14 +81,18 @@ namespace ProjectCeros
             if (item.isRequested)
             {
                 _inviteButtonText.text = "Requested";
+                
                 _inviteButton.interactable = false;
+                
                 buttonImage.sprite = _greyedSprite;
             }
 
             else if (item.hasAccepted)
             {
                 _inviteButtonText.text = "Accepted";
+                
                 _inviteButton.interactable = false;
+                
                 buttonImage.sprite = _regularSprite;
             }
 
@@ -95,13 +101,17 @@ namespace ProjectCeros
                 _inviteButtonText.text = "Unavailable";
 
                 buttonImage.sprite = _greyedSprite;
+                _wobble.enabled = false;
                 _inviteButton.interactable = false;
+                _inviteButton.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
 
             else if (InvitationLimit.Value == InvitationsSend.Value)
             {
                 _inviteButtonText.text = "No more invites";
                 _inviteButton.interactable = false;
+                _wobble.enabled = false;
+                _inviteButton.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 buttonImage.sprite = _greyedSprite;
             }
 
@@ -110,6 +120,7 @@ namespace ProjectCeros
                 _inviteButtonText.text = "Request!";
 
                 _inviteButton.interactable = true;
+                _wobble.enabled = true;
                 buttonImage.sprite = _regularSprite;
             }
 
