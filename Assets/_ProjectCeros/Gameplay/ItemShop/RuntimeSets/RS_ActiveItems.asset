@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66785ba58691db488616372bd8d7248, type: 3}
   m_Name: RS_ActiveItems
   m_EditorClassIdentifier: 
-  _isSaveable: 0
+  _isSaveable: 1
   Items: 010000000400000006000000080000006a000000

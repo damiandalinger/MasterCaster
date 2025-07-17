@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e2b57a719344d4498b41952fa8c84c, type: 3}
-  m_Name: V_wantsTutorial
+  m_Name: V_showedOnce
   m_EditorClassIdentifier: 
-  _isSaveable: 0
+  _isSaveable: 1
   DeveloperDescription: 
   InitialValue: 0
   RuntimeValue: 0
