@@ -32,8 +32,7 @@ namespace ProjectCeros
         [SerializeField, Tooltip("Here goes the RuntimeSet that hold all the active only item ids.")]
         private IntRuntimeSet _activeItemIDs;
 
-
-        public void Update()
+        public void Start()
         {
             UpdateRoomDisplay();
         }

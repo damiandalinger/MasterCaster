@@ -21,7 +21,7 @@ MonoBehaviour:
   Modifier: 0.01
   Chance: 0.95
   GuestID: 1
-  CooldownCounter: 2
+  CooldownCounter: 0
   Rating: 0
   Fee: 0
   TopicID: 1

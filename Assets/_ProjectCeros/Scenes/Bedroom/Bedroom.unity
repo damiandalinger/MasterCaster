@@ -119,6 +119,40 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &122881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 122882}
+  m_Layer: 0
+  m_Name: ItemDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &122882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122881}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 206847231}
+  - {fileID: 1210319336}
+  - {fileID: 1409659200}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &40548418
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 206847231}
   m_Layer: 0
-  m_Name: ItemDisplay
+  m_Name: ItemDisplayItems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +780,7 @@ Transform:
   - {fileID: 1401494428}
   - {fileID: 1109387650}
   - {fileID: 1969385851}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 122882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &207417849
 GameObject:
@@ -4275,12 +4309,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210319334}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 122882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1234819928
 GameObject:
@@ -5174,6 +5208,66 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 4d88b8b3e7919fa49a3283bcff4b3b36, type: 2}
+--- !u!1 &1409659199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409659200}
+  - component: {fileID: 1409659201}
+  m_Layer: 0
+  m_Name: '@GameEventListener'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1409659200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409659199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 122882}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1409659201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409659199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21db9dc8413bef74b9d59f5e1a278a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameEvent: {fileID: 11400000, guid: e57010c821770164783051f52d16eab8, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1210319335}
+        m_TargetAssemblyTypeName: ProjectCeros.RoomItemDisplayManager, Assembly-CSharp
+        m_MethodName: UpdateRoomDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1489033694
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,6 +5743,17 @@ PolygonCollider2D:
       - {x: 0.48999998, y: -0.099999994}
       - {x: 0.5, y: -0.07}
   m_UseDelaunayMesh: 0
+--- !u!114 &1704242964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4883266413618260730, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+  m_PrefabInstance: {fileID: 4879277091451688607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb53d9912cdb6e345967a9614b0fca0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1725811335 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6019757583027664141, guid: 389dd06211fba3244a3e56ad155dd6aa, type: 3}
@@ -7936,13 +8041,65 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 393355048}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1704242964}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 4879277091451688608}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateStarRating
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DeacceptEverybody
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ResetModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ProjectCeros.DetermineGlobalStart, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ProjectCeros.AcceptedGuestReseter, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ProjectCeros.AdjustGuestModifier, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 324780306907650362, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2508765031427090624, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: m_Name
       value: CalculateGuest
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
@@ -7955,23 +8112,23 @@ PrefabInstance:
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 393355048}
+      objectReference: {fileID: 1180751218}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1180751218}
+      objectReference: {fileID: 4879277091451688610}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 4879277091451688610}
+      objectReference: {fileID: 4879277091451688609}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 4879277091451688609}
+      objectReference: {fileID: 4879277091451688608}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 4879277091451688608}
+      objectReference: {fileID: 1406796195}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
@@ -7985,40 +8142,48 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockGuest
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: CalculateGuest
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: ResetInvitation
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: ModifyGuestModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: StartDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
       value: StartDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ProjectCeros.UnlockGuests, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: ProjectCeros.CalculateGuestAppearance, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: ProjectCeros.InvitationReseter, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: ProjectCeros.AdjustGuestModifier, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: ProjectCeros.LaterWeekTutorial, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3898119714983459028, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
@@ -9026,8 +9191,7 @@ SceneRoots:
   - {fileID: 4879277091451688607}
   - {fileID: 393355047}
   - {fileID: 1286529844}
-  - {fileID: 206847231}
-  - {fileID: 1210319336}
+  - {fileID: 122882}
   - {fileID: 2130876208}
   - {fileID: 1373781442}
   - {fileID: 877890900}

@@ -21,7 +21,9 @@ namespace ProjectCeros
 
         [SerializeField] private GuestDatabaseSO _unlockedGuestIDs;
 
+        [SerializeField] private IntReference InvitationLimit;
 
+        [SerializeField] private IntReference InvitationsSend;
 
         [Header("UI Elements")]
         [SerializeField] private TextMeshProUGUI _guestNameText;
@@ -49,6 +51,8 @@ namespace ProjectCeros
         public Image buttonImage;
 
 
+
+
         // Adjusts the GuestUI info.
         public void ShowGuestDetails(GuestSO item)
         {
@@ -69,6 +73,8 @@ namespace ProjectCeros
             }
 
             ShowStarRating(item.Rating);
+
+
 
             if (item.isRequested)
             {
@@ -92,13 +98,19 @@ namespace ProjectCeros
                 _inviteButton.interactable = false;
             }
 
+            else if (InvitationLimit.Value == InvitationsSend.Value)
+            {
+                _inviteButtonText.text = "No more invites";
+                _inviteButton.interactable = false;
+                buttonImage.sprite = _greyedSprite;
+            }
+
             else
             {
                 _inviteButtonText.text = "Request!";
 
                 _inviteButton.interactable = true;
                 buttonImage.sprite = _regularSprite;
-
             }
 
             _invitationLimiter.SetGuestToInvite(item);

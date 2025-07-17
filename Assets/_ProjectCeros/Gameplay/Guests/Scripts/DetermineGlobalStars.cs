@@ -27,11 +27,11 @@ namespace ProjectCeros
 
         public void Update()
         {
-            UpadteStarRating();
+            UpdateStarRating();
         }
 
 
-        public void UpadteStarRating()
+        public void UpdateStarRating()
         {
             if (_listerners.Value > 0 && _listerners.Value <= 9)
             {

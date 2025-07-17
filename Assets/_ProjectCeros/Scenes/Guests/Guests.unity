@@ -152,6 +152,18 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 119130485}
+        m_TargetAssemblyTypeName: ProjectCeros.UnlockGuests, Assembly-CSharp
+        m_MethodName: UnlockGuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1770496170}
         m_TargetAssemblyTypeName: ProjectCeros.UnlockGuests, Assembly-CSharp
         m_MethodName: SyncGuestData
@@ -634,6 +646,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97981447}
   m_CullTransparentMesh: 1
+--- !u!1 &119130483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 119130484}
+  - component: {fileID: 119130485}
+  m_Layer: 0
+  m_Name: '@UnlockGuests'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &119130484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119130483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 458038131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &119130485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119130483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19bc85a84772fe4d9b786cd0f016495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _equipment: {fileID: 11400000, guid: e4c0ad56298c8fd428871f5dc2782cf4, type: 2}
+  _globalStars:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 9173ff3ca79191543b5dd7db08ad6c5b, type: 2}
+  GuestIDs: {fileID: 11400000, guid: d9cfb5e387217364da6360514936a665, type: 2}
 --- !u!1 &119309372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,12 +1073,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317380608}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1284.2714, y: 621.9692, z: -2.2510037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 458038131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321348895
 GameObject:
@@ -1504,6 +1566,8 @@ Transform:
   - {fileID: 1313338684}
   - {fileID: 1770496169}
   - {fileID: 1895263103}
+  - {fileID: 317380610}
+  - {fileID: 119130484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492193401
@@ -4827,6 +4891,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _invitationLimiter: {fileID: 1510381258}
   _unlockedGuestIDs: {fileID: 11400000, guid: b42925ca3a66c76479834c95dcc590a1, type: 2}
+  InvitationLimit:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: eda64f80cf727c641beab2b2e8c120d1, type: 2}
+  InvitationsSend:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 239110ab70a639e4c9141ce6606ea270, type: 2}
   _guestNameText: {fileID: 492193403}
   _descriptionText: {fileID: 321348897}
   _topicText: {fileID: 496567211}
@@ -5088,7 +5160,6 @@ SceneRoots:
   - {fileID: 231375618}
   - {fileID: 1716657140}
   - {fileID: 458038131}
-  - {fileID: 317380610}
   - {fileID: 37382264}
   - {fileID: 1453819647}
   - {fileID: 1529207228}
