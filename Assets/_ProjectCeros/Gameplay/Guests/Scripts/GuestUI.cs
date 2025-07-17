@@ -81,7 +81,7 @@ namespace ProjectCeros
             if (item.isRequested)
             {
                 _inviteButtonText.text = "Requested";
-                
+                _wobble.enabled = true;
                 _inviteButton.interactable = false;
                 
                 buttonImage.sprite = _greyedSprite;
@@ -90,7 +90,7 @@ namespace ProjectCeros
             else if (item.hasAccepted)
             {
                 _inviteButtonText.text = "Accepted";
-                
+                _wobble.enabled = true;
                 _inviteButton.interactable = false;
                 
                 buttonImage.sprite = _regularSprite;

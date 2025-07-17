@@ -47,6 +47,8 @@ namespace ProjectCeros
 
         private ItemSO currentSelectedItem;
 
+        [SerializeField] private SmoothWobbleZ _wobble;
+
 
 
 
@@ -79,12 +81,17 @@ namespace ProjectCeros
 
                 // Image buttonImage = _buyButton.GetComponent<Image>();
                 buttonImage.sprite = _greySprite;
+
+                _wobble.enabled = false;
+                _buyButton.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
 
             else
             {
                 _alreadyBought.SetActive(false);
                 _buyButton.interactable = true;
+
+                _wobble.enabled = true;
 
                 // Image buttonImage = _buyButton.GetComponent<Image>();
                 buttonImage.sprite = _regularSprite;
