@@ -4778,6 +4778,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
       objectReference: {fileID: 0}
+    - target: {fileID: 1987063379227499299, guid: 5de881b021483f6449177632d0a2ede4, type: 3}
+      propertyPath: m_text
+      value: Start Interview!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987063379227499299, guid: 5de881b021483f6449177632d0a2ede4, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987063379227499299, guid: 5de881b021483f6449177632d0a2ede4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c6e340bd058fff4184cbce7ebe9df01, type: 2}
+    - target: {fileID: 1987063379227499299, guid: 5de881b021483f6449177632d0a2ede4, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987063379227499299, guid: 5de881b021483f6449177632d0a2ede4, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987063379227499299, guid: 5de881b021483f6449177632d0a2ede4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2115203932794276782, guid: 5de881b021483f6449177632d0a2ede4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
