@@ -18,9 +18,9 @@ MonoBehaviour:
     They will break him if he\u2019s not cautious enough. Very friendly as a guest."
   Topic: Shooter
   Modifier: 0.03
-  Chance: 0.20833333
+  Chance: 0.175
   GuestID: 3
-  CooldownCounter: 16
+  CooldownCounter: 0
   Rating: 1
   Fee: 0
   TopicID: 4
@@ -31,6 +31,6 @@ MonoBehaviour:
   GuestSpriteDialogue: {fileID: 21300000, guid: 26b7c81746935f348a858da8ec80cd93, type: 3}
   isRequested: 0
   hasAccepted: 0
-  isOnCooldown: 1
+  isOnCooldown: 0
   wasInterviewed: 0
   Color: {r: 0.85882354, g: 0.5764706, b: 0.2, a: 1}

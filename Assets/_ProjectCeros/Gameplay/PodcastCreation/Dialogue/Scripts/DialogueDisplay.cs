@@ -25,11 +25,16 @@ namespace ProjectCeros
         [SerializeField] private BackgroundFader _faderNegative;
         [SerializeField] private BackgroundFader _faderGuest;
 
+        [SerializeField] private BackgroundFader _faderPositiveM;
+        [SerializeField] private BackgroundFader _faderNegativeM;
+        [SerializeField] private BackgroundFader _faderGuestM;
+
         [SerializeField] private IntReference _topicID;
         [SerializeField] private IntReference _spinID;
         [SerializeField] private StringReference _playerName;
 
         [SerializeField] private TMP_Text _playerNameText;
+        [SerializeField] private TMP_Text _playerNameDialogueText;
         [SerializeField] private TMP_Text _guestNameText;
         [SerializeField] private TMP_Text dialogueText;
 
@@ -55,6 +60,7 @@ namespace ProjectCeros
         private bool isTyping;
         private bool _isReady;
         private bool _toggle = false;
+        private bool _markus;
 
 
         void Start()
@@ -62,12 +68,23 @@ namespace ProjectCeros
             SetupDialogue();
 
             _playerNameText.text = _playerName.Value;
+            _playerNameDialogueText.text = _playerName.Value;
+
+            if (_playerName.Value.Contains("Markus"))
+            {
+                _markus = true;
+            }
+
+            else
+            {
+                _markus = false;
+            }
         }
 
         public void SetupDialogue()
         {
             FindAcceptedGuest();
-           
+
             if (!_hasGuest)
             {
                 _soloBox.SetActive(true);
@@ -204,7 +221,7 @@ namespace ProjectCeros
                 dialogueText.text = dialogueSegments[currentSegmentIndex - 1]; // Show full segment
                 isTyping = false;
             }
-            
+
             else
             {
                 AdvanceDialogue();
@@ -235,7 +252,7 @@ namespace ProjectCeros
                         : colorPlayer;               // Player: black
 
 
-                    _playerNameText.text = _playerName.Value;
+                    _playerNameDialogueText.text = _playerName.Value;
                     _guestNameText.text = _guest.Name;
 
                     //_namePlayer.text = _toggle ? null : _player.PersonName;
@@ -253,7 +270,7 @@ namespace ProjectCeros
                 {
                     dialogueText.color = colorPlayer;
 
-                    _playerNameText.text = _playerName.Value;
+                    _playerNameDialogueText.text = _playerName.Value;
                     _guestNameText.text = null;
 
                     _playerBox.SetActive(true);
@@ -263,17 +280,39 @@ namespace ProjectCeros
 
                 if (_hasGuest)
                 {
-                    _faderGuest.ChangeBackground();
+                    if (!_markus)
+                    {
+                        _faderGuest.ChangeBackground();
+                    }
+
+                    else
+                    {
+                        _faderGuestM.ChangeBackground();
+                    }
                 }
 
                 else if (_spinID.Value == 1)
                 {
-                    _faderPositive.ChangeBackground();
+                    if (!_markus)
+                    {
+                        _faderPositive.ChangeBackground();
+                    }
+                    else
+                    {
+                        _faderPositiveM.ChangeBackground();
+                    }
                 }
 
                 else
                 {
-                    _faderNegative.ChangeBackground();
+                    if (!_markus)
+                    {
+                        _faderNegative.ChangeBackground();
+                    }
+                    else
+                    {
+                        _faderNegativeM.ChangeBackground();
+                    }
                 }
 
                 // Start typing the current segment
