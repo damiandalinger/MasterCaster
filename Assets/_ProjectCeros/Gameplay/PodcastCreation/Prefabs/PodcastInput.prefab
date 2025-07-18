@@ -7492,13 +7492,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8502a07f6a556fb42b98563edde2cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameObjects:
-  - {fileID: 6946067022550230347}
-  - {fileID: 7541946689211093881}
-  - {fileID: 4459055178428971956}
-  - {fileID: 6485715855547636220}
-  - {fileID: 5716530060137319402}
-  - {fileID: 122250147372148116}
+  _groups:
+  - groupObjects:
+    - {fileID: 6946067022550230347}
+  - groupObjects:
+    - {fileID: 7541946689211093881}
+  - groupObjects:
+    - {fileID: 4459055178428971956}
+  - groupObjects:
+    - {fileID: 6485715855547636220}
+  - groupObjects:
+    - {fileID: 5716530060137319402}
+  - groupObjects:
+    - {fileID: 122250147372148116}
 --- !u!1 &4578565746245585181
 GameObject:
   m_ObjectHideFlags: 0

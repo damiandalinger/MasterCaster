@@ -12,36 +12,52 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-
+    [System.Serializable]
+    public class GameObjectGroup
+    {
+        [Tooltip("GameObjects in this group.")]
+        public List<GameObject> groupObjects = new();
+    }
     public class GameObjectSwitcher : MonoBehaviour
     {
         #region Fields
 
         [Tooltip("UI containers (e.g., panels or button groups). Only one is visible at a time.")]
-        [SerializeField] private List<GameObject> _gameObjects = new();
+        [SerializeField] private List<GameObjectGroup> _groups = new();
 
         #endregion
 
         // Displays the specified group and hides all others.
         public void ShowGroup(int index)
         {
-            if (index < 0 || index >= _gameObjects.Count)
+            if (index < 0 || index >= _groups.Count)
             {
-                Debug.LogWarning($"[GameObjectSwitcher] Invalid group index: {index}");
+                Debug.LogWarning($"[GameObjectGroupSwitcher] Invalid group index: {index}");
                 return;
             }
 
-            for (int i = 0; i < _gameObjects.Count; i++)
+            for (int i = 0; i < _groups.Count; i++)
             {
-                _gameObjects[i].SetActive(i == index);
+                bool shouldShow = (i == index);
+                foreach (var go in _groups[i].groupObjects)
+                {
+                    if (go != null)
+                        go.SetActive(shouldShow);
+                }
             }
         }
 
-        // Deactivates all UI groups.
+        // Hides all GameObjects in all groups.
         public void HideAll()
         {
-            foreach (var group in _gameObjects)
-                group.SetActive(false);
+            foreach (var group in _groups)
+            {
+                foreach (var go in group.groupObjects)
+                {
+                    if (go != null)
+                        go.SetActive(false);
+                }
+            }
         }
     }
 }

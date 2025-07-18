@@ -1213,8 +1213,9 @@ GameObject:
   m_Component:
   - component: {fileID: 390725191}
   - component: {fileID: 390725192}
+  - component: {fileID: 390725193}
   m_Layer: 0
-  m_Name: SPR_Character_Laptop_Throne
+  m_Name: Typing02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1229,11 +1230,11 @@ Transform:
   m_GameObject: {fileID: 390725190}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.257, y: 0.41, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.008000374, y: 0.252, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1489033695}
+  m_Father: {fileID: 1969385851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &390725192
 SpriteRenderer:
@@ -1279,17 +1280,39 @@ SpriteRenderer:
   m_SortingLayerID: 391699755
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c72436b6ae6fba4585f67a8ebf6b438, type: 3}
+  m_Sprite: {fileID: -1650094956, guid: 197d0873284f41940b2d9284bd54815b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.8153126, y: 3.08}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &390725193
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390725190}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7af70ff4630368840af0142a7202d11f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &393355047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1966,7 +1989,7 @@ SpriteRenderer:
   m_SortingLayerID: -716241811
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7759b6b50786af84e8d6fd6e8c5de45a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad40823cf9a9bea40b39545336cd477b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2094,7 +2117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3124417108b72141af96c7119e97e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hoverSprite: {fileID: 0}
+  _hoverSprite: {fileID: 21300000, guid: 62e41787b4195c94dbbc9c19c5cf5fe7, type: 3}
   _clickCooldown: 0.2
   _onClick:
     m_PersistentCalls:
@@ -2115,18 +2138,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: ProjectCeros.CanISleep, Assembly-CSharp
         m_MethodName: CheckCondition
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1489033696}
-        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
-        m_MethodName: ShowGroup
-        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2968,7 +2979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3124417108b72141af96c7119e97e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hoverSprite: {fileID: 0}
+  _hoverSprite: {fileID: 21300000, guid: cd3658112a903244b832898da443d771, type: 3}
   _clickCooldown: 0.2
   _onClick:
     m_PersistentCalls:
@@ -2997,10 +3008,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1489033696}
-        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
-        m_MethodName: ShowGroup
-        m_Mode: 3
+      - m_Target: {fileID: 1489033698}
+        m_TargetAssemblyTypeName: ProjectCeros.DelayedEventInvoker, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3586,7 +3597,7 @@ SpriteRenderer:
   m_SortingLayerID: -2040715717
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5787d3e8c4d59ed4daf4acfe9115e003, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ba4bd439bf806c42af5b4c865dd28ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3750,7 +3761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3124417108b72141af96c7119e97e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hoverSprite: {fileID: 0}
+  _hoverSprite: {fileID: 21300000, guid: 35f02d6ab9ece3440a29224a11c40fdb, type: 3}
   _clickCooldown: 0.2
   _onClick:
     m_PersistentCalls:
@@ -3791,10 +3802,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1489033696}
-        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
-        m_MethodName: ShowGroup
-        m_Mode: 3
+      - m_Target: {fileID: 1489033700}
+        m_TargetAssemblyTypeName: ProjectCeros.DelayedEventInvoker, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3813,8 +3824,9 @@ GameObject:
   m_Component:
   - component: {fileID: 994281382}
   - component: {fileID: 994281383}
+  - component: {fileID: 994281384}
   m_Layer: 0
-  m_Name: SPR_Character_Podcast
+  m_Name: Sitting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3829,7 +3841,7 @@ Transform:
   m_GameObject: {fileID: 994281381}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.133, y: -0.251, z: 0}
+  m_LocalPosition: {x: -2.571, y: 0.193, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3879,17 +3891,39 @@ SpriteRenderer:
   m_SortingLayerID: 391699755
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 03e2e45bc51b55c499fb37328c397ca4, type: 3}
+  m_Sprite: {fileID: -1420707479, guid: 3dd19f81ae572e1448338211d2aef915, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 5.12}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &994281384
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994281381}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb7f636e895ce844e9b75f600f2d0873, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1047746349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4422,7 +4456,8 @@ Transform:
   m_LocalPosition: {x: 4.57, y: -0.29, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1234819929}
   m_Father: {fileID: 206847231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1109387651
@@ -4469,7 +4504,7 @@ SpriteRenderer:
   m_SortingLayerID: -2040715717
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e70a25ead5e5cd4ea43b45637d6e1b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 046f9362a483c2f469fff56b8d59441e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4823,8 +4858,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1234819929}
   - component: {fileID: 1234819930}
+  - component: {fileID: 1234819931}
   m_Layer: 0
-  m_Name: SPR_Character_Laptop_Garden
+  m_Name: Typing01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4839,11 +4875,11 @@ Transform:
   m_GameObject: {fileID: 1234819928}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.225, y: 0.357, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.3880005, y: 0.622, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1489033695}
+  m_Father: {fileID: 1109387650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1234819930
 SpriteRenderer:
@@ -4889,17 +4925,39 @@ SpriteRenderer:
   m_SortingLayerID: 391699755
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 35841193842f2fe44a93d53419cf9cce, type: 3}
+  m_Sprite: {fileID: 1860154439, guid: 587bee4528a45ec4d9ca0fb5f4aa4268, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.8153126, y: 3.08}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1234819931
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234819928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 22525ba36ccfbb948bbcc19f01f36242, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1271504679
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,8 +4968,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1271504680}
   - component: {fileID: 1271504681}
+  - component: {fileID: 1271504682}
   m_Layer: 0
-  m_Name: SPR_Character_Standing
+  m_Name: Standing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4976,17 +5035,39 @@ SpriteRenderer:
   m_SortingLayerID: 391699755
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6457ded1ffe33b449b78e1377a332a16, type: 3}
+  m_Sprite: {fileID: -1041072158, guid: e6732b9d45b30a44981ec312147996a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 5.12}
+  m_Size: {x: 2.56, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1271504682
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271504679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b51852abfa538c4f8303fc6e908a954, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1281907861
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,7 +5431,7 @@ SpriteRenderer:
   m_SortingLayerID: -716241811
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c9bf8f13172e0064badbb4e3b290995c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1acbfcf82bdcbcd4484abf119399bf03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5684,8 +5765,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1489033695}
   - component: {fileID: 1489033696}
+  - component: {fileID: 1489033700}
+  - component: {fileID: 1489033698}
+  - component: {fileID: 1489033697}
   m_Layer: 0
-  m_Name: Characters
+  m_Name: CharacterAnimations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5705,8 +5789,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1849693026}
-  - {fileID: 1234819929}
-  - {fileID: 390725191}
   - {fileID: 1271504680}
   - {fileID: 994281382}
   m_Father: {fileID: 0}
@@ -5723,12 +5805,179 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8502a07f6a556fb42b98563edde2cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameObjects:
-  - {fileID: 1849693025}
-  - {fileID: 1234819928}
-  - {fileID: 390725190}
-  - {fileID: 1271504679}
-  - {fileID: 994281381}
+  _groups:
+  - groupObjects:
+    - {fileID: 1234819928}
+    - {fileID: 390725190}
+  - groupObjects:
+    - {fileID: 1271504679}
+  - groupObjects:
+    - {fileID: 994281381}
+--- !u!114 &1489033697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489033694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3714a6eba580be549af7eb065488b08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayInSeconds:
+    UseConstant: 1
+    ConstantValue: 0.5
+    Variable: {fileID: 0}
+  _onDelayComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1489033696}
+        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
+        m_MethodName: ShowGroup
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1109387651}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1969385852}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1489033698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489033694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3714a6eba580be549af7eb065488b08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayInSeconds:
+    UseConstant: 1
+    ConstantValue: 0.5
+    Variable: {fileID: 0}
+  _onDelayComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1489033696}
+        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
+        m_MethodName: ShowGroup
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1109387651}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1969385852}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1489033700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489033694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3714a6eba580be549af7eb065488b08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayInSeconds:
+    UseConstant: 1
+    ConstantValue: 0.5
+    Variable: {fileID: 0}
+  _onDelayComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1489033696}
+        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
+        m_MethodName: ShowGroup
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1109387651}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1969385852}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1520962775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5935,6 +6184,7 @@ GameObject:
   - component: {fileID: 1639439222}
   - component: {fileID: 1639439221}
   - component: {fileID: 1639439224}
+  - component: {fileID: 1639439225}
   m_Layer: 0
   m_Name: NewspaperBound
   m_TagString: Untagged
@@ -6009,7 +6259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3124417108b72141af96c7119e97e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hoverSprite: {fileID: 0}
+  _hoverSprite: {fileID: 21300000, guid: c739e39dfe4017f4984f5982064ad5f1, type: 3}
   _clickCooldown: 0.2
   _onClick:
     m_PersistentCalls:
@@ -6038,34 +6288,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1639439219}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1639439225}
+        m_TargetAssemblyTypeName: ProjectCeros.DelayedEventInvoker, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 788485626}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1489033696}
-        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
-        m_MethodName: ShowGroup
-        m_Mode: 3
+      - m_Target: {fileID: 1489033698}
+        m_TargetAssemblyTypeName: ProjectCeros.DelayedEventInvoker, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6150,6 +6388,49 @@ PolygonCollider2D:
       - {x: 0.48999998, y: -0.099999994}
       - {x: 0.5, y: -0.07}
   m_UseDelaunayMesh: 0
+--- !u!114 &1639439225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639439219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3714a6eba580be549af7eb065488b08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayInSeconds:
+    UseConstant: 1
+    ConstantValue: 0.5
+    Variable: {fileID: 0}
+  _onDelayComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1639439219}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 788485626}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1704242964 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4883266413618260730, guid: 33950d7687cb7394fb64f96923792b64, type: 3}
@@ -6267,7 +6548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3124417108b72141af96c7119e97e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hoverSprite: {fileID: 0}
+  _hoverSprite: {fileID: 21300000, guid: b160f4ece616a40449f54a135ff80298, type: 3}
   _clickCooldown: 0.2
   _onClick:
     m_PersistentCalls:
@@ -6308,10 +6589,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1489033696}
-        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
-        m_MethodName: ShowGroup
-        m_Mode: 3
+      - m_Target: {fileID: 1489033697}
+        m_TargetAssemblyTypeName: ProjectCeros.DelayedEventInvoker, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6368,11 +6649,13 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.53999996, y: -0.04}
       - {x: 0.45999998, y: -0.04}
+      - {x: 0.2682395, y: -0.18129718}
       - {x: 0.08, y: -0.32}
       - {x: 0.08, y: -0.35}
       - {x: 0.089999996, y: -0.37}
       - {x: 0.13, y: -0.37}
       - {x: 0.17999999, y: -0.35999998}
+      - {x: 0.3865342, y: -0.19417155}
       - {x: 0.48, y: -0.16}
       - {x: 0.55, y: -0.099999994}
       - {x: 0.55, y: -0.06}
@@ -6390,9 +6673,11 @@ PolygonCollider2D:
       - {x: -0.29, y: -0.29999998}
       - {x: -0.14999999, y: -0.35}
       - {x: -0.08, y: -0.35}
-      - {x: 0.32999998, y: -0.089999996}
-      - {x: 0.45, y: -0.01}
-      - {x: 0.5, y: 0.04}
+      - {x: 0.16888213, y: -0.36176044}
+      - {x: 0.3435064, y: -0.22844401}
+      - {x: 0.48573828, y: -0.14712977}
+      - {x: 0.56818384, y: -0.04714347}
+      - {x: 0.5270133, y: 0.06701348}
   m_UseDelaunayMesh: 0
 --- !u!1 &1771959878
 GameObject:
@@ -6661,7 +6946,7 @@ SpriteRenderer:
   m_SortingLayerID: -2040715717
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 416d40d1340159f4ea99674240c9299e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3730299f9edc76840ba12ffccdff88d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6808,7 +7093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3124417108b72141af96c7119e97e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hoverSprite: {fileID: 0}
+  _hoverSprite: {fileID: 21300000, guid: c2eefa2d647d1174ab2dd8f550e6cab2, type: 3}
   _clickCooldown: 0.2
   _onClick:
     m_PersistentCalls:
@@ -6849,10 +7134,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1489033696}
-        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
-        m_MethodName: ShowGroup
-        m_Mode: 3
+      - m_Target: {fileID: 1489033700}
+        m_TargetAssemblyTypeName: ProjectCeros.DelayedEventInvoker, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6871,6 +7156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1849693026}
   - component: {fileID: 1849693027}
+  - component: {fileID: 1849693028}
   m_Layer: 0
   m_Name: SPR_Character_Bed
   m_TagString: Untagged
@@ -6945,9 +7231,31 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1849693028
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849693025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1853308594
 GameObject:
   m_ObjectHideFlags: 0
@@ -7112,7 +7420,7 @@ SpriteRenderer:
   m_SortingLayerID: -716241811
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f481c8c67a14a54a9fbc770be19d2a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6afe56d91be7cf04c844c42a26590fd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7287,7 +7595,8 @@ Transform:
   m_LocalPosition: {x: 4.624, y: -0.133, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 390725191}
   m_Father: {fileID: 206847231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1969385852
@@ -7334,7 +7643,7 @@ SpriteRenderer:
   m_SortingLayerID: -2040715717
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f711d56955fd8c749b6e1ac22bf2c01a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd89f80dd1c811444ac50e52a3f0074a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7742,7 +8051,7 @@ SpriteRenderer:
   m_SortingLayerID: -716241811
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c72fb65fc3ede054489555b05677a63c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8ba8c139efa79345b1c08ad2f057d22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7856,7 +8165,7 @@ SpriteRenderer:
   m_SortingLayerID: -716241811
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f30dfbd48c9206d42badd2c6ad3ce37c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da3d6eb078febb7469788e372334b8ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
