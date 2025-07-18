@@ -3286,7 +3286,7 @@ MonoBehaviour:
   targetPoint: {fileID: 1858189397}
   maxSpeed: 25
   decelerationDistance: 5
-  stopThreshold: 0.05
+  stopThreshold: 0.01
   _isMoving:
     UseConstant: 0
     ConstantValue: 0
