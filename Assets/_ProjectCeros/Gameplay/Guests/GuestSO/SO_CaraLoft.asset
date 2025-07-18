@@ -18,7 +18,7 @@ MonoBehaviour:
     and ruins Ms. Loft has most certainly done either of them plenty. She now enjoys
     retirement as a best selling author of her adventures"
   Topic: RPG
-  Modifier: 0.3
+  Modifier: 0.2
   Chance: 0.175
   GuestID: 10
   CooldownCounter: 0

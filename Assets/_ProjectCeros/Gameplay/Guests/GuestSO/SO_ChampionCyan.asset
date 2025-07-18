@@ -18,7 +18,7 @@ MonoBehaviour:
     let that distract you from the fact that she lets those creatures fight for her
     and the spectators enjoyment. So is it all just a farce ?"
   Topic: RPG
-  Modifier: 0.25
+  Modifier: 0.3
   Chance: 0.95
   GuestID: 16
   CooldownCounter: 0
