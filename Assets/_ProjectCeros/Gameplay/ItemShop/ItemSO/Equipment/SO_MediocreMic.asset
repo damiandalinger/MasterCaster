@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "Your first big investment towards a better future of your Podcast!
     Still on the average side of things, but you\u2019re getting there! "
   ItemSprite: {fileID: 21300000, guid: f30dfbd48c9206d42badd2c6ad3ce37c, type: 3}
-  Price: 15
+  Price: 10
   UpgradeGroup: 1
   Id: 2
   Modifier: 0.07

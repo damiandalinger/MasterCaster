@@ -20,4 +20,4 @@ MonoBehaviour:
   Price: 400
   UpgradeGroup: 4
   Id: 9
-  Modifier: 0.01
+  Modifier: 0.05

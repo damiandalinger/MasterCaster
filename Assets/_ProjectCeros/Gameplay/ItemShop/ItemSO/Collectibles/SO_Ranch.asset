@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "It's ranch man. I don\u2019t know what to write anymore. It\u2019s
     exactly what\u2019s written on the tin. Creamy goodness for your salad. "
   ItemSprite: {fileID: 21300000, guid: de9b3250ad085994b9a61dbaf2a68874, type: 3}
-  Price: 3000
+  Price: 10000
   UpgradeGroup: 113
   Id: 113
-  Modifier: 0.01
+  Modifier: 0.1

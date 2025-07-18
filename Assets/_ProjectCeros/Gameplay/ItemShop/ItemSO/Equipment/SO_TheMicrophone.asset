@@ -17,7 +17,7 @@ MonoBehaviour:
     exterior. And it records the crispest sounds imaginable - You may marvel at this
     masterpiece.
   ItemSprite: {fileID: 21300000, guid: 7759b6b50786af84e8d6fd6e8c5de45a, type: 3}
-  Price: 50
+  Price: 200
   UpgradeGroup: 1
   Id: 3
   Modifier: 0.14

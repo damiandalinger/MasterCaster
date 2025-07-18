@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: Freed from the limitations of duct tape, this one proudly crowns your
     head. Subtly flexing on all your listeners.
   ItemSprite: {fileID: 21300000, guid: c9bf8f13172e0064badbb4e3b290995c, type: 3}
-  Price: 30
+  Price: 25
   UpgradeGroup: 2
   Id: 5
-  Modifier: 0.03
+  Modifier: 0.04

@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "A few added sounds should do the trick. Fingers crossed this actually
     improves the podcast, at least it\u2019ll be different."
   ItemSprite: {fileID: 21300000, guid: a269d9f39b407944aba341b583f04149, type: 3}
-  Price: 100
+  Price: 1000
   UpgradeGroup: 5
   Id: 10
-  Modifier: 0.01
+  Modifier: 0.1

@@ -18,7 +18,7 @@ MonoBehaviour:
     them in no time! Just a great tool all around. Really makes your work, worked
     out. '
   ItemSprite: {fileID: 21300000, guid: 416d40d1340159f4ea99674240c9299e, type: 3}
-  Price: 200
+  Price: 700
   UpgradeGroup: 3
   Id: 7
-  Modifier: 0.01
+  Modifier: 0.08

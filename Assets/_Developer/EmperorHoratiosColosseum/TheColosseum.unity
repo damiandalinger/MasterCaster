@@ -357,14 +357,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7487730883839643836, guid: 9a5818040f3e270419c79f1defa5c863, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 221.8036
-      objectReference: {fileID: 0}
-    - target: {fileID: 7487730883839643836, guid: 9a5818040f3e270419c79f1defa5c863, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 111.21028
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3014,14 +3006,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 988161167}
     m_Modifications:
-    - target: {fileID: 72010598259071406, guid: 83637a3868b9fec4590f9a6830a86e3b, type: 3}
-      propertyPath: m_margin.x
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 72010598259071406, guid: 83637a3868b9fec4590f9a6830a86e3b, type: 3}
-      propertyPath: m_margin.z
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 331370863126063802, guid: 83637a3868b9fec4590f9a6830a86e3b, type: 3}
       propertyPath: m_Name
       value: 3x1

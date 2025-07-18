@@ -18,7 +18,7 @@ MonoBehaviour:
     journeys were made to gather all stones necessary to power this weapon. Now it\u2019s
     finally time... <i>Snaps\u2026</i> hm\u2026 nothing happened\u2026"
   ItemSprite: {fileID: 21300000, guid: 44126937cb3a71940a344f2c49668192, type: 3}
-  Price: 2000
+  Price: 5000
   UpgradeGroup: 110
   Id: 110
-  Modifier: 0.01
+  Modifier: 0.05

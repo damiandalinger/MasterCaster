@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "Cinders and ash and a sword driven straight through the floorboards,
     the nightmare of any landlord.\n\nUnlocks Guest: \nServant of Cinder"
   ItemSprite: {fileID: 21300000, guid: 6f925ea8c85e2674298a4f077ac0a2d9, type: 3}
-  Price: 190
+  Price: 650
   UpgradeGroup: 106
   Id: 106
-  Modifier: 0.01
+  Modifier: 0.05
