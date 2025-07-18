@@ -88,9 +88,21 @@ SpriteAtlas:
     - 630907881e5ebc24091f18121e6aae3d: 21300000
     - 1acbfcf82bdcbcd4484abf119399bf03: 21300000
     - a86eb849dd3edff479b0f97daaf75ed8: 21300000
+    - 52577c59d58b2e64787a9a43c6e32a68: 630513167
+    - 52577c59d58b2e64787a9a43c6e32a68: 939321545
+    - 52577c59d58b2e64787a9a43c6e32a68: 206766597
+    - 52577c59d58b2e64787a9a43c6e32a68: 557990235
+    - 52577c59d58b2e64787a9a43c6e32a68: 478582751
+    - 52577c59d58b2e64787a9a43c6e32a68: -929479549
     - 6afe56d91be7cf04c844c42a26590fd4: 21300000
     - 6d0faf4ac9a3067439d57c1d6cc5169e: 21300000
     - d576f75ab75e16e47a64dfbe48223126: 21300000
+    - ca8bcc0b64571544c84bdde5d2f0378f: -1211925541
+    - ca8bcc0b64571544c84bdde5d2f0378f: 790349364
+    - ca8bcc0b64571544c84bdde5d2f0378f: 1224222646
+    - ca8bcc0b64571544c84bdde5d2f0378f: 567560798
+    - ca8bcc0b64571544c84bdde5d2f0378f: 650954097
+    - ca8bcc0b64571544c84bdde5d2f0378f: 1159979227
     - 590b7f2b3c1cc2840af182291e6017b5: 21300000
     - e14cf23be62366745ada5265ab91d2f3: 21300000
     - ad40823cf9a9bea40b39545336cd477b: 21300000
@@ -109,6 +121,7 @@ SpriteAtlas:
     - e6732b9d45b30a44981ec312147996a5: 2079619380
     - ab8ee05eb01cafe41aadb27b57c03b29: 21300000
     - 96d3cb6eaaca55f4b90c139179e696c6: 21300000
+    - 856e9f9e2bd587b45a011b69df206c1d: 21300000
     - 8a95530f10d72f04a8fa71bafdef66e2: 21300000
     - 3730299f9edc76840ba12ffccdff88d6: 21300000
   m_MasterAtlas: {fileID: 0}
@@ -150,9 +163,21 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 630907881e5ebc24091f18121e6aae3d, type: 3}
   - {fileID: 21300000, guid: 1acbfcf82bdcbcd4484abf119399bf03, type: 3}
   - {fileID: 21300000, guid: a86eb849dd3edff479b0f97daaf75ed8, type: 3}
+  - {fileID: 630513167, guid: 52577c59d58b2e64787a9a43c6e32a68, type: 3}
+  - {fileID: 939321545, guid: 52577c59d58b2e64787a9a43c6e32a68, type: 3}
+  - {fileID: 206766597, guid: 52577c59d58b2e64787a9a43c6e32a68, type: 3}
+  - {fileID: 557990235, guid: 52577c59d58b2e64787a9a43c6e32a68, type: 3}
+  - {fileID: 478582751, guid: 52577c59d58b2e64787a9a43c6e32a68, type: 3}
+  - {fileID: -929479549, guid: 52577c59d58b2e64787a9a43c6e32a68, type: 3}
   - {fileID: 21300000, guid: 6afe56d91be7cf04c844c42a26590fd4, type: 3}
   - {fileID: 21300000, guid: 6d0faf4ac9a3067439d57c1d6cc5169e, type: 3}
   - {fileID: 21300000, guid: d576f75ab75e16e47a64dfbe48223126, type: 3}
+  - {fileID: -1211925541, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 790349364, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 1224222646, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 567560798, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 650954097, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 1159979227, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
   - {fileID: 21300000, guid: 590b7f2b3c1cc2840af182291e6017b5, type: 3}
   - {fileID: 21300000, guid: e14cf23be62366745ada5265ab91d2f3, type: 3}
   - {fileID: 21300000, guid: ad40823cf9a9bea40b39545336cd477b, type: 3}
@@ -171,6 +196,7 @@ SpriteAtlas:
   - {fileID: 2079619380, guid: e6732b9d45b30a44981ec312147996a5, type: 3}
   - {fileID: 21300000, guid: ab8ee05eb01cafe41aadb27b57c03b29, type: 3}
   - {fileID: 21300000, guid: 96d3cb6eaaca55f4b90c139179e696c6, type: 3}
+  - {fileID: 21300000, guid: 856e9f9e2bd587b45a011b69df206c1d, type: 3}
   - {fileID: 21300000, guid: 8a95530f10d72f04a8fa71bafdef66e2, type: 3}
   - {fileID: 21300000, guid: 3730299f9edc76840ba12ffccdff88d6, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -211,9 +237,21 @@ SpriteAtlas:
   - SPR_Collectibles_Mask_Big_room_Line
   - SPR_Equipment_Headphone_T2_Big_2
   - SPR_Collectibles_Glove_Big_Line
+  - SS_Window_Sunny_1
+  - SS_Window_Sunny_0
+  - SS_Window_Sunny_3
+  - SS_Window_Sunny_2
+  - SS_Window_Sunny_5
+  - SS_Window_Sunny_4
   - SPR_Equipment_Headphone_T1_Big_2
   - SPR_Room_Script
   - SPR_Collectibles_Bathwater_Big_Line
+  - SS_Window_Rainy_3
+  - SS_Window_Rainy_2
+  - SS_Window_Rainy_1
+  - SS_Window_Rainy_0
+  - SS_Window_Rainy_5
+  - SS_Window_Rainy_4
   - SPR_Room_DeskLaptop
   - SPR_Collectibles_Raygun_Big_Line
   - SPR_Equipment_Mic_T3_Big_2
@@ -232,6 +270,7 @@ SpriteAtlas:
   - SS_Character_Standing_6
   - SPR_Room_Leaderboard
   - SPR_Equipment_Skilltree
+  - SPR_Character_Bed
   - Untitled_Artworks
   - SPR_Equipment_Laptop_T2_Big_2
   m_RenderDataMap: {}

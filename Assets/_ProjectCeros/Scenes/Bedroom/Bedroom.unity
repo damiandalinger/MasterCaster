@@ -5768,6 +5768,7 @@ GameObject:
   - component: {fileID: 1489033700}
   - component: {fileID: 1489033698}
   - component: {fileID: 1489033697}
+  - component: {fileID: 1489033701}
   m_Layer: 0
   m_Name: CharacterAnimations
   m_TagString: Untagged
@@ -5813,6 +5814,8 @@ MonoBehaviour:
     - {fileID: 1271504679}
   - groupObjects:
     - {fileID: 994281381}
+  - groupObjects:
+    - {fileID: 1849693025}
 --- !u!114 &1489033697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5974,6 +5977,34 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1489033701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489033694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756af48229c34a140bf09dfa3d17e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e9760d21be2b2184491abf9a5dc052e8, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1489033696}
+        m_TargetAssemblyTypeName: ProjectCeros.GameObjectSwitcher, Assembly-CSharp
+        m_MethodName: ShowGroup
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7156,9 +7187,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1849693026}
   - component: {fileID: 1849693027}
-  - component: {fileID: 1849693028}
   m_Layer: 0
-  m_Name: SPR_Character_Bed
+  m_Name: Sleeping
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7223,7 +7253,7 @@ SpriteRenderer:
   m_SortingLayerID: 391699755
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: acbab7e4a34741a499eb56494446525d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 856e9f9e2bd587b45a011b69df206c1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7231,31 +7261,9 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1849693028
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849693025}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1853308594
 GameObject:
   m_ObjectHideFlags: 0
@@ -9209,6 +9217,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1105005089468668761, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+      propertyPath: m_Name
+      value: Rainy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105005089468668761, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1273205714044976854, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9249,6 +9265,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1533452026059154799, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 939321545, guid: 52577c59d58b2e64787a9a43c6e32a68, type: 3}
+    - target: {fileID: 2057077242028804091, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+      propertyPath: _rainChance
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259452055243467024, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+      propertyPath: m_Name
+      value: Sunny
+      objectReference: {fileID: 0}
     - target: {fileID: 6122051043679609908, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
       propertyPath: m_Name
       value: '@WeatherManager'
@@ -9256,8 +9284,68 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1105005089468668761, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5910713367495383550}
+    - targetCorrespondingSourceObject: {fileID: 5259452055243467024, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5910713367495383551}
   m_SourcePrefab: {fileID: 100100000, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+--- !u!1 &5910713367495383548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1105005089468668761, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+  m_PrefabInstance: {fileID: 5910713367495383547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5910713367495383549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5259452055243467024, guid: 736faf59a68a10a4bbd71466c0a1e8fc, type: 3}
+  m_PrefabInstance: {fileID: 5910713367495383547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5910713367495383550
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5910713367495383548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01e841b1588920f479a725ba157e3a2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!95 &5910713367495383551
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5910713367495383549}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5dadbea48bcfce043be4b007e80ccc4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &6122216412339194342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10008,7 +10096,6 @@ SceneRoots:
   - {fileID: 1919656734}
   - {fileID: 1281907862}
   - {fileID: 207417851}
-  - {fileID: 5910713367495383547}
   - {fileID: 4879277091451688607}
   - {fileID: 393355047}
   - {fileID: 1047746349}
@@ -10019,3 +10106,4 @@ SceneRoots:
   - {fileID: 623230688}
   - {fileID: 1489033695}
   - {fileID: 1192877741}
+  - {fileID: 5910713367495383547}

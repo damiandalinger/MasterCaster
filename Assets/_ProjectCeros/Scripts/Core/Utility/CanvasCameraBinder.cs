@@ -26,9 +26,14 @@ namespace ProjectCeros
 
         #region Unity Lifecycle
 
-        private void Start()
+        private void Awake()
         {
             _canvas = GetComponent<Canvas>();
+        }
+
+        void OnEnable()
+        {
+            AssignCameraByTag();
         }
 
         private void Update()
