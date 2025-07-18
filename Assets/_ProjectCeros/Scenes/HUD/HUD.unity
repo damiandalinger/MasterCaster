@@ -3356,6 +3356,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4163609561086678182, guid: 2d2ef11dcaec9c94ba61bdd7f313504c, type: 3}
+      propertyPath: Event
+      value: 
+      objectReference: {fileID: 11400000, guid: e9760d21be2b2184491abf9a5dc052e8, type: 2}
     - target: {fileID: 8897726823553777408, guid: 2d2ef11dcaec9c94ba61bdd7f313504c, type: 3}
       propertyPath: m_Name
       value: SleepScreen

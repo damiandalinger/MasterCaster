@@ -35,14 +35,12 @@ namespace ProjectCeros
         private void OnDisable()
         {
             _pauseAction.action.performed -= OnPauseInput;
-            _pauseAction.action.Disable();
         }
 
         // Registers the pause input callback and enables the input action when the object becomes active.
         private void OnEnable()
         {
             _pauseAction.action.performed += OnPauseInput;
-            _pauseAction.action.Enable();
         }
 
         #endregion

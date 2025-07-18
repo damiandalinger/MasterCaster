@@ -16,5 +16,5 @@ MonoBehaviour:
   DeveloperDescription: 'The amount of money the Player has at his
 
     disposal.'
-  InitialValue: 10
+  InitialValue: 100
   RuntimeValue: 27
