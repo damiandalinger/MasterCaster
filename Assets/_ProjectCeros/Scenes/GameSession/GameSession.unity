@@ -228,6 +228,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: '@LeaderboardManager'
       objectReference: {fileID: 0}
+    - target: {fileID: 8986092119301853330, guid: df47177d971742a4d928891015ed7c8e, type: 3}
+      propertyPath: _hasWon.Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 65c9f39a3e8f728409717282798a1b2a, type: 2}
+    - target: {fileID: 8986092119301853330, guid: df47177d971742a4d928891015ed7c8e, type: 3}
+      propertyPath: _hasWon.UseConstant
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

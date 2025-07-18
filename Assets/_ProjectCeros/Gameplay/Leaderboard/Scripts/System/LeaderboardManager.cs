@@ -4,6 +4,7 @@
 
 /// <remarks>
 /// 02/07/2025 by Damian Dalinger: Script Creation.
+/// 18/07/2025 by Unik Kelmendi: added win condition.
 /// </remarks>
 
 using UnityEngine;
@@ -51,6 +52,9 @@ namespace ProjectCeros
 
         [Tooltip("Reference to the LeaderboardDataSync script.")]
         [SerializeField] private LeaderboardDataSync _dataSync;
+
+        [Tooltip("If true, player has completed the game.")]
+        [SerializeField] private BoolReference _hasWon;
 
         #endregion
 
@@ -199,7 +203,12 @@ namespace ProjectCeros
                     if (i < 10)
                     {
                         playerInTop10 = true;
+                        
                         SetPlayerTop10Rank(i);
+
+                        if (i == 0)
+                        {_hasWon.Variable.SetValue(true);}
+                        
                     }
                     continue;
                 }
