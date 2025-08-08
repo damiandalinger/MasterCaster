@@ -1,0 +1,182 @@
+[
+    {
+        "PairID": 1001,
+        "Headline": "Ubihard Releases 12th Murderers Oath",
+        "Description": "After recent failures is this finally the installment that brings back the glory of the 2nd game? The India setting is rumoured to be …  ",
+        "AgencyID": 3,
+        "Subgenre": 5,
+        "ValuePositive": 1.3,
+        "ValueNegative": 1.4,
+        "BackgroundName": "",
+        "StoryID": 11,
+        "StoryPart": 1
+    },
+    {
+        "PairID": 1001,
+        "Headline": "New Murder - Same Oath",
+        "Description": "Ubihard has released the new Murderers Oath into the palms of their customers. We of course are eager to fully explore!",
+        "AgencyID": 2,
+        "Subgenre": 5,
+        "ValuePositive": 1.3,
+        "ValueNegative": 1.4,
+        "BackgroundName": "",
+        "StoryID": 11,
+        "StoryPart": 1
+    },
+    {
+        "PairID": 1002,
+        "Headline": "Murderers Oath is Good?",
+        "Description": "The 12th part finally has good gameplay and the charm of older protagonists has returned! The elephants especially are fun to take down!",
+        "AgencyID": 2,
+        "Subgenre": 5,
+        "ValuePositive": 1.6,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 11,
+        "StoryPart": 2
+    },
+    {
+        "PairID": 1002,
+        "Headline": "Ubhihard regains old Spirit",
+        "Description": "The crisp gameplay reminiscent of the older games has finally made a return! Euphoria was the name of the game for our writers!",
+        "AgencyID": 3,
+        "Subgenre": 5,
+        "ValuePositive": 1.6,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 11,
+        "StoryPart": 2
+    },
+    {
+        "PairID": 1003,
+        "Headline": "Zekken 17 just is",
+        "Description": "‘’It’s mediocre, but in a good way. No unpleasant surprises just the same fighting that we all know.’’ That's how one of our testers put it",
+        "AgencyID": 1,
+        "Subgenre": 4,
+        "ValuePositive": 1.2,
+        "ValueNegative": 1.1,
+        "BackgroundName": "SPR_FrogBusterGames_2x2_Tired",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1003,
+        "Headline": "Zekken 17 is like its pre\u200Bde\u200Bces\u200Bsors - Exquisite!",
+        "Description": "… the graphics also got an update and the physics jiggle in just the right places. I really enjoyed it, definitely my game of the year!",
+        "AgencyID": 2,
+        "Subgenre": 4,
+        "ValuePositive": 1.2,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1004,
+        "Headline": "New FUN in The First of Us",
+        "Description": "A new sub plot has been added to further explore the zombie struck world. And we get a completely new character as well!",
+        "AgencyID": 3,
+        "Subgenre": 5,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1004,
+        "Headline": "The First of Us - Big DLC",
+        "Description": "A new protagonist, new zones and some new enemies.It’s nothing revolutionary, but there is certainly charm in discovering the unexplored! ",
+        "AgencyID": 1,
+        "Subgenre": 5,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1005,
+        "Headline": "Diavola 5 Cleaves through the Competition",
+        "Description": "Snappy gameplay, loot piles couldn’t be bigger, my dopamine is going wild.",
+        "AgencyID": 2,
+        "Subgenre": 6,
+        "ValuePositive": 1.3,
+        "ValueNegative": 1.5,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1005,
+        "Headline": "Same as before - Diavola 5",
+        "Description": "Just the same old gameplay from before. New class just feels mediocre …",
+        "AgencyID": 3,
+        "Subgenre": 6,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1006,
+        "Headline": "Street of Exile - Apocalypse Version",
+        "Description": "A surprising amount of fluff for a holiday event but we won’t complain!",
+        "AgencyID": 2,
+        "Subgenre": 6,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1006,
+        "Headline": "Dev Crashout over ‘Street of Exile’",
+        "Description": "‘’It’s setting unrealistic expectations for the industry. We big developers can’t spare the resources like indie teams can!’’",
+        "AgencyID": 1,
+        "Subgenre": 6,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1007,
+        "Headline": "Metal Gear Fluid - Sneaky Action",
+        "Description": "The series now steps into a semi open world - a fun new perspective. ",
+        "AgencyID": 1,
+        "Subgenre": 5,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1007,
+        "Headline": "Metal Gear Fluid HATES Women!",
+        "Description": "… if one looks even a little deeper they can see the supremely sexualised outfits of the female characters in the game…",
+        "AgencyID": 2,
+        "Subgenre": 5,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.1,
+        "BackgroundName": "SPR_WorldOfGames_2x2_Action",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1008,
+        "Headline": "Center-\u200BEarth: Shade of War REVIVES VOLKIN",
+        "Description": "Explore the dark lands as a lone elf and help defend the good people!",
+        "AgencyID": 3,
+        "Subgenre": 6,
+        "ValuePositive": 1.6,
+        "ValueNegative": 1.3,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 1008,
+        "Headline": "Become an Elven-\u200BOrc-\u200BWarlord!",
+        "Description": "Center-Earth: Shade of War allows the player to build their own army! ",
+        "AgencyID": 2,
+        "Subgenre": 6,
+        "ValuePositive": 1.6,
+        "ValueNegative": 1.3,
+        "BackgroundName": "",
+        "StoryID": 0
+    }
+]

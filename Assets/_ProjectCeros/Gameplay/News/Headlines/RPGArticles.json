@@ -1,0 +1,156 @@
+[
+    {
+        "PairID": 3001,
+        "Headline": "A young Hunter? YES PLEASE!",
+        "Description": "‘’If he wasn’t charming before, he’s certainly now’’ one female fan of  CDP:Blues’ The Hunter-series wrote. And we most certainly agree! ",
+        "AgencyID": 1,
+        "Subgenre": 8,
+        "ValuePositive": 1.5,
+        "ValueNegative": 1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3001,
+        "Headline": "CDP:\u200BBlue Shakes the World",
+        "Description": "Finally players can explore the prologe of the Hunter. Battle through hordds of slavic monsters and the other type of monster of the night … ",
+        "AgencyID": 3,
+        "Subgenre": 8,
+        "ValuePositive": 1.5,
+        "ValueNegative": 1,
+        "BackgroundName": "SPR_GameMoon_2x2_RPG",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3002,
+        "Headline": "New Speed\u200Brun Legend in Blood\u200Bhunter",
+        "Description": "… with a twist! The game was fully controlled through different vegetables! Potatoes, cucumbers, you name it.",
+        "AgencyID": 1,
+        "Subgenre": 7,
+        "ValuePositive": 1.4,
+        "ValueNegative": 0.8,
+        "BackgroundName": "SPR_FrogBusterGames_2x2_ThumbsUp",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3002,
+        "Headline": "‘LetMe\u200BSpeedrunIt’ - Boy did he speed\u200Brun it",
+        "Description": "When you or I play Bloodhunter, we both die. However this guy somehow decided that the normal masochistic tendencies wouldn't be enough.",
+        "AgencyID": 2,
+        "Subgenre": 7,
+        "ValuePositive": 1.4,
+        "ValueNegative": 0.8,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3003,
+        "Headline": "Sekigahara:\u200BShadows Live Longer - Fan\u200Btastic",
+        "Description": "Few games manage to tickle the inner masochist but this one manages that!",
+        "AgencyID": 3,
+        "Subgenre": 7,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.2,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3003,
+        "Headline": "Sekigahara:\u200BShadows Live Longer - A Un\u200Bintuitive and Bad Game",
+        "Description": "This game is for the ones that think that difficulty is what makes a good game.",
+        "AgencyID": 2,
+        "Subgenre": 7,
+        "ValuePositive": 1.4,
+        "ValueNegative": 1.2,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3004,
+        "Headline": "New Mile\u200Bstone for Linka!",
+        "Description": "The Oscars this year nominate Mythos of Linka for best synchronisation!",
+        "AgencyID": 3,
+        "Subgenre": 8,
+        "ValuePositive": 1.5,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3004,
+        "Headline": "Game WINS Oscars!",
+        "Description": "‘’A truly groundbreaking performance’’ was the verdicts of the announcers",
+        "AgencyID": 1,
+        "Subgenre": 8,
+        "ValuePositive": 1.5,
+        "ValueNegative": 1.1,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3005,
+        "Headline": "Nuke After\u200Bmath 76 - Another Dis\u200Bappoint\u200Bment",
+        "Description": "‘’I wanted to play it with me nan but when she wanted to start the game again, she got banned automatically for picking up money to fast.’’",
+        "AgencyID": 1,
+        "Subgenre": 9,
+        "ValuePositive": 0.8,
+        "ValueNegative": 1.6,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3005,
+        "Headline": "How To NUKE a fandom - Nuke After\u200Bmath 76",
+        "Description": "This game will truly be a case study for future students of game theory in how bad a singular game can be.",
+        "AgencyID": 3,
+        "Subgenre": 9,
+        "ValuePositive": 0.8,
+        "ValueNegative": 1.6,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3006,
+        "Headline": "Reign Deli\u200Bverance - The Med\u200Bieval RPG of your Dreams",
+        "Description": "A lofty knight, deft archer or strong thief? The possibilities are really endless.",
+        "AgencyID": 3,
+        "Subgenre": 8,
+        "ValuePositive": 1.5,
+        "ValueNegative": 1.2,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3006,
+        "Headline": "Reign Deliverance a FAKE",
+        "Description": "… all playability gets stomped by the clunky combat and the portrayal of a ‘realistic’ bohemia. Bad Game Design Overall!",
+        "AgencyID": 2,
+        "Subgenre": 8,
+        "ValuePositive": 1.5,
+        "ValueNegative": 1.2,
+        "BackgroundName": "SPR_WorldOfGames_2x2_RPG",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3007,
+        "Headline": "Elderly\u200BRing-\u200BRip\u200Boffs",
+        "Description": "… lesser studios and money hungry CEO’s realised its potential. A plethora of cheaply attempted copies or just straight up stolen…",
+        "AgencyID": 2,
+        "Subgenre": 7,
+        "ValuePositive": 1,
+        "ValueNegative": 1.3,
+        "BackgroundName": "",
+        "StoryID": 0
+    },
+    {
+        "PairID": 3007,
+        "Headline": "So you like Elderly\u200BRing?",
+        "Description": "If you enjoyed ElderlyRing you can enjoy presumably a few dozen copies of the game. However, now comes the best part - they are all trash! ",
+        "AgencyID": 1,
+        "Subgenre": 7,
+        "ValuePositive": 1,
+        "ValueNegative": 1.3,
+        "BackgroundName": "SPR_FrogBusterGames_2x2_Tired",
+        "StoryID": 0
+    }
+]

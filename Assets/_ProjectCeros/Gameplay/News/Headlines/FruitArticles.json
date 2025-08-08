@@ -1,0 +1,149 @@
+[
+    {
+        "PairID": 0,
+        "Description": "Bananas share 50% of their DNA with humans.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Banana",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Cherries contain melatonin and can thus help regulate sleep patterns. ",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Cherry",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Donut peaches are infact a natural development and not caused by humans!",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Peach",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "If you eat one apple a day, you would need over 20 years to taste all 7000 different kinds!",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Apple",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Contrary to what the name suggests, they are not actually berries!",
+        "AgencyID": 4,
+        "BackgroundName": "SSPR_FruitOfTheWeek_Strawberry",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Actually a fruit.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Tomato",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Cranberries can bounce if they are ripe!",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Cranberry",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Dried figs have the same amount of calcium as milk.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Fig",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Less known than the tomato being fruit, the pumpkin is one too!",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Pumpkin",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "At one point in time they were known as chinese gooseberries.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Kiwi",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "A single passion fruit contains enough fiber to satisfy 98% of your daily needs!",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Passionfruit",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Unlike what their looks suggest, they are berries.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Coconut",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Their name translates from latin to apple with many seeds.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Pomgranate",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Honey dew was considered a sacred fruit in ancient egypt. ",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Honeymelon",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "The leaves of rhubarb are extremely toxic!",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Rhubarb",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Grapes will explode in the microwave!",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Grape",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "The dragon fruit blooms at night and is thus pollinated by bats!",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Dragonfruit",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Not all oranges are orange.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Orange",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "They may be lethal if consumed together with certain drugs. ",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Grapefruit",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "They are very rich in fiber. 100g is more than enough to satiate your daily need.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Blueberry",
+        "StoryID": 0
+    },
+    {
+        "PairID": 0,
+        "Description": "Almonds are in fact part of the peach family.",
+        "AgencyID": 4,
+        "BackgroundName": "SPR_FruitOfTheWeek_Almond",
+        "StoryID": 0
+    }
+]

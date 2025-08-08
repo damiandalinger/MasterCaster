@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02201d8c52ba724eb2f73a0382eecbd, type: 3}
+  m_Name: SO_MediocreMicrophone
+  m_EditorClassIdentifier: 
+  ItemName: Mediocre Microphone
+  Description: "Your first big investment towards a better future of your Podcast!
+    Still on the average side of things, but you\u2019re getting there! "
+  ItemSprite: {fileID: 21300000, guid: f30dfbd48c9206d42badd2c6ad3ce37c, type: 3}
+  Price: 10
+  UpgradeGroup: 1
+  Id: 2
+  Modifier: 0.07

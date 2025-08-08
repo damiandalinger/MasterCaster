@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SA_PodcastCreation
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: b43ea22091f33e046a1050744fc4e4b0, type: 3}
+    - {fileID: 102900000, guid: ce01f81f45dce0e44a8b4bb751a0146b, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 026bbd1050ce2d945be5be6081b37688: 21300000
+    - bbaaef202b24e6449a97983b97a1d5c6: 21300000
+    - 5b831581d31255445ad3dd9af6f2ee58: 21300000
+    - f1d68b91cf919724d9f5629200b5d59c: 21300000
+    - 98a78b4266837fa44b62742a80130671: 21300000
+    - 3da395f227fd22b4ab3bd610383501e8: 21300000
+    - 5705a33381337b44abc256e8d1433b77: 21300000
+    - 48911cd315ba75f44b495f6f204ccff1: 21300000
+    - 0fa6d4e334680b24c8d95ba8e453edfa: 21300000
+    - 90727cf31ca81834786c12b61a8917af: 21300000
+    - 4ede710443bf8ab489bcea312382247b: 21300000
+    - 5ed3e424dd2c76a46b02625621ff718c: 21300000
+    - 6a363cf4aceeaa04f924520ab3192737: 21300000
+    - bee13395ae1697449b2b931adab2c212: 21300000
+    - a42086365fbba9b4ab3528f9d1525545: 21300000
+    - cb7bce97ae202d54eb322dd56c668cf5: 21300000
+    - 93f55bb720e7e4847be092f6b7ae01a7: 21300000
+    - 3b57a8e892702584fac211c65a75dfb1: 21300000
+    - 03190269f5cde7447a3b20e1242ed388: 21300000
+    - 902a92a97465a6a47aea4a2ca25c334d: 21300000
+    - 07da0cb95f0ed9e458fb4c5e6de4e38a: 21300000
+    - 45fcfad9c343342468bf33a91d269963: 21300000
+    - 5b346b7a0b8d41f419c80b0bbb443f04: 21300000
+    - e8cb63ea0282cf14f9f335254ed3cddb: 21300000
+    - 46132eeabeee7a84d98c8a7842a9b8d2: 21300000
+    - d8d3dc6b4da6d244c8f6433f1fa73e7f: 21300000
+    - bd5f8d8c43a49c545bbbd80ce6dfff8b: 21300000
+    - d3241bbca1c4d3743b5b10b3a334efae: 21300000
+    - 43245ebccca09204f9375b9bb61f4a03: 21300000
+    - 79e9d31d7876b7d4ebd6beef2782b34d: 21300000
+    - 082e70fda4db6b646a5efb107dc36238: 21300000
+    - f6c30dfd1cce0514d9b7ec95e4f41e66: 21300000
+    - ad94268f9e59b234a9f30d7b169e6599: 21300000
+    - 690e58cf573b4214f9a9f44c4c9f4484: 21300000
+    - 5d5c1dffe66ccda458191f0aa4c661c6: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 026bbd1050ce2d945be5be6081b37688, type: 3}
+  - {fileID: 21300000, guid: bbaaef202b24e6449a97983b97a1d5c6, type: 3}
+  - {fileID: 21300000, guid: 5b831581d31255445ad3dd9af6f2ee58, type: 3}
+  - {fileID: 21300000, guid: f1d68b91cf919724d9f5629200b5d59c, type: 3}
+  - {fileID: 21300000, guid: 98a78b4266837fa44b62742a80130671, type: 3}
+  - {fileID: 21300000, guid: 3da395f227fd22b4ab3bd610383501e8, type: 3}
+  - {fileID: 21300000, guid: 5705a33381337b44abc256e8d1433b77, type: 3}
+  - {fileID: 21300000, guid: 48911cd315ba75f44b495f6f204ccff1, type: 3}
+  - {fileID: 21300000, guid: 0fa6d4e334680b24c8d95ba8e453edfa, type: 3}
+  - {fileID: 21300000, guid: 90727cf31ca81834786c12b61a8917af, type: 3}
+  - {fileID: 21300000, guid: 4ede710443bf8ab489bcea312382247b, type: 3}
+  - {fileID: 21300000, guid: 5ed3e424dd2c76a46b02625621ff718c, type: 3}
+  - {fileID: 21300000, guid: 6a363cf4aceeaa04f924520ab3192737, type: 3}
+  - {fileID: 21300000, guid: bee13395ae1697449b2b931adab2c212, type: 3}
+  - {fileID: 21300000, guid: a42086365fbba9b4ab3528f9d1525545, type: 3}
+  - {fileID: 21300000, guid: cb7bce97ae202d54eb322dd56c668cf5, type: 3}
+  - {fileID: 21300000, guid: 93f55bb720e7e4847be092f6b7ae01a7, type: 3}
+  - {fileID: 21300000, guid: 3b57a8e892702584fac211c65a75dfb1, type: 3}
+  - {fileID: 21300000, guid: 03190269f5cde7447a3b20e1242ed388, type: 3}
+  - {fileID: 21300000, guid: 902a92a97465a6a47aea4a2ca25c334d, type: 3}
+  - {fileID: 21300000, guid: 07da0cb95f0ed9e458fb4c5e6de4e38a, type: 3}
+  - {fileID: 21300000, guid: 45fcfad9c343342468bf33a91d269963, type: 3}
+  - {fileID: 21300000, guid: 5b346b7a0b8d41f419c80b0bbb443f04, type: 3}
+  - {fileID: 21300000, guid: e8cb63ea0282cf14f9f335254ed3cddb, type: 3}
+  - {fileID: 21300000, guid: 46132eeabeee7a84d98c8a7842a9b8d2, type: 3}
+  - {fileID: 21300000, guid: d8d3dc6b4da6d244c8f6433f1fa73e7f, type: 3}
+  - {fileID: 21300000, guid: bd5f8d8c43a49c545bbbd80ce6dfff8b, type: 3}
+  - {fileID: 21300000, guid: d3241bbca1c4d3743b5b10b3a334efae, type: 3}
+  - {fileID: 21300000, guid: 43245ebccca09204f9375b9bb61f4a03, type: 3}
+  - {fileID: 21300000, guid: 79e9d31d7876b7d4ebd6beef2782b34d, type: 3}
+  - {fileID: 21300000, guid: 082e70fda4db6b646a5efb107dc36238, type: 3}
+  - {fileID: 21300000, guid: f6c30dfd1cce0514d9b7ec95e4f41e66, type: 3}
+  - {fileID: 21300000, guid: ad94268f9e59b234a9f30d7b169e6599, type: 3}
+  - {fileID: 21300000, guid: 690e58cf573b4214f9a9f44c4c9f4484, type: 3}
+  - {fileID: 21300000, guid: 5d5c1dffe66ccda458191f0aa4c661c6, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SPR_Script1_RPG
+  - SPR_Script1_Simulation_Hover
+  - SPR_Script1_Strategy_Pressed
+  - SPR_Podcast_Script_2
+  - SPR_Script1_Shooter_Hover
+  - SPR_Podcast_Button_Left
+  - SPR_Script1_Action
+  - SPR_Script1_Shooter
+  - SPR_Podcast_Circle_Hover
+  - SPR_Script1_Action_Hover
+  - SPR_Podcast_Empty
+  - SPR_Podcast_No
+  - SPR_Script1_Indie_Pressed
+  - SPR_Script1_Strategy
+  - SPR_Podcast_Button_Right
+  - SPR_Podcast_No_Hover
+  - SPR_Podcast_Circle_Pressed
+  - SPR_Podcast_Yes_Hover
+  - SPR_Script1_Simulation
+  - SPR_Podcast_Yes
+  - SPR_Podcast_Script_1
+  - SPR_Podcast_Confirm_Hover
+  - SPR_Script1_RPG_Pressed
+  - SPR_Podcast_Confirm
+  - SPR_Script1_Indie
+  - SPR_Script1_Shooter_Pressed
+  - SPR_Podcast_Button_Right_Hover
+  - SPR_Script1_Strategy_Hover
+  - SPR_Script1_RPG_Hover
+  - SPR_Podcast_Button_Left_Hover
+  - SPR_Podcast_TitleLine
+  - SPR_Script1_Simulation_Pressed
+  - SPR_Script1_Action_Pressed
+  - SPR_Script1_Indie_Hover
+  - SPR_Podcast_GuestQuestion
+  m_RenderDataMap: {}
+  m_Tag: SA_PodcastCreation
+  m_IsVariant: 0
