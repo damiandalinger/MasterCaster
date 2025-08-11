@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/_ProjectCeros/Scenes/HUD/HUD.unity
     guid: 054b32c2dbeaf83498a5e3e35a7ab32a
   - enabled: 1
+    path: Assets/_ProjectCeros/Scenes/Tutorial/Tutorial.unity
+    guid: 5f47763c119d2634abf9870df025f55a
+  - enabled: 1
     path: Assets/_ProjectCeros/Scenes/Newspaper/Newspaper.unity
     guid: 9eee40a474cb5a94dbc0572082f92fa2
   - enabled: 1

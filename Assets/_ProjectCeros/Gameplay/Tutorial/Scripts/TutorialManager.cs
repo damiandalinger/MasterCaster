@@ -1,73 +1,146 @@
+/// <summary>
+/// Central controller for showing tutorial steps by ID, tracking completion, setting the finished flag, and invoking an event when all steps are done.
+/// </summary>
+
+/// <remarks>
+/// 11/08/2025 by Damian Dalinger: Script creation.
+/// </remarks>
+
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using UnityEngine.Events;
 
 namespace ProjectCeros
 {
     public class TutorialManager : MonoBehaviour
     {
-        [SerializeField] private BoolReference _wantsTutorial;
-        [SerializeField] private BoolReference _showedOnce;
+        #region Fields
 
-        [SerializeField] private TextMeshProUGUI _headingBox;
-        [SerializeField] private TextMeshProUGUI _textBox;
+        [Tooltip("All relevant tutorial steps.")]
+        [SerializeField] private List<TutorialStep> _steps = new List<TutorialStep>();
 
-        [SerializeField] private GameObject _uiElement;
+        [Tooltip("Panel placed in the scene and initially disabled.")]
+        [SerializeField] private TutorialPanel _panelInstance;
 
-        [SerializeField] private string _heading;
+        [Tooltip("Global finished flag stored via BoolReference.")]
+        [SerializeField] private BoolReference _isTutorialFinished;
 
-        [TextArea(3, 10)]
-        [SerializeField] private string _text;
+        [Tooltip("Invoked exactly once when all tutorial steps are completed.")]
+        [SerializeField] private UnityEvent _onAllStepsCompleted = new UnityEvent();
 
+        private TutorialStep _currentStep;
 
-        public void FirstTutioralPrompt()
+        #endregion
+
+        #region LifeCycle Methods
+
+        private void Awake()
         {
-            if (!_showedOnce)
+            ResetAllSteps();
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        // Triggers the tutorial step for the given ID if not completed yet.
+        public void TriggerStep(int id)
+        {
+            // Do not show anything if the tutorial is already finished.
+            if (_isTutorialFinished != null && _isTutorialFinished.Value)
+                return;
+
+            var step = FindStepById(id);
+            if (step == null)
             {
-                _headingBox.text = _heading;
-                _textBox.text = _text;
-                _uiElement.SetActive(true);
+                Debug.LogWarning($"TutorialManager.TriggerStep: No step for Id {id} found.");
+                return;
+            }
+
+            if (step.IsComplete)
+                return;
+
+            ShowStep(step);
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        // Returns true if all configured steps are completed.
+        private bool AllStepsCompleted()
+        {
+            for (int i = 0; i < _steps.Count; i++)
+            {
+                var s = _steps[i];
+                if (s == null) continue;
+                if (!s.IsComplete)
+                    return false;
+            }
+            return true;
+        }
+
+        // Marks a step complete and finalizes when all steps are done.
+        private void CompleteStep(TutorialStep step)
+        {
+            step.IsComplete = true;
+            HidePanel();
+
+            if (AllStepsCompleted())
+            {
+                _isTutorialFinished.Variable.SetValue(true);
+                _onAllStepsCompleted?.Invoke();
             }
         }
 
-
-        public void ShowClue()
+        // Finds the TutorialStep ScriptableObject by searching for the id.
+        private TutorialStep FindStepById(int id)
         {
-            if (_wantsTutorial && !_showedOnce)
+            for (int i = 0; i < _steps.Count; i++)
             {
-                _headingBox.text = _heading;
-                _textBox.text = _text;
-                _uiElement.SetActive(true);
-
-                Debug.Log("Show clue!");
+                var s = _steps[i];
+                if (s != null && s.Id == id)
+                    return s;
             }
-
+            return null;
         }
 
-        public void WantsTutorial()
+        // Hides the panel instance.
+        private void HidePanel()
         {
-            _wantsTutorial.Variable.SetValue(true);
-            _uiElement.SetActive(false);
-            _showedOnce.Variable.SetValue(true);
-
-            Debug.Log("wants tutorial yes!");
+            if (_panelInstance != null && _panelInstance.gameObject.activeSelf)
+                _panelInstance.gameObject.SetActive(false);
         }
 
-        public void WantsNoTutorial()
+        // Button handler for the panel's "Understood" action.
+        private void OnUnderstoodClicked()
         {
-            _wantsTutorial.Variable.SetValue(false);
-            _uiElement.SetActive(false);
-            _showedOnce.Variable.SetValue(true);
+            if (_currentStep != null)
+            {
+                CompleteStep(_currentStep);
+                _currentStep = null;
+            }
         }
 
-
-        public void ClueRead()
+        // Clears completion and resets the finished flag at scene start.
+        private void ResetAllSteps()
         {
-            _uiElement.SetActive(false);
-            _showedOnce.Variable.SetValue(true);
+            for (int i = 0; i < _steps.Count; i++)
+            {
+                var s = _steps[i];
+                if (s == null) continue;
+                s.IsComplete = false;
+            }
         }
 
+        // Shows the scene-placed panel and binds the current step content.
+        private void ShowStep(TutorialStep step)
+        {
+            _currentStep = step;
+            _panelInstance.Bind(step.Headline, step.Text, OnUnderstoodClicked);
+            _panelInstance.gameObject.SetActive(true);
+        }
 
+        #endregion
     }
-
 }
