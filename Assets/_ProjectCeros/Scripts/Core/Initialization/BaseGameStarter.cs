@@ -4,6 +4,7 @@
 
 /// <remarks>
 /// 27/05/2025 by Damian Dalinger: Script creation.
+/// 12/08/2025 by Damian Dalinger: Changed reset logic to coroutine.
 /// </remarks>
 
 using System.Collections;
@@ -71,7 +72,7 @@ namespace ProjectCeros
             LoadingScreenManager.Instance.Show();
             yield return null;
 
-            ResetInitialGameState();
+            yield return ResetAndLoadLogic();
 
             yield return LoadAdditiveScenes();
 
@@ -110,7 +111,7 @@ namespace ProjectCeros
         // Implement in subclasses
         protected abstract IEnumerator ManagerInitialization();
         protected abstract void RaiseFinishedEvent();
-        protected abstract void ResetInitialGameState();
+        protected abstract IEnumerator ResetAndLoadLogic();
 
         #endregion
     }

@@ -5,6 +5,7 @@
 /// <remarks>
 /// 13/05/2025 by Damian Dalinger: Script creation.
 /// 27/05/2025 by Damian Dalinger: Implemented NewGameStarter as BaseGameStarter child.
+/// 12/08/2025 by Damian Dalinger: Changed reset logi to coroutine.
 /// </remarks>
 
 using System.Collections;
@@ -42,10 +43,10 @@ namespace ProjectCeros
         }
 
         // Resets the data from the last play.
-        protected override void ResetInitialGameState()
+        protected override IEnumerator ResetAndLoadLogic()
         {
-            SaveManager.Instance?.DeleteSave();
-            SaveManager.Instance?.ResetSaveables();
+            SaveManager.Instance.DeleteSave();
+            yield return SaveManager.Instance.ResetSaveables();
         }
 
         #endregion

@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 17/07/2025 by Damian Dalinger: Initial implementation.
+/// 12/08/2025 by Damian Dalinger: Added overridable completion hook for inheritance.
 /// </remarks>
 
 using System.Collections;
@@ -23,7 +24,7 @@ namespace ProjectCeros
         [Tooltip("Event to call after the delay.")]
         [SerializeField] private UnityEvent _onDelayComplete;
 
-        private Coroutine _activeRoutine;
+        protected Coroutine _activeRoutine;
 
         #endregion
 
@@ -40,13 +41,23 @@ namespace ProjectCeros
 
         #endregion
 
+        #region Protected Methods
+
+        // Is called after the timer is completed.
+        protected virtual void HandleDelayElapsed()
+        {
+            _onDelayComplete?.Invoke();
+        }
+
+        #endregion
+
         #region Private Methods
 
         private IEnumerator DelayCoroutine()
         {
             yield return new WaitForSeconds(_delayInSeconds);
-            _onDelayComplete?.Invoke();
             _activeRoutine = null;
+            HandleDelayElapsed();
         }
 
         #endregion

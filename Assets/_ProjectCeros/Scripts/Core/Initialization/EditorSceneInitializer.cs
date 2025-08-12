@@ -5,7 +5,8 @@
 
 /// <remarks>
 /// 13/05/2025 by Damian Dalinger: Script creation.
-/// 27/05/2025 by Damian Dalinger: Changed to a coroutine. 
+/// 27/05/2025 by Damian Dalinger: Changed to a coroutine.
+/// 12/08/2025 by Damian Dalinger: Added DontSaveInBuild Flags.
 /// </remarks>
 
 using UnityEngine;
@@ -14,7 +15,7 @@ using System.Collections;
 
 namespace ProjectCeros
 {
-    public class SceneInitializer : MonoBehaviour
+    public class EditorSceneInitializer : MonoBehaviour
     {
         #region Fields
 
@@ -31,6 +32,11 @@ namespace ProjectCeros
 
         #region Lifecycle Methods
 
+        private void Awake()
+        {
+            gameObject.hideFlags |= HideFlags.DontSaveInBuild;
+        }
+
         private void Start()
         {
             if (SceneManager.sceneCount > 1)
@@ -38,8 +44,11 @@ namespace ProjectCeros
                 Destroy(gameObject);
                 return;
             }
-            
-            DontDestroyOnLoad(gameObject);
+
+            if (Application.isPlaying)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
             StartCoroutine(InitRoutine());
         }
 
@@ -64,10 +73,23 @@ namespace ProjectCeros
             if (_shouldStartNewGame && _newGameStarterPrefab != null)
             {
                 BaseGameStarter instance = Instantiate(_newGameStarterPrefab);
-                DontDestroyOnLoad(instance.gameObject);
+                if (Application.isPlaying)
+                {
+                    DontDestroyOnLoad(gameObject);
+                }
             }
 
             Destroy(gameObject);
+        }
+
+        private void OnValidate()
+        {
+            gameObject.hideFlags |= HideFlags.DontSaveInBuild;
+        }
+
+        private void Reset()
+        {
+            gameObject.hideFlags |= HideFlags.DontSaveInBuild;
         }
 
         #endregion

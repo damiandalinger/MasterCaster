@@ -4,6 +4,7 @@
 
 /// <remarks>
 /// 27/05/2025 by Damian Dalinger: Script creation.
+/// 12/08/2025 by Damian Dalinger: Changed load logic to a coroutine.
 /// </remarks>
 
 using System.Collections;
@@ -25,11 +26,6 @@ namespace ProjectCeros
         // Attempts to load the saved game from disk.
         protected override IEnumerator ManagerInitialization()
         {
-            if (SaveManager.Instance != null && SaveManager.Instance.SaveFileExists())
-                SaveManager.Instance.Load();
-            else
-                Debug.LogWarning("No valid save game found!");
-
             var leaderboard = FindFirstObjectByType<LeaderboardDataSync>();
             leaderboard.ImportFromRuntimeSets();
 
@@ -42,9 +38,17 @@ namespace ProjectCeros
             _onGameContinued?.Raise();
         }
 
-        protected override void ResetInitialGameState()
+        // Loads the save.
+        protected override IEnumerator ResetAndLoadLogic()
         {
-            // Nothing to reset.
+            if (SaveManager.Instance != null && SaveManager.Instance.SaveFileExists())
+            {
+                yield return SaveManager.Instance.Load();
+            }
+            else
+            {
+                Debug.LogWarning("[Continue] No save file found.");
+            }
         }
 
         #endregion

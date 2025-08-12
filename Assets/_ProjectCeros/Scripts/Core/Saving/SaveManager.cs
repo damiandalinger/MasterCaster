@@ -6,12 +6,16 @@
 /// <remarks>
 /// 30/05/2025 by Damian Dalinger: Script creation.
 /// 04/06/2025 by Damian Dalinger: Changed the system from a hardcoded list to a automatic adding list.
+/// 12/08/2025 by Damian Dalinger: Changed the load, save and reset logic to coroutines.
 /// </remarks>
 
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using System.Collections;
+
+
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -25,6 +29,9 @@ namespace ProjectCeros
 
         [Tooltip("The Index who keeps track of all saveable Variables.")]
         [SerializeField] private SaveableVariableIndex _variableIndex;
+
+        [Tooltip("The event, which is fired when the saving process is finished.")]
+        [SerializeField] private GameEvent _onSaveFinished;
 
         #endregion
 
@@ -63,19 +70,21 @@ namespace ProjectCeros
         }
 
         // Loads saved data from disk and applies it to registered saveables.
-        [ContextMenu("Load Now")]
-        public void Load()
+        public IEnumerator Load()
         {
-            if (!File.Exists(GetSavePath()) || _variableIndex == null) return;
+            if (!File.Exists(GetSavePath()) || _variableIndex == null) yield break;
 
             var json = File.ReadAllText(GetSavePath());
             var data = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
 
             foreach (var saveable in _variableIndex.Saveables)
             {
-                if (saveable.IsSaveable && data.TryGetValue(saveable.SaveKey, out var state))
-                    saveable.RestoreState(state);
+                if (!saveable.IsSaveable) continue;
+                if (data != null && data.TryGetValue(saveable.SaveKey, out var value))
+                    saveable.RestoreState(value);
             }
+
+            yield return null;
         }
 
         // Opens the folder containing the save file in the OS file browser (Editor only).
@@ -88,19 +97,20 @@ namespace ProjectCeros
         }
 
         // Resets all saveable variables to their default values.
-        public void ResetSaveables()
+        public IEnumerator ResetSaveables()
         {
             foreach (var saveable in _variableIndex.Saveables)
             {
                 saveable.ResetToDefault();
             }
+
+            yield return null;
         }
 
         // Saves all saveable variables in the index to disk as a JSON file.
-        [ContextMenu("Save Now")]
-        public void Save()
+        public IEnumerator Save()
         {
-            if (_variableIndex == null) return;
+            if (_variableIndex == null) yield break;
 
             var data = new Dictionary<string, object>();
             foreach (var saveable in _variableIndex.Saveables)
@@ -111,6 +121,10 @@ namespace ProjectCeros
 
             var json = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(GetSavePath(), json);
+
+            yield return null;
+
+            _onSaveFinished?.Raise();
         }
 
         // Checks if a save file exists.

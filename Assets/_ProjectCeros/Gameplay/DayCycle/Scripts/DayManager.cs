@@ -28,7 +28,7 @@ namespace ProjectCeros
         {
             _currentDay.Variable.ApplyChange(1);
 
-            SaveManager.Instance.Save();
+            StartCoroutine(SaveManager.Instance.Save());
         }
 
         #endregion

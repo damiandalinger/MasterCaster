@@ -308,8 +308,8 @@ MonoBehaviour:
   _onEndpointReached:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4725445724429163238}
-        m_TargetAssemblyTypeName: ProjectCeros.DelayedEventInvoker, Assembly-CSharp
+      - m_Target: {fileID: 8342024383292519563}
+        m_TargetAssemblyTypeName: ProjectCeros.ConditionalDelayedEventInvoker, Assembly-CSharp
         m_MethodName: Trigger
         m_Mode: 1
         m_Arguments:
@@ -734,8 +734,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6867315868917263209}
-  - component: {fileID: 4725445724429163238}
   - component: {fileID: 2474777541821363726}
+  - component: {fileID: 8342024383292519563}
+  - component: {fileID: 8335251752692787244}
   m_Layer: 0
   m_Name: '@DelayEvent'
   m_TagString: Untagged
@@ -758,37 +759,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1701813727516132951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4725445724429163238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7127382412251206673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3714a6eba580be549af7eb065488b08e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _delayInSeconds:
-    UseConstant: 0
-    ConstantValue: 2
-    Variable: {fileID: 11400000, guid: a31ef6e4c9c759b4db3a91e6ad1bd18a, type: 2}
-  _onDelayComplete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4507478281753035254}
-        m_TargetAssemblyTypeName: ProjectCeros.UI.ScreenFader, Assembly-CSharp
-        m_MethodName: FadeTransition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2474777541821363726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,6 +773,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targets:
   - {fileID: 2405897852649692170}
+--- !u!114 &8342024383292519563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7127382412251206673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8368d23c843d04194419e840f3842c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayInSeconds:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: a31ef6e4c9c759b4db3a91e6ad1bd18a, type: 2}
+  _onDelayAndConditionComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4507478281753035254}
+        m_TargetAssemblyTypeName: ProjectCeros.UI.ScreenFader, Assembly-CSharp
+        m_MethodName: FadeTransition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8335251752692787244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7127382412251206673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756af48229c34a140bf09dfa3d17e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 68c4a0c9cf4d3d0418f938bbd2ad08a9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8342024383292519563}
+        m_TargetAssemblyTypeName: ProjectCeros.ConditionalDelayedEventInvoker, Assembly-CSharp
+        m_MethodName: ConditionMet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8557008582729742319
 GameObject:
   m_ObjectHideFlags: 0
