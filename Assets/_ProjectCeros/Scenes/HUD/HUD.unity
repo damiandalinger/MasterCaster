@@ -912,10 +912,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8335251752692787244, guid: 2d2ef11dcaec9c94ba61bdd7f313504c, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnConditionMet
-      objectReference: {fileID: 0}
     - target: {fileID: 8897726823553777408, guid: 2d2ef11dcaec9c94ba61bdd7f313504c, type: 3}
       propertyPath: m_Name
       value: SleepScreen

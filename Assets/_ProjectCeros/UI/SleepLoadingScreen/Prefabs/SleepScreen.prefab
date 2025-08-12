@@ -197,6 +197,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1239012456319545221}
+        m_TargetAssemblyTypeName: ProjectCeros.CursorController, Assembly-CSharp
+        m_MethodName: ShowCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2405897852649692170
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +351,18 @@ MonoBehaviour:
       - m_Target: {fileID: 900513776126425692}
         m_TargetAssemblyTypeName: ProjectCeros.UI.ScreenFader, Assembly-CSharp
         m_MethodName: FadeTransition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1239012456319545221}
+        m_TargetAssemblyTypeName: ProjectCeros.CursorController, Assembly-CSharp
+        m_MethodName: HideCursorConfined
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -789,6 +813,9 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: a31ef6e4c9c759b4db3a91e6ad1bd18a, type: 2}
+  _onDelayComplete:
+    m_PersistentCalls:
+      m_Calls: []
   _onDelayAndConditionComplete:
     m_PersistentCalls:
       m_Calls:
@@ -822,7 +849,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8342024383292519563}
         m_TargetAssemblyTypeName: ProjectCeros.ConditionalDelayedEventInvoker, Assembly-CSharp
-        m_MethodName: ConditionMet
+        m_MethodName: OnConditionMet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -895,9 +922,83 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3554918456603110083}
+  - {fileID: 9015976994442387179}
   - {fileID: 6867315868917263209}
   - {fileID: 912620251098611925}
   - {fileID: 1373099061990177780}
   - {fileID: 4248167934193737321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &752573172180926340
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1701813727516132951}
+    m_Modifications:
+    - target: {fileID: 8567760467524390612, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_Name
+      value: '@CursorController'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+--- !u!114 &1239012456319545221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1963699264200691713, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+  m_PrefabInstance: {fileID: 752573172180926340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5d12413c3ce6b45bb7dbb1f66a2e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &9015976994442387179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8605959006994833775, guid: c8df46b21e7175f4eb9582ac2b92efe6, type: 3}
+  m_PrefabInstance: {fileID: 752573172180926340}
+  m_PrefabAsset: {fileID: 0}

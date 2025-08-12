@@ -7,6 +7,7 @@
 /// </remarks>
 
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ProjectCeros
 {
@@ -16,6 +17,12 @@ namespace ProjectCeros
 
         [Tooltip("The loading screen prefab to be instantiated.")]
         [SerializeField] private GameObject _loadingScreenPrefab;
+
+        [Tooltip("Invoked when the loading screen is shown.")]
+        [SerializeField] private UnityEvent _onShow;
+
+        [Tooltip("Invoked when the loading screen is hidden.")]
+        [SerializeField] private UnityEvent _onHide;
 
         private GameObject _instance;
 
@@ -51,6 +58,7 @@ namespace ProjectCeros
         {
             if (_instance != null)
             {
+                _onHide?.Invoke();
                 Destroy(_instance);
                 _instance = null;
             }
@@ -67,6 +75,7 @@ namespace ProjectCeros
             }
 
             _instance.SetActive(true);
+            _onShow?.Invoke();
         }
 
         #endregion
