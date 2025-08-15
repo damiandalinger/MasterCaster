@@ -82,8 +82,8 @@ namespace ProjectCeros
                 }
 
                 string sign = "";
-                if (_showPlusSignForPositiveValues && value > 0)
-                    sign = "+";
+                if (_showPlusSignForPositiveValues)
+                    sign = (value < 0) ? "-" : "+";
 
                 string numberString = _useThousandsSeparator
                     ? Mathf.Abs(value).ToString("N0")  // Optional: ohne Minus für eigene Sign-Logik

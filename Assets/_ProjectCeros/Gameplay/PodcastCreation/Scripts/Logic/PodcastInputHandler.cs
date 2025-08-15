@@ -30,10 +30,7 @@ namespace ProjectCeros
         [SerializeField] private TMP_InputField _titleInputFieldGuest;
 
         [Tooltip("Confirmation button shown when selection is valid.")]
-        [SerializeField] private GameObject _confirmButtonNormal;
-
-        [Tooltip("Confirmation button shown when selection is valid at the guest episode.")]
-        [SerializeField] private GameObject _confirmButtonGuest;
+        [SerializeField] private GameObject _confirmButton;
 
         [Tooltip("List of all created podcast titles.")]
         [SerializeField] private StringRuntimeSet _podcastTitles;
@@ -206,8 +203,7 @@ namespace ProjectCeros
         {
             bool isValid = IsValidSelection();
 
-            _confirmButtonNormal.SetActive(!_isGuestEpisode && isValid);
-            _confirmButtonGuest.SetActive(_isGuestEpisode && isValid);
+            _confirmButton.SetActive(isValid);
         }
 
         #endregion

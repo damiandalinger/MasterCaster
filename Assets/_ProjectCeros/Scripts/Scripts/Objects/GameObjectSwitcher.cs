@@ -5,6 +5,7 @@
 
 /// <remarks>
 /// 25/06/2025 by Damian Dalinger: Initial creation.
+/// 15/08/2025 by Damian Dalinger: Added the ability to save the current index and display it on Start.
 /// </remarks>
 
 using System.Collections.Generic;
@@ -25,7 +26,21 @@ namespace ProjectCeros
         [Tooltip("UI containers (e.g., panels or button groups). Only one is visible at a time.")]
         [SerializeField] private List<GameObjectGroup> _groups = new();
 
+        [Tooltip("If enabled, the switcher will restore the saved index on Start.")]
+        [SerializeField] private bool _restoreOnStart = false;
+
+        [Tooltip("Variable used to store the last shown group index.")]
+        [SerializeField] private IntReference _currentIndexVariable;
+
         #endregion
+
+        private void Start()
+        {
+            if (_restoreOnStart && _currentIndexVariable.Variable != null)
+            {
+                ShowGroup(_currentIndexVariable.Variable.RuntimeValue);
+            }
+        }
 
         // Displays the specified group and hides all others.
         public void ShowGroup(int index)
@@ -45,6 +60,12 @@ namespace ProjectCeros
                         go.SetActive(shouldShow);
                 }
             }
+            
+            if (_currentIndexVariable.Variable != null)
+            {
+                _currentIndexVariable.Variable.SetValue(index);
+            }
+
         }
 
         // Hides all GameObjects in all groups.

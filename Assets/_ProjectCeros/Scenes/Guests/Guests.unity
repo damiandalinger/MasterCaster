@@ -1106,7 +1106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3657086659357903236, guid: bf3c61052150ab84da7d645fa2fad77f, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3657086659357903236, guid: bf3c61052150ab84da7d645fa2fad77f, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag

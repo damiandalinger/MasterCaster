@@ -1,5 +1,5 @@
 /// <summary>
-/// If the condition is false, invokes a method, which shows the text temporarily. If true, raises a GameEvent.
+/// If the condition is false, raises a GameEvent, which shows the text temporarily. If true, raises a GameEvent.
 /// </summary>
 
 /// <remarks>
@@ -23,8 +23,8 @@ namespace ProjectCeros
         [Tooltip("GameEvent to raise if the condition is true.")]
         [SerializeField] private GameEvent _onConditionTrue;
 
-        [Tooltip("Event to invoke if the condition is false (e.g. show a message).")]
-        [SerializeField] private UnityEvent _onConditionFalse;
+        [Tooltip("GameEvent to raise if the condition is false.")]
+        [SerializeField] private GameEvent _onConditionFalse;
 
         #endregion
 
@@ -39,7 +39,7 @@ namespace ProjectCeros
             }
             else
             {
-                 _onConditionFalse?.Invoke();
+                _onConditionFalse?.Raise();
             }
         }
 
