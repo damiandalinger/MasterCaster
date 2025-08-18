@@ -126,8 +126,9 @@ namespace ProjectCeros
             float bonusMult = baseBonus + guest + equip + sponsor + dark + subgenre;
             float finalValue = baseValue * topicMult * bonusMult * sizeMult;
 
-            int totalListeners = Mathf.CeilToInt(finalValue);
-            int gain = totalListeners - (int)baseListeners;
+            int newListeners = Mathf.Max(0, Mathf.CeilToInt(finalValue)); 
+            int totalListeners = (int)baseListeners + newListeners;
+            int gain = newListeners;
 
             _listenerGain.Variable.SetValue(gain);
             ApplyMoneyGain(gain);
