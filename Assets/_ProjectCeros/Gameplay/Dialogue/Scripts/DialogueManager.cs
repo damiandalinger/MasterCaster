@@ -17,8 +17,7 @@ namespace ProjectCeros
     public class DialogueManager : MonoBehaviour
     {
         public string fileName = "DialogueText.json";
-        private DialogueData dialogueData;
-
+        
         [SerializeField] private StringReference _podcastName;
 
         [SerializeField] private GuestSO _guest;
@@ -26,11 +25,10 @@ namespace ProjectCeros
         private Dictionary<string, string> dialogueVariables = new Dictionary<string, string>();
 
         [SerializeField] private string[] _guestHello;
-
         [SerializeField] private string[] _guestPersonal;
-
         [SerializeField] private string[] _guestBye;
 
+        private DialogueData dialogueData;
 
         void Awake()
         {
@@ -54,12 +52,14 @@ namespace ProjectCeros
             }
         }
 
-        // This Method determines which Placeholders(Key) in the JSON file will be replaced by what words(value).
+        // This Method determines which Placeholders(Key) in the JSON file will be replaced by what words(value) once 
+        // they get injected by InjectVariables.
         public void SetDialogueVariable(string key, string value)
         {
             dialogueVariables[key] = value;
         }
 
+        // This Method replaces the Placeholders in the JSON files with the words that are determined in SetDialogueVariable.
         public string InjectVariables(string rawText)
         {
             foreach (var pair in dialogueVariables)
@@ -73,7 +73,8 @@ namespace ProjectCeros
         }
 
         #region Solo Dialogue
-
+        // Solo dialogues consist of 3 textbits, A welcome message, a topic related message and a godbye message.
+        // These methods pick a random text from the pool of possible messages.
         public string GetRandomWelcome()
         {
             return GetRandomFromList(dialogueData?.welcome);
@@ -84,6 +85,9 @@ namespace ProjectCeros
             return GetRandomFromList(dialogueData?.goodbye);
         }
 
+        // This method determines the Topic message. When called, this method receives a boolean that represents the wether
+        // or not the player chose to rant or to praise. It also receives a boolean that determines the genre from which a message
+        // was selected.
         public string GetTopicMessage(string topic, bool positive)
         {
             if (dialogueData == null || dialogueData.topics == null)
@@ -116,6 +120,9 @@ namespace ProjectCeros
         #endregion
 
         #region Guest Dialogue
+
+        // This method changes the name of the current guest to the successfully invited one. It also sets up the the dialogue lines of the
+        // guest from which the other methods can later randomly choose.
         public void GetGuestDialogue()
         {
             SetDialogueVariable("Guest", _guest.Name);
@@ -140,6 +147,8 @@ namespace ProjectCeros
             _guestBye = guest.bye;
         }
 
+        // These methods fetch the dialogue messages for when the player has succesfully invited a guest. These dialogues consist of 6 
+        // textbits that each get chosen randomly.
         public string GetGuestHello()
         {
             return GetRandomFromList(_guestHello);
@@ -178,6 +187,7 @@ namespace ProjectCeros
 
         #endregion
 
+        // This method is used to pick a random textline from an array of strings.
         private string GetRandomFromList(string[] list)
         {
             if (list == null || list.Length == 0)

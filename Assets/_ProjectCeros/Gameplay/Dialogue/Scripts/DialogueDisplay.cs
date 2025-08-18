@@ -109,8 +109,6 @@ namespace ProjectCeros
 
                 StartCoroutine(StartDialogueGuestSequence());
             }
-
-            //AdvanceDialogue();
         }
 
         #region FindAcceptedGuest
@@ -168,8 +166,6 @@ namespace ProjectCeros
 
             _isReady = true;
             AdvanceDialogue();
-            //yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
-            //AdvanceDialogue();
         }
 
         IEnumerator StartDialogueGuestSequence()
@@ -201,8 +197,6 @@ namespace ProjectCeros
 
             _isReady = true;
             AdvanceDialogue();
-            //yield return TypeDialogue(dialogueSegments[currentSegmentIndex]);
-            //AdvanceDialogue();
         }
         #endregion
 
@@ -248,21 +242,17 @@ namespace ProjectCeros
                 {
                     // Change text color depending on who's speaking
                     dialogueText.color = _toggle
-                        ? _guest.Color // Guest: dark blue
-                        : colorPlayer;               // Player: black
-
+                        ? _guest.Color 
+                        : colorPlayer;               
 
                     _playerNameDialogueText.text = _playerName.Value;
+                    
                     _guestNameText.text = _guest.Name;
-
-                    //_namePlayer.text = _toggle ? null : _player.PersonName;
-                    //_nameGuest.text = _toggle ? _guest.Name : null;
-
                     _guestNameText.color = _guest.Color;
 
                     _playerBox.SetActive(!_toggle);
                     _guestBox.SetActive(_toggle);
-                    // Toggle the speaker flag
+
                     _toggle = !_toggle;
                 }
 
