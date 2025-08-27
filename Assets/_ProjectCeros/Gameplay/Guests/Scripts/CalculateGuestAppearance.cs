@@ -1,6 +1,5 @@
 /// <summary>
-/// This script looks at the requested guests and starts the process of determing if they accept or not.
-/// Also handles guest cooldown.
+/// This script checks for the requested guests and initiates the calculation. It handles cooldown for previously invited guests.
 /// </summary>
 
 /// <remarks>
@@ -39,7 +38,6 @@ namespace ProjectCeros
                 if (guest.isOnCooldown)
                 {
                     guest.CooldownCounter++;
-
                 }
 
                 if (guest.CooldownCounter == _guestCooldown)
@@ -47,21 +45,8 @@ namespace ProjectCeros
                     guest.isOnCooldown = false;
 
                     guest.CooldownCounter = 0;
-
                 }
-
             }
-
-
-
-
         }
-
-
-
-
-
-
-
     }
 }

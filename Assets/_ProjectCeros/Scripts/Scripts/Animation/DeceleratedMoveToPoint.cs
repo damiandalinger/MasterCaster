@@ -1,3 +1,11 @@
+/// <summary>
+/// This script handles UI animation.
+/// </summary>
+
+/// <remarks>
+/// 17/07/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
 
 namespace ProjectCeros

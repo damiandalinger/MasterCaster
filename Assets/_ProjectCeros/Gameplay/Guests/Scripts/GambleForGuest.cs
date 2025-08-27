@@ -27,9 +27,6 @@ namespace ProjectCeros
         [SerializeField] private ScreenFader _fader;
 
 
-
-
-
         public void GambleGuest(GuestSO guest)
         {
 
@@ -54,12 +51,10 @@ namespace ProjectCeros
                     Debug.Log("No guest, sad");
                     _outcomeText.Variable.SetValue("Your Guest request was declined. How unfortunate!");
                 }
-
             }
 
             // If the player has reached the max stars rating.
             else if (_globalStars.Value == 5)
-
             {
                 float random = Random.value;
 
@@ -72,7 +67,6 @@ namespace ProjectCeros
                     guest.hasAccepted = true;
                     Debug.Log("OHH YEAAH, GUEST IS COMING");
                     _outcomeText.Variable.SetValue("You have a guest!");
-
                 }
 
                 else
@@ -81,7 +75,6 @@ namespace ProjectCeros
                     _outcomeText.Variable.SetValue("Your Guest request was declined. How unfortunate!");
 
                 }
-
             }
 
 
@@ -111,7 +104,6 @@ namespace ProjectCeros
 
             // If the player has definitive lower stars rating than the guest.
             else if (_globalStars.Value < guest.Rating)
-
             {
                 float random = Random.value;
 
@@ -128,20 +120,13 @@ namespace ProjectCeros
                 }
 
                 else
-
                 {
                     Debug.Log("No guest, sad");
                     _outcomeText.Variable.SetValue("Your Guest request was declined. How unfortunate!");
                 }
-
-
             }
 
             _fader.FadeTransition();
-
         }
-
-
     }
-
 }

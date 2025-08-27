@@ -1,3 +1,12 @@
+/// <summary>
+/// This script checks for guests that have accepted and turns on the note of the podcast creation screen.
+/// It holds methods for the buttons and reveals the hidden topic information for the interviewed guest.
+/// </summary>
+
+/// <remarks>
+/// 25/06/2025 by Unik Kelmendi: Initial creation.
+/// </remarks>
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -49,7 +58,6 @@ namespace ProjectCeros
         public void AcceptGuest()
         {
             _guest.wasInterviewed = true;
-
         }
 
         public void DeclineGuest()
@@ -58,7 +66,5 @@ namespace ProjectCeros
             _guest.hasAccepted = false;
             _guestModifier.Variable.SetValue(0);
         }
-       
-
     }
 }

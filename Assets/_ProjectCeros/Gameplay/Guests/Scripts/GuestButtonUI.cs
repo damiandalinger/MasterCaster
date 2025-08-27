@@ -13,7 +13,6 @@ using UnityEngine.UI;
 
 namespace ProjectCeros
 {
-
     public class GuestButtonUI : MonoBehaviour
     {
         [SerializeField] private GuestSO _guestData;
@@ -25,9 +24,7 @@ namespace ProjectCeros
         // This tells the GuestUI the SO data.
         public void TransferData(GuestSO guest)
         {
-
             _guestData = guest;
-
 
             if (_unlockedId.Items.Contains(guest.GuestID) && (button != null))
             {
@@ -46,6 +43,5 @@ namespace ProjectCeros
             GuestUI.Instance.ShowGuestDetails(_guestData);
 
         }
-
     }
 }

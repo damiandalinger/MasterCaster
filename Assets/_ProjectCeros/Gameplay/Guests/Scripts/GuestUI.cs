@@ -12,7 +12,6 @@ using TMPro;
 
 namespace ProjectCeros
 {
-
     public class GuestUI : MonoBehaviour
     {
         public static GuestUI Instance;
@@ -51,8 +50,6 @@ namespace ProjectCeros
         public Sprite _greyedSprite;
         public Sprite _regularSprite;
         public Image buttonImage;
-
-
 
 
         // Adjusts the GuestUI info.
@@ -128,7 +125,6 @@ namespace ProjectCeros
 
 
             ShowItemChance();
-
         }
 
 
@@ -155,15 +151,12 @@ namespace ProjectCeros
             {
                 _chanceText.text = "High chance of coming";
             }
-
-
         }
 
 
         private void Awake()
         {
             Instance = this;
-            // _playerMoney.text = $"${_money.Value}";
             buttonImage = _inviteButton.GetComponent<Image>();
             _inviteButton.onClick.AddListener(BuyCurrentItem);
         }
@@ -176,11 +169,9 @@ namespace ProjectCeros
 
             Debug.Log($"Trying to invite {currentSelectedItem.Name}");
 
-            //_moneyChecker.CheckMoney();
             _invitationLimiter.InviteGuest();
 
             ShowGuestDetails(currentSelectedItem);
-
         }
 
 
@@ -192,6 +183,5 @@ namespace ProjectCeros
                 image.sprite = (i < rating) ? filledStar : emptyStar;
             }
         }
-
     }
 }

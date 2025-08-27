@@ -1,5 +1,5 @@
 /// <summary>
-/// This script determines the probability for a guest to arrive.
+/// This script determines the probability for a guest to arrive. It allows designers to adjust probabilities in the engine.
 /// </summary>
 
 /// <remarks>
@@ -44,28 +44,18 @@ namespace ProjectCeros
         [SerializeField] private float _addedPenalty = 0.1f;
 
 
-        public void Start()
-        {
-            // SetGuestChance();
-        }
-
         public void SetGuestChance()
         {
             foreach (var guest in _guestDatabase.Items)
             {
-
                 guest.Chance = DetermineGuestChance(guest);
-
-
             }
 
             Debug.Log("Set guest chance is done");
         }
 
-
         public float DetermineGuestChance(GuestSO guest)
         {
-
             // If Stars of the Player are definitive higher than guest stars.
             if (_globalStars.Value > guest.Rating || guest.Rating == 0)
             {
@@ -80,7 +70,6 @@ namespace ProjectCeros
                 return _fixedChance;
             }
 
-
             // If the Stars of the Player and the Guest are the same.
             else if (_globalStars.Value == guest.Rating)
             {
@@ -91,10 +80,7 @@ namespace ProjectCeros
                 t += _baseChance;
 
                 return t;
-
             }
-
-
 
             // If the player has definitive lower stars rating than the guest.
             else if (_globalStars.Value < guest.Rating)
@@ -104,25 +90,16 @@ namespace ProjectCeros
 
                 float t = _multiplier * _addedChance * _addedPenalty;
 
-
                 t += _baseChance * _basePenalty;
 
                 return t;
-
             }
 
 
             else
             {
                 return _fixedChance;
-
             }
-
-
-
         }
-
-
     }
-
 }

@@ -12,7 +12,6 @@ using UnityEngine;
 namespace ProjectCeros
 
 {
-
     public class DetermineGlobalStart : MonoBehaviour
     {
 
@@ -24,12 +23,10 @@ namespace ProjectCeros
         public IntReference NewThreshhold;
 
 
-
         public void Update()
         {
             UpdateStarRating();
         }
-
 
         public void UpdateStarRating()
         {
@@ -38,8 +35,6 @@ namespace ProjectCeros
                 GlobalStars.Variable.SetValue(0);
                 OldThreshhold.Variable.SetValue(0);
                 NewThreshhold.Variable.SetValue(9);
-
-
             }
 
 
@@ -83,5 +78,4 @@ namespace ProjectCeros
             }
         }
     }
-
 }
