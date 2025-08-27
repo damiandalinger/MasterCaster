@@ -1,11 +1,10 @@
 /// <summary>
-/// work in Progress.
+/// This script updates the item modifier that dictates bonuses from bought items.
 /// </summary>
 
 /// <remarks>
 /// 20/06/2025 by Unik Kelmendi: Initial creation.
 /// </remarks>
-
 
 using UnityEngine;
 
@@ -21,19 +20,13 @@ namespace ProjectCeros
 
         private ItemSO _item;
 
-
         public void UpdateModifier(int id)
         {
             _item = _itemDatabase.GetItemByID(id);
 
             _shopModifier.Variable.ApplyChange(_item.Modifier);
 
-            Debug.Log($"Value changed to: {_shopModifier}");
-
+            Debug.Log($"Value changed to: {_shopModifier.Value}");
         }
-
-
-
-
     }
 }

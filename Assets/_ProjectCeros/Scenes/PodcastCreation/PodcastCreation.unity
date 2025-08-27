@@ -223,11 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fed8a0d83f8984a98f865435a30e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 120038353}
   backgrounds:
   - {fileID: 669482268}
   - {fileID: 487636589}
   - {fileID: 743086338}
+  fadeImage: {fileID: 120038353}
   fadeDuration: 1
 --- !u!4 &55511020
 Transform:
@@ -1207,11 +1207,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fed8a0d83f8984a98f865435a30e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 120038353}
   backgrounds:
   - {fileID: 564358606}
   - {fileID: 73834943}
   - {fileID: 33228220}
+  fadeImage: {fileID: 120038353}
   fadeDuration: 1
 --- !u!4 &534546066
 Transform:
@@ -1948,11 +1948,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fed8a0d83f8984a98f865435a30e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 120038353}
   backgrounds:
   - {fileID: 936187492}
   - {fileID: 86190134}
   - {fileID: 2138006194}
+  fadeImage: {fileID: 120038353}
   fadeDuration: 1
 --- !u!4 &859019487
 Transform:
@@ -2245,11 +2245,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fed8a0d83f8984a98f865435a30e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 120038353}
   backgrounds:
   - {fileID: 1848961195}
   - {fileID: 823506651}
   - {fileID: 762010072}
+  fadeImage: {fileID: 120038353}
   fadeDuration: 1
 --- !u!4 &1106145474
 Transform:
@@ -2505,11 +2505,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fed8a0d83f8984a98f865435a30e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 120038353}
   backgrounds:
   - {fileID: 1664834437}
   - {fileID: 704880606}
   - {fileID: 918312124}
+  fadeImage: {fileID: 120038353}
   fadeDuration: 1
 --- !u!4 &1373720404
 Transform:
@@ -2593,11 +2593,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fed8a0d83f8984a98f865435a30e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 120038353}
   backgrounds:
   - {fileID: 1179932673}
   - {fileID: 2056523759}
   - {fileID: 308467229}
+  fadeImage: {fileID: 120038353}
   fadeDuration: 1
 --- !u!4 &1445394694
 Transform:
@@ -4837,7 +4837,7 @@ MonoBehaviour:
   _guestImage: {fileID: 1673423749}
   colorPlayer: {r: 0, g: 0, b: 0, a: 1}
   letterDelay: 0.015
-  autoAdvanceDelay: 3
+  autoAdvanceDelay: 5
 --- !u!114 &3690937479193755323
 MonoBehaviour:
   m_ObjectHideFlags: 0

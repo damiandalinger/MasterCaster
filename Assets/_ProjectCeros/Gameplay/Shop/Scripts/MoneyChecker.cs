@@ -21,13 +21,11 @@ namespace ProjectCeros
 
         [SerializeField] private List<int> _boughtItems;
 
-
         // Accesed by other scripts to tell MoneyChecker which ItemSo is in question for purchase
         public void SetItemToPurchase(ItemSO item)
         {
             ItemToPurchase = item;
         }
-
 
         // Checks if player has enough money and if the item was already bought or not
         public void CheckMoney()
@@ -47,7 +45,6 @@ namespace ProjectCeros
                 {
                     Debug.Log("You already bought this item!");
                 }
-
             }
 
             else

@@ -81,6 +81,29 @@ namespace ProjectCeros
             }
         }
 
+        // This is the button that force advances the dialogue.
+        public void OnDialogueClick()
+        {
+            if (autoAdvanceCoroutine != null)
+            {
+                StopCoroutine(autoAdvanceCoroutine);
+                autoAdvanceCoroutine = null;
+            }
+
+            if (isTyping)
+            {
+                StopAllCoroutines();
+                dialogueText.text = dialogueSegments[currentSegmentIndex - 1];
+                isTyping = false;
+            }
+
+            else
+            {
+                AdvanceDialogue();
+            }
+        }
+
+        // This method sets up the UI and starts the dialogue screen.
         public void SetupDialogue()
         {
             FindAcceptedGuest();
@@ -111,117 +134,9 @@ namespace ProjectCeros
             }
         }
 
-        #region FindAcceptedGuest
-        private void FindAcceptedGuest()
-        {
-            _guest = null;
 
-            foreach (var guest in _allguests.AllGuests)
-            {
-                if (guest.hasAccepted)
-                {
-                    _guest = guest;
-                }
-            }
-
-            if (_guest != null)
-            {
-                _hasGuest = true;
-            }
-
-            else
-            {
-                _hasGuest = false;
-            }
-        }
-        #endregion
-
-        #region DialogueSequencing
-        IEnumerator StartDialogueSequence()
-        {
-            DetermineTopic(_topicID.Value);
-            DetermineSpin(_spinID.Value);
-
-            Debug.Log(_topic);
-            Debug.Log(_isPositive);
-
-            // Wait one frame to make sure DialogueManager Awake() ran
-            yield return null;
-
-            if (_dialogueManager == null)
-            {
-                Debug.LogError("DialogueManager not found!");
-                yield break;
-            }
-
-            // Prepare dialogue sequence
-            string welcomeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomWelcome());
-            string topicMsg = _dialogueManager.InjectVariables(_dialogueManager.GetTopicMessage(_topic, _isPositive));
-            string goodbyeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGoodbye());
-
-            dialogueSegments = new string[] { welcomeMsg, topicMsg, goodbyeMsg };
-            currentSegmentIndex = 0;
-
-            Debug.Log(string.Join(",", dialogueSegments));
-
-            _isReady = true;
-            AdvanceDialogue();
-        }
-
-        IEnumerator StartDialogueGuestSequence()
-        {
-            _dialogueManager.SetGuest(_guest);
-            _dialogueManager.GetGuestDialogue();
-
-            // Wait one frame to make sure DialogueManager Awake() ran
-            yield return null;
-
-            if (_dialogueManager == null)
-            {
-                Debug.LogError("DialogueManager not found!");
-                yield break;
-            }
-
-            // Prepare dialogue sequence
-            string PlayerHelloMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestWelcome()); //fixed
-            string GuestHelloMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestHello());
-
-            string PlayerMainMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestMain()); //fixed
-            string GuestMainMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestPersonal());
-
-            string PlayerbyeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestGoodbye()); //fixed
-            string GuestByeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestBye());
-
-            dialogueSegments = new string[] { PlayerHelloMsg, GuestHelloMsg, PlayerMainMsg, GuestMainMsg, PlayerbyeMsg, GuestByeMsg };
-            currentSegmentIndex = 0;
-
-            _isReady = true;
-            AdvanceDialogue();
-        }
-        #endregion
-
-        // Call this method from a UI Button (via OnClick)
-        public void OnDialogueClick()
-        {
-            if (autoAdvanceCoroutine != null)
-            {
-                StopCoroutine(autoAdvanceCoroutine);
-                autoAdvanceCoroutine = null;
-            }
-
-            if (isTyping)
-            {
-                StopAllCoroutines();
-                dialogueText.text = dialogueSegments[currentSegmentIndex - 1]; // Show full segment
-                isTyping = false;
-            }
-
-            else
-            {
-                AdvanceDialogue();
-            }
-        }
-
+        #region AdvanceDialogue
+        //This Method handles how the dialogue segments that are saved get advanced throughout the dialogue.
         public void AdvanceDialogue()
         {
             if (_isReady)
@@ -232,8 +147,6 @@ namespace ProjectCeros
                 {
                     dialogueText.text = "";
                     Debug.Log("Dialogue finished!");
-
-                    //StartCoroutine(EndDialogueSequence());
                     _endDialogue.Raise();
                     return;
                 }
@@ -242,11 +155,11 @@ namespace ProjectCeros
                 {
                     // Change text color depending on who's speaking
                     dialogueText.color = _toggle
-                        ? _guest.Color 
-                        : colorPlayer;               
+                        ? _guest.Color
+                        : colorPlayer;
 
                     _playerNameDialogueText.text = _playerName.Value;
-                    
+
                     _guestNameText.text = _guest.Name;
                     _guestNameText.color = _guest.Color;
 
@@ -311,7 +224,104 @@ namespace ProjectCeros
             }
         }
 
+        #endregion
 
+
+        #region FindAcceptedGuest
+        // This script checks if the player has aqcuired a guest.
+        private void FindAcceptedGuest()
+        {
+            _guest = null;
+
+            foreach (var guest in _allguests.AllGuests)
+            {
+                if (guest.hasAccepted)
+                {
+                    _guest = guest;
+                }
+            }
+
+            if (_guest != null)
+            {
+                _hasGuest = true;
+            }
+
+            else
+            {
+                _hasGuest = false;
+            }
+        }
+        #endregion
+
+
+        #region DialogueSequencing
+        // These methods are the coroutines that start when the dialogue is finished being set up.
+        IEnumerator StartDialogueSequence()
+        {
+            DetermineTopic(_topicID.Value);
+            DetermineSpin(_spinID.Value);
+
+            Debug.Log(_topic);
+            Debug.Log(_isPositive);
+
+            yield return null;
+
+            if (_dialogueManager == null)
+            {
+                Debug.LogError("DialogueManager not found!");
+                yield break;
+            }
+
+            string welcomeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomWelcome());
+            string topicMsg = _dialogueManager.InjectVariables(_dialogueManager.GetTopicMessage(_topic, _isPositive));
+            string goodbyeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGoodbye());
+
+            dialogueSegments = new string[] { welcomeMsg, topicMsg, goodbyeMsg };
+            currentSegmentIndex = 0;
+
+            _isReady = true;
+            AdvanceDialogue();
+        }
+
+        IEnumerator StartDialogueGuestSequence()
+        {
+            _dialogueManager.SetGuest(_guest);
+            _dialogueManager.GetGuestDialogue();
+
+            yield return null;
+
+            if (_dialogueManager == null)
+            {
+                Debug.LogError("DialogueManager not found!");
+                yield break;
+            }
+
+            string PlayerHelloMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestWelcome()); //fixed
+            string GuestHelloMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestHello());
+
+            string PlayerMainMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestMain()); //fixed
+            string GuestMainMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestPersonal());
+
+            string PlayerbyeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetRandomGuestGoodbye()); //fixed
+            string GuestByeMsg = _dialogueManager.InjectVariables(_dialogueManager.GetGuestBye());
+
+            dialogueSegments = new string[] { PlayerHelloMsg, GuestHelloMsg, PlayerMainMsg, GuestMainMsg, PlayerbyeMsg, GuestByeMsg };
+            currentSegmentIndex = 0;
+
+            _isReady = true;
+            AdvanceDialogue();
+        }
+        #endregion
+
+
+        // This method automatically advances the dialogue after a delay.
+        IEnumerator AutoAdvanceAfterDelay()
+        {
+            yield return new WaitForSeconds(autoAdvanceDelay);
+            AdvanceDialogue();
+        }
+
+        // This coroutine types out the dialogue snippets letter by letter.
         IEnumerator TypeDialogue(string segment)
         {
             isTyping = true;
@@ -363,13 +373,7 @@ namespace ProjectCeros
             autoAdvanceCoroutine = StartCoroutine(AutoAdvanceAfterDelay());
         }
 
-        IEnumerator AutoAdvanceAfterDelay()
-        {
-            yield return new WaitForSeconds(autoAdvanceDelay);
-            AdvanceDialogue();
-        }
-
-
+        // This method determins the topic for the DialogueManager.
         private void DetermineTopic(int id)
         {
             switch (id)
@@ -384,6 +388,7 @@ namespace ProjectCeros
             }
         }
 
+        // This method determins the topic spin for the DialogueManager.
         private void DetermineSpin(int id)
         {
             if (id == 1)
@@ -395,7 +400,6 @@ namespace ProjectCeros
             {
                 _isPositive = false;
             }
-
         }
     }
 }

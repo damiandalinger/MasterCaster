@@ -9,7 +9,6 @@
 
 using UnityEngine;
 
-
 namespace ProjectCeros
 {
 

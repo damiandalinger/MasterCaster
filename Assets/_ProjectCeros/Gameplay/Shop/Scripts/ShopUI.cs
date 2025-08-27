@@ -12,7 +12,6 @@ using TMPro;
 
 namespace ProjectCeros
 {
-
     public class ShopUI : MonoBehaviour
     {
         public static ShopUI Instance;
@@ -55,7 +54,6 @@ namespace ProjectCeros
 
         [SerializeField] private BoolReference _isMoving;
 
-
         // Adjusts the ShopUI info.
         public void ShowItemDetails(ItemSO item)
         {
@@ -75,7 +73,6 @@ namespace ProjectCeros
             ShowItemSold();
 
         }
-
 
         // Updates the UI when an item is Sold out.
         public void ShowItemSold()
@@ -134,7 +131,6 @@ namespace ProjectCeros
             _buyButton.onClick.AddListener(BuyCurrentItem);
         }
 
-
         // Triggers the buying logic.
         private void BuyCurrentItem()
         {
@@ -143,8 +139,6 @@ namespace ProjectCeros
             Debug.Log($"Buying {currentSelectedItem.ItemName}");
 
             _moneyChecker.CheckMoney();
-
         }
-
     }
 }

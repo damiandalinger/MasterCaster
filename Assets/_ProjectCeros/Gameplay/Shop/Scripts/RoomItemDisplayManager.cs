@@ -12,9 +12,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-/// Dev Notes:
-/// Once the game reloads, it needs to look at the items and based on the item id, the inventory needs to be restored.
-
 namespace ProjectCeros
 {
 

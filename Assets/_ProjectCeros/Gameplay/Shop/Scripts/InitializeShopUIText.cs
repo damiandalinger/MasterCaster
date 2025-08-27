@@ -9,7 +9,6 @@
 
 using UnityEngine;
 
-
 namespace ProjectCeros
 
 {
@@ -22,7 +21,5 @@ namespace ProjectCeros
             ShopUI.Instance.ShowItemDetails(_itemData);
 
         }
-    
     }
-
 }
