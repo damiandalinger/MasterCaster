@@ -15,13 +15,12 @@ namespace ProjectCeros
     {
         [SerializeField] private GuestDatabaseSO _allGuests;
         [SerializeField] private GuestSORuntimeSet _unlockedGuests;
+        [SerializeField] private GuestUI _guestUI;
 
         [SerializeField] private GameObject guestIconPrefab;
-        [SerializeField] private Transform iconParent; // assign the GuestIconGrid here
+        [SerializeField] private Transform iconParent; 
 
         [SerializeField] private bool _isFirst;
-
-        [SerializeField] private GuestUI _guestUI;
 
 
         public void PopulateGuestIcons()

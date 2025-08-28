@@ -1,5 +1,5 @@
 /// <summary>
-/// This Script is attached to the instantiated guestUI
+/// This Script is attached to the instantiated guestUI. It handles which Sprite is used for the UI.
 /// </summary>
 
 /// <remarks>
@@ -11,8 +11,6 @@ using UnityEngine.UI;
 
 namespace ProjectCeros
 {
-
-
     public class GuestIconUI : MonoBehaviour
     {
         [SerializeField] private Image _guestPortrait;
@@ -42,7 +40,5 @@ namespace ProjectCeros
                 _guestPortrait.sprite = guest.GuestSpriteavailable;
             }
         }
-
-
     }
 }

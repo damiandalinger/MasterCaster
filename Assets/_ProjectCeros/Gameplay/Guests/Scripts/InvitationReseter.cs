@@ -1,6 +1,5 @@
 /// <summary>
-/// This script looks at the requested guests and starts the process of determing if they accept or not.
-/// Also handles guest cooldown.
+/// This script resets the invitation send count at the end of the day.
 /// </summary>
 
 /// <remarks>
@@ -11,8 +10,6 @@ using UnityEngine;
 
 namespace ProjectCeros
 {
-
-
     public class InvitationReseter : MonoBehaviour
     {
         public IntReference InvitationsSend;
@@ -21,7 +18,6 @@ namespace ProjectCeros
         public void ResetInvitation()
         {
             InvitationsSend.Variable.SetValue(0);
-
         }
     }
 }

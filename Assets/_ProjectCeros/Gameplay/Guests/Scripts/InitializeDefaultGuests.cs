@@ -25,11 +25,7 @@ namespace ProjectCeros
             foreach (int id in _defaultUnlocks)
             {
                 GuestIDs.Add(id);
-
             }
         }
-
-
-
     }
 }

@@ -24,7 +24,7 @@ namespace ProjectCeros
 
         [SerializeField] private StringReference _outcomeText;
 
-        [SerializeField] private ScreenFader _fader;
+        [SerializeField] private GameEvent _fader;
 
 
         public void GambleGuest(GuestSO guest)
@@ -126,7 +126,7 @@ namespace ProjectCeros
                 }
             }
 
-            _fader.FadeTransition();
+            _fader.Raise();
         }
     }
 }

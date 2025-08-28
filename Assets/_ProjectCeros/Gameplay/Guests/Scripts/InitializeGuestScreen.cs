@@ -1,6 +1,5 @@
 /// <summary>
-/// This script looks at the requested guests and starts the process of determing if they accept or not.
-/// Also handles guest cooldown.
+/// This script initializes the GuestScreen whenever the player enters the scene.
 /// </summary>
 
 /// <remarks>
@@ -9,23 +8,16 @@
 
 using UnityEngine;
 
-
 namespace ProjectCeros
 
 {
     public class InitializeGuestScreens : MonoBehaviour
     {
-    
-
         [SerializeField] private GameEvent gameEvent;
-
 
         public void Awake()
         {
             gameEvent.Raise();
         }
-
-
-
     }
 }

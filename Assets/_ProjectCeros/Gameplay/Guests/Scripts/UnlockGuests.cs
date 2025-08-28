@@ -35,23 +35,19 @@ namespace ProjectCeros
                 if (id == 101)
                 {
                     GuestIDs.Add(1);
-
                 }
 
                 //Unlock Hollowknight
                 if (id == 103)
                 {
                     GuestIDs.Add(6);
-
                 }
 
                 //Unlock Firekeeper
                 if (id == 106)
                 {
                     GuestIDs.Add(13);
-
                 }
-
             }
 
             // Unlock guests based on Strarrating.
@@ -89,17 +85,6 @@ namespace ProjectCeros
                 GuestIDs.Add(15);
                 GuestIDs.Add(16);
             }
-
-
-
-
-
         }
-
-
-
     }
-
-
-
 }

@@ -3536,8 +3536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _allGuests: {fileID: 11400000, guid: b42925ca3a66c76479834c95dcc590a1, type: 2}
-  unlockedGuestIDs: {fileID: 11400000, guid: d9cfb5e387217364da6360514936a665, type: 2}
   unlockedGuests: {fileID: 11400000, guid: 08b946250d8dd164f8055dcb9d449dd7, type: 2}
+  unlockedGuestIDs: {fileID: 11400000, guid: d9cfb5e387217364da6360514936a665, type: 2}
   _initialize: 0
 --- !u!1 &1778647633
 GameObject:
@@ -3660,10 +3660,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _allGuests: {fileID: 11400000, guid: b42925ca3a66c76479834c95dcc590a1, type: 2}
   _unlockedGuests: {fileID: 11400000, guid: 08b946250d8dd164f8055dcb9d449dd7, type: 2}
+  _guestUI: {fileID: 2092212618}
   guestIconPrefab: {fileID: 9076840089246855424, guid: 365de057e83c52c49a58fee9e68d94f3, type: 3}
   iconParent: {fileID: 1391455218}
   _isFirst: 0
-  _guestUI: {fileID: 2092212618}
 --- !u!1 &2082362832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,6 +3827,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 239110ab70a639e4c9141ce6606ea270, type: 2}
+  _wobble: {fileID: 97981452}
   _guestNameText: {fileID: 492193403}
   _descriptionText: {fileID: 321348897}
   _topicText: {fileID: 496567211}
@@ -3834,7 +3835,6 @@ MonoBehaviour:
   _guestImage: {fileID: 1309696449}
   _inviteButton: {fileID: 97981449}
   _inviteButtonText: {fileID: 1351008759}
-  _wobble: {fileID: 97981452}
   starParent: {fileID: 119309373}
   filledStar: {fileID: 21300000, guid: 65337a73ea371f149a73b3e67ce32027, type: 3}
   emptyStar: {fileID: 21300000, guid: ddf1bc11c701fbf42aae9a824a3aa8db, type: 3}

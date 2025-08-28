@@ -16,12 +16,11 @@ namespace ProjectCeros
 
         [SerializeField] private GuestDatabaseSO _allGuests;
 
+        [SerializeField] private GuestSORuntimeSet unlockedGuests;
+
         [SerializeField] private IntRuntimeSet unlockedGuestIDs;
 
-        public GuestSORuntimeSet unlockedGuests;
-
         [SerializeField] private bool _initialize = false;
-
 
 
         public void SyncGuestData()
@@ -40,11 +39,5 @@ namespace ProjectCeros
                 }
             }
         }
-
-
-
-
     }
-
-
 }

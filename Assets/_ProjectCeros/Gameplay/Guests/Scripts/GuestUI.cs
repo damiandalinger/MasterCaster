@@ -21,8 +21,9 @@ namespace ProjectCeros
         [SerializeField] private GuestDatabaseSO _unlockedGuestIDs;
 
         [SerializeField] private IntReference InvitationLimit;
-
         [SerializeField] private IntReference InvitationsSend;
+
+        [SerializeField] private SmoothWobbleZ _wobble;
 
         [Header("UI Elements")]
         [SerializeField] private TextMeshProUGUI _guestNameText;
@@ -39,18 +40,15 @@ namespace ProjectCeros
 
         [SerializeField] private TMP_Text _inviteButtonText;
 
+        [SerializeField] private Transform starParent;
+        [SerializeField] private Sprite filledStar;
+        [SerializeField] private Sprite emptyStar;
+
+        [SerializeField] private Sprite _greyedSprite;
+        [SerializeField] private Sprite _regularSprite;
+        [SerializeField] private Image buttonImage;
+
         private GuestSO currentSelectedItem;
-
-        [SerializeField] private SmoothWobbleZ _wobble;
-
-        public Transform starParent;
-        public Sprite filledStar;
-        public Sprite emptyStar;
-
-        public Sprite _greyedSprite;
-        public Sprite _regularSprite;
-        public Image buttonImage;
-
 
         // Adjusts the GuestUI info.
         public void ShowGuestDetails(GuestSO item)
@@ -73,14 +71,12 @@ namespace ProjectCeros
 
             ShowStarRating(item.Rating);
 
-
-
             if (item.isRequested)
             {
                 _inviteButtonText.text = "Requested";
                 _wobble.enabled = true;
                 _inviteButton.interactable = false;
-                
+
                 buttonImage.sprite = _greyedSprite;
             }
 
@@ -89,7 +85,7 @@ namespace ProjectCeros
                 _inviteButtonText.text = "Accepted";
                 _wobble.enabled = true;
                 _inviteButton.interactable = false;
-                
+
                 buttonImage.sprite = _regularSprite;
             }
 
@@ -123,10 +119,8 @@ namespace ProjectCeros
 
             _invitationLimiter.SetGuestToInvite(item);
 
-
             ShowItemChance();
         }
-
 
         public void ShowItemChance()
         {
@@ -153,14 +147,12 @@ namespace ProjectCeros
             }
         }
 
-
         private void Awake()
         {
             Instance = this;
             buttonImage = _inviteButton.GetComponent<Image>();
             _inviteButton.onClick.AddListener(BuyCurrentItem);
         }
-
 
         // Triggers the buying logic.
         private void BuyCurrentItem()
@@ -173,7 +165,6 @@ namespace ProjectCeros
 
             ShowGuestDetails(currentSelectedItem);
         }
-
 
         public void ShowStarRating(int rating)
         {
