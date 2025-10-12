@@ -30,7 +30,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8816592758045097958}
   m_Father: {fileID: 1938507734842841429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -66,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5ef366ad7c7e7a84b8afa9f3c06c539e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cbc14f55773be147a26c310ca4f9119, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -105,7 +106,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 2cbc14f55773be147a26c310ca4f9119, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 5ef366ad7c7e7a84b8afa9f3c06c539e, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -249,12 +250,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1938507734842841429}
+  m_Father: {fileID: 1383902446994805324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 1024, y: 256}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5126037868671619450
 CanvasRenderer:
@@ -643,12 +644,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1938507734842841429}
+  m_Father: {fileID: 5668014826420424128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -13}
-  m_SizeDelta: {x: 1024, y: 256}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4283602111702391943
 CanvasRenderer:
@@ -814,7 +815,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8592528180497893986}
   m_Father: {fileID: 1938507734842841429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -850,7 +852,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5ef366ad7c7e7a84b8afa9f3c06c539e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cbc14f55773be147a26c310ca4f9119, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -889,7 +891,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 2cbc14f55773be147a26c310ca4f9119, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 5ef366ad7c7e7a84b8afa9f3c06c539e, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -960,9 +962,7 @@ Transform:
   - {fileID: 3474991777206365439}
   - {fileID: 8240309444490622589}
   - {fileID: 1383902446994805324}
-  - {fileID: 8592528180497893986}
   - {fileID: 5668014826420424128}
-  - {fileID: 8816592758045097958}
   - {fileID: 1923397866959918336}
   m_Father: {fileID: 7834650259614863558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

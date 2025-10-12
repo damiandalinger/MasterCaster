@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Project-Ceros
-  defaultCursor: {fileID: 2800000, guid: c5aef68fd844f3442ad53d5c528a7b8e, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 3fdbb35387afb4f40b9eed5796b341d9, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1

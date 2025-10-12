@@ -79,6 +79,10 @@ SpriteAtlas:
     - 116235374e546d943a98d23ed70b4842: 21300000
     - 62e41787b4195c94dbbc9c19c5cf5fe7: 21300000
     - 6d0faf4ac9a3067439d57c1d6cc5169e: 21300000
+    - 70f2b2ca6a8b37545bb83b2bb2e67e5f: 1647101894
+    - 70f2b2ca6a8b37545bb83b2bb2e67e5f: 1363778698
+    - 70f2b2ca6a8b37545bb83b2bb2e67e5f: 961736246
+    - 70f2b2ca6a8b37545bb83b2bb2e67e5f: -773155632
     - 590b7f2b3c1cc2840af182291e6017b5: 21300000
     - d43fe4ac665e05a449a90feaefeb940f: 21300000
     - d33ba4bc5b3e8ad41b9dfa08fe1d90dc: 21300000
@@ -121,6 +125,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 116235374e546d943a98d23ed70b4842, type: 3}
   - {fileID: 21300000, guid: 62e41787b4195c94dbbc9c19c5cf5fe7, type: 3}
   - {fileID: 21300000, guid: 6d0faf4ac9a3067439d57c1d6cc5169e, type: 3}
+  - {fileID: 1647101894, guid: 70f2b2ca6a8b37545bb83b2bb2e67e5f, type: 3}
+  - {fileID: 1363778698, guid: 70f2b2ca6a8b37545bb83b2bb2e67e5f, type: 3}
+  - {fileID: 961736246, guid: 70f2b2ca6a8b37545bb83b2bb2e67e5f, type: 3}
+  - {fileID: -773155632, guid: 70f2b2ca6a8b37545bb83b2bb2e67e5f, type: 3}
   - {fileID: 21300000, guid: 590b7f2b3c1cc2840af182291e6017b5, type: 3}
   - {fileID: 21300000, guid: d43fe4ac665e05a449a90feaefeb940f, type: 3}
   - {fileID: 21300000, guid: d33ba4bc5b3e8ad41b9dfa08fe1d90dc, type: 3}
@@ -162,6 +170,10 @@ SpriteAtlas:
   - SPR_Bedroom_Plant
   - SPR_Bedroom_Bed_Hover
   - SPR_Bedroom_Script
+  - SS_Character_SittingBed_0
+  - SS_Character_SittingBed_1
+  - SS_Character_SittingBed_2
+  - SS_Character_SittingBed_3
   - SPR_Bedroom_Desk
   - SPR_Bedroom_Wallshelf
   - SPR_Bedroom_Newspaper_Bound
