@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SA_Weather
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 8192
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: c603468364f959a4893437d333611f40, type: 3}
+    - {fileID: 102900000, guid: 13d2cd6218fb80a46b186a7424b743ff, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - d06594403b225454e84e0e59658e249b: 21300000
+    - 415316361e541494d8a8d554a53d6ec1: 21300000
+    - f54be827e32706b4186017bd51e4b9c9: 21300000
+    - 9fede6e74b249d84db355a6172a394db: 1264382943
+    - 9fede6e74b249d84db355a6172a394db: 1525119202
+    - 9fede6e74b249d84db355a6172a394db: 1930710964
+    - 9fede6e74b249d84db355a6172a394db: -688465045
+    - ca8bcc0b64571544c84bdde5d2f0378f: -1211925541
+    - ca8bcc0b64571544c84bdde5d2f0378f: 790349364
+    - ca8bcc0b64571544c84bdde5d2f0378f: 1224222646
+    - ca8bcc0b64571544c84bdde5d2f0378f: 567560798
+    - ca8bcc0b64571544c84bdde5d2f0378f: 650954097
+    - ca8bcc0b64571544c84bdde5d2f0378f: 1159979227
+    - d958546cc9090844e99d6c6db80201ae: -1076358293
+    - d958546cc9090844e99d6c6db80201ae: 1902424288
+    - d958546cc9090844e99d6c6db80201ae: 110694956
+    - d958546cc9090844e99d6c6db80201ae: -737880783
+    - d958546cc9090844e99d6c6db80201ae: 1969780861
+    - d958546cc9090844e99d6c6db80201ae: -1745188906
+    - d958546cc9090844e99d6c6db80201ae: -588444436
+    - d958546cc9090844e99d6c6db80201ae: 1783422519
+    - cf9371bc598020c41ab2966dd6eff071: 21300000
+    - 93ac33ade839d3f4e812b56b62910314: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: d06594403b225454e84e0e59658e249b, type: 3}
+  - {fileID: 21300000, guid: 415316361e541494d8a8d554a53d6ec1, type: 3}
+  - {fileID: 21300000, guid: f54be827e32706b4186017bd51e4b9c9, type: 3}
+  - {fileID: 1264382943, guid: 9fede6e74b249d84db355a6172a394db, type: 3}
+  - {fileID: 1525119202, guid: 9fede6e74b249d84db355a6172a394db, type: 3}
+  - {fileID: 1930710964, guid: 9fede6e74b249d84db355a6172a394db, type: 3}
+  - {fileID: -688465045, guid: 9fede6e74b249d84db355a6172a394db, type: 3}
+  - {fileID: -1211925541, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 790349364, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 1224222646, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 567560798, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 650954097, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: 1159979227, guid: ca8bcc0b64571544c84bdde5d2f0378f, type: 3}
+  - {fileID: -1076358293, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
+  - {fileID: 1902424288, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
+  - {fileID: 110694956, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
+  - {fileID: -737880783, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
+  - {fileID: 1969780861, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
+  - {fileID: -1745188906, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
+  - {fileID: -588444436, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
+  - {fileID: 1783422519, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
+  - {fileID: 21300000, guid: cf9371bc598020c41ab2966dd6eff071, type: 3}
+  - {fileID: 21300000, guid: 93ac33ade839d3f4e812b56b62910314, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SPR_Clouds_Left
+  - SPR_Background_Sunny
+  - SPR_Clouds_Right
+  - SS_Background_Rainy_3
+  - SS_Background_Rainy_2
+  - SS_Background_Rainy_1
+  - SS_Background_Rainy_0
+  - SS_Window_Rainy_3
+  - SS_Window_Rainy_2
+  - SS_Window_Rainy_1
+  - SS_Window_Rainy_0
+  - SS_Window_Rainy_5
+  - SS_Window_Rainy_4
+  - SS_Tree_1
+  - SS_Tree_0
+  - SS_Tree_3
+  - SS_Tree_2
+  - SS_Tree_5
+  - SS_Tree_4
+  - SS_Tree_7
+  - SS_Tree_6
+  - SPR_Clouds_Mid
+  - SPR_Building
+  m_RenderDataMap: {}
+  m_Tag: SA_Weather
+  m_IsVariant: 0

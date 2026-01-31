@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07bdabc65c2ad6841b8bc97b95b768ed
+guid: d958546cc9090844e99d6c6db80201ae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SS_Window_Sunny_0
+      name: SS_Tree_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,14 +112,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8a86dbaaad704e4bbfac71b4ac9d8a8
-      internalID: -1425877531
+      spriteID: 374e9e5136a36104aa1574e165e4b3c0
+      internalID: 1902424288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_Window_Sunny_1
+      name: SS_Tree_1
       rect:
         serializedVersion: 2
         x: 512
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1941675c079685345a97485b95742b97
-      internalID: 1694994085
+      spriteID: 5fa60e056d0f9e348846f5c2cb6f849b
+      internalID: -1076358293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_Window_Sunny_2
+      name: SS_Tree_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17ed79456dbdd85439441fb6a0668405
-      internalID: -732155194
+      spriteID: 37bb6b00ea731b44b995938b79ece74e
+      internalID: -737880783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_Window_Sunny_3
+      name: SS_Tree_3
       rect:
         serializedVersion: 2
         x: 0
@@ -178,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5272e619e012b244a96fdc0712e62f80
-      internalID: -181402684
+      spriteID: a1b851ad03681bd4685bbc4d06ffc142
+      internalID: 110694956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_Window_Sunny_4
+      name: SS_Tree_4
       rect:
         serializedVersion: 2
         x: 512
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3702d5727c87ac244b2713861d14e919
-      internalID: 2003302725
+      spriteID: cedea3d4fa165b84b8e828ecad93e563
+      internalID: -1745188906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_Window_Sunny_5
+      name: SS_Tree_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -222,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46f5bafc08c00e749a19ee4e36d8221a
-      internalID: 1281898154
+      spriteID: 89b89186a507e064b97a11ec09f05e89
+      internalID: 1969780861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_Window_Sunny_6
+      name: SS_Tree_6
       rect:
         serializedVersion: 2
         x: 0
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce600dc75b4267e4ba17ad373fc01eb2
-      internalID: 1386900213
+      spriteID: 08202deae29340b448c8c444d1bdd129
+      internalID: 1783422519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_Window_Sunny_7
+      name: SS_Tree_7
       rect:
         serializedVersion: 2
         x: 512
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa1b7f4b9f35cd041b2e3e16cad4d0a5
-      internalID: 1319939371
+      spriteID: be43255dfb3889f4cb9981ad0d86886a
+      internalID: -588444436
       vertices: []
       indices: 
       edges: []
@@ -286,14 +286,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SS_Window_Sunny_0: -1425877531
-      SS_Window_Sunny_1: 1694994085
-      SS_Window_Sunny_2: -732155194
-      SS_Window_Sunny_3: -181402684
-      SS_Window_Sunny_4: 2003302725
-      SS_Window_Sunny_5: 1281898154
-      SS_Window_Sunny_6: 1386900213
-      SS_Window_Sunny_7: 1319939371
+      SS_Tree_0: 1902424288
+      SS_Tree_1: -1076358293
+      SS_Tree_2: -737880783
+      SS_Tree_3: 110694956
+      SS_Tree_4: -1745188906
+      SS_Tree_5: 1969780861
+      SS_Tree_6: 1783422519
+      SS_Tree_7: -588444436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

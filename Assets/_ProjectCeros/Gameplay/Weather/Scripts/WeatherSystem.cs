@@ -20,8 +20,8 @@ namespace ProjectCeros
         [SerializeField] private BoolVariable _isRaining;
 
         [Header("Visuals")]
-        [Tooltip("Sprite shown when it's raining.")]
         [SerializeField] private GameObject _rainVisual;
+        [SerializeField] private GameObject _sunVisual;
 
         // Call this at the end of the day to determine the weather.
         public void DetermineWeather()
@@ -30,8 +30,10 @@ namespace ProjectCeros
 
             _isRaining.RuntimeValue = isRain;
 
-            if (_rainVisual != null)
-                _rainVisual.SetActive(isRain);
+            GameObject activeVisual = isRain ? _rainVisual : _sunVisual;
+            GameObject inactiveVisual = isRain ? _sunVisual : _rainVisual;
+            activeVisual.SetActive(true);
+            inactiveVisual.SetActive(false);
         }
     }
 }
