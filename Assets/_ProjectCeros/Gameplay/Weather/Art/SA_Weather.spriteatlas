@@ -52,6 +52,7 @@ SpriteAtlas:
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
     - d06594403b225454e84e0e59658e249b: 21300000
+    - e885e473d488ff04c98f31cc22e77c3a: 21300000
     - 415316361e541494d8a8d554a53d6ec1: 21300000
     - f54be827e32706b4186017bd51e4b9c9: 21300000
     - 9fede6e74b249d84db355a6172a394db: 1264382943
@@ -73,10 +74,10 @@ SpriteAtlas:
     - d958546cc9090844e99d6c6db80201ae: -588444436
     - d958546cc9090844e99d6c6db80201ae: 1783422519
     - cf9371bc598020c41ab2966dd6eff071: 21300000
-    - 93ac33ade839d3f4e812b56b62910314: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: d06594403b225454e84e0e59658e249b, type: 3}
+  - {fileID: 21300000, guid: e885e473d488ff04c98f31cc22e77c3a, type: 3}
   - {fileID: 21300000, guid: 415316361e541494d8a8d554a53d6ec1, type: 3}
   - {fileID: 21300000, guid: f54be827e32706b4186017bd51e4b9c9, type: 3}
   - {fileID: 1264382943, guid: 9fede6e74b249d84db355a6172a394db, type: 3}
@@ -98,9 +99,9 @@ SpriteAtlas:
   - {fileID: -588444436, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
   - {fileID: 1783422519, guid: d958546cc9090844e99d6c6db80201ae, type: 3}
   - {fileID: 21300000, guid: cf9371bc598020c41ab2966dd6eff071, type: 3}
-  - {fileID: 21300000, guid: 93ac33ade839d3f4e812b56b62910314, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_Clouds_Left
+  - SPR_Building
   - SPR_Background_Sunny
   - SPR_Clouds_Right
   - SS_Background_Rainy_3
@@ -122,7 +123,6 @@ SpriteAtlas:
   - SS_Tree_7
   - SS_Tree_6
   - SPR_Clouds_Mid
-  - SPR_Building
   m_RenderDataMap: {}
   m_Tag: SA_Weather
   m_IsVariant: 0
